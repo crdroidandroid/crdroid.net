@@ -16,11 +16,12 @@ if (file_exists('update.xml')) {
         
         //devices
         foreach ($manufacturer as $k => $v) {
-            $build_date_arr = $v->filename;
-            $build_date = explode("-", $build_date_arr);
+            $build_date = explode("-", $v->filename);
             $maintainer_arr = $v->maintainer;
             $maintainer = explode("(", $maintainer_arr);
-            $nick = str_replace(")","",$maintainer[1]);
+            if (isset($maintainer[1])) {
+                $nick = str_replace(")","",$maintainer[1]);
+            }
             echo"<div class='device'>
                     <div class='main' id='" . $k . "'>
                         <span class='ti-mobile'> Device name: " . $v->devicename . "</span><br>
