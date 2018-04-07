@@ -2,7 +2,10 @@
 // Devices.xml reader by Gabriel Lup
 $branch="8.1";
 $GitHub_devices="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/" . $branch . "/update.xml";
-file_put_contents("update.xml", fopen($GitHub_devices, 'r'));
+file_put_contents("data", fopen($GitHub_devices, 'r'));
+if (filesize('data') > 0) {
+    rename('data','update.xml');
+}
 
 //echo "<h1>Parsing info from GitHub (branch " . $branch . ")</h2>";
 if (file_exists('update.xml')) {
