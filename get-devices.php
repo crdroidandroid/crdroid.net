@@ -31,8 +31,8 @@ if (file_exists('update.xml')) {
             }
             echo "
                         <span class='ti-android'> crDroid version: " . $build_date[4] . "</span><br>
-                        <span class='ti-package'> Last build: " . $build_date[2] . "</span><br>
-                        <span class='ti-harddrives'> Build type: " . $v->buildtype . "<span><br>
+                        <span class='ti-calendar'> Last build: " . $build_date[2] . "</span><br>
+                        <span class='ti-pencil-alt'> Build type: " . $v->buildtype . "<span><br>
                     </div>
                     <div class='dl'>";
             if (empty($v->download)) {
