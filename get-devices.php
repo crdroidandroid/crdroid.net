@@ -21,6 +21,8 @@ if (file_exists('update.xml')) {
             $maintainer = explode("(", $maintainer_arr);
             if (isset($maintainer[1])) {
                 $nick = str_replace(")","",$maintainer[1]);
+            }else{
+                $nick = null;
             }
             echo"<div class='device'>
                     <div class='main' id='" . $k . "'>
