@@ -47,7 +47,7 @@
     <header class="bg-gradient">
         <div class="container mt-5">
             <h1>Ready to download?</h1>
-            <p class="tagline">Below there a list with official supported devices. <br>Choose your device to get started using crDroid<br><br><br></p>
+            <p class="tagline">Below you can find a list with official supported devices. <br>Choose your device to get started using crDroid<br><br><br></p>
         </div>
     </header>
     
