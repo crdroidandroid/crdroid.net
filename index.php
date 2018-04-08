@@ -349,16 +349,16 @@
 
             <div class="row pt-4">
                 <div class="col-md-6">
-                    <h4 class="mb-3">Does crDroid support OTA?</h4>
-                    <p class="light-font mb-5">Yes. crDroid is designed to push OTA notifications whenever new updates are available. </p>
                     <h4 class="mb-3">What base is crDroid using?</h4>
                     <p class="light-font mb-5">crDroid uses LineageOS as base. We try to keep in sync with LineageOS source while also adding lots of customizations for you to choose from. </p>
-                </div>
-                <div class="col-md-6">
                     <h4 class="mb-3">For how long do you plan to keep updates?</h4>
                     <p class="light-font mb-5">As crDroid is based on LineageOS, which is also based on stock Android, we can say crDroid is going to keep updates flowing as long as LineageOS and Google do. </p>
+                </div>
+                <div class="col-md-6">
                     <h4 class="mb-3">Are you going to add more features?</h4>
                     <p class="light-font mb-5">No way... Nah... just kidding... We always try to add more and more features with stability and security first in mind. </p>
+                    <h4 class="mb-3">How do I become maintainer for crDroid?</h4>
+                    <p class="light-font mb-5">It's really simple. Just message Gabriel over <a href="http://telegram.me/gwolf2u" target="_blank"><span class="ti-headphone-alt" style="font-size: 14px;"></span> Telegram</a> with the device you want to maintain.</p>
                 </div>
             </div>
         </div>
@@ -387,7 +387,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> GitHub.com ;)</p>
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> GitHub.com <span class="ti-face-smile" style="font-size: 14px;"></span></p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
                             <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:crdroidrom@gmail.com">mailto:crdroidrom@gmail.com</a>
