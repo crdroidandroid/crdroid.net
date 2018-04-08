@@ -1,3 +1,10 @@
+<?php
+if (isset($_GET['device'])) {
+    $id = $_GET['device'];
+}else{
+    $id = "";
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
-                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> GitHub.com ;)</p>
+                    <p class="mb-2"> <span class="ti-location-pin mr-2"></span> GitHub.com <span class="ti-face-smile" style="font-size: 14px;"></span></p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
                             <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:crdroidrom@gmail.com">mailto:crdroidrom@gmail.com</a>
@@ -103,7 +110,7 @@
     <script src="js/script.js"></script>
     <!-- Search -->
     <script>
-        $("#search").on("keyup", function() {
+        $("#search").on("keyup submit", function() {
             var key = this.value.toLowerCase();
             if (key == ''){
                 $(".manufacturer").css("display", "inherit");
@@ -115,6 +122,11 @@
                 var $this = $(this);
                 $this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
             });
+        });
+        
+        $(document).ready(function() {
+            $("#search").val('<?php echo $id;?>');
+            $("#search").submit();
         });
     </script>
 </body>

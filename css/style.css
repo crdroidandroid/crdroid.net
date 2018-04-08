@@ -647,6 +647,19 @@ header {
     margin-top: 65px;
 }
 
+.links a:link, .links a:visited, .links a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.timestamp {
+    color: #555;
+    font-size: 0.8em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
 input {
     border: 2px solid white; 
     -webkit-box-shadow: 
