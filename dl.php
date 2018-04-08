@@ -54,8 +54,9 @@
     <div class="section light-bg" id="downloads">
         <div class="container">
             <div class="section-title">
-                <small>Devices</small>
-                <h3>Happy flashing</h3>
+                <h3>Search devices</h3>
+                <input type="text" id='search'></input><br>
+                <small>*search can handle device name, codename, crDroid version, maintainer and build type</small>
             </div>
             <!-- Devices -->
             <div class="row">
@@ -100,5 +101,21 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <!-- Search -->
+    <script>
+        $("#search").on("keyup", function() {
+            var key = this.value.toLowerCase();
+            if (key == ''){
+                $(".manufacturer").css("display", "inherit");
+            }else{
+                $(".manufacturer").css("display", "none");
+            }
+
+            $(".device").each(function() {
+                var $this = $(this);
+                $this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
+            });
+        });
+    </script>
 </body>
 </html>

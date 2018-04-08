@@ -647,6 +647,29 @@ header {
     margin-top: 65px;
 }
 
+input {
+    border: 2px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 3px;
+    background: rgba(255,255,255,0.5);
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    width: 25%;
+}
+
+input:focus {
+    outline-color: #faf6fb;
+    width: 30%;
+}
+
 @media only screen and (max-width: 800px) {
     .nav-tabs .nav-item .nav-link,
     .nav-tabs .nav-link:focus,
@@ -662,5 +685,13 @@ header {
         float: none;
         width: 100%;
         margin: auto;
+    }
+    
+    input {
+        width: 65%;
+    }
+
+    input:focus {
+        width: 75%;
     }
 }

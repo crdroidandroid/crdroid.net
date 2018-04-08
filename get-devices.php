@@ -28,7 +28,7 @@ if (file_exists('update.xml')) {
                 $nick = null;
             }
             echo"<div class='device'>
-                    <div class='main' id='" . $k . "'>
+                    <div class='main'>
                         <span class='ti-mobile'> Device name: " . $v->devicename . "</span><br>
                         <span class='ti-receipt'> Device codename: " . $k . "</span></br>
                         <span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
