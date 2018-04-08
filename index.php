@@ -99,7 +99,7 @@
                                 <span class="ti-lock gradient-fill ti-3x mr-3"></span>
                                 <div class="media-body">
                                     <h4 class="card-title">Secure</h4>
-                                    <p class="card-text">We cheerish and treasure the privacy of our users with-top notch security options from Android and LineageOS</p>
+                                    <p class="card-text">We cherish and treasure the privacy of our users with top-notch security options from Android and LineageOS</p>
                                 </div>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
                             <div class="circle-icon mr-4">2</div>
                             <div class="media-body">
                                 <h5>Updates on the go</h5>
-                                <p>With our build in OTA notification you'll never miss an update ever again</p>
+                                <p>With our built-in OTA notification you'll never miss an update ever again</p>
                             </div>
                         </li>
                         <li class="media">
