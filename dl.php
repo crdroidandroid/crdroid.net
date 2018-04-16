@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
 <?php 
+
+function GetDeviceName($id){
+	$name = '';
+	$xml = simplexml_load_file('update.xml');
+	foreach ($xml as $manufacturer){
+		foreach ($manufacturer as $k => $v){
+			if ($k == $id){
+				$name = $v->devicename;
+			}
+		}
+	}
+	return $name;
+}
+
 if (isset($_GET['device'])) {
-    echo "    <title>crDroid.net - Download crDroid for " . $_GET['device'] . "</title>\n\n";
+    echo "    <title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['device']) . " (" . $_GET['device'] . ")" . "</title>\n\n";
     echo "    <!-- Required meta tags -->\n";
     echo "    <meta charset=\"utf-8\">\n";
     echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n";
-    echo "    <meta name=\"description\" content=\"official crDroid ROM for " . $_GET['device'] .  "\">\n";
-    echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, "  . $_GET['device'] .  "\">\n";
+    echo "    <meta name=\"description\" content=\"official crDroid ROM for " . GetDeviceName($_GET['device']) . " (" . $_GET['device'] . ")" . "\">\n";
+    echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['device']) . ", " . $_GET['device'] .  "\">\n";
     $id = $_GET['device'];
 }else{
     echo "    <title>crDroid.net - Download crDroid for supported devices</title>\n\n";
