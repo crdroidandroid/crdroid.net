@@ -1,19 +1,25 @@
-<?php
-if (isset($_GET['device'])) {
-    $id = $_GET['device'];
-}else{
-    $id = "";
-}
-?>
 <!doctype html>
 <html lang="en">
 <head>
-    <title>crDroid.net - increase performance and reliability over stock Android for your device</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="official crDroid ROM website">
-    <meta name="keywords" content="crDroid, crDroid ROM, ROM">
+<?php 
+if (isset($_GET['device'])) {
+    echo "    <title>crDroid.net - Download crDroid for " . $_GET['device'] . "</title>\n\n";
+    echo "    <!-- Required meta tags -->\n";
+    echo "    <meta charset=\"utf-8\">\n";
+    echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n";
+    echo "    <meta name=\"description\" content=\"official crDroid ROM for " . $_GET['device'] .  "\">\n";
+    echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, "  . $_GET['device'] .  "\">\n";
+    $id = $_GET['device'];
+}else{
+    echo "    <title>crDroid.net - Download crDroid for supported devices</title>\n\n";
+    echo "    <!-- Required meta tags -->\n";
+    echo "    <meta charset=\"utf-8\">\n";
+    echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n";
+    echo "    <meta name=\"description\" content=\"official crDroid ROM download page\">\n";
+    echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, crDroid download\">\n";
+    $id = "";
+}
+?>
     
     <link rel="shortcut icon" href="favicon.ico" type="favicon.ico">
     
@@ -62,7 +68,7 @@ if (isset($_GET['device'])) {
         <div class="container">
             <div class="section-title">
                 <h3>Search devices</h3>
-                <input type="text" id='search'></input><br>
+                <input type="text" id='search'><br>
                 <small>*search can handle device name, codename, crDroid version, maintainer and build type</small>
             </div>
             <!-- Devices -->
