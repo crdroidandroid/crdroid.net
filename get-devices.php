@@ -66,21 +66,21 @@ if (file_exists('update.xml')) {
         <div class='dl'>";
 			if (empty($v->download)) {
 				echo "
-            <a href='#downloads' class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Download crDroid</a>";
+            <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Download crDroid</span>";
 			}else{
 				echo "
             <a href='" . $v->download . "' class='btn btn-dark' target='_blank' title='" . $v->filename . "'><span class='ti-import'></span> Download crDroid</a>";
 			}
 			if (empty($v->gapps)) {
 				echo "
-            <a href='#downloads' class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Google Apps</a>";
+            <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Google Apps</span>";
 			}else{
 				echo "
             <a href='" . $v->gapps . "' class='btn btn-orange' target='_blank'><span class='ti-package'></span> Google Apps</a>";
 			}
 			if (empty($v->forum)) {
 				echo "
-            <a href='#downloads' class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Support Forum</a>";
+            <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Support Forum</span>";
 			}else{
 				echo "
             <a href='" . $v->forum . "' class='btn btn-light' target='_blank'><span class='ti-comments-smiley'></span> Support Forum</a>";
