@@ -118,7 +118,7 @@ if (isset($_GET['device'])) {
     <!-- // end .section -->
     
     <footer class="my-5 text-center">
-        <p class="mb-2"><small>COPYRIGHT © 2016-<?php echo date("Y");?>. ALL RIGHTS RESERVED. <br>Designed by <a href="https://gwolf2u.com" target="_blank">Lup Gabriel</a></small></p>
+        <p class="mb-2"><small>COPYRIGHT © 2016-<?php echo date("Y");?>. ALL RIGHTS RESERVED. <br>Designed by <a href="https://gwolf2u.com" target="_blank">Lup Gabriel</a> & <a href="https://iamsaikat.gitlab.io" target="_blank">Saikat Halder</a></small></p>
     </footer>
 
     <!-- jQuery and Bootstrap -->
