@@ -1,10 +1,10 @@
 RewriteEngine On
 
 #redirect all old URLs to the new rewritten URL
-RewriteCond %{THE_REQUEST} ^GET\ /+dl\.php\?device=([^&\ ]+)
+RewriteCond %{THE_REQUEST} ^GET\ /+device\.php\?name=([^&\ ]+)
 RewriteRule ^ /%1? [R=302,L]
 
-#rewrite folder path internally to dl.php
+#rewrite folder path internally to device.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/?$ dl.php?device=$1 [QSA,L]
+RewriteRule ^([^/]+)/?$ device.php?name=$1 [QSA,L]
