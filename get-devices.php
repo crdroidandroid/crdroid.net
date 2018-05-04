@@ -64,6 +64,6 @@ if (file_exists('update.xml')) {
         ";
 		}
 	}
-	echo "<div class='timestamp'>Showing devices from cache set " . date("F d Y H:i:s.", filemtime('update.xml')). "</div>";
+	echo "<div class='timestamp'>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update.xml')). "</div>";
 }
 ?>

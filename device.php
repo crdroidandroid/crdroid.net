@@ -5,7 +5,7 @@
 include 'handler.php';
 is_NeedUpdate();
 
-if (isset($_GET['name'])) {
+if (!empty(GetDeviceName($_GET['name']))) {
     echo "    <title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
     echo "    <!-- Required meta tags -->\n";
     echo "    <meta charset=\"utf-8\">\n";
@@ -14,7 +14,14 @@ if (isset($_GET['name'])) {
     echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['name']) . ", " . $_GET['name'] .  "\">\n";
     $id = $_GET['name'];
 }else{
-    die("undefined");
+    echo "
+<title>crDroid.net</title>
+</head>
+<body>
+undefined
+</body>
+</html>";
+    exit;
 }
 ?>
 
@@ -126,6 +133,7 @@ if (isset($_GET['name'])) {
                     }
                 }
             }
+            echo "<div class='timestamp'>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update.xml')). "</div>";
         }
     ?>
     
