@@ -1,6 +1,6 @@
 <?php
 include 'handler.php';
-is_NeedUpdate();
+isUpdateNeeded();
 
 if (file_exists('update.xml')) {
 	$xml = simplexml_load_file('update.xml');

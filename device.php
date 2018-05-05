@@ -3,7 +3,7 @@
 <head>
 <?php 
 include 'handler.php';
-is_NeedUpdate();
+isUpdateNeeded();
 
 if (!empty(GetDeviceName($_GET['name']))) {
     echo "    <title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
