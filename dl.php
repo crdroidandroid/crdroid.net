@@ -83,11 +83,6 @@
                 $this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
             });
         });
-        
-        $(document).ready(function() {
-            $("#search").val('<?php echo $id;?>');
-            $("#search").submit();
-        });
     </script>
 </body>
 </html>
