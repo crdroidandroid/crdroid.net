@@ -23,7 +23,7 @@ function isUpdateNeeded(){
 	// Don't spam GitHub with request - it blocks them after a while (temporary ban on domain)
 	// Do update every 30 minutes (1800 seconds)
 	if (! file_exists('update.xml')) {
-    	GetXMLfromGitHub($GLOBALS['GitHub_devices']);
+		GetXMLfromGitHub($GLOBALS['GitHub_devices']);
 	}else{
     	if (filemtime('update.xml') + 1800 < strtotime('now')) {
 			GetXMLfromGitHub($GLOBALS['GitHub_devices']);
@@ -46,6 +46,7 @@ function GetDeviceName($id){
 
 function GetSupportedManufactures(){
 	$nr_of_manufacturers = 0;
+	isUpdateNeeded();
 	$xml = simplexml_load_file('update.xml');
 	foreach ($xml as $manufacturer){
 		$nr_of_manufacturers = $nr_of_manufacturers + 1;
@@ -55,6 +56,7 @@ function GetSupportedManufactures(){
 
 function GetSupportedDevices(){
 	$nr_of_devices = 0;
+	isUpdateNeeded();
 	$xml = simplexml_load_file('update.xml');
 	foreach ($xml as $manufacturer){
 		foreach ($manufacturer as $k => $v){
