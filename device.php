@@ -63,8 +63,8 @@ undefined
     
     <header class="bg-gradient">
         <div class="container mt-5">
-            <h1>Ready to download?</h1>
-            <p class="tagline"><br></p>
+            <h1>Ready to crDroid-ify your device?</h1>
+            <p class="tagline">Cool, seems you are ready to download<br>Check below info to get started<br><br></p>
         </div>
     </header>
     
