@@ -14,13 +14,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
     echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['name']) . ", " . $_GET['name'] .  "\">\n";
     $id = $_GET['name'];
 }else{
-    echo "
-<title>crDroid.net</title>
-</head>
-<body>
-undefined
-</body>
-</html>";
+    header("Location: https://crdroid.net/", true, 301);
     exit;
 }
 ?>
