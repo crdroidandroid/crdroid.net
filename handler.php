@@ -21,11 +21,11 @@ function GetXMLfromGitHub($url) {
 
 function isUpdateNeeded(){
 	// Don't spam GitHub with request - it blocks them after a while (temporary ban on domain)
-	// Do update every 30 minutes (1800 seconds)
+	// Do update every 5 minutes (300 seconds)
 	if (! file_exists('update.xml')) {
 		GetXMLfromGitHub($GLOBALS['GitHub_devices']);
 	}else{
-    	if (filemtime('update.xml') + 1800 < strtotime('now')) {
+    	if (filemtime('update.xml') + 300 < strtotime('now')) {
 			GetXMLfromGitHub($GLOBALS['GitHub_devices']);
    		}
 	}
