@@ -371,7 +371,7 @@
             <div class="call-to-action">
                 <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
                 <h2>Download anytime</h2>
-                <p class="tagline">Get the ROM base incuding preffered gapps package righ now. </p>
+                <p class="tagline">Get the ROM base incuding preffered gapps package right now. </p>
                 <div class="my-4">
                     <a href="dl.php" class="btn btn-light"><img src="images/download.png" alt="icon"> Download</a>
                     <a href="http://opengapps.org/" class="btn btn-light" target="_blank"><img src="images/opengapps.png" alt="icon"> OpenGapps</a>
