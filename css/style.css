@@ -122,7 +122,6 @@ p.lead {
     border-radius: 3px;
     background: #FFF;
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
-    font-size: 14px;
     font-weight: 500;
     color: #633991;
     margin: 0.5rem;
@@ -134,7 +133,6 @@ p.lead {
     border-radius: 3px;
     background: #333;
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
-    font-size: 14px;
     font-weight: 500;
     color: #fff;
     margin: 0.5rem;
@@ -146,7 +144,6 @@ p.lead {
     border-radius: 3px;
     background: #ff8f00;
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
-    font-size: 14px;
     font-weight: 500;
     color: #fff;
     margin: 0.5rem;
@@ -162,7 +159,6 @@ p.lead {
     border-radius: 3px;
     background: #ccc;
     /*box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);*/
-    font-size: 14px;
     font-weight: 500;
     color: #fff;
     margin: 0.5rem;
@@ -280,7 +276,7 @@ header {
     font-size: 23px;
     font-weight: 300;
     color: #ffb8f6;
-    max-width: 800px;
+    /*max-width: 800px;*/
     margin: 0 auto;
 }
 
@@ -615,16 +611,11 @@ header {
 }
 
 .manufacturer {
-    width: 80%;
-    clear: both;
     color: #633991;
     font-size: 32px;
-    font-weight: bold;
-    margin:5px 20px 5px 20px;
 }
 
 .device {
-    width: 100%;
     min-height: 170px;
     border: 2px solid #633991;
     padding: 5px;
@@ -654,7 +645,7 @@ header {
 
 .timestamp {
     color: #555;
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin: 0 auto;
     text-align: center;
     margin-top: 20px;

@@ -60,13 +60,30 @@
                 <small>*search can handle device name, codename, crDroid version, maintainer and build type</small>
             </div>
             <!-- Devices -->
-            <div class="row">
-                <?php include ('get-devices.php');?>
-            </div>
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#crDroid_v5">crDroid Pie <img src="images/beta-stamp.png" width="35"></a>
+                    </li>
+                </ul>
+                <?php include 'handler.php'; ?>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="crDroid_v4">
+                        <div class="d-flex flex-column">
+                        <?php ReturnDevices('v8.1') ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="crDroid_v5">
+                        <div class="d-flex flex-column">
+                        <?php ReturnDevices('v9.0') ?>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
     <!-- // end .section -->
-
     <?php include 'footer.php';?>
     <!-- Search -->
     <script>

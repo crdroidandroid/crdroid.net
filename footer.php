@@ -25,7 +25,8 @@ echo "
     <!-- // end .section -->
     
     <footer class=\"my-5 text-center\">
-        <p class=\"mb-2\"><small>COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED. <br>Designed by <a href=\"https://gwolf2u.com\" target=\"_blank\">Lup Gabriel</a> & <a href=\"https://iamsaikat.gitlab.io\" target=\"_blank\">Saikat Halder</a></small></p>
+        <div class='timestamp'>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update_v8.1.xml')). "</div>
+        <p class=\"mb-2\"><small>COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED. <br>Designed by <a href=\"https://gwolf2u.com\" target=\"_blank\">Lup Gabriel</a></small></p>
     </footer>
 
     <!-- jQuery and Bootstrap -->

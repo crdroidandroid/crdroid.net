@@ -3,7 +3,6 @@
 <head>
 <?php 
 include 'handler.php';
-isUpdateNeeded();
 
 if (!empty(GetDeviceName($_GET['name']))) {
     echo "    <title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
@@ -64,74 +63,26 @@ if (!empty(GetDeviceName($_GET['name']))) {
     
     <div class="section light-bg" id="downloads">
         <div class="container">
-            <div class="row">
-    <?php
-        if (file_exists('update.xml')) {
-            $xml = simplexml_load_file('update.xml');
-            foreach($xml as $manufacturer){
-                foreach ($manufacturer as $k => $v){
-                    if ($k == $id){
-                    $build_date = explode("-", $v->filename);
-                    $maintainer_arr = $v->maintainer;
-                    $maintainer = explode("(", $maintainer_arr);
-                    if (isset($maintainer[1])) {
-                        $nick = str_replace(")","",$maintainer[1]);
-                    }else{
-                        $nick = null;
-                    }
-                        echo "
-                <div class='manufacturer'>
-                    <span class='ti-folder'> " . $manufacturer['id'] . "</span>
-                </div>";
-                        echo "
-                <div class='device'>
-                    <div class='main'>
-                    <span class='ti-mobile'> Device name: " . mb_strimwidth($v->devicename,0,20,"...") . "</span><br>
-                    <span class='ti-receipt links'> Device codename: <a href='https://crdroid.net/" . $k . "' rel='bookmark'>" . $k . "</a></span></br>
-                    <span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
-                    if (!empty($nick)) {
-                        echo "
-                    <span class='ti-id-badge'> Nickname: " . $nick . "<span><br>";
-                    }
-                        echo "
-                    <span class='ti-android'> crDroid version: " . $build_date[4] . "</span><br>
-                    <span class='ti-calendar'> Last build: " . $build_date[2] . "</span><br>
-                    <span class='ti-pencil-alt'> Build type: " . $v->buildtype . "<span><br>
-                </div>
-                <div class='dl'>";
-                    if (empty($v->download)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Download crDroid</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->download . "' class='btn btn-dark' target='_blank' title='" . $v->filename . "'><span class='ti-import'></span> Download crDroid</a>";
-                    }
-                    if (empty($v->gapps)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Google Apps</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->gapps . "' class='btn btn-orange' target='_blank'><span class='ti-package'></span> Google Apps</a>";
-                    }
-                    if (empty($v->forum)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Support Forum</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->forum . "' class='btn btn-light' target='_blank'><span class='ti-comments-smiley'></span> Support Forum</a>";
-                    }
-                echo "
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#crDroid_v5">crDroid Pie <img src="images/beta-stamp.png" width="35"></a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="crDroid_v4">
+                        <div class="d-flex flex-column">
+                        <?php ReturnDeviceInfo('v8.1', $id);?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="crDroid_v5">
+                        <div class="d-flex flex-column">
+                        <?php ReturnDeviceInfo('v9.0', $id);?>
+                        </div>
                     </div>
                 </div>
-                ";
-                    }
-                }
-            }
-            echo "<div class='timestamp'>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update.xml')). "</div>";
-        }
-    ?>
-    
-            </div>
         </div>
     </div>
     

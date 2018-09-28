@@ -53,7 +53,7 @@
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
             <h1>Welcome to crDroid ROM </h1>
-            <p class="tagline">crDroid is designed to improve the performance, reliability and customizability of stock Android. We are based on Android 8.1 Oreo and we officially support <?php include 'handler.php'; echo GetSupportedDevices(); ?> devices from <?php echo GetSupportedManufactures(); ?> manufacturers with more to come.</p>
+            <p class="tagline">crDroid is designed to improve the performance, reliability and customizability of stock Android. <br>We officially support <?php include 'handler.php'; echo GetSupportedDevices('8.1'); ?> devices in Android 8.1 Oreo and <?php echo GetSupportedDevices('9.0'); ?> devices in Android 9.0 Pie with more to come.</p>
         </div>
         <div class="img-holder mt-3"><img src="images/ss/1.main.png" alt="phone" class="img-fluid"></div>
     </header>
