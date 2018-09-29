@@ -32,6 +32,15 @@ if (!empty(GetDeviceName($_GET['name']))) {
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-6432969-5');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
