@@ -7,7 +7,7 @@ echo "
                     <p class=\"mb-2\"> <span class=\"ti-location-pin mr-2\"></span> GitHub.com <span class=\"ti-face-smile\" style=\"font-size: 14px;\"></span></p>
                     <div class=\"d-block d-sm-inline-block\">
                         <p class=\"mb-2\">
-                            <span class=\"ti-email mr-2\"></span> <a class=\"mr-4\" href=\"mailto:crdroidrom@gmail.com\">mailto:crdroidrom@gmail.com</a>
+                            <span class=\"ti-email mr-2\"></span> <a class=\"mr-4\" href=\"mailto:contact@crdroid.net\">mailto:contact@crdroid.net</a>
                         </p>
                     </div>
                 </div>
