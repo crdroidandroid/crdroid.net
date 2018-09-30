@@ -698,4 +698,8 @@ input:focus {
     input:focus {
         width: 75%;
     }
+    
+    .device .main {
+        font-size: 1em;
+    }
 }
