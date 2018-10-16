@@ -101,7 +101,7 @@ function ReturnDevices($version) {
 			echo "
 			<div class='device'>
 				<div class='main'>
-				<span class='ti-mobile'> Device: " . $v->devicename . "</span><br>
+				<span class='ti-mobile'> Device: " .  mb_strimwidth($v->devicename,0,20,"...") . "</span><br>
 				<span class='ti-receipt links'> Codename: <a href='https://crdroid.net/" . $k . "' rel='bookmark'>" . $k . "</a></span></br>
 				<span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
 				if (!empty($nick)) {
@@ -165,7 +165,7 @@ function ReturnDeviceInfo($version, $id) {
                         echo "
                 <div class='device'>
                     <div class='main'>
-                    <span class='ti-mobile'> Device: " . $v->devicename . "</span><br>
+                    <span class='ti-mobile'> Device: " . mb_strimwidth($v->devicename,0,20,"...") . "</span><br>
                     <span class='ti-receipt links'> Codename: <a href='https://crdroid.net/" . $k . "' rel='bookmark'>" . $k . "</a></span></br>
                     <span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
                     if (!empty($nick)) {
