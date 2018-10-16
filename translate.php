@@ -65,7 +65,7 @@
         <div class="container">
             <div class="section-title">
                 <h3>Projects</h3>
-                <small>Click on a project badge to start a translation</small>
+                <small>Click on a project badge to start a translation. In case a language is missing, please contact us and let us know.</small>
             </div>
             
             <div class="row">
