@@ -57,7 +57,7 @@
     <header class="bg-gradient">
         <div class="container mt-5">
             <h1>We need your help</h1>
-            <p class="tagline">crDroid needs you help translate all our project to be able to reach out to more and more of you.<br>Want to help, why not check out below for more info, is really easy.<br><br><br></p>
+            <p class="tagline">crDroid needs your help translate all our project to be able to reach out to more and more of you.<br>Want to help, why not check out below for more info, is really easy.<br><br><br></p>
         </div>
     </header>
     
