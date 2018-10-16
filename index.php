@@ -50,7 +50,8 @@
                                 <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">GALLERY</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
-                                <li class="nav-item"><a href="dl.php" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Download</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="translate.php">TRANSLATE</a> </li>
+                                <li class="nav-item"> <a href="dl.php" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">DOWNLOADS</a></li>
                             </ul>
                         </div>
                     </nav>
