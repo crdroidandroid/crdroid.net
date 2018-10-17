@@ -368,7 +368,7 @@
                     <h4 class="mb-3">Are you going to add more features?</h4>
                     <p class="light-font mb-5">No way... Nah... just kidding... We always try to add more and more features with stability and security first in mind. </p>
                     <h4 class="mb-3">How do I become maintainer for crDroid?</h4>
-                    <p class="light-font mb-5">It's really simple. Just message Gabriel over <a href="http://telegram.me/gwolf2u" target="_blank"><span class="ti-headphone-alt" style="font-size: 14px;"></span> Telegram</a> with the device you want to maintain. Note that we only support Oreo builds for new devices as Nougat is only in maintenance mode.</p>
+                    <p class="light-font mb-5">It's really simple. Just message Gabriel over <a href="http://telegram.me/gwolf2u" target="_blank"><span class="ti-headphone-alt" style="font-size: 14px;"></span> Telegram</a> with the device you want to maintain. Note that we only support Pie builds for new devices as Oreo is only in maintenance mode.</p>
                 </div>
             </div>
         </div>
