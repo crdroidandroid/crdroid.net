@@ -45,7 +45,9 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link" href="https://crdroid.net">HOME <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link active" href="#downloads">DOWNLOADS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="translate.php">TRANSLATE</a> </li>
+                                <li class="nav-item"> <a class="nav-link " href="discussions.php">DISCUSSIONS</a> </li>
+                              	<li class="nav-item"> <a href="#downloads" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">DOWNLOADS</a></li>
                             </ul>
                         </div>
                     </nav>
