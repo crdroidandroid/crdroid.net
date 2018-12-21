@@ -76,21 +76,21 @@ if (!empty(GetDeviceName($_GET['name']))) {
         <div class="container">
             <ul class="nav nav-tabs nav-justified" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
+						<a class="nav-link active" data-toggle="tab" href="#crDroid_v5">crDroid Pie <img src="images/beta-stamp.png" width="35"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#crDroid_v5">crDroid Pie <img src="images/beta-stamp.png" width="35"></a>
+                        <a class="nav-link" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="crDroid_v4">
-                        <div class="d-flex flex-column">
-                        <?php ReturnDeviceInfo('v8.1', $id);?>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="crDroid_v5">
+                    <div class="tab-pane fade show active" id="crDroid_v5">
                         <div class="d-flex flex-column">
                         <?php ReturnDeviceInfo('v9.0', $id);?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="crDroid_v4">
+                        <div class="d-flex flex-column">
+                        <?php ReturnDeviceInfo('v8.1', $id);?>
                         </div>
                     </div>
                 </div>
