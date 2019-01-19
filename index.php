@@ -64,9 +64,9 @@
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
             <h1>Welcome to crDroid ROM </h1>
-            <p class="tagline">crDroid is designed to improve the performance, reliability and customizability of stock Android. <br>We officially support <?php include 'handler.php'; echo GetSupportedDevices('8.1'); ?> devices in Android 8.1 Oreo and <?php echo GetSupportedDevices('9.0'); ?> devices in Android 9.0 Pie with more to come.</p>
+            <p class="tagline">crDroid is designed to improve the performance, reliability and customizability of stock Android. <br>We officially support <?php include 'handler.php'; echo GetSupportedDevices('9.0'); ?> devices in Android 9.0 Pie with more to come.</p>
         </div>
-        <div class="img-holder mt-3"><img src="images/ss/1.main.png" alt="phone" class="img-fluid"></div>
+        <div class="img-holder mt-3"><img src="images/ss/1.png" alt="phone" class="img-fluid"></div>
     </header>
     
     <div class="section light-bg" id="features">
@@ -151,17 +151,16 @@
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="general">
                     <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/android-oreo.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <img src="images/android-pie.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
                         <div>
 
                             <h2>Our general features</h2>
-                            <p>Android 8.1.0</p>
+                            <p>Android 9.0 Pie</p>
                             <p>Pixel look and feel</p>
-                            <p>crDroid Music - Music player based on Phonograph</p>
-                            <p>crDroid File Manager - File manager based on Amaze File manager</p>
-                            <p>crDroid Home - Revamped and customized launcher with Google now integration</p>
                             <p>crDroid Settings - Our own chamber of secrets with below customization settings</p>
                             <p>OTA notification for officially supported devices</p>
+                            <p>crDroid Music - Music player based on Phonograph</p>
+                            <p>crDroid Home - Revamped and customized launcher with Google now integration</p>
                             <p>ART and BIONIC optimizations</p>
                         </div>
                     </div>
@@ -170,15 +169,15 @@
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Status bar customizations are here</h2>
-                            <p>Status Bar icons toggle</p>
+                            <p>Status Bar icons toggle (including NFC and Roaming icon toggles)</p>
                             <p>Clock & date customizations</p>
                             <p>Carrier label customizations</p>
-                            <p>Network Traffic customizations</p>
-                            <p>Customization for weather info in statusbar</p>
-                            <p>Data activity toggles</p>
-                            <p>Battery image and percentage toggle</p>
-                            <p>BT battery toggle</p>
-                            <p>Battery Bar customizations</p>
+                            <p>Network Traffic monitor</p>
+                            <p>4G icon toggle</p>
+                            <p>Roaming indicator toggle</p>
+                            <p>BT battery status toggle</p>
+                            <p>Battery style and percentage customizations</p>
+                            <p>Battery bar customizations</p>
                             <p>Custom logo customizations</p>
                             <p>More...</p>
                         </div>
@@ -188,14 +187,12 @@
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Quick settings to move fast</h2>
-                            <p>Custom header customizations</p>
-                            <p>BT battery toggle</p>
-                            <p>Weather tile customizations</p>
-                            <p>Quick scroller for small QS tiles</p>
+                            <p>BT battery status</p>
                             <p>Rows/columns configuration</p>
-                            <p>Brightness slider configuration</p>
+                            <p>Tile title toggle</p>
                             <p>Vibrate on touch toggle</p>
-                            <p>Additional tiles: Sync, Caffeine, Ambient notifications, Sound, Volume, Compass, USB Tethering, Music, Expanded Desktop, PIP, Weather, Reboot/Recovery</p>
+                            <p>Brightness slider configuration</p>
+                            <p>Auto brightness toggle</p>
                         </div>
                     </div>
                 </div>
@@ -203,15 +200,13 @@
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Yeah we got this too</h2>
-                            <p>Customization for weather on lockscreen</p>
-                            <p>Visualization toggle</p>
+                            <p>Music visualization toggle</p>
                             <p>Media cover art toggle</p>
                             <p>Battery info toggle</p>
                             <p>Face auto unlock for recognized trusted faces</p>
                             <p>Tap to sleep toggle</p>
-                            <p>Notifications customizations</p>
-                            <p>Toggle to access power menu and quick settings on secured lock screen</p>
                             <p>Fingerprint authentication vibration toggle</p>
+                            <p>Power menu and quick settings on secured lock screen toggle</p>
                         </div>
                     </div>
                 </div>
@@ -219,16 +214,16 @@
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Buttons since why not?</h2>
-                            <p>Disable navigation HW keys</p>
-                            <p>Backlight toggle and timeout settings</p>
-                            <p>Accidental touch prevention for navigation HW keys</p>
-                            <p>HW button mapping</p>
-                            <p>Advanced reboot toggle</p>
-                            <p>Power menu customizations</p>
+                            <p>Advanced restart toggle</p>
+                            <p>Power menu customizations </p>
                             <p>End call with power button</p>
                             <p>Long press power button for torch</p>
-                            <p>Kill app with back button</p>
                             <p>Wake device with HW non-capacitive button</p>
+                            <p>Answer call with volume button</p>
+                            <p>Control playback with volume buttons</p>
+                            <p>Disable navigation HW keys</p>
+                            <p>Accidental touch prevention for navigation HW keys</p>
+                            <p>Kill app with back button</p>
                             <p>More...</p>
                         </div>
                     </div>
@@ -283,7 +278,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/ss/1.main.png" alt="iphone" class="img-fluid">
+                    <img src="images/ss/1.png" alt="iphone" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -335,17 +330,18 @@
             </div>
 
             <div class="img-gallery owl-carousel owl-theme">
-                <img src="images/ss/2.statusbar.png" alt="image">
-                <img src="images/ss/3.quicksettings1.png" alt="image">
-                <img src="images/ss/4.quicksettings2.png" alt="image">
-                <img src="images/ss/6.recents.png" alt="image">
-                <img src="images/ss/7.navigation.png" alt="image">
-                <img src="images/ss/8.buttons.png" alt="image">
-                <img src="images/ss/9.ui.png" alt="image">
-                <img src="images/ss/10.notifications.png" alt="image">
-                <img src="images/ss/11.sound.png" alt="image">
-                <img src="images/ss/12.misc.png" alt="image">
-                <img src="images/ss/13.about.png" alt="image">
+                <img src="images/ss/2.png" alt="image">
+                <img src="images/ss/3.png" alt="image">
+                <img src="images/ss/4.png" alt="image">
+                <img src="images/ss/6.png" alt="image">
+                <img src="images/ss/7.png" alt="image">
+                <img src="images/ss/8.png" alt="image">
+                <img src="images/ss/9.png" alt="image">
+                <img src="images/ss/10.png" alt="image">
+                <img src="images/ss/11.png" alt="image">
+                <img src="images/ss/12.png" alt="image">
+                <img src="images/ss/13.png" alt="image">
+				<img src="images/ss/14.png" alt="image">
             </div>
         </div>
     </div>
