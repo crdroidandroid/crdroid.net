@@ -76,7 +76,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
         <div class="container">
             <ul class="nav nav-tabs nav-justified" role="tablist">
                     <li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#crDroid_v5">crDroid Pie <img src="images/beta-stamp.png" width="35"></a>
+						<a class="nav-link active" data-toggle="tab" href="#crDroid_v5">crDroid Pie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
