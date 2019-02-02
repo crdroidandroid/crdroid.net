@@ -82,7 +82,7 @@
 		<div id="disqus_thread" style="width: 90%; margin: auto;"></div>
 		<script>
 			var disqus_config = function () {
-				this.page.url = 'https://crdroid.net/discussions.php';
+				this.page.url = 'https://crdroid.net/discuss.php';
 				this.page.identifier = 'crDroid.net - user discussions';
 			};
 			(function() {

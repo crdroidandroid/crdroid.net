@@ -343,7 +343,7 @@
             <img src="img/team/neobuddy89.jpg" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
-                <li><a href="#https://github.com/neobuddy89"><i class="fab fa-github"></i> neobuddy89</a></li>
+                <li><a href="https://github.com/neobuddy89"><i class="fab fa-github"></i> neobuddy89</a></li>
               </ul>
               <span>crDroid Core Developer</span>
               <h4>Pranav</h4>
