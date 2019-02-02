@@ -109,13 +109,13 @@ span {
   font-size: 16px;
   border-radius: 2px;
   right: 15px;
-  bottom: 15px;
+  bottom: 40px;
   transition: background 0.5s;
 }
 
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 15px;
+    bottom: 40px;
   }
 }
 
