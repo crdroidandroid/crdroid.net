@@ -245,6 +245,7 @@ span {
 #hero img {
   max-width: 95%;
   margin-bottom: 30px;
+  max-height: 398px;
 }
 
 #hero .btn-get-started {
