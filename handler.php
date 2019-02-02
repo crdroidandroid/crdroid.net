@@ -165,6 +165,8 @@ function ReturnDeviceInfo($version, $id) {
                     $maintainer = explode("(", $maintainer_arr);
                     if (isset($maintainer[1])) {
                         $nick = str_replace(")","",$maintainer[1]);
+						$nick_arr = explode(",", $nick);
+						$nick = $nick_arr[0];
                     }else{
                         $nick = null;
                     }
