@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <title>crDroid.net - Download crDroid for supported devices</title>
+    <title>crDroid.net - help out with translations</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="official crDroid ROM download page">
+	<meta name="description" content="translations for crDroid Android project">
 	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
     <!-- Favicons -->
@@ -54,8 +54,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="https://crdroid.net">Home</a></li>
-		  <li><a href="translations.php">Translations</a></li>
 		  <li><a href="discuss.php">Discussions</a></li>
+		  <li><a href="dl.php">All devices</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -68,75 +68,56 @@
 <section class="padd-section text-center wow fadeInUp">
     <div class="container">
       <div class="section-title text-center">
-        <h2>Ready to download?</h2>
-        <p class="separator">Below you can find a list with official supported devices.<br>Choose your device and get started using crDroid<br></p>
-		<div class="inputWithIcon"><input type="text" placeholder="Search for your device..." id="search"><i class="fas fa-search fa-lg fa-fw" aria-hidden="true"></i><small>*search can handle device name, codename, crDroid version, maintainer and build type</small></div>
-      </div>
+        <h2>We need your help</h2>
+        <p class="separator">crDroid needs your help translate all our project to be able to reach out to more and more of you.<br>Want to help, why not check out below for more info, is really easy.</p>
+		</div>
     </div>
 </section>
 
-<?php include 'handler.php'; ?>
-<!--==========================
-	Download section
-============================-->
-<div class="container">
-	<div class="col-md-12">    
-		<div class="card card-nav-tabs">
-			<div class="card-header card-header-primary">
-				<div class="nav-tabs-navigation">
-					<div class="nav-tabs-wrapper">
-						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item">
-								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Pie
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Oreo
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="card-body ">
-				<div class="tab-content text-center">
-					<div class="tab-pane fade show active" id="crDroid-v5">
-						<div class="device-holder">
-							<?php ReturnDevices('v9.0') ?>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v4">
-						<div class="device-holder">
-							<?php ReturnDevices('v8.1') ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
+  <!--==========================
+    Get Started Section
+  ============================-->
+  <section class="padd-section text-center wow fadeInUp">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-translation">
+            <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid">
+            <h4>crDroid Settings</h4>
+            <p>This is the place where mission control is running<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-translation/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-frameworks-base">
+            <img src="img/svg/framework.svg" alt="img" class="img-fluid">
+            <h4>Frameworks Base</h4>
+            <p>We need a way to link with Android API don't we<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-frameworks-base/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-home">
+            <img src="img/svg/launcher.svg" alt="img" class="img-fluid">
+            <h4>crDroid Home</h4>
+            <p>Our Launcher from where you start favorite apps<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-home/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
 <?php include 'footer.php';?>
-
-<!--==========================
-	Search script
-============================-->
-<script>
-	$("#search").on("keyup submit", function() {
-		var key = this.value.toLowerCase();
-		if (key == ''){
-			$(".manufacturer").css("display", "inherit");
-		}else{
-			$(".manufacturer").css("display", "none");
-		}
-		$(".device").each(function() {
-			var $this = $(this);
-			$this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
-		});
-	});
-</script>
 
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <title>crDroid.net - Download crDroid for supported devices</title>
+    <title>crDroid.net - user discussions</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="official crDroid ROM download page">
+	<meta name="description" content="user discussions">
 	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
     <!-- Favicons -->
@@ -55,7 +55,7 @@
         <ul class="nav-menu">
           <li><a href="https://crdroid.net">Home</a></li>
 		  <li><a href="translations.php">Translations</a></li>
-		  <li><a href="discuss.php">Discussions</a></li>
+		  <li><a href="dl.php">All devices</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -68,75 +68,35 @@
 <section class="padd-section text-center wow fadeInUp">
     <div class="container">
       <div class="section-title text-center">
-        <h2>Ready to download?</h2>
-        <p class="separator">Below you can find a list with official supported devices.<br>Choose your device and get started using crDroid<br></p>
-		<div class="inputWithIcon"><input type="text" placeholder="Search for your device..." id="search"><i class="fas fa-search fa-lg fa-fw" aria-hidden="true"></i><small>*search can handle device name, codename, crDroid version, maintainer and build type</small></div>
-      </div>
+        <h2>Discussions</h2>
+        <p class="separator">Got something to say? Let the community know!</p>
+		</div>
     </div>
 </section>
 
-<?php include 'handler.php'; ?>
 <!--==========================
-	Download section
+	Content section
 ============================-->
 <div class="container">
 	<div class="col-md-12">    
-		<div class="card card-nav-tabs">
-			<div class="card-header card-header-primary">
-				<div class="nav-tabs-navigation">
-					<div class="nav-tabs-wrapper">
-						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item">
-								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Pie
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Oreo
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="card-body ">
-				<div class="tab-content text-center">
-					<div class="tab-pane fade show active" id="crDroid-v5">
-						<div class="device-holder">
-							<?php ReturnDevices('v9.0') ?>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v4">
-						<div class="device-holder">
-							<?php ReturnDevices('v8.1') ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="disqus_thread" style="width: 90%; margin: auto;"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = 'https://crdroid.net/discussions.php';
+				this.page.identifier = 'crDroid.net - user discussions';
+			};
+			(function() {
+			var d = document, s = d.createElement('script');
+				s.src = 'https://crdroid.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>     
 	</div>
 </div>
 
 <?php include 'footer.php';?>
-
-<!--==========================
-	Search script
-============================-->
-<script>
-	$("#search").on("keyup submit", function() {
-		var key = this.value.toLowerCase();
-		if (key == ''){
-			$(".manufacturer").css("display", "inherit");
-		}else{
-			$(".manufacturer").css("display", "none");
-		}
-		$(".device").each(function() {
-			var $this = $(this);
-			$this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
-		});
-	});
-</script>
 
 </body>
 </html>

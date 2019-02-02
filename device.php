@@ -5,12 +5,11 @@
 include 'handler.php';
 
 if (!empty(GetDeviceName($_GET['name']))) {
-    echo "    <title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
-    echo "    <!-- Required meta tags -->\n";
-    echo "    <meta charset=\"utf-8\">\n";
-    echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n";
-    echo "    <meta name=\"description\" content=\"official crDroid ROM for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "\">\n";
-    echo "    <meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['name']) . ", " . $_GET['name'] .  "\">\n";
+	echo "	<meta charset=\"utf-8\">\n";
+    echo "	<title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
+    echo "	<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\n";
+    echo "	<meta name=\"description\" content=\"official crDroid ROM for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "\">\n";
+    echo "	<meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['name']) . ", " . $_GET['name'] .  "\">\n";
     $id = $_GET['name'];
 }else{
     header("Location: https://crdroid.net/", true, 301);
@@ -18,85 +17,116 @@ if (!empty(GetDeviceName($_GET['name']))) {
 }
 ?>
 
-<link rel="shortcut icon" href="favicon.ico" type="favicon.ico">
-    
-    <!-- Font -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+	<!-- Favicons -->
+	<link href="img/favicon.ico" rel="icon">
+	
+	<!-- Google Fonts -->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Main css -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+	<!-- Bootstrap css -->
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        gtag('config', 'UA-6432969-5');
-    </script>
+	<!-- Libraries CSS Files -->
+	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link href="lib/animate/animate.min.css" rel="stylesheet">
+	<link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- Google verification -->
+	<meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-6432969-5');
+	</script>
 </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="30">
-    <!-- Nav Menu -->
-    <div class="nav-menu fixed-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand" href="https://crdroid.net"><img src="images/logo.png" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-                        <div class="collapse navbar-collapse" id="navbar">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link" href="https://crdroid.net">HOME <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="translate.php">TRANSLATE</a> </li>
-                                <li class="nav-item"> <a class="nav-link " href="discussions.php">DISCUSSIONS</a> </li>
-                              	<li class="nav-item"> <a href="dl.php" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">DOWNLOADS</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
+<body>
+
+<header id="header" class="header header-hide">
+	<div class="container">
+		<div id="logo" class="pull-left">
+			<h1><a href="https://crdroid.net" class="scrollto"><span>cr</span>Droid <span>A</span>ndroid</a></h1>
+			<!-- Uncomment below image logo -->
+			<!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+		</div>
+
+		<nav id="nav-menu-container">
+			<ul class="nav-menu">
+			<li><a href="https://crdroid.net">Home</a></li>
+			<li><a href="translations.php">Translations</a></li>
+			<li><a href="discuss.php">Discussions</a></li>
+			<li><a href="dl.php">All devices</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		</nav>
+	</div>
+</header>
+  
+<!--==========================
+	Get Started Section
+============================-->
+<section class="padd-section text-center wow fadeInUp">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Ready to crDroid-ify your<br><?php echo GetDeviceName($_GET['name']);?>?</h2>
+        <p class="separator">Cool, seems you are ready to download<br>Check below info to get started<br></p>
+	  </div>
     </div>
-    
-    <header class="bg-gradient">
-        <div class="container mt-5">
-            <h1>Ready to crDroid-ify your <br><?php echo GetDeviceName($_GET['name']);?>?</h1>
-            <p class="tagline">Cool, seems you are ready to download<br>Check below info to get started<br><br></p>
-        </div>
-    </header>
-    
-    <div class="section light-bg" id="downloads">
-        <div class="container">
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#crDroid_v5">crDroid Pie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#crDroid_v4">crDroid Oreo</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="crDroid_v5">
-                        <div class="d-flex flex-column">
-                        <?php ReturnDeviceInfo('v9.0', $id);?>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="crDroid_v4">
-                        <div class="d-flex flex-column">
-                        <?php ReturnDeviceInfo('v8.1', $id);?>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-    
-    <?php include 'footer.php';?>
+</section>
+
+<!--==========================
+	Download section
+============================-->
+<div class="container">
+	<div class="col-md-12">    
+		<div class="card card-nav-tabs">
+			<div class="card-header card-header-primary">
+				<div class="nav-tabs-navigation">
+					<div class="nav-tabs-wrapper">
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<li class="nav-item">
+								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Pie
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Oreo
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card-body ">
+				<div class="tab-content text-center">
+					<div class="tab-pane fade show active" id="crDroid-v5">
+						<div class="device-holder">
+							<?php ReturnDeviceInfo('v9.0', $id);?>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="crDroid-v4">
+						<div class="device-holder">
+							<?php ReturnDeviceInfo('v8.1', $id);?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php include 'footer.php';?>
+
 </body>
 </html>

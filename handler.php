@@ -78,15 +78,22 @@ function GetSupportedDevices($version){
 	return $nr_of_devices;
 }
 
+function GetSupportedOEMS($version){
+	$nr_of_oems = 0;
+	$xml = simplexml_load_file('update_v' . $version . '.xml');
+	foreach ($xml as $manufacturer){
+		$nr_of_oems = $nr_of_oems + 1;
+	}
+	return $nr_of_oems;
+}
+
 function ReturnDevices($version) {
 	if (file_exists('update_'. $version . '.xml')) {
 		$xml = simplexml_load_file('update_'. $version . '.xml');
 		foreach($xml as $manufacturer){
 			//manufacturer
 			echo "
-		<div class='manufacturer'>
-			<span class='ti-folder'> " . $manufacturer['id'] . "</span>
-		</div>";
+							<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $manufacturer['id'] . " <i class=\"fas fa-angle-double-right\"></i></div>";
 
 			//devices
 			foreach ($manufacturer as $k => $v) {
@@ -95,54 +102,57 @@ function ReturnDevices($version) {
 				$maintainer = explode("(", $maintainer_arr);
 				if (isset($maintainer[1])) {
 					$nick = str_replace(")","",$maintainer[1]);
+					$nick_arr = explode(",", $nick);
+					$nick = $nick_arr[0];
 				}else{
 					$nick = null;
 				}
-			echo "
-			<div class='device'>
-				<div class='main'>
-				<span class='ti-mobile'> Device: " .  mb_strimwidth($v->devicename,0,20,"...") . "</span><br>
-				<span class='ti-receipt links'> Codename: <a href='https://crdroid.net/" . $k . "' rel='bookmark'>" . $k . "</a></span></br>
-				<span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
-				if (!empty($nick)) {
 					echo "
-				<span class='ti-id-badge'> Nickname: " . $nick . "<span><br>";
-				}
-			echo "
-				<span class='ti-android'> crDroid version: " . $build_date[4] . "</span><br>
-				<span class='ti-calendar'> Last build: " . $build_date[2] . "</span><br>
-				<span class='ti-pencil-alt'> Build type: " . $v->buildtype . "<span><br>
-			</div>
-			<div class='dl'>";
-				if (empty($v->download)) {
-					echo "
-				<span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Download crDroid</span>";
-				}else{
-					echo "
-				<a href='" . $v->download . "' class='btn btn-dark' target='_blank' title='" . $v->filename . "'><span class='ti-import'></span> Download crDroid</a>";
-				}
-				if (empty($v->gapps)) {
-					echo "
-				<span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Google Apps</span>";
-				}else{
-					echo "
-				<a href='" . $v->gapps . "' class='btn btn-orange' target='_blank'><span class='ti-package'></span> Google Apps</a>";
-				}
-				if (empty($v->forum)) {
-					echo "
-				<span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Support Forum</span>";
-				}else{
-					echo "
-				<a href='" . $v->forum . "' class='btn btn-light' target='_blank'><span class='ti-comments-smiley'></span> Support Forum</a>";
-				}
-			echo "
-				</div>
-			</div>
-			";
+							<div class=\"device\">
+								<div class=\"body\">
+									<div class=\"header-row\">
+										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $v->devicename ."</span></div>
+										<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $k . "' rel='bookmark'>" . $k . "</a></span></div>
+									</div>
+									<div class=\"row\">
+										<div class=\"cell alternative\">
+											<span style=\"display: inline-block; text-align: left;\">
+											<div><span class=\"fa fa-user-circle\"></span></div>
+											<div class=\"maintainer\">" . $maintainer[0] . "</div><br>";
+											if (!empty($nick)) {
+												echo "
+											<div><span class=\"far fa-user\"></span></div>
+											<div class=\"nickname\">" . $nick . "</div><br>";}
+											echo "
+											<div><span class=\"fab fa-android\"></span></div>
+											<div class=\"version\">" . $build_date[4] . "</div><br>
+											<div><span class=\"fa fa-calendar-alt\"></span></div>
+											<div class=\"build-date\">" . $build_date[2] . "</div><br>
+											<div><span class=\"fas fa-rss\"></span></div>
+											<div class=\"build-type\">" . $v->buildtype . "</div><br>
+											</span>
+										</div>
+										<div class=\"cell\">
+											<div style=\"float: left\"><div class=\"divider\"></div></div>
+											<div style=\"margin: 0 auto;\">
+												<button onclick=\"location.href='" . $v->download . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
+												if (empty($v->forum)) {
+												echo "
+												<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}else{
+												echo "
+												<button onclick=\"location.href='" . $v->forum . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
+												echo "
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+";
 			}
 		}
 	}
 }
+
 
 function ReturnDeviceInfo($version, $id) {
 	if (file_exists('update_'. $version . '.xml')) {
@@ -159,56 +169,54 @@ function ReturnDeviceInfo($version, $id) {
                         $nick = null;
                     }
                         echo "
-                <div class='manufacturer'>
-                    <span class='ti-folder'> " . $manufacturer['id'] . "</span>
-                </div>";
+							<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $manufacturer['id'] . " <i class=\"fas fa-angle-double-right\"></i></div>";
                         echo "
-                <div class='device'>
-                    <div class='main'>
-                    <span class='ti-mobile'> Device: " . mb_strimwidth($v->devicename,0,20,"...") . "</span><br>
-                    <span class='ti-receipt links'> Codename: <a href='https://crdroid.net/" . $k . "' rel='bookmark'>" . $k . "</a></span></br>
-                    <span class='ti-user'> Maintainer: " . $maintainer[0] . "</span><br>";
-                    if (!empty($nick)) {
-                        echo "
-                    <span class='ti-id-badge'> Nickname: " . $nick . "<span><br>";
-                    }
-                        echo "
-                    <span class='ti-android'> crDroid version: " . $build_date[4] . "</span><br>
-                    <span class='ti-calendar'> Last build: " . $build_date[2] . "</span><br>
-                    <span class='ti-pencil-alt'> Build type: " . $v->buildtype . "<span><br>
-                </div>
-                <div class='dl'>";
-                    if (empty($v->download)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Download crDroid</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->download . "' class='btn btn-dark' target='_blank' title='" . $v->filename . "'><span class='ti-import'></span> Download crDroid</a>";
-                    }
-                    if (empty($v->gapps)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Google Apps</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->gapps . "' class='btn btn-orange' target='_blank'><span class='ti-package'></span> Google Apps</a>";
-                    }
-                    if (empty($v->forum)) {
-                        echo "
-                    <span class='btn btn-disabled' title='Unavailable'><span class='ti-face-sad'></span> Support Forum</span>";
-                    }else{
-                        echo "
-                    <a href='" . $v->forum . "' class='btn btn-light' target='_blank'><span class='ti-comments-smiley'></span> Support Forum</a>";
-                    }
-                echo "
-                    </div>
-                </div>
-                ";
+							<div class=\"device\">
+								<div class=\"body\">
+									<div class=\"header-row\">
+										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $v->devicename ."</span></div>
+										<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $k . "' rel='bookmark'>" . $k . "</a></span></div>
+									</div>
+									<div class=\"row\">
+										<div class=\"cell alternative\">
+											<span style=\"display: inline-block; text-align: left;\">
+											<div><span class=\"fa fa-user-circle\"></span></div>
+											<div class=\"maintainer\">" . $maintainer[0] . "</div><br>";
+											if (!empty($nick)) {
+												echo "
+											<div><span class=\"far fa-user\"></span></div>
+											<div class=\"nickname\">" . $nick . "</div><br>";}
+											echo "
+											<div><span class=\"fab fa-android\"></span></div>
+											<div class=\"version\">" . $build_date[4] . "</div><br>
+											<div><span class=\"fa fa-calendar-alt\"></span></div>
+											<div class=\"build-date\">" . $build_date[2] . "</div><br>
+											<div><span class=\"fas fa-rss\"></span></div>
+											<div class=\"build-type\">" . $v->buildtype . "</div><br>
+											</span>
+										</div>
+										<div class=\"cell\">
+											<div style=\"float: left\"><div class=\"divider\"></div></div>
+											<div style=\"margin: 0 auto;\">
+												<button onclick=\"location.href='" . $v->download . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
+												if (empty($v->forum)) {
+												echo "
+												<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}else{
+												echo "
+												<button onclick=\"location.href='" . $v->forum . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
+												echo "
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+";
                 }
             }
         }
     }
 	if (DeviceExistsInBranch($version, $id) == false) {
-		echo "There is no build information available for this version of crDroid :( <br>Check for other versions in the other tabs.";
+		echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
 	}	
 }
 ?>
