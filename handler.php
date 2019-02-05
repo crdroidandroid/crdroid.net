@@ -3,6 +3,8 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
+$url_crversion="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crdroid/9.0/config/common.mk";
+isUpdateNeeded($url_crversion, 'crversion');
 $url_v8_1="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/8.1/update.xml";
 isUpdateNeeded($url_v8_1, 'v8.1');
 $url_v9_0="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/9.0/update.xml";
@@ -220,5 +222,18 @@ function ReturnDeviceInfo($version, $id) {
 	if (DeviceExistsInBranch($version, $id) == false) {
 		echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
 	}	
+}
+
+function crDroid_Version(){
+	$common = file_get_contents('update_crversion.xml');
+	$arr = explode(' ', $common);
+	foreach ($arr as &$value) {
+		$linenr = $linenr + 1;
+		if (strpos($value, 'CR_VERSION') !== false) {
+			$cr_version =  preg_split("/\r\n|\n|\r/", $arr[$linenr + 1] );
+			return $cr_version[0];
+			break;
+		}
+	}
 }
 ?>

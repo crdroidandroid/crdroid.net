@@ -73,10 +73,10 @@
     <div class="hero-container">
       <h1>Welcome to crDroid ROM</h1>
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
-      <img src="img/hero-img.png" alt="crdroid" height="500">
-      <a href="dl.php" class="btn-get-started scrollto">Get Started</a>
+      <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
+      <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid v<b><?php include 'handler.php'; echo crDroid_Version(); ?></b></a>
       <div class="btns">
-        <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php include 'handler.php'; echo GetSupportedDevices('9.0'); ?> devices officially supported</a>
+        <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php echo GetSupportedDevices('9.0'); ?> devices officially supported</a>
         <a href="dl.php"><i class="fas fa-industry"></i> <?php echo GetSupportedOEMS('9.0'); ?> OEMs officially supported</a>
       </div>
     </div>
