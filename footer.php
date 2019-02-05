@@ -10,7 +10,7 @@ echo "
 			<div class=\"col-md-12 col-lg-4\">
 				<div class=\"footer-logo\">
 					<a class=\"navbar-brand\" href=\"https://crdroid.net\">crDroid Android</a>
-					<p><i class=\"fas fa-search-location\"></i>  GitHub.com<br><i class=\"fas fa-mail-bulk\"></i> <a href=\"mailto:contact@crdroid.net\">contact@crdroid.net</a></p>
+					<p><i class=\"fas fa-map-marked-alt\"></i> <a href=\"https://github.com/crdroidandroid\">crDroid Android @ GitHub</a><br><i class=\"fas fa-mail-bulk\"></i> <a href=\"mailto:contact@crdroid.net\">contact@crdroid.net</a></p>
 				</div>
 			</div>
 		</div>
