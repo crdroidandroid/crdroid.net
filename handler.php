@@ -100,6 +100,7 @@ function ReturnDevices($version) {
 			//devices
 			foreach ($manufacturer as $k => $v) {
 				$build_date = explode("-", $v->filename);
+				$version = explode(".zip", $build_date[4]);
 				$maintainer_arr = $v->maintainer;
 				$maintainer = explode("(", $maintainer_arr);
 				if (isset($maintainer[1])) {
@@ -127,7 +128,7 @@ function ReturnDevices($version) {
 											<div class=\"nickname\">" . $nick . "</div><br>";}
 											echo "
 											<div><span class=\"fab fa-android\"></span></div>
-											<div class=\"version\">" . $build_date[4] . "</div><br>
+											<div class=\"version\">" . $version[0] . "</div><br>
 											<div><span class=\"fa fa-calendar-alt\"></span></div>
 											<div class=\"build-date\">" . $build_date[2] . "</div><br>
 											<div><span class=\"fas fa-rss\"></span></div>
@@ -163,6 +164,7 @@ function ReturnDeviceInfo($version, $id) {
                 foreach ($manufacturer as $k => $v){
                     if ($k == $id){
                     $build_date = explode("-", $v->filename);
+					$version = explode(".zip", $build_date[4]);
                     $maintainer_arr = $v->maintainer;
                     $maintainer = explode("(", $maintainer_arr);
                     if (isset($maintainer[1])) {
@@ -192,7 +194,7 @@ function ReturnDeviceInfo($version, $id) {
 											<div class=\"nickname\">" . $nick . "</div><br>";}
 											echo "
 											<div><span class=\"fab fa-android\"></span></div>
-											<div class=\"version\">" . $build_date[4] . "</div><br>
+											<div class=\"version\">" . $version[0] . "</div><br>
 											<div><span class=\"fa fa-calendar-alt\"></span></div>
 											<div class=\"build-date\">" . $build_date[2] . "</div><br>
 											<div><span class=\"fas fa-rss\"></span></div>
@@ -227,6 +229,7 @@ function ReturnDeviceInfo($version, $id) {
 function crDroid_Version(){
 	$common = file_get_contents('update_crversion.xml');
 	$arr = explode(' ', $common);
+	$linenr = 0;
 	foreach ($arr as &$value) {
 		$linenr = $linenr + 1;
 		if (strpos($value, 'CR_VERSION') !== false) {
