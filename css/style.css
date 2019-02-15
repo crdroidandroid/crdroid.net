@@ -1052,6 +1052,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 	box-shadow: 0 0 4px 2px #909090;
 }
 
+.device-holder .device.unmaintained{
+	background-image: linear-gradient( 235deg, #aaa 50%, #aaa 100%);
+}
+
 .device-holder .device:hover{
 	box-shadow: 0 0 4px 2px #333;
 }

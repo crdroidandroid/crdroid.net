@@ -109,9 +109,16 @@ function ReturnDevices($version) {
 					$nick = $nick_arr[0];
 				}else{
 					$nick = null;
+				}				
+				if (!empty($maintainer[0])) {
+					echo "
+							<div class=\"device\">";
+				}else{
+					echo "
+							<div class=\"device unmaintained\">";
+						$maintainer[0] = '<span style="opacity: 0.3;">Unmaintained <i class="far fa-frown"></i></span>';
 				}
 					echo "
-							<div class=\"device\">
 								<div class=\"body\">
 									<div class=\"header-row\">
 										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $v->devicename ."</span></div>
@@ -176,8 +183,15 @@ function ReturnDeviceInfo($version, $id) {
                     }
                         echo "
 							<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $manufacturer['id'] . " <i class=\"fas fa-angle-double-right\"></i></div>";
+						if (!empty($maintainer[0])) {
+							echo "
+							<div class=\"device\">";
+						}else{
+							echo "
+							<div class=\"device unmaintained\">";
+							$maintainer[0] = '<span style="opacity: 0.3;">Unmaintained <i class="far fa-frown"></i></span>';
+						}
                         echo "
-							<div class=\"device\">
 								<div class=\"body\">
 									<div class=\"header-row\">
 										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $v->devicename ."</span></div>
