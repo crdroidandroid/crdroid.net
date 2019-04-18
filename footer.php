@@ -18,7 +18,7 @@ echo "
 	<div class=\"copyrights\">
 		<div class=\"container\">
 			<p>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update_v8.1.xml')). "</p>
-			<p>&copy; COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED.</p>
+			<p>COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED.</p>
 			<div class=\"credits\">Designed by <a href=\"https://gwolf2u.com\">Lup Gabriel</a></div>
 		</div>
 	</div>
