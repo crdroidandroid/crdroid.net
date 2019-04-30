@@ -340,7 +340,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/neobuddy89.jpg" class="img-responsive" alt="img">
+            <img src="https://avatars.githubusercontent.com/neobuddy89" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/neobuddy89"><i class="fab fa-github"></i> neobuddy89</a></li>
@@ -353,7 +353,7 @@
 
        <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/firebird11.jpg" class="img-responsive" alt="img">
+            <img src="https://avatars.githubusercontent.com/firebird11" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/firebird11"><i class="fab fa-github"></i> firebird11</a></li>
@@ -366,7 +366,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/gwolf2u.jpg" class="img-responsive" alt="img">
+            <img src="https://avatars.githubusercontent.com/gwolf2u" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/gwolf2u"><i class="fab fa-github"></i> gwolf2u</a></li>
@@ -380,7 +380,7 @@
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="img/team/soubhik-khan.jpg" class="img-responsive" alt="img">
+            <img src="https://avatars.githubusercontent.com/soubhik-khan" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/soubhik-khan"><i class="fab fa-github"></i> soubhik-khan</a></li>
