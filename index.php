@@ -223,7 +223,7 @@
                   <div class="top-top">
 
                     <h2>What our users say</h2>
-                    <p>Thanks for the great work, this ROM is realy awesome.</p>
+                    <p>Thanks for the great work, this ROM is really awesome.</p>
                     <h4>nicko.martin<span>XDA Forum</span></h4>
 
                   </div>
