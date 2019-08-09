@@ -1,701 +1,719 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://crdroid.net/</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://crdroid.net/translations.php</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://crdroid.net/discuss.php</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://crdroid.net/dl.php</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://crdroid.net/Z00L</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/Z00T</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/X00T</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/X01BD</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/angler</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/hammerhead</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/marlin</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/shamu</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kiwi</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kuntao</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d850</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d851</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d852</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d855</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/f400</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/g3ds</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/ls990</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/vs985</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/v500</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/h930</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/harpia</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/montana</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/chef</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/osprey</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/potter</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/sanders</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/oneplus2</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/oneplus3</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/cheeseburger</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/dumpling</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/enchilada</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/fajita</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/a7y17lte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/herolte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/hero2lte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/j7xelte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/rimo02a</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/crackling</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/marmite</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/dipper</loc>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/rosy</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/daisy</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/beryllium</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/mido</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://crdroid.net/santoni</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/markw</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/santoni</loc>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/rolex</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/sagit</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/tiffany</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/vince</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/whyred</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/riva</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/chiron</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/jason</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/jasmine_sprout</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/wayne</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kenzo</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/tulip</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/sakura</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/tissot</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/gemini</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/violet</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/lavender</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/sirius</loc>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/wt88047</loc>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/lettuce</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/jalebi</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/ham</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/z2_plus</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/X00TD</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/mata</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/mako</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/bullhead</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/seed</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/sailfish</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/m8</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/m8d</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/prague</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/s2</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/x2</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/zl1</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/A6020</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/a6000</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d800</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d801</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d802</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d803</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/ls980</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/vs980</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/mobee01a</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/athene</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/merlin</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/surnia</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/ether</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/bacon</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/find7</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/serrano3gxx</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/serranodsdd</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/serranoltexx</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/s3ve3g</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/klte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kltedv</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kltekor</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/klteduos</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/starlte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/star2lte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/zerofltexx</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/on7xelte</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/kipper</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/oxygen</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/capricorn</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/natrium</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/scorpio</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/land</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/garlic</loc>
-  <lastmod>2019-05-31T18:57:13+00:00</lastmod>
+  <lastmod>2019-08-09T17:32:51+00:00</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
