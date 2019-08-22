@@ -56,10 +56,11 @@
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#screenshots">Screenshots</a></li>
-		  <li><a href="#testimonials">Testimonials</a></li>
-		  <li><a href="#faq">FAQ</a></li>
-		  <li><a href="translations.php">Translations</a></li>
-		  <li><a href="discuss.php">Discussions</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="translations.php">Translations</a></li>
+          <li><a href="discuss.php">Discussions</a></li>
+          <li><a href="legal.php">Legal</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>

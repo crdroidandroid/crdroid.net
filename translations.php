@@ -54,8 +54,9 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="https://crdroid.net">Home</a></li>
-		  <li><a href="discuss.php">Discussions</a></li>
-		  <li><a href="dl.php">All devices</a></li>
+          <li><a href="discuss.php">Discussions</a></li>
+          <li><a href="dl.php">All devices</a></li>
+          <li><a href="legal.php">Legal</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>

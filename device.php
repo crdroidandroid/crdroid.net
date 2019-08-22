@@ -66,6 +66,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 			<li><a href="translations.php">Translations</a></li>
 			<li><a href="discuss.php">Discussions</a></li>
 			<li><a href="dl.php">All devices</a></li>
+			<li><a href="legal.php">Legal</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
 		</nav>
