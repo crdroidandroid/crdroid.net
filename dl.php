@@ -88,13 +88,18 @@
 					<div class="nav-tabs-wrapper">
 						<ul class="nav nav-tabs" data-tabs="tabs">
 							<li class="nav-item">
+								<a class="nav-link" href="#crDroid-v6" data-toggle="tab">
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6
+								</a>
+							</li>
+							<li class="nav-item">
 								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Pie
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5 (Pie)
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid Oreo
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4 (Oreo)
 								</a>
 							</li>
 						</ul>
@@ -103,6 +108,11 @@
 			</div>
 			<div class="card-body ">
 				<div class="tab-content text-center">
+					<div class="tab-pane fade" id="crDroid-v6">
+						<div class="device-holder">
+							Soon...
+						</div>
+					</div>
 					<div class="tab-pane fade show active" id="crDroid-v5">
 						<div class="device-holder">
 							<?php ReturnDevices('v9.0') ?>
