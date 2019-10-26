@@ -5,8 +5,6 @@
 //error_reporting(E_ALL);
 $url_crversion="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crdroid/9.0/config/common.mk";
 isUpdateNeeded($url_crversion, 'crversion');
-$url_v8_1="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/8.1/update.xml";
-isUpdateNeeded($url_v8_1, 'v8.1');
 $url_v9_0="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/9.0/update.xml";
 isUpdateNeeded($url_v9_0, 'v9.0');
 
