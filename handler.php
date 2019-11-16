@@ -38,19 +38,39 @@ function isUpdateNeeded($url, $version){
 
 function GetDeviceName($id){
 	$name = '';
-	$branches = array("8.1", "9.0");
-	$arrlength = count($branches);
-	
+
+	//the old XML way
+	$xmlbranches = array("8.1", "9.0");
+	$arrlength = count($xmlbranches);
+
 	for($x = 0; $x < $arrlength; $x++) {
-		$xml = simplexml_load_file('update_v' . $branches[$x] . '.xml');
+		$xml = simplexml_load_file('update_v' . $xmlbranches[$x] . '.xml');
 		foreach ($xml as $manufacturer){
 			foreach ($manufacturer as $k => $v){
 				if ($k == $id){
 					$name = $v->devicename;
+					goto endme;
 				}
 			}
 		}
 	}
+
+	//JSON way
+	$jsonbranches = array("6");
+	$arrlength = count($jsonbranches);
+
+	for($x = 0; $x < $arrlength; $x++) {
+		$json_array = json_decode(file_get_contents('devices_handler/' . $jsonbranches[$x] .'.json'), true);
+		foreach($json_array as $key => $arrays){
+			foreach($arrays as $devicecodename => $devicename){
+				if ($devicecodename == $id){
+					$name = $devicename['device'];
+					goto endme;
+				}
+			}
+		}
+	}
+endme:
 	return $name;
 }
 
@@ -61,9 +81,12 @@ function DeviceExistsInBranch($version, $id) {
 		foreach ($manufacturer as $k => $v){
 			if ($k == $id){
 				$result = true;
+				goto endme;
 			}
 		}
 	}
+
+endme:
 	return $result;
 }
 
@@ -127,11 +150,11 @@ function ReturnDevices($version) {
 											<span style=\"display: inline-block; text-align: left;\">
 											<div><span class=\"fa fa-user-circle\"></span></div>
 											<div class=\"maintainer\">" . $maintainer[0] . "</div><br>";
-											if (!empty($nick)) {
-												echo "
+					if (!empty($nick)) {
+						echo "
 											<div><span class=\"far fa-user\"></span></div>
 											<div class=\"nickname\">" . $nick . "</div><br>";}
-											echo "
+						echo "
 											<div><span class=\"fab fa-android\"></span></div>
 											<div class=\"version\">" . $cr_version[0] . "</div><br>
 											<div><span class=\"fa fa-calendar-alt\"></span></div>
@@ -144,12 +167,12 @@ function ReturnDevices($version) {
 											<div style=\"float: left\"><div class=\"divider\"></div></div>
 											<div style=\"margin: 0 auto;\">
 												<button onclick=\"location.href='" . $v->download . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
-												if (empty($v->forum)) {
-												echo "
+						if (empty($v->forum)) {
+							echo "
 												<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}else{
-												echo "
+							echo "
 												<button onclick=\"location.href='" . $v->forum . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
-												echo "
+							echo "
 											</div>
 										</div>
 									</div>
@@ -235,7 +258,7 @@ function ReturnDeviceInfo($version, $id) {
     }
 	if (DeviceExistsInBranch($version, $id) == false) {
 		echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
-	}	
+	}
 }
 
 function crDroid_Version(){
@@ -250,5 +273,142 @@ function crDroid_Version(){
 			break;
 		}
 	}
+}
+
+//JSON way
+function ReadJSON($version){
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		echo "<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $key ." <i class=\"fas fa-angle-double-right\"></i></div>";
+		foreach($arrays as $devicecodename => $devicename){
+			if (!empty($devicename['maintainer'])) {
+				echo "
+						<div class=\"device\">
+						<div class=\"body\">
+								<div class=\"header-row\">
+									<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
+									<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
+								</div>
+								<div class=\"row\">
+									<div class=\"cell alternative\">
+										<span style=\"display: inline-block; text-align: left;\">
+										<div><span class=\"fa fa-user-circle\"></span></div>
+										<div class=\"maintainer\">" . $devicename['maintainer'] . "</div><br>";
+			}else{
+				echo "
+						<div class=\"device unmaintained\">
+						<div class=\"body\">
+								<div class=\"header-row\">
+									<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
+									<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
+								</div>
+								<div class=\"row\">
+									<div class=\"cell alternative\">
+										<span style=\"display: inline-block; text-align: left;\">
+										<div><span class=\"fa fa-user-circle\"></span></div>
+										<div class=\"maintainer\"><span style=\"opacity: 0.3;\">Unmaintained <i class=\"far fa-frown\"></i></span></div><br>";
+			}
+					if (!empty($devicename['nick'])) {
+						echo "
+										<div><span class=\"far fa-user\"></span></div>
+										<div class=\"nickname\">" . $devicename['nick'] . "</div><br>";}
+			echo "
+										<div><span class=\"fab fa-android\"></span></div>
+										<div class=\"version\">" . $devicename['crversion'] . "</div><br>
+										<div><span class=\"fa fa-calendar-alt\"></span></div>
+										<div class=\"build-date\">" . $devicename['builddate'] . "</div><br>
+										<div><span class=\"fas fa-rss\"></span></div>
+										<div class=\"build-type\">" . $devicename['buildtype'] . "</div><br>
+										</span>
+									</div>
+									<div class=\"cell\">
+										<div style=\"float: left\"><div class=\"divider\"></div></div>
+										<div style=\"margin: 0 auto;\">
+											<button onclick=\"location.href='" . $devicename['download'] . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
+					if (empty($devicename['forum'])) {
+						echo "
+											<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";
+					}else{
+						echo "
+											<button onclick=\"location.href='" . $devicename['forum'] . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
+						echo "
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>";
+		}
+		echo "<br />";
+	}
+}
+
+function ReadDeviceJSON($version, $id){
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		foreach($arrays as $devicecodename => $devicename){
+			if ($devicecodename == $id){
+				echo "<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $key ." <i class=\"fas fa-angle-double-right\"></i></div>";
+				if (!empty($devicename['maintainer'])) {
+					echo "
+							<div class=\"device\">
+							<div class=\"body\">
+									<div class=\"header-row\">
+										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
+										<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
+									</div>
+									<div class=\"row\">
+										<div class=\"cell alternative\">
+											<span style=\"display: inline-block; text-align: left;\">
+											<div><span class=\"fa fa-user-circle\"></span></div>
+											<div class=\"maintainer\">" . $devicename['maintainer'] . "</div><br>";
+				}else{
+					echo "
+							<div class=\"device unmaintained\">
+							<div class=\"body\">
+									<div class=\"header-row\">
+										<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
+										<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
+									</div>
+									<div class=\"row\">
+										<div class=\"cell alternative\">
+											<span style=\"display: inline-block; text-align: left;\">
+											<div><span class=\"fa fa-user-circle\"></span></div>
+											<div class=\"maintainer\"><span style=\"opacity: 0.3;\">Unmaintained <i class=\"far fa-frown\"></i></span></div><br>";
+				}
+						if (!empty($devicename['nick'])) {
+							echo "
+											<div><span class=\"far fa-user\"></span></div>
+											<div class=\"nickname\">" . $devicename['nick'] . "</div><br>";}
+				echo "
+											<div><span class=\"fab fa-android\"></span></div>
+											<div class=\"version\">" . $devicename['crversion'] . "</div><br>
+											<div><span class=\"fa fa-calendar-alt\"></span></div>
+											<div class=\"build-date\">" . $devicename['builddate'] . "</div><br>
+											<div><span class=\"fas fa-rss\"></span></div>
+											<div class=\"build-type\">" . $devicename['buildtype'] . "</div><br>
+											</span>
+										</div>
+										<div class=\"cell\">
+											<div style=\"float: left\"><div class=\"divider\"></div></div>
+											<div style=\"margin: 0 auto;\">
+												<button onclick=\"location.href='" . $devicename['download'] . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
+						if (empty($devicename['forum'])) {
+							echo "
+												<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";
+						}else{
+							echo "
+												<button onclick=\"location.href='" . $devicename['forum'] . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
+							echo "
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>";
+						goto endme;
+				}
+			}
+	}
+	echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
+endme:
 }
 ?>

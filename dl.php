@@ -88,17 +88,17 @@
 						<ul class="nav nav-tabs" data-tabs="tabs">
 							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v6" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6 <span class="badge badge-danger">New</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5 (Pie)
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4 (Oreo)
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4
 								</a>
 							</li>
 						</ul>
@@ -109,16 +109,19 @@
 				<div class="tab-content text-center">
 					<div class="tab-pane fade" id="crDroid-v6">
 						<div class="device-holder">
-							Soon...
+							<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
+							<?php ReadJSON(6); ?>
 						</div>
 					</div>
 					<div class="tab-pane fade show active" id="crDroid-v5">
 						<div class="device-holder">
+							<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
 							<?php ReturnDevices('v9.0') ?>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="crDroid-v4">
 						<div class="device-holder">
+							<p>This crDroid version is based on Android 8 (Oreo) released by Google on August 21, 2017</p>
 							<?php ReturnDevices('v8.1') ?>
 						</div>
 					</div>
