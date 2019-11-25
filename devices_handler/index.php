@@ -47,6 +47,7 @@ function FinalizeJSON($version){
 }
 
 function CompileJSON($version) {
+	WriteTmpJSON($version, '{');
 	$files = glob('v' . $version . '.x/*.json', GLOB_BRACE);
 	$tab = "\t";
 	$countto = CountJSON($version);
@@ -77,7 +78,7 @@ function CompileJSON($version) {
 		if (is_null($oem) || is_null($codename) || is_null($device) || is_null($maintainer) || is_null($crversion) || is_null($builddate) || is_null($buildtype) || is_null($download) || is_null($forum)) {
 			goto nextDevice;
 		}
-		WriteTmpJSON($version, '{');
+
 		WriteTmpJSON($version, $tab . '"' . $codename . '": [');
 		WriteTmpJSON($version, $tab . $tab . "{");
 		WriteTmpJSON($version, $tab . $tab . $tab . '"oem": "' . $oem . '",');
@@ -95,10 +96,10 @@ function CompileJSON($version) {
 		}else{
 			WriteTmpJSON($version, $tab . '],');
 		}
-		WriteTmpJSON($version, '}');
-		FinalizeJSON($version);
-nextDevice:
 	}
+nextDevice:
+	WriteTmpJSON($version, '}');
+	FinalizeJSON($version);
 }
 
 if (!$ver == null){
