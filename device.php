@@ -100,7 +100,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" href="#crDroid-v5" data-toggle="tab">
+								<a class="nav-link" href="#crDroid-v5" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5
 								</a>
 							</li>
@@ -121,7 +121,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 							<?php ReadDeviceJSON(6, $id); ?>
 						</div>
 					</div>
-					<div class="tab-pane fade show active" id="crDroid-v5">
+					<div class="tab-pane fade show" id="crDroid-v5">
 						<div class="device-holder">
 							<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
 							<?php ReturnDeviceInfo('v9.0', $id);?>
@@ -140,6 +140,17 @@ if (!empty(GetDeviceName($_GET['name']))) {
 </div>
 
 <?php include 'footer.php';?>
+
+<!-- Default tab -->
+<script type="text/javascript" async=true>
+$(document).ready(function(){
+  activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
+});
+
+function activateTab(tab){
+  $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+};
+</script>
 
 </body>
 </html>

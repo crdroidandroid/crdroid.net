@@ -76,16 +76,27 @@ endme:
 
 function DeviceExistsInBranch($version, $id) {
 	$result = false;
-	$xml = simplexml_load_file('update_' . $version . '.xml');
-	foreach ($xml as $manufacturer){
-		foreach ($manufacturer as $k => $v){
-			if ($k == $id){
-				$result = true;
-				goto endme;
+	if (file_exists('update_' . $version . '.xml')) {
+		$xml = simplexml_load_file('update_' . $version . '.xml');
+		foreach ($xml as $manufacturer){
+			foreach ($manufacturer as $k => $v){
+				if ($k == $id){
+					$result = true;
+					goto endme;
+				}
+			}
+		}
+	} else {
+		$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+		foreach($json_array as $key => $arrays){
+			foreach($arrays as $devicecodename => $devicename){
+				if ($devicecodename == $id){
+					$result = true;
+					goto endme;
+				}
 			}
 		}
 	}
-
 endme:
 	return $result;
 }
@@ -410,5 +421,18 @@ function ReadDeviceJSON($version, $id){
 	}
 	echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
 endme:
+}
+
+function GetLatestcrDroid($device) {
+	// crDroid 4 if default
+	$version = 4;
+	
+	if (DeviceExistsInBranch('v9.0', $device) == true) {
+		$version = 5;
+	}
+	if (DeviceExistsInBranch('6', $device) == true) {
+		$version = 6;
+	}
+return $version;
 }
 ?>
