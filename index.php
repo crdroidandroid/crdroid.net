@@ -76,8 +76,8 @@
       <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
       <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(); ?></b></a>
       <div class="btns">
-        <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php echo GetSupportedDevices('9.0'); ?> devices officially supported</a>
-        <a href="dl.php"><i class="fas fa-industry"></i> <?php echo GetSupportedOEMS('9.0'); ?> OEMs officially supported</a>
+        <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php echo GetSupportedDevices('6'); ?> devices officially supported</a>
+        <a href="dl.php"><i class="fas fa-industry"></i> <?php echo GetSupportedOEMS('6'); ?> OEMs officially supported</a>
       </div>
     </div>
   </section><!-- #hero -->

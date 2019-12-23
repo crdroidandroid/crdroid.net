@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$url_crversion="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crdroid/9.0/config/common.mk";
+$url_crversion="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crdroid/10.0/config/common.mk";
 isUpdateNeeded($url_crversion, 'crversion');
 $url_v9_0="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/9.0/update.xml";
 isUpdateNeeded($url_v9_0, 'v9.0');
@@ -103,10 +103,20 @@ endme:
 
 function GetSupportedDevices($version){
 	$nr_of_devices = 0;
-	$xml = simplexml_load_file('update_v' . $version . '.xml');
-	foreach ($xml as $manufacturer){
-		foreach ($manufacturer as $k => $v){
-			$nr_of_devices = $nr_of_devices + 1;
+	if (file_exists('update_v' . $version . '.xml')) {
+		$xml = simplexml_load_file('update_v' . $version . '.xml');
+		foreach ($xml as $manufacturer){
+			foreach ($manufacturer as $k => $v){
+				$nr_of_devices = $nr_of_devices + 1;
+			}
+		}
+	} else {
+		$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+		foreach($json_array as $key => $arrays){
+			foreach($arrays as $devicecodename => $devicename){
+				$result = true;
+				$nr_of_devices = $nr_of_devices + 1;
+			}
 		}
 	}
 	return $nr_of_devices;
@@ -114,9 +124,17 @@ function GetSupportedDevices($version){
 
 function GetSupportedOEMS($version){
 	$nr_of_oems = 0;
-	$xml = simplexml_load_file('update_v' . $version . '.xml');
-	foreach ($xml as $manufacturer){
-		$nr_of_oems = $nr_of_oems + 1;
+	if (file_exists('update_v' . $version . '.xml')) {
+		$xml = simplexml_load_file('update_v' . $version . '.xml');
+		foreach ($xml as $manufacturer){
+			$nr_of_oems = $nr_of_oems + 1;
+		}
+	} else {
+		$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+		foreach($json_array as $key => $arrays){
+			$result = true;
+			$nr_of_oems = $nr_of_oems + 1;
+		}
 	}
 	return $nr_of_oems;
 }
