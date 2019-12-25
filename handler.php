@@ -367,7 +367,6 @@ function ReadJSON($version){
 							</div>
 						</div>";
 		}
-		echo "<br />";
 	}
 }
 
