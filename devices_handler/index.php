@@ -81,7 +81,7 @@ function CompileJSON($version) {
 
 		WriteTmpJSON($version, $tab . '"' . $codename . '": [');
 		WriteTmpJSON($version, $tab . $tab . "{");
-		WriteTmpJSON($version, $tab . $tab . $tab . '"oem": "' . $oem . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"oem": "' . ucfirst($oem) . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"device": "' . $device . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"maintainer": "' . trim($maintainer) . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"nick": "' . $nick . '",');
