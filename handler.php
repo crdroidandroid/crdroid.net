@@ -341,10 +341,10 @@ function ReadJSON($version){
 
 function convertToMB($val) {
 	$units = "MB";
-	$val = $val / 1000000;
+	$val = $val / 1024 / 1024;
 	$val = round($val, 1);
 	if (strlen($val) > 5) {
-		$val = $val / 1000;
+		$val = $val / 1024;
 		$val = round($val,1);
 		$units = "GB";
 	}
