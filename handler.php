@@ -335,7 +335,7 @@ function ReadJSON($version){
 				</div>
 			</div>";
 		}
-		echo "<div class=\"clearfix\"></div>";
+		echo "<div class=\"clearfix oemsplit\"></div>";
 	}
 }
 

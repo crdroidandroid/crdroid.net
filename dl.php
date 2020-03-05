@@ -145,9 +145,11 @@
 		if (key == ''){
 			$(".manufacturer").css("display", "inherit");
 			$(".manufacturer-2020").css("display", "inherit");
+			$(".oemsplit").css("display", "inherit");
 		}else{
 			$(".manufacturer").css("display", "none");
 			$(".manufacturer-2020").css("display", "none");
+			$(".oemsplit").css("display", "none");
 		}
 		$(".device").each(function() {
 			var $this = $(this);
