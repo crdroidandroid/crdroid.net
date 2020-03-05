@@ -414,25 +414,25 @@ function GenerateModal($version){
 					  </table>
 					  <div class=\"buttons\">
 					  	  <h5 class=\"text-left\">crDroid downloads:</h5>
-						  <button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"location.href='" . $devicename['download'] . "'\"><i class=\"fa fa-arrow-alt-circle-down\"></i> Download latest version</button>
-						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"location.href='https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x'\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
+						  <button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"window.open('" . $devicename['download'] . "','_blank')\"><i class=\"fa fa-arrow-alt-circle-down\"></i> Download latest version</button>
+						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x','_blank')\"'\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
 						  <h5 class=\"text-left\">Useful links:</h5>
-						  <button type=\"button\" class=\"btn btn-warning btn-sm\" onclick=\"location.href='" . $devicename['forum'] . "'\"><i class=\"fa fa-headset\"></i> Support</button>";
+						  <button type=\"button\" class=\"btn btn-warning btn-sm\" onclick=\"window.open('" . $devicename['forum'] . "','_blank')\"><i class=\"fa fa-headset\"></i> Support</button>";
 				if (!empty( $devicename['gapps'])){
 					echo "
-						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"location.href='" . $devicename['gapps'] . "'\"><i class=\"fab fa-google\"></i> Gapps</button>";
+						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"window.open('" . $devicename['gapps'] . "','_blank')\"><i class=\"fab fa-google\"></i> Gapps</button>";
 				}
 				if (!empty( $devicename['recovery'])){
 					echo "
-						  <button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"location.href='" . $devicename['recovery'] . "'\"><i class=\"fas fa-terminal\"></i> Recovery</button>";
+						  <button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"window.open('" . $devicename['recovery'] . "','_blank')\"><i class=\"fas fa-terminal\"></i> Recovery</button>";
 				}
 				if (!empty( $devicename['firmware'])){
 					echo "
-						  <button type=\"button\" class=\"btn btn-secondary btn-sm\" onclick=\"location.href='" . $devicename['firmware'] . "'\"><i class=\"fas fa-microchip\"></i> Firmware</button>";
+						  <button type=\"button\" class=\"btn btn-secondary btn-sm\" onclick=\"window.open('" . $devicename['firmware'] . "','_blank')\"><i class=\"fas fa-microchip\"></i> Firmware</button>";
 				}
 				if (!empty( $devicename['paypal']) && !empty($devicename['maintainer'])){
 					echo "
-						  <button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"location.href='" . $devicename['paypal'] . "'\"><i class=\"fas fa-donate\"></i> Donate to maintainer</button>";
+						  <button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"window.open('" . $devicename['paypal'] . "','_blank')\"><i class=\"fas fa-donate\"></i> Donate to maintainer</button>";
 				}
 				echo "
 					  </div>
