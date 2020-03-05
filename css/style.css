@@ -73,7 +73,7 @@ span {
   padding-right: 0;
 }
 
-.btn {
+.device .btn {
   border: 1px solid #fff;
   border-radius: 50px;
   color: #fff;
@@ -1035,9 +1035,108 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /*--------------------------------------------------------------
 # Download page
 --------------------------------------------------------------*/
-.device-holder {
+.modal-title {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.infobox {
+	margin: 10px;
+}
+
+.infobox .buttons {
 	margin: 0 auto;
-	max-width: 100%;
+	text-align: center;
+}
+
+.infobox .buttons .btn {
+	margin: 5px;
+}
+
+.device-holder-2020 {
+	width: 100%;
+}
+
+.device-holder-2020 .device {
+	float: left;
+    width: 325px;
+	height: 150px;
+	margin: 10px;
+	border-radius: 5px;
+	background-image: linear-gradient( 235deg, #cfd9df 50%, #e2ebf0 100%);
+	border: 1px solid rgba(0,0,0,.125);
+	box-shadow: 0 0 4px -2px #454545;
+	overflow: hidden;
+}
+
+.device-holder-2020 .device:hover {
+	box-shadow: 0 0 4px 1px #454545;
+}
+
+.device-holder-2020 .device.unmaintained{
+	background-image: linear-gradient( 235deg, #aaa 50%, #aaa 100%);
+}
+
+
+.device-holder-2020 .device .imgbox {
+	float: left;
+	width: 90px;
+	overflow: hidden;
+}
+
+.device-holder-2020 .device .imgbox img {
+	max-height: 134px;
+	/**width: 70px;**/
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+.device-holder-2020 .device .details .devicename {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	font-size: 1.05rem;
+}
+
+.device-holder-2020 .device .details .codename {
+	color: #505050;
+	margin-bottom: 0px;
+}
+
+.device-holder-2020 .device .details .codename a {
+	font-weight: 625;
+	text-decoration: none;
+	margin-bottom: 0px;
+}
+
+.device-holder-2020 .device .details .crversion {
+	margin-bottom: 3px;
+}
+
+.device-holder-2020 .device .details .btn {
+	background-color: #454545;
+	border: none;
+	color: white;
+	padding: 12px 16px;
+	font-size: 8px;
+	cursor: pointer;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.closebtn {
+	background-color: #232323;
+	color: #fff;
+	padding: 8px 20px;
+	font-size: 10px;
+	border: none;
+	border-radius: 14px;
+	font-weight: bold;
+}
+
+.closebtn:hover {
+	color: #ccc;
 }
 
 .device-holder .device{
@@ -1106,7 +1205,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 	display: table-row-group;
 }
 
-.btn {
+.device-holder .device .btn {
   background-color: #454545;
   border: none;
   color: white;
@@ -1119,30 +1218,30 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-weight: bold;
 }
 
-.btn::after {
+.device-holder .device .btn::after {
 	content: " Download crDroid"
 }
 
-.btn:hover {
+.device-holder .device .btn:hover {
   background-color: #333333;
 }
 
-.btn:disabled{
+.device-holder .device .btn:disabled{
   background-color: #cccccc;
   color: #666666;
   cursor: no-drop;
 }
 
-.btn.support {
+.device-holder .device .btn.support {
 	background-color: #ffffff;
 	color: #000000;
 }
 
-.btn.support:hover {
+.device-holder .device .btn.support:hover {
 	background-color: #eeeeee;
 }
 
-.btn.support::after {
+.device-holder .device .btn.support::after {
 	content: " Support forum"
 }
 
@@ -1270,6 +1369,11 @@ div.card .card-header-primary {
     position: relative;
 }
 
+.manufacturer-2020 {
+	padding-top: 5px;
+	font-size: 32px;
+}
+
 .manufacturer {
 	padding-top: 5px;
 	font-size: 32px;
@@ -1368,5 +1472,24 @@ input[type="text"]:focus {
 	
 	.nav-tabs .nav-item {
 		margin: 0 auto;
+	}
+
+	.device-holder-2020 .device {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 900px) {	
+	.device-holder-2020 .device {
+		width: 95%;
+	}
+
+	.device-holder-2020 .device .details .devicename {
+		margin-top: 15px;
+		font-size: 0.8em;
+	}
+
+	.device-holder-2020 .device .details p {
+		font-size: 12px;
 	}
 }

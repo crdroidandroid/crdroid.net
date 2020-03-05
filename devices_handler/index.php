@@ -73,6 +73,11 @@ function CompileJSON($version) {
 		$builddate=$builddatea_arr[2] ?? null;
 		$buildtype=$json_data['response'][0]['buildtype'] ?? null;
 		$download=$json_data['response'][0]['download'] ?? null;
+		$gapps=$json_data['response'][0]['gapps'] ?? null;
+		$recovery=$json_data['response'][0]['recovery'] ?? null;
+		$firmware=$json_data['response'][0]['firmware'] ?? null;
+		$paypal=$json_data['response'][0]['paypal'] ?? null;
+		$size=$json_data['response'][0]['size'] ?? null;
 		$forum=$json_data['response'][0]['forum'] ?? null;
 
 		if (is_null($oem) || is_null($codename) || is_null($device) || is_null($maintainer) || is_null($crversion) || is_null($builddate) || is_null($buildtype) || is_null($download) || is_null($forum)) {
@@ -89,6 +94,11 @@ function CompileJSON($version) {
 		WriteTmpJSON($version, $tab . $tab . $tab . '"builddate": "' . $builddate . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"buildtype": "' . $buildtype . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"download": "' . $download . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"gapps": "' . $gapps . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"recovery": "' . $recovery . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"firmware": "' . $firmware . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"paypal": "' . $paypal . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"size": ' . $size . ',');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"forum": "' . $forum . '"');
 		WriteTmpJSON($version, $tab . $tab . '}');
 		if ($countup == $countto){

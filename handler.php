@@ -308,64 +308,143 @@ function crDroid_Version(){
 function ReadJSON($version){
 	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
 	foreach($json_array as $key => $arrays){
-		echo "<div class=\"manufacturer\"><i class=\"fas fa-angle-double-left\"></i> " . $key ." <i class=\"fas fa-angle-double-right\"></i></div>";
+		echo "<div class=\"manufacturer-2020\"><i class=\"fas fa-angle-double-left\"></i> " . $key ." <i class=\"fas fa-angle-double-right\"></i></div>";
 		foreach($arrays as $devicecodename => $devicename){
+			$img = null;
+			$imgpath = "img/devices/" . $devicecodename .".png";
+			if (file_exists($imgpath)){
+				$img = "<img src=\"" . $imgpath ."\" />";
+			} else {
+				$img = "<span style=\"margin-top: 30px; margin-left: 15px; display:block; font-size: 50px;\"><i class=\"fas fa-image\"></i></span>";
+			}
+
 			if (!empty($devicename['maintainer'])) {
 				echo "
-						<div class=\"device\">
-						<div class=\"body\">
-								<div class=\"header-row\">
-									<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
-									<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
-								</div>
-								<div class=\"row\">
-									<div class=\"cell alternative\">
-										<span style=\"display: inline-block; text-align: left;\">
-										<div><span class=\"fa fa-user-circle\"></span></div>
-										<div class=\"maintainer\">" . $devicename['maintainer'] . "</div><br>";
+				<div class=\"device\">";
 			}else{
 				echo "
-						<div class=\"device unmaintained\">
-						<div class=\"body\">
-								<div class=\"header-row\">
-									<div class=\"cell\"><small><span class=\"fa fa-mobile-alt\"></span> Device</small><br><span class=\"device-text\">" . $devicename['device'] ."</span></div>
-									<div class=\"cell\"><small><span class=\"fa fa-code\"></span> Codename</small><br><span class=\"device-text\"><a href='/" . $devicecodename . "' rel='bookmark'>" . $devicecodename . "</a></span></div>
-								</div>
-								<div class=\"row\">
-									<div class=\"cell alternative\">
-										<span style=\"display: inline-block; text-align: left;\">
-										<div><span class=\"fa fa-user-circle\"></span></div>
-										<div class=\"maintainer\"><span style=\"opacity: 0.3;\">Unmaintained <i class=\"far fa-frown\"></i></span></div><br>";
+				<div class=\"device unmaintained\">";
 			}
-					if (!empty($devicename['nick'])) {
-						echo "
-										<div><span class=\"far fa-user\"></span></div>
-										<div class=\"nickname\">" . $devicename['nick'] . "</div><br>";}
 			echo "
-										<div><span class=\"fab fa-android\"></span></div>
-										<div class=\"version\">" . $devicename['crversion'] . "</div><br>
-										<div><span class=\"fa fa-calendar-alt\"></span></div>
-										<div class=\"build-date\">" . $devicename['builddate'] . "</div><br>
-										<div><span class=\"fas fa-rss\"></span></div>
-										<div class=\"build-type\">" . $devicename['buildtype'] . "</div><br>
-										</span>
-									</div>
-									<div class=\"cell\">
-										<div style=\"float: left\"><div class=\"divider\"></div></div>
-										<div style=\"margin: 0 auto;\">
-											<button onclick=\"location.href='" . $devicename['download'] . "'\" class=\"btn\"><i class=\"fa fa-arrow-alt-circle-down\"></i></button>";
-					if (empty($devicename['forum'])) {
-						echo "
-											<button disabled onclick=\"location.href='#'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";
-					}else{
-						echo "
-											<button onclick=\"location.href='" . $devicename['forum'] . "'\" class=\"btn support\"><i class=\"fa fa-headset\"></i></button>";}
-						echo "
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>";
+				<div class=\"imgbox\">" . $img ."</div>
+				<div class=\"details\">
+					<p class=\"devicename\">" . $devicename['device'] ."</p>
+					<p class=\"codename\"><span class=\"fa fa-code\"></span> Codename: <a href=\"/" . $devicecodename ."\">" . $devicecodename . "</a></p>
+					<p class=\"crversion\"><span class=\"fab fa-android\"></span> crDroid version: " . $devicename['crversion'] . "</p>
+					<a href=\"#\" class=\"btn\" data-toggle=\"modal\" data-target=\"#" . $devicecodename . $version ."\">Download details</a>
+				</div>
+			</div>";
+		}
+		echo "<div class=\"clearfix\"></div>";
+	}
+}
+
+function convertToMB($val) {
+	$units = "MB";
+	$val = $val / 1000000;
+	$val = round($val, 1);
+	if (strlen($val) > 5) {
+		$val = $val / 1000;
+		$val = round($val,1);
+		$units = "GB";
+	}
+	return $val . " " . $units;
+}
+
+function GenerateModal($version){
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		foreach($arrays as $devicecodename => $devicename){
+			echo "
+			<div class=\"modal fade\" id=\"" . $devicecodename . $version . "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+			<div class=\"modal-dialog\" role=\"document\">
+			  <div class=\"modal-content\">
+				<div class=\"modal-header\">
+				  <h5 class=\"modal-title\" id=\"exampleModalLabel\">crDroid for ". $devicename['device'] ."</h5>
+				  <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+					<span aria-hidden=\"true\">&times;</span>
+				  </button>
+				</div>
+				<div class=\"modal-body\">
+					<div class=\"infobox\">";
+			if (empty($devicename['maintainer'])) {
+					echo "<div class=\"alert alert-warning\" role=\"alert\">This is device is no longer maintained. Want to maintain it? Read how to become maintainer @ <a href=\"https://github.com/crdroidandroid/android/blob/10.0/README.mkdn#3-how-to-become-an-official-maintainer\" target=\"_blank\" class=\"alert-link\">GitHub</a>.</div>";
+				}
+			echo "
+					<table class=\"table table-sm table-borderless\">
+					  <tbody>
+						  <tr>
+						  <th scope=\"row\"><span class=\"fa fa-code\"></span> Codename</th>
+						  <td>" . $devicecodename . "</td>
+						  </tr>";
+			if (!empty($devicename['maintainer'])) {
+				echo "
+						  <tr>
+						  <th scope=\"row\"><i class=\"fas fa-user-secret\"></i> Maintainer</th>
+						  <td>" . $devicename['maintainer'] . "</td>
+						  </tr>";
+			}
+			if (!empty($devicename['nick'])) {
+				echo "
+						  <tr>
+						  <th scope=\"row\"><span class=\"far fa-user\"></span> Nickname</th>
+						  <td>" . $devicename['nick'] . "</td>
+						  </tr>";
+			}
+			$size = (int)$devicename['size'];
+			$zipsize = convertToMB($size);
+				echo "
+						  <tr>
+						  <th scope=\"row\"><span class=\"fab fa-android\"></span> crDroid version</th>
+						  <td>" . $devicename['crversion'] . "</td>
+						  </tr>
+						  <tr>
+						  <th scope=\"row\"><span class=\"fa fa-calendar-alt\"></span> Build date</th>
+						  <td>" . $devicename['builddate'] . "</td>
+						  </tr>
+						  <tr>
+						  <th scope=\"row\"><i class=\"fas fa-hdd\"></i> Size</th>
+						  <td>" . $zipsize . "</td>
+						  </tr>
+						  <tr>
+						  <th scope=\"row\"><i class=\"fas fa-sitemap\"></i> Build type</th>
+						  <td>" . $devicename['buildtype'] . "</td>
+						  </tr>
+					  </tbody>
+					  </table>
+					  <div class=\"buttons\">
+					  	  <h5 class=\"text-left\">crDroid downloads:</h5>
+						  <button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"location.href='" . $devicename['download'] . "'\"><i class=\"fa fa-arrow-alt-circle-down\"></i> Download latest version</button>
+						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"location.href='https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x'\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
+						  <h5 class=\"text-left\">Useful links:</h5>
+						  <button type=\"button\" class=\"btn btn-warning btn-sm\" onclick=\"location.href='" . $devicename['forum'] . "'\"><i class=\"fa fa-headset\"></i> Support</button>";
+				if (!empty( $devicename['gapps'])){
+					echo "
+						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"location.href='" . $devicename['gapps'] . "'\"><i class=\"fab fa-google\"></i> Gapps</button>";
+				}
+				if (!empty( $devicename['recovery'])){
+					echo "
+						  <button type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"location.href='" . $devicename['recovery'] . "'\"><i class=\"fas fa-terminal\"></i> Recovery</button>";
+				}
+				if (!empty( $devicename['firmware'])){
+					echo "
+						  <button type=\"button\" class=\"btn btn-secondary btn-sm\" onclick=\"location.href='" . $devicename['firmware'] . "'\"><i class=\"fas fa-microchip\"></i> Firmware</button>";
+				}
+				if (!empty( $devicename['paypal']) && !empty($devicename['maintainer'])){
+					echo "
+						  <button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"location.href='" . $devicename['paypal'] . "'\"><i class=\"fas fa-donate\"></i> Donate to maintainer</button>";
+				}
+				echo "
+					  </div>
+					</div>
+				</div>
+				<div class=\"modal-footer\">
+				  <button type=\"button\" class=\"btn closebtn\" data-dismiss=\"modal\">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+			";
 		}
 	}
 }

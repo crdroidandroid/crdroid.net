@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
 	<!-- Bootstrap css -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Libraries CSS Files -->
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@
       <div class="section-title text-center">
         <h2>Ready to download?</h2>
         <p class="separator">Below you can find a list with official supported devices.<br>Choose your device and get started using crDroid<br></p>
-		<div class="inputWithIcon"><input type="text" placeholder="Search for your device..." id="search"><i class="fas fa-search fa-lg fa-fw" aria-hidden="true"></i><small>*search can handle device name, codename, crDroid version, maintainer and build type</small></div>
+		<div class="inputWithIcon"><input type="text" placeholder="Search for your device..." id="search"><i class="fas fa-search fa-lg fa-fw" aria-hidden="true"></i><small>*search can handle device name, codename, crDroid version or maintainer</small></div>
       </div>
     </div>
 </section>
@@ -108,8 +108,8 @@
 			<div class="card-body ">
 				<div class="tab-content text-center">
 					<div class="tab-pane fade show active" id="crDroid-v6">
-						<div class="device-holder">
-							<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
+						<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
+						<div class="device-holder-2020">
 							<?php ReadJSON(6); ?>
 						</div>
 					</div>
@@ -131,6 +131,9 @@
 	</div>
 </div>
 
+<!-- Modal -->
+<?php GenerateModal(6); ?>
+
 <?php include 'footer.php';?>
 
 <!--==========================
@@ -141,8 +144,10 @@
 		var key = this.value.toLowerCase();
 		if (key == ''){
 			$(".manufacturer").css("display", "inherit");
+			$(".manufacturer-2020").css("display", "inherit");
 		}else{
 			$(".manufacturer").css("display", "none");
+			$(".manufacturer-2020").css("display", "none");
 		}
 		$(".device").each(function() {
 			var $this = $(this);
@@ -150,6 +155,8 @@
 		});
 	});
 </script>
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
