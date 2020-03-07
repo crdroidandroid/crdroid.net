@@ -1469,7 +1469,13 @@ input[type="text"]:focus {
 	.device-holder .cell {
 		font-size: 12px;
 	}
-	
+  
+  .device-holder .device .btn {
+    padding: 8px 10px;
+    font-size: 8px;
+    margin-top: 20px;
+}
+
 	.device-holder .header-row .device-text {
 		font-size: 14px;
 	}
