@@ -1047,6 +1047,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   float: left;
   height: 350px;
   min-width: 350px;
+  max-width: 350px;
   display: block;
   padding: 5px;
   margin-top: 40px;
