@@ -368,7 +368,7 @@ function GenerateModal($version){
 				<div class=\"modal-body\">
 					<div class=\"infobox\">";
 			if (empty($devicename['maintainer'])) {
-					echo "<div class=\"alert alert-warning\" role=\"alert\">This is device is no longer maintained. Want to maintain it? Read how to become maintainer @ <a href=\"https://github.com/crdroidandroid/android/blob/10.0/README.mkdn#3-how-to-become-an-official-maintainer\" target=\"_blank\" class=\"alert-link\">GitHub</a>.</div>";
+					echo "<div class=\"alert alert-warning\" role=\"alert\">This device is no longer maintained. Want to maintain it? Read how to become maintainer @ <a href=\"https://github.com/crdroidandroid/android/blob/10.0/README.mkdn#3-how-to-become-an-official-maintainer\" target=\"_blank\" class=\"alert-link\">GitHub</a>.</div>";
 				}
 			echo "
 					<table class=\"table table-sm table-borderless\">
@@ -474,7 +474,7 @@ function ReadDeviceJSON($version, $id){
 				}
 
 				if (empty($devicename['maintainer'])) {
-					echo "<div class=\"alert alert-warning\" role=\"alert\">This is device is no longer maintained. Want to maintain it? Read how to become maintainer @ <a href=\"https://github.com/crdroidandroid/android/blob/10.0/README.mkdn#3-how-to-become-an-official-maintainer\" target=\"_blank\" class=\"alert-link\">GitHub</a>.</div>";
+					echo "<div class=\"alert alert-warning\" role=\"alert\">This device is no longer maintained. Want to maintain it? Read how to become maintainer @ <a href=\"https://github.com/crdroidandroid/android/blob/10.0/README.mkdn#3-how-to-become-an-official-maintainer\" target=\"_blank\" class=\"alert-link\">GitHub</a>.</div>";
 				}
 
 				echo "
