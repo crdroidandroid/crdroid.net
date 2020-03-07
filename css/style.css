@@ -1053,6 +1053,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 	margin: 5px;
 }
 
+.infobox .buttons .dropdown-item {
+	font-size: 12px;
+}
+
 .device-holder-2020 {
 	width: 100%;
 }

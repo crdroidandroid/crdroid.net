@@ -417,7 +417,18 @@ function GenerateModal($version){
 						  <button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"window.open('" . $devicename['download'] . "','_blank')\"><i class=\"fa fa-arrow-alt-circle-down\"></i> Download latest version</button>
 						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x','_blank')\"'\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
 						  <h5 class=\"text-left\">Useful links:</h5>
-						  <button type=\"button\" class=\"btn btn-warning btn-sm\" onclick=\"window.open('" . $devicename['forum'] . "','_blank')\"><i class=\"fa fa-headset\"></i> Support</button>";
+						  <div class=\"btn-group\">
+  							<button type=\"button\" class=\"btn btn-warning btn-sm dropdown-toggle\"><i class=\"fa fa-headset\"></i> Support</button>
+							<div class=\"dropdown-menu\">
+								<a class=\"dropdown-item\" href=\"" . $devicename['forum'] . "\" target=\"_blank\"><i class=\"fas fa-bullhorn\"></i> Forum</a>";
+			if (!empty($devicename['telegram'])){
+				echo "			<a class=\"dropdown-item\" href=\"" . $devicename['telegram'] . "\" target=\"_blank\"><i class=\"fab fa-telegram-plane\"></i> Telegram</a>";
+			}
+				echo "
+							</div>
+						</div>			 
+						  ";
+						  
 				if (!empty( $devicename['gapps'])){
 					echo "
 						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"window.open('" . $devicename['gapps'] . "','_blank')\"><i class=\"fab fa-google\"></i> Gapps</button>";

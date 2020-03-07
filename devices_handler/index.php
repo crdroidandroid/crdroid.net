@@ -77,6 +77,7 @@ function CompileJSON($version) {
 		$recovery=$json_data['response'][0]['recovery'] ?? null;
 		$firmware=$json_data['response'][0]['firmware'] ?? null;
 		$paypal=$json_data['response'][0]['paypal'] ?? null;
+		$telegram=$json_data['response'][0]['telegram'] ?? null;
 		$size=$json_data['response'][0]['size'] ?? null;
 		$forum=$json_data['response'][0]['forum'] ?? null;
 
@@ -98,6 +99,7 @@ function CompileJSON($version) {
 		WriteTmpJSON($version, $tab . $tab . $tab . '"recovery": "' . $recovery . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"firmware": "' . $firmware . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"paypal": "' . $paypal . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"telegram": "' . $telegram . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"size": ' . $size . ',');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"forum": "' . $forum . '"');
 		WriteTmpJSON($version, $tab . $tab . '}');
