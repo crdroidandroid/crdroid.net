@@ -535,6 +535,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding-top: 80px;
 }
 
+.devicespecific-padd-section {
+  padding-top: 80px;
+}
+
 @media (max-width: 992px) {
   .padd-section {
     padding-top: 40px;
@@ -1035,6 +1039,53 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /*--------------------------------------------------------------
 # Download page
 --------------------------------------------------------------*/
+.devicespecific {
+  width: 100%;
+}
+
+.devicespecific .imgbox {
+  float: left;
+  height: 350px;
+  min-width: 350px;
+  display: block;
+  padding: 5px;
+  margin-top: 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.devicespecific .imgbox img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.devicespecific .details {
+  float: right;
+  min-width: 65%;
+}
+
+.devicespecific .details h3 {
+  font-size: 1.85em;
+  color: #666666;
+}
+
+.devicespecific .details tr{
+  text-align: left;
+}
+
+.devicespecific .details .buttons {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.devicespecific .details .btn {
+	margin: 5px;
+}
+
+.devicespecific .details .dropdown-item {
+	font-size: 12px;
+}
+
 .modal-title {
 	font-weight: bold;
 	font-size: 16px;
@@ -1063,7 +1114,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .device-holder-2020 .device {
 	float: left;
-    width: 325px;
+  width: 325px;
 	height: 150px;
 	margin: 10px;
 	border-radius: 5px;
@@ -1501,5 +1552,18 @@ input[type="text"]:focus {
 
 	.device-holder-2020 .device .details p {
 		font-size: 12px;
-	}
+  }
+  
+  .devicespecific .details h3 {
+    font-size: 1.25em;
+  }
+
+  .devicespecific .details {
+    min-width: 95%;
+  }
+
+  .devicespecific .imgbox {
+    margin-top: auto;
+    min-width: auto;
+  }
 }

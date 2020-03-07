@@ -25,7 +25,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
 	<!-- Bootstrap css -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Libraries CSS Files -->
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -75,10 +75,9 @@ if (!empty(GetDeviceName($_GET['name']))) {
 <!--==========================
 	Get Started Section
 ============================-->
-<section class="padd-section text-center wow fadeInUp">
+<section class="devicespecific-padd-section text-center wow fadeInUp">
     <div class="container">
       <div class="section-title text-center">
-        <h2>Ready to crDroid-ify your<br><?php echo GetDeviceName($_GET['name']);?>?</h2>
         <p class="separator">Cool, seems you are ready to download<br>Check below info to get started<br></p>
 	  </div>
     </div>
@@ -116,9 +115,9 @@ if (!empty(GetDeviceName($_GET['name']))) {
 			<div class="card-body ">
 				<div class="tab-content text-center">
 					<div class="tab-pane fade" id="crDroid-v6">
-						<div class="device-holder">
+						<div class="devicespecific">
 							<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
-							<?php ReadDeviceJSON(6, $id); ?>
+							<?php ReadDeviceJSON(6, $id); ?>							
 						</div>
 					</div>
 					<div class="tab-pane fade show" id="crDroid-v5">
@@ -150,7 +149,20 @@ $(document).ready(function(){
 function activateTab(tab){
   $('.nav-tabs a[href="#' + tab + '"]').tab('show');
 };
+
+$('.dropdown-toggle').click(function(){
+	$('.dropdown-menu').toggleClass('show');
+});
+$(".dropdown-menu").mouseleave(function(){
+	$(".dropdown-menu").removeClass("show");
+});
+$('.close, .closebtn').click(function(){
+	$('.dropdown-menu').removeClass('show');
+});
 </script>
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
