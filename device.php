@@ -30,9 +30,8 @@ if (!empty(GetDeviceName($_GET['name']))) {
 	<!-- Libraries CSS Files -->
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
 	<!-- Main Stylesheet File -->
 	<link href="css/style.css" rel="stylesheet">

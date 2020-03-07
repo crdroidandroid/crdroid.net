@@ -373,6 +373,10 @@ function GenerateModal($version){
 			echo "
 					<table class=\"table table-sm table-borderless\">
 					  <tbody>
+					  	  <tr>
+					  	  <th scope=\"row\"><i class=\"fas fa-copyright\"></i> OEM</th>
+					  	  <td>" . $key . "</td>
+					  	  </tr>
 						  <tr>
 						  <th scope=\"row\"><span class=\"fa fa-code\"></span> Codename</th>
 						  <td>" . $devicecodename . "</td>
@@ -380,14 +384,14 @@ function GenerateModal($version){
 			if (!empty($devicename['maintainer'])) {
 				echo "
 						  <tr>
-						  <th scope=\"row\"><i class=\"fas fa-user-secret\"></i> Maintainer</th>
+						  <th scope=\"row\"><i class=\"far fa-id-card\"></i> Maintainer</th>
 						  <td>" . $devicename['maintainer'] . "</td>
 						  </tr>";
 			}
 			if (!empty($devicename['nick'])) {
 				echo "
 						  <tr>
-						  <th scope=\"row\"><span class=\"far fa-user\"></span> Nickname</th>
+						  <th scope=\"row\"><i class=\"fas fa-id-card-alt\"></i> Nickname</th>
 						  <td>" . $devicename['nick'] . "</td>
 						  </tr>";
 			}
@@ -399,11 +403,11 @@ function GenerateModal($version){
 						  <td>" . $devicename['crversion'] . "</td>
 						  </tr>
 						  <tr>
-						  <th scope=\"row\"><span class=\"fa fa-calendar-alt\"></span> Build date</th>
+						  <th scope=\"row\"><i class=\"fas fa-business-time\"></i> Build date</th>
 						  <td>" . $devicename['builddate'] . "</td>
 						  </tr>
 						  <tr>
-						  <th scope=\"row\"><i class=\"fas fa-hdd\"></i> Size</th>
+						  <th scope=\"row\"><i class=\"fas fa-box-open\"></i> ZIP size</th>
 						  <td>" . $zipsize . "</td>
 						  </tr>
 						  <tr>
@@ -486,6 +490,10 @@ function ReadDeviceJSON($version, $id){
 					<hr>
 					<table class=\"table table-sm table-borderless\">
 					  <tbody>
+					  	  <tr>
+					  	  <th scope=\"row\"><i class=\"fas fa-copyright\"></i> OEM</th>
+					  	  <td>" . $key . "</td>
+					  	  </tr>
 						  <tr>
 						  <th scope=\"row\"><span class=\"fa fa-code\"></span> Codename</th>
 						  <td>" . $devicecodename . "</td>
@@ -493,14 +501,14 @@ function ReadDeviceJSON($version, $id){
 			if (!empty($devicename['maintainer'])) {
 				echo "
 						  <tr>
-						  <th scope=\"row\"><i class=\"fas fa-user-secret\"></i> Maintainer</th>
+						  <th scope=\"row\"><i class=\"far fa-id-card\"></i> Maintainer</th>
 						  <td>" . $devicename['maintainer'] . "</td>
 						  </tr>";
 			}
 			if (!empty($devicename['nick'])) {
 				echo "
 						  <tr>
-						  <th scope=\"row\"><span class=\"far fa-user\"></span> Nickname</th>
+						  <th scope=\"row\"><i class=\"fas fa-id-card-alt\"></i> Nickname</th>
 						  <td>" . $devicename['nick'] . "</td>
 						  </tr>";
 			}
@@ -512,11 +520,11 @@ function ReadDeviceJSON($version, $id){
 						  <td>" . $devicename['crversion'] . "</td>
 						  </tr>
 						  <tr>
-						  <th scope=\"row\"><span class=\"fa fa-calendar-alt\"></span> Build date</th>
+						  <th scope=\"row\"><i class=\"fas fa-business-time\"></i> Build date</th>
 						  <td>" . $devicename['builddate'] . "</td>
 						  </tr>
 						  <tr>
-						  <th scope=\"row\"><i class=\"fas fa-hdd\"></i> Size</th>
+						  <th scope=\"row\"><i class=\"fas fa-box-open\"></i> ZIP size</th>
 						  <td>" . $zipsize . "</td>
 						  </tr>
 						  <tr>
