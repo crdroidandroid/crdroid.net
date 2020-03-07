@@ -1564,6 +1564,6 @@ input[type="text"]:focus {
 
   .devicespecific .imgbox {
     margin-top: auto;
-    min-width: auto;
+    min-width: 100%;
   }
 }
