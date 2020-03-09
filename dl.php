@@ -7,7 +7,7 @@
 	<meta name="description" content="official crDroid ROM download page">
 	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
-    <!-- Favicons -->
+	<!-- Favicons -->
 	<link href="img/favicon.ico" rel="icon">
 	
 	<!-- Google Fonts -->

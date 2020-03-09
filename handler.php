@@ -3,8 +3,6 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$url_crversion="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crdroid/10.0/config/common.mk";
-isUpdateNeeded($url_crversion, 'crversion');
 $url_v9_0="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/9.0/update.xml";
 isUpdateNeeded($url_v9_0, 'v9.0');
 
@@ -290,18 +288,19 @@ function ReturnDeviceInfo($version, $id) {
 	}
 }
 
-function crDroid_Version(){
-	$common = file_get_contents('update_crversion.xml');
-	$arr = explode(' ', $common);
-	$linenr = 0;
-	foreach ($arr as &$value) {
-		$linenr = $linenr + 1;
-		if (strpos($value, 'CR_VERSION') !== false) {
-			$cr_version =  preg_split("/\r\n|\n|\r/", $arr[$linenr + 1] );
-			return $cr_version[0];
-			break;
+function crDroid_Version($version){
+	$cr = null;
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		foreach($arrays as $devicecodename => $devicename){
+			if (is_null($cr)){
+				$cr = $devicename['crversion'];
+			} elseif ($cr < $devicename['crversion']) {
+				$cr = $devicename['crversion'];
+			}
 		}
 	}
+	return $cr;
 }
 
 //JSON way

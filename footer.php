@@ -17,7 +17,6 @@ echo "
 	</div>
 	<div class=\"copyrights\">
 		<div class=\"container\">
-			<p>Showing data from cache set " . date("F d Y H:i:s.", filemtime('update_crversion.xml')). "</p>
 			<p>COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED.</p>
 			<div class=\"credits\">Designed by <a href=\"https://gwolf2u.com\">Lup Gabriel</a></div>
 		</div>
@@ -33,7 +32,6 @@ echo "
 <script src=\"lib/superfish/hoverIntent.js\"></script>
 <script src=\"lib/superfish/superfish.min.js\"></script>
 <script src=\"lib/easing/easing.min.js\"></script>
-<script src=\"lib/modal-video/js/modal-video.js\"></script>
 <script src=\"lib/owlcarousel/owl.carousel.min.js\"></script>
 <script src=\"lib/wow/wow.min.js\"></script>
 

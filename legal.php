@@ -7,7 +7,7 @@
 	<meta name="description" content="legal">
 	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
-    <!-- Favicons -->
+	<!-- Favicons -->
 	<link href="img/favicon.ico" rel="icon">
 	
 	<!-- Google Fonts -->
@@ -15,14 +15,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
 	<!-- Bootstrap css -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Libraries CSS Files -->
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
 	<!-- Main Stylesheet File -->
 	<link href="css/style.css" rel="stylesheet">

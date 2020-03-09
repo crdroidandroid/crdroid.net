@@ -15,14 +15,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
 	<!-- Bootstrap css -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Libraries CSS Files -->
 	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 	<link href="lib/animate/animate.min.css" rel="stylesheet">
-	<link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
 	<!-- Main Stylesheet File -->
 	<link href="css/style.css" rel="stylesheet">
@@ -74,7 +73,7 @@
       <h1>Welcome to crDroid ROM</h1>
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
       <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
-      <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(); ?></b></a>
+      <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(6); ?></b></a>
       <div class="btns">
         <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php echo GetSupportedDevices('6'); ?> devices officially supported</a>
         <a href="dl.php"><i class="fas fa-industry"></i> <?php echo GetSupportedOEMS('6'); ?> OEMs officially supported</a>
