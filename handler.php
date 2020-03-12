@@ -431,7 +431,11 @@ function GenerateModal($version){
 							</div>
 						</div>			 
 						  ";
-						  
+				$changelogLink = "devices_handler/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
+				if (file_exists($changelogLink)){
+					echo "
+						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
+				}
 				if (!empty( $devicename['gapps'])){
 					echo "
 						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"window.open('" . $devicename['gapps'] . "','_blank')\"><i class=\"fab fa-google\"></i> Gapps</button>";
@@ -548,7 +552,11 @@ function ReadDeviceJSON($version, $id){
 							</div>
 						</div>			 
 						  ";
-						  
+				$changelogLink = "devices_handler/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
+				if (file_exists($changelogLink)){
+					echo "
+						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
+				}
 				if (!empty( $devicename['gapps'])){
 					echo "
 						  <button type=\"button\" class=\"btn btn-info btn-sm\" onclick=\"window.open('" . $devicename['gapps'] . "','_blank')\"><i class=\"fab fa-google\"></i> Gapps</button>";
