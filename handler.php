@@ -312,7 +312,7 @@ function ReadJSON($version){
 			$img = null;
 			$imgpath = "img/devices/" . $devicecodename .".png";
 			if (file_exists($imgpath)){
-				$img = "<img src=\"" . $imgpath ."\" />";
+				$img = "<img class=\"lazy\" data-src=\"" . $imgpath ."\" />";
 			} else {
 				$img = "<span style=\"margin-top: 30px; margin-left: 15px; display:block; font-size: 50px;\"><i class=\"fas fa-image\"></i></span>";
 			}
