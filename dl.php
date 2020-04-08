@@ -154,6 +154,9 @@
 			var $this = $(this);
 			$this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
 		});
+		var instance = $('.lazy').Lazy({ chainable: false });
+		$('.lazy').Lazy();
+    	var instance = $('.lazy').data("plugin_lazy");
 	});
 	$('.dropdown-toggle').click(function(){
 		$('.dropdown-menu').toggleClass('show');
