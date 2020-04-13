@@ -350,6 +350,11 @@ function convertToMB($val) {
 	return $val . " " . $units;
 }
 
+function beautifyDate($val) {
+	$split = str_split($val, 2);
+	return $split[0] . $split[1] . "-" . $split[2] . "-" . $split[3];
+}
+
 function GenerateModal($version){
 	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
 	foreach($json_array as $key => $arrays){
@@ -403,7 +408,7 @@ function GenerateModal($version){
 						  </tr>
 						  <tr>
 						  <th scope=\"row\"><i class=\"fas fa-business-time\"></i> Build date</th>
-						  <td>" . $devicename['builddate'] . "</td>
+						  <td>" . beautifyDate($devicename['builddate']) . "</td>
 						  </tr>
 						  <tr>
 						  <th scope=\"row\"><i class=\"fas fa-box-open\"></i> ZIP size</th>
@@ -524,7 +529,7 @@ function ReadDeviceJSON($version, $id){
 						  </tr>
 						  <tr>
 						  <th scope=\"row\"><i class=\"fas fa-business-time\"></i> Build date</th>
-						  <td>" . $devicename['builddate'] . "</td>
+						  <td>" . beautifyDate($devicename['builddate']) . "</td>
 						  </tr>
 						  <tr>
 						  <th scope=\"row\"><i class=\"fas fa-box-open\"></i> ZIP size</th>
