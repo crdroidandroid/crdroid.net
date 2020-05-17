@@ -458,6 +458,7 @@ function GenerateModal($version){
 						  <button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"window.open('" . $devicename['paypal'] . "','_blank')\"><i class=\"fas fa-donate\"></i> Donate to maintainer</button>";
 				}
 				echo "
+						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://stats.crdroid.net/" . $devicecodename . "','_blank')\"><i class=\"fas fa-chart-line\"></i> Stats</button>
 					  </div>
 					</div>
 				</div>
@@ -579,6 +580,7 @@ function ReadDeviceJSON($version, $id){
 						  <button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"window.open('" . $devicename['paypal'] . "','_blank')\"><i class=\"fas fa-donate\"></i> Donate to maintainer</button>";
 				}
 				echo "
+						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://stats.crdroid.net/" . $devicecodename . "','_blank')\"><i class=\"fas fa-chart-line\"></i> Stats</button>
 				</div></div>";
 				goto endme;
 			} else {
