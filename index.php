@@ -338,20 +338,20 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-6 col-md-4 col-lg-3">
+        <div class="col-md-6 col-md-4 col-lg-3 max20">
           <div class="team-block bottom">
             <img src="https://avatars.githubusercontent.com/neobuddy89" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/neobuddy89"><i class="fab fa-github"></i> neobuddy89</a></li>
               </ul>
-              <span>crDroid Core Developer</span>
+              <span>crDroid Lead Developer</span>
               <h4>Pranav</h4>
             </div>
           </div>
         </div>
 
-       <div class="col-md-6 col-md-4 col-lg-3">
+       <div class="col-md-6 col-md-4 col-lg-3 max20">
           <div class="team-block bottom">
             <img src="https://avatars.githubusercontent.com/firebird11" class="img-responsive" alt="img">
             <div class="team-content">
@@ -364,28 +364,41 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-md-4 col-lg-3">
+        <div class="col-md-6 col-md-4 col-lg-3 max20">
           <div class="team-block bottom">
             <img src="https://avatars.githubusercontent.com/gwolf2u" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/gwolf2u"><i class="fab fa-github"></i> gwolf2u</a></li>
-				<li><a href="https://telegram.me/gwolf2u"><i class="fab fa-telegram"></i> gwolf2u</a></li>
+				        <li><a href="https://telegram.me/gwolf2u"><i class="fab fa-telegram"></i> gwolf2u</a></li>
               </ul>
-              <span>crDroid Website Developer & Public relations</span>
+              <span>crDroid Core Team</span>
               <h4>Gabriel</h4>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-md-4 col-lg-3">
+        <div class="col-md-6 col-md-4 col-lg-3 max20">
+          <div class="team-block bottom">
+            <img src="https://avatars.githubusercontent.com/Hikari-no-Tenshi" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="https://github.com/Hikari-no-Tenshi"><i class="fab fa-github"></i> Hikari-no-Tenshi</a></li>
+              </ul>
+              <span>crDroid Core Team</span>
+              <h4>Serhij</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3 max20">
           <div class="team-block bottom">
             <img src="https://avatars.githubusercontent.com/soubhik-khan" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://github.com/soubhik-khan"><i class="fab fa-github"></i> soubhik-khan</a></li>
               </ul>
-              <span>crDroid Core Team</span>
+              <span>crDroid Core Team (retired)</span>
               <h4>Soubhik</h4>
             </div>
           </div>

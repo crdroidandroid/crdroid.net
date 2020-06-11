@@ -723,7 +723,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
 --------------------------------*/
 #team .team-block {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-  height: 254px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1487,6 +1486,10 @@ input[type="text"]:focus {
 .inputWithIcon.inputIconBg input[type="text"]:focus + i {
   color: #fff;
   background-color: #71c55d;
+}
+
+.max20 {
+  max-width: 20%;
 }
 
 @media only screen and (max-width: 800px) {	
