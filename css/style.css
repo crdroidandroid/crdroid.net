@@ -748,6 +748,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   position: absolute;
   width: 100%;
   transition: all 0.5s ease-in-out 0s;
+  font-size: 10px;
 }
 
 #team .team-block .team-content ul {
@@ -757,6 +758,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #team .team-block .team-content ul li {
   display: inline-block;
+  font-size: 10px;
 }
 
 #team .team-block .team-content ul li a {
@@ -1488,8 +1490,8 @@ input[type="text"]:focus {
   background-color: #71c55d;
 }
 
-.max20 {
-  max-width: 20%;
+.fitme {
+  max-width: 14.28%;
 }
 
 @media only screen and (max-width: 800px) {	
