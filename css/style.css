@@ -1543,7 +1543,11 @@ input[type="text"]:focus {
 
 	.device-holder-2020 .device {
 		width: 95%;
-	}
+  }
+  
+  .fitme {
+    max-width: 33%;
+  }
 }
 
 @media only screen and (max-width: 900px) {	
