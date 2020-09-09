@@ -1385,8 +1385,8 @@ div.card .card-header-primary {
 
 .nav-tabs .nav-item {
     margin-bottom: -1px;
-	min-width: 33.333%;
-	text-align: center;
+	  min-width: 25%;
+    text-align: center;
 }
 
 .nav-tabs .nav-item .nav-link.active {
