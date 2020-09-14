@@ -293,14 +293,15 @@ function crDroid_Version($version){
 	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
 	foreach($json_array as $key => $arrays){
 		foreach($arrays as $devicecodename => $devicename){
+			$ver=explode(".",$devicename['crversion']);
 			if (is_null($cr)){
-				$cr = $devicename['crversion'];
-			} elseif ($cr < $devicename['crversion']) {
-				$cr = $devicename['crversion'];
+				$cr = $ver[1];
+			} elseif ($cr < $ver[1]) {
+				$cr = $ver[1];
 			}
 		}
 	}
-	return $cr;
+	return $version . "." . $cr;
 }
 
 //JSON way
