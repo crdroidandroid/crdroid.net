@@ -75,10 +75,6 @@
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
       <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
       <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(6); ?></b></a>
-      <div class="btns">
-        <a href="dl.php"><i class="fas fa-mobile-alt"></i> <?php echo GetSupportedDevices('6'); ?> devices officially supported</a>
-        <a href="dl.php"><i class="fas fa-industry"></i> <?php echo GetSupportedOEMS('6'); ?> OEMs officially supported</a>
-      </div>
     </div>
   </section><!-- #hero -->
 

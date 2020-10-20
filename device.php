@@ -95,7 +95,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 						<ul class="nav nav-tabs" data-tabs="tabs">
 							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v7" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7 <span class="badge badge-warning">Soon</span>
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7 <span class="badge badge-danger">New</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -120,9 +120,9 @@ if (!empty(GetDeviceName($_GET['name']))) {
 			<div class="card-body ">
 				<div class="tab-content text-center">
 					<div class="tab-pane fade" id="crDroid-v7">
-						<div class="device-holder">
+						<div class="devicespecific">
 							<p>This crDroid version is based on Android 11 released by Google on September 8, 2020</p>
-							<div><span style="font-size: 200px; margin: 0 auto;"><i class="fas fa-laptop-code"></i></span><br> Well now... Hold your horses... This is under development!</div>
+							<?php ReadDeviceJSON(7, $id); ?>							
 						</div>
 					</div>
 					<div class="tab-pane fade" id="crDroid-v6">
@@ -131,7 +131,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 							<?php ReadDeviceJSON(6, $id); ?>							
 						</div>
 					</div>
-					<div class="tab-pane fade show" id="crDroid-v5">
+					<div class="tab-pane fade" id="crDroid-v5">
 						<div class="device-holder">
 							<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
 							<?php ReturnDeviceInfo('v9.0', $id);?>

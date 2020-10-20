@@ -603,6 +603,9 @@ function GetLatestcrDroid($device) {
 	if (DeviceExistsInBranch('6', $device) == true) {
 		$version = 6;
 	}
+	if (DeviceExistsInBranch('7', $device) == true) {
+		$version = 7;
+	}
 return $version;
 }
 ?>

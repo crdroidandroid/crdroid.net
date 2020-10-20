@@ -1116,7 +1116,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .device-holder-2020 .device {
 	float: left;
-  width: 325px;
+  	width: 325px;
 	height: 150px;
 	margin: 10px;
 	border-radius: 5px;
