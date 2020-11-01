@@ -154,7 +154,13 @@ if (!empty(GetDeviceName($_GET['name']))) {
 <!-- Default tab -->
 <script type="text/javascript" async=true>
 $(document).ready(function(){
-  activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
+  var x = window.location.hash;
+  if (x.includes('#')){
+	var tab = x.replace('#', '');
+	activateTab(tab);
+  }else{
+	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
+  }
 });
 
 function activateTab(tab){
