@@ -74,7 +74,10 @@
       <h1>Welcome to crDroid ROM</h1>
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
       <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
-      <a href="dl.php" class="btn-get-started scrollto">Get started with crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(6); ?></b></a>
+      <div class="ver-container">
+        <div class="ver"><a href="dl.php#crDroid-v7" class="btn-get-started">crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(7); ?></b> - Android 11</a><div class="new">NEW</div></div>
+        <div class="ver"><a href="dl.php" class="btn-get-started">crDroid <small>v</small><b><?php echo crDroid_Version(6); ?></b> - Android 10</a></div>
+      </div>
     </div>
   </section><!-- #hero -->
 

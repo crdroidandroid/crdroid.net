@@ -250,7 +250,6 @@ span {
 
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 1px;
@@ -258,7 +257,6 @@ span {
   padding: 11px 36px;
   border-radius: 50px;
   transition: 0.5s;
-  margin-bottom: 30px;
   border: 2px solid #71c55d;
   background: #fff;
   color: #71c55d;
@@ -289,6 +287,29 @@ span {
 
 #hero .btns a:hover {
   color: #71c55d;
+}
+
+#hero .hero-container .ver-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#hero .hero-container .ver-container .ver {
+  padding: 10px;
+}
+
+#hero .hero-container .ver-container .ver .new{
+  position: relative;
+  top: -53px;
+  left: 170px;
+  border-radius: 15px;
+  border: 2px solid #71c55d;
+  background: #71c55d;
+  color: #fff;
+  width: 60px;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -1547,6 +1568,14 @@ input[type="text"]:focus {
   
   .fitme {
     max-width: 33%;
+  }
+
+  #hero .hero-container .ver-container {
+    display: inline-block;
+  }
+
+  #hero .hero-container .ver-container .ver {
+    padding: 0px;
   }
 }
 
