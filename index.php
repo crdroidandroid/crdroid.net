@@ -438,10 +438,12 @@
 	$('.crnew').mouseover(function(){
     $('.new').css("background", "#fff");
     $('.new').css("color", "#71c55d");
+    $('.new').css("transition", ".5s");
   });
   $('.crnew').mouseleave(function(){
     $('.new').css("background", "#71c55d");
     $('.new').css("color", "#fff");
+    $('.new').css("transition", ".5s");
 	});
 </script>
 
