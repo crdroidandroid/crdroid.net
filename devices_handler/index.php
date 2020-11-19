@@ -80,6 +80,7 @@ function CompileJSON($version) {
 		$telegram=$json_data['response'][0]['telegram'] ?? null;
 		$size=$json_data['response'][0]['size'] ?? null;
 		$forum=$json_data['response'][0]['forum'] ?? null;
+		$md5=$json_data['response'][0]['md5'] ?? null;
 
 		if (is_null($oem) || is_null($codename) || is_null($device) || is_null($maintainer) || is_null($crversion) || is_null($builddate) || is_null($buildtype) || is_null($download) || is_null($forum)) {
 			goto nextDevice;
@@ -101,7 +102,8 @@ function CompileJSON($version) {
 		WriteTmpJSON($version, $tab . $tab . $tab . '"paypal": "' . $paypal . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"telegram": "' . $telegram . '",');
 		WriteTmpJSON($version, $tab . $tab . $tab . '"size": ' . $size . ',');
-		WriteTmpJSON($version, $tab . $tab . $tab . '"forum": "' . $forum . '"');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"forum": "' . $forum . '",');
+		WriteTmpJSON($version, $tab . $tab . $tab . '"md5": "' . $md5 . '"');
 		WriteTmpJSON($version, $tab . $tab . '}');
 		if ($countup == $countto){
 			WriteTmpJSON($version, $tab . ']');
