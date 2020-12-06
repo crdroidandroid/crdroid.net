@@ -54,7 +54,7 @@ function GetDeviceName($id){
 	}
 
 	//JSON way
-	$jsonbranches = array("6");
+	$jsonbranches = array("6", "7");
 	$arrlength = count($jsonbranches);
 
 	for($x = 0; $x < $arrlength; $x++) {
