@@ -95,7 +95,7 @@ if (!empty(GetDeviceName($_GET['name']))) {
 						<ul class="nav nav-tabs" data-tabs="tabs">
 							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v7" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7 <span class="badge badge-danger">New</span>
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7
 								</a>
 							</li>
 							<li class="nav-item">
