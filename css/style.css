@@ -1575,7 +1575,7 @@ input[type="text"]:focus {
   }
 
   #hero .hero-container .ver-container .ver {
-    padding: 0px;
+    padding: 5px;
   }
 }
 
