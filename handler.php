@@ -3,36 +3,6 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$url_v9_0="https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/9.0/update.xml";
-isUpdateNeeded($url_v9_0, 'v9.0');
-
-function GetXMLfromGitHub($url, $version) {
-	$fp = fopen('data', 'w+');
-	$ch = curl_init($url);
-	curl_setopt($ch, CURLOPT_FILE, $fp);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 20);
-	curl_exec($ch);
-	$statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-	curl_close($ch);
-	if($statusCode == 200){
-		rename('data','update_' . $version . '.xml');
-	}else{
-		unlink('data');
-		echo "<span style='margin: 0 auto; font-weight: bold; text-align: center;'>Can not read data from GitHub. This is most likely a temporary issue.</span>";
-	}
-}
-
-function isUpdateNeeded($url, $version){
-	// Don't spam GitHub with request - it blocks them after a while (temporary ban on domain)
-	// Do update every 5 minutes (300 seconds)
-	if (! file_exists('update_' . $version . '.xml')) {
-		GetXMLfromGitHub($url, $version);
-	}else{
-    	if (filemtime('update_' . $version . '.xml') + 300 < strtotime('now')) {
-			GetXMLfromGitHub($url, $version);
-   		}
-	}
-}
 
 function GetDeviceName($id){
 	$name = '';
@@ -101,20 +71,11 @@ endme:
 
 function GetSupportedDevices($version){
 	$nr_of_devices = 0;
-	if (file_exists('update_v' . $version . '.xml')) {
-		$xml = simplexml_load_file('update_v' . $version . '.xml');
-		foreach ($xml as $manufacturer){
-			foreach ($manufacturer as $k => $v){
-				$nr_of_devices = $nr_of_devices + 1;
-			}
-		}
-	} else {
-		$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
-		foreach($json_array as $key => $arrays){
-			foreach($arrays as $devicecodename => $devicename){
-				$result = true;
-				$nr_of_devices = $nr_of_devices + 1;
-			}
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		foreach($arrays as $devicecodename => $devicename){
+			$result = true;
+			$nr_of_devices = $nr_of_devices + 1;
 		}
 	}
 	return $nr_of_devices;
@@ -122,17 +83,10 @@ function GetSupportedDevices($version){
 
 function GetSupportedOEMS($version){
 	$nr_of_oems = 0;
-	if (file_exists('update_v' . $version . '.xml')) {
-		$xml = simplexml_load_file('update_v' . $version . '.xml');
-		foreach ($xml as $manufacturer){
-			$nr_of_oems = $nr_of_oems + 1;
-		}
-	} else {
-		$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
-		foreach($json_array as $key => $arrays){
-			$result = true;
-			$nr_of_oems = $nr_of_oems + 1;
-		}
+	$json_array = json_decode(file_get_contents('devices_handler/' . $version.'.json'), true);
+	foreach($json_array as $key => $arrays){
+		$result = true;
+		$nr_of_oems = $nr_of_oems + 1;
 	}
 	return $nr_of_oems;
 }

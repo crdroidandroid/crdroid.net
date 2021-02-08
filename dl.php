@@ -130,7 +130,7 @@
 					</div>
 					<div class="tab-pane fade" id="crDroid-v5">
 						<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
-						<div class="alert alert-warning" role="alert">This version of crDroid is legacy updated, meaning it may drop support soon</div>
+						<div class="alert alert-dark" role="alert">This version of crDroid is no longer updated</div>
 						<div class="device-holder">
 							<?php ReturnDevices('v9.0') ?>
 						</div>
