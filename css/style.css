@@ -94,6 +94,10 @@ span {
   border-color: #adadad;
 }
 
+.btn-donate {
+	margin-right: 30px;
+}
+
 .fa {
   font-size: 13px;
 }
@@ -1542,6 +1546,14 @@ input[type="text"]:focus {
 	
 	.btn.support::after {
 		content: ""
+	}
+
+	.btn-donate {
+		margin-right: 0px;
+	}
+
+	.btn-donate-patreon {
+		margin-top: 10px;
 	}
 	
 	.device-holder .cell {

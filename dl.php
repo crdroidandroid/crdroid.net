@@ -55,6 +55,7 @@
           <li><a href="https://crdroid.net">Home</a></li>
 		  <li><a href="translations.php">Translations</a></li>
 		  <li><a href="https://stats.crdroid.net">Device Stats</a></li>
+		  <li><a href="donate.php">Support us</a></li>
 		  <li><a href="legal.php">Legal</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

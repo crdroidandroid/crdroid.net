@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <title>crDroid.net - help out with translations</title>
+    <title>crDroid.net - Support us</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="translations for crDroid Android project">
+	<meta name="description" content="support our project">
 	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
 	<!-- Favicons -->
@@ -54,8 +54,8 @@
         <ul class="nav-menu">
           <li><a href="https://crdroid.net">Home</a></li>
           <li><a href="dl.php">All devices</a></li>
+		  <li><a href="translations.php">Translations</a></li>
           <li><a href="https://stats.crdroid.net">Device Stats</a></li>
-		  <li><a href="donate.php">Support us</a></li>
           <li><a href="legal.php">Legal</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -69,8 +69,9 @@
 <section class="padd-section text-center wow fadeInUp">
     <div class="container">
       <div class="section-title text-center">
-        <h2>We need your help</h2>
-        <p class="separator">crDroid needs your help translate all our project to be able to reach out to more and more of you.<br>Want to help, why not check out below for more info, is really easy.</p>
+        <h2>Support us</h2>
+		<p><span style="color: #ff5733; font-size: 26px;"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></span></p>
+        <p class="separator">crDroid is a project that we are doing with passion and in our free time. <br>If you would like to support us, cosider a donation on PayPal or our Patreon page.<br>Every <i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i> will get reinvested in the further development of the project!</p>
 		</div>
     </div>
 </section>
@@ -82,37 +83,13 @@
   <section class="padd-section text-center wow fadeInUp">
     <div class="container">
       <div class="row">
-
-        <div class="col-md-6 col-lg-4">
+        <div class="col">
           <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-translation">
-            <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid">
-            <h4>crDroid Settings</h4>
-            <p>This is the place where mission control is running<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-translation/localized.svg"></p>
-			</a>
+		  	<button type="button" class="btn btn-primary btn-lg btn-donate" onclick="window.open('https://paypal.me/crdroidandroid')"><i class="fab fa-paypal"></i> Donate on Paypal</button></span>
+			<button type="button" class="btn btn-warning btn-lg btn-donate-patreon" onclick="window.open('https://www.patreon.com/crdroidandroid')"><i class="fab fa-patreon"></i> Become a Patreon</button>
           </div>
+		  <br>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-frameworks-base">
-            <img src="img/svg/framework.svg" alt="img" class="img-fluid">
-            <h4>Frameworks Base</h4>
-            <p>We need a way to link with Android API don't we<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-frameworks-base/localized.svg"></p>
-			</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-home">
-            <img src="img/svg/launcher.svg" alt="img" class="img-fluid">
-            <h4>crDroid Home</h4>
-            <p>Our Launcher from where you start favorite apps<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-home/localized.svg"></p>
-			</a>
-          </div>
-        </div>
-
       </div>
     </div>
 
