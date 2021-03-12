@@ -313,7 +313,7 @@
           <div class="feature-block">
             <img src="img/svg/team.svg" alt="img" class="img-fluid">
             <h4>How do I become maintainer for crDroid?</h4>
-            <p>It's really simple. Just message Gabriel over <a href="https://telegram.me/gwolf2u" target="_blank"><span class="fab fa-telegram" style="font-size: 14px;"></span> Telegram</a> with the device you want to maintain. Note that we only support Android 11 builds for new devices.</p>
+            <p>So you want to make your build official and become a crDroid maintainer? Just head over to our GitHub for <a href="https://github.com/crdroidandroid/android/blob/11.0/README.mkdn#3-how-to-become-an-official-maintainer" target="_blank">more info</a>. Note that we only support Android 11 builds for new devices.</p>
           </div>
         </div>
 
