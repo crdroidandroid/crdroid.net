@@ -391,7 +391,7 @@ function GenerateModal($version){
 							</div>
 						</div>			 
 						  ";
-				$changelogLink = "devices_handler/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
+				$changelogLink = "changelog/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
 				if (file_exists($changelogLink)){
 					echo "
 						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
@@ -513,7 +513,7 @@ function ReadDeviceJSON($version, $id){
 							</div>
 						</div>			 
 						  ";
-				$changelogLink = "devices_handler/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
+				$changelogLink = "changelog/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
 				if (file_exists($changelogLink)){
 					echo "
 						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";

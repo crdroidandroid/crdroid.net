@@ -55,6 +55,30 @@ function deleteDir($path) {
             array_map(__FUNCTION__, glob($path.'/*')) == @rmdir($path);
 }
 
+function moveChangelog($version){
+	$dir = 'v' . $version . '.x';
+	$dirNew = '../changelog/v' . $version . '.x/';
+	unlink($dir . '/initial support/createjson.sh');
+	rmdir($dir . '/initial support');
+	mkdir($dirNew, 0777, true);
+	if (is_dir($dir)) {
+		if ($dh = opendir($dir)) {
+			while (($file = readdir($dh)) !== false) {
+			//exclude unwanted 
+				if (strpos($file, '.md')) continue;
+				if (strpos($file, '.json')) continue;
+
+				if (rename($dir.'/'.$file, $dirNew.'/'.$file)){
+					//move done
+				}else {
+					//move fail
+				}
+			}
+			closedir($dh);
+		}
+	}
+}
+
 function CompileJSON($version) {
 	WriteTmpJSON($version, '{');
 	$files = glob('v' . $version . '.x/*.json', GLOB_BRACE);
@@ -123,6 +147,7 @@ function CompileJSON($version) {
 nextDevice:
 	WriteTmpJSON($version, '}');
 	FinalizeJSON($version);
+	moveChangelog($version);
 	deleteDir('v' . $version . '.x');
 }
 
