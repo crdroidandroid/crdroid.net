@@ -46,6 +46,15 @@ function FinalizeJSON($version){
 	unlink($version.'convert.json');
 }
 
+function deleteDir($path) {
+    if (empty($path)) { 
+        return false;
+    }
+    return is_file($path) ?
+            @unlink($path) :
+            array_map(__FUNCTION__, glob($path.'/*')) == @rmdir($path);
+}
+
 function CompileJSON($version) {
 	WriteTmpJSON($version, '{');
 	$files = glob('v' . $version . '.x/*.json', GLOB_BRACE);
@@ -114,6 +123,7 @@ function CompileJSON($version) {
 nextDevice:
 	WriteTmpJSON($version, '}');
 	FinalizeJSON($version);
+	deleteDir('v' . $version . '.x');
 }
 
 if (!$ver == null){
