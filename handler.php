@@ -265,7 +265,7 @@ function ReadJSON($version){
 		echo "<div class=\"manufacturer-2020\"><i class=\"fas fa-angle-double-left\"></i> " . $key ." <i class=\"fas fa-angle-double-right\"></i></div>";
 		foreach($arrays as $devicecodename => $devicename){
 			$img = null;
-			$imgpath = "img/devices/" . $devicecodename .".png";
+			$imgpath = "img/devices/" . $devicecodename .".webp";
 			if (file_exists($imgpath)){
 				$img = "<img class=\"lazy\" data-src=\"" . $imgpath ."\" />";
 			} else {
@@ -434,7 +434,7 @@ function ReadDeviceJSON($version, $id){
 		foreach($arrays as $devicecodename => $devicename){
 			if ($devicecodename == $id){
 				$img = null;
-				$imgpath = "img/devices/" . $devicecodename .".png";
+				$imgpath = "img/devices/" . $devicecodename .".webp";
 				if (file_exists($imgpath)){
 					$img = "<img src=\"" . $imgpath ."\" />";
 				} else {
