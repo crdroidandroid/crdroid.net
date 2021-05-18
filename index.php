@@ -74,7 +74,7 @@
     <div class="hero-container">
       <h1>Welcome to crDroid ROM</h1>
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
-      <!--<img src="img/hero-img.png" alt="crdroid" height="500">-->
+      <!--<img src="img/hero-img.webp" alt="crdroid" height="500">-->
       <div class="ver-container">
         <div class="ver"><a href="dl.php" class="btn-get-started">crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(7); ?></b> - Android 11</a></div>
         <div class="ver"><a href="dl.php#crDroid-v6" class="btn-get-started">crDroid <small>v</small><b><?php echo crDroid_Version(6); ?></b> - Android 10</a></div>
@@ -142,7 +142,7 @@
       <div class="row justify-content-center">
 
         <div class="col-md-5 col-lg-3">
-          <img src="img/hero-img.png" alt="About">
+          <img src="img/hero-img.webp" alt="About">
         </div>
 
         <div class="col-md-7 col-lg-5">
@@ -186,19 +186,19 @@
     <div class="container">
       <div class="owl-carousel owl-theme">
 
-        <div><img src="img/screen/1.png" alt="img"></div>
-        <div><img src="img/screen/2.png" alt="img"></div>
-        <div><img src="img/screen/3.png" alt="img"></div>
-        <div><img src="img/screen/4.png" alt="img"></div>
-        <div><img src="img/screen/5.png" alt="img"></div>
-        <div><img src="img/screen/6.png" alt="img"></div>
-        <div><img src="img/screen/7.png" alt="img"></div>
-        <div><img src="img/screen/8.png" alt="img"></div>
-        <div><img src="img/screen/9.png" alt="img"></div>
-		<div><img src="img/screen/10.png" alt="img"></div>
-		<div><img src="img/screen/11.png" alt="img"></div>
-		<div><img src="img/screen/12.png" alt="img"></div>
-		<div><img src="img/screen/13.png" alt="img"></div>
+        <div><img src="img/screen/1.webp" alt="img"></div>
+        <div><img src="img/screen/2.webp" alt="img"></div>
+        <div><img src="img/screen/3.webp" alt="img"></div>
+        <div><img src="img/screen/4.webp" alt="img"></div>
+        <div><img src="img/screen/5.webp" alt="img"></div>
+        <div><img src="img/screen/6.webp" alt="img"></div>
+        <div><img src="img/screen/7.webp" alt="img"></div>
+        <div><img src="img/screen/8.webp" alt="img"></div>
+        <div><img src="img/screen/9.webp" alt="img"></div>
+		<div><img src="img/screen/10.webp" alt="img"></div>
+		<div><img src="img/screen/11.webp" alt="img"></div>
+		<div><img src="img/screen/12.webp" alt="img"></div>
+		<div><img src="img/screen/13.webp" alt="img"></div>
       </div>
     </div>
 
