@@ -417,7 +417,7 @@ function GenerateModal($version){
 					  </div>
 					</div>
 					<div class=\"changelog\" style=\"display: none; margin-left: 30px; padding-bottom: 5px;\"><h5>Changelog:</h5></div>
-					<div style=\"text-align: center; padding-bottom: 10px;\"><textarea readonly rows=\"12\" class=\"changelogTXT\" style=\"white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;\"></textarea></div>
+					<div style=\"text-align: center; padding-bottom: 20px;\"><textarea readonly rows=\"12\" class=\"changelogTXT\" style=\"white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d; font-size: 0.8125rem;\"></textarea></div>
 				</div>
 				<div class=\"modal-footer\">
 				  <button type=\"button\" class=\"btn closebtn\" data-dismiss=\"modal\">Close</button>
