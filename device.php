@@ -146,6 +146,8 @@ if (!empty(GetDeviceName($_GET['name']))) {
 					</div>
 				</div>
 			</div>
+			<div class="changelog" style="display: none; margin-left: 30px; padding-bottom: 5px;"><h5>Changelog:</h5></div>
+			<div style="text-align: center; padding-bottom: 10px;"><textarea readonly rows="12" class="changelogTXT" style="white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;"></textarea></div>
 		</div>
 	</div>
 </div>
@@ -161,7 +163,17 @@ $(document).ready(function(){
 	activateTab(tab);
   }else{
 	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
-  }
+  };
+	$('[id="changelogBtn"]').click(function() {
+		$(".changelogTXT").load($(this).attr("data-textfile"));
+		$(".changelog").fadeIn(1000);
+		$(".changelogTXT").slideDown(1000);
+		$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+	});
+	$('.nav-link').click(function() {
+		$(".changelog").fadeOut(0);
+		$(".changelogTXT").slideUp(0);
+	});
 });
 
 function activateTab(tab){
@@ -179,7 +191,7 @@ $('.close, .closebtn').click(function(){
 });
 </script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>

@@ -394,7 +394,7 @@ function GenerateModal($version){
 				$changelogLink = "changelog/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
 				if (file_exists($changelogLink)){
 					echo "
-						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
+						<button type=\"button\" class=\"btn btn-dark btn-sm\" id=\"changelogBtn\" data-textfile=\"" . $changelogLink . "\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
 				}
 				if (!empty( $devicename['gapps'])){
 					echo "
@@ -416,6 +416,8 @@ function GenerateModal($version){
 						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://stats.crdroid.net/" . $devicecodename . "','_blank')\"><i class=\"fas fa-chart-line\"></i> Stats</button>
 					  </div>
 					</div>
+					<div class=\"changelog\" style=\"display: none; margin-left: 30px; padding-bottom: 5px;\"><h5>Changelog:</h5></div>
+					<div style=\"text-align: center; padding-bottom: 10px;\"><textarea readonly rows=\"12\" class=\"changelogTXT\" style=\"white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;\"></textarea></div>
 				</div>
 				<div class=\"modal-footer\">
 				  <button type=\"button\" class=\"btn closebtn\" data-dismiss=\"modal\">Close</button>
@@ -516,7 +518,7 @@ function ReadDeviceJSON($version, $id){
 				$changelogLink = "changelog/v" . $version . ".x/changelog_" . $devicecodename . ".txt";
 				if (file_exists($changelogLink)){
 					echo "
-						<button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('" . $changelogLink . "','_blank')\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
+						<button type=\"button\" class=\"btn btn-dark btn-sm\" id=\"changelogBtn\" data-textfile=\"" . $changelogLink . "\"><i class=\"fas fa-list-alt\"></i> Changelog</button>";
 				}
 				if (!empty( $devicename['gapps'])){
 					echo "
