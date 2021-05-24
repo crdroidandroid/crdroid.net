@@ -3,13 +3,14 @@
 <head>
 <?php 
 include 'handler.php';
+$device = GetDeviceName($_GET['name']);
 
-if (!empty(GetDeviceName($_GET['name']))) {
+if (!empty($device)) {
 	echo "	<meta charset=\"utf-8\">\n";
-    echo "	<title>crDroid.net - Download crDroid for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "</title>\n\n";
+    echo "	<title>crDroid.net - Download crDroid for " . $device . " (" . $_GET['name'] . ")" . "</title>\n\n";
     echo "	<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\n";
-    echo "	<meta name=\"description\" content=\"official crDroid ROM for " . GetDeviceName($_GET['name']) . " (" . $_GET['name'] . ")" . "\">\n";
-    echo "	<meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . GetDeviceName($_GET['name']) . ", " . $_GET['name'] .  "\">\n";
+    echo "	<meta name=\"description\" content=\"official crDroid ROM for " . $device . " (" . $_GET['name'] . ")" . "\">\n";
+    echo "	<meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . $device . ", " . $_GET['name'] .  "\">\n";
     $id = $_GET['name'];
 }else{
     header("Location: https://crdroid.net/", true, 301);
