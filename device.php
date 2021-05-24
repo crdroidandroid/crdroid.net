@@ -158,9 +158,22 @@ if (!empty(GetDeviceName($_GET['name']))) {
 <script type="text/javascript" async=true>
 $(document).ready(function(){
   var x = window.location.hash;
+  var tab = null;
   if (x.includes('#')){
-	var tab = x.replace('#', '');
-	activateTab(tab);
+	var s = x.split("/");
+	if (s[0]){
+		tab = s[0].replace('#','');
+		activateTab(tab);
+	}
+	if (s[1].includes('changelog')){
+		var myv = tab.replace('crDroid-', '');
+		var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
+		$(".changelogTXT").load(file);
+		$(".changelog").fadeIn(1000);
+		$(".changelogTXT").slideDown(1000);
+		$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+	}
+	console.log(tab + "/" + myv);
   }else{
 	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
   };
