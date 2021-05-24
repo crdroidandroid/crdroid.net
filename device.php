@@ -173,7 +173,6 @@ $(document).ready(function(){
 		$(".changelogTXT").slideDown(1000);
 		$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
 	}
-	console.log(tab + "/" + myv);
   }else{
 	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
   };
