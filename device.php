@@ -166,13 +166,15 @@ $(document).ready(function(){
 		tab = s[0].replace('#','');
 		activateTab(tab);
 	}
-	if (s[1].includes('changelog')){
-		var myv = tab.replace('crDroid-', '');
-		var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
-		$(".changelogTXT").load(file);
-		$(".changelog").fadeIn(1000);
-		$(".changelogTXT").slideDown(1000);
-		$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+	if (s[1]){
+		if (s[1].includes('changelog')){
+			var myv = tab.replace('crDroid-', '');
+			var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
+			$(".changelogTXT").load(file);
+			$(".changelog").fadeIn(1000);
+			$(".changelogTXT").slideDown(1000);
+			$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+		}
 	}
   }else{
 	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
