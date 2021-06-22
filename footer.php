@@ -18,7 +18,7 @@ echo "
 	<div class=\"copyrights\">
 		<div class=\"container\">
 			<p>COPYRIGHT © 2016-" . date("Y") . ". ALL RIGHTS RESERVED.</p>
-			<div class=\"credits\">Designed by <a href=\"https://gwolf2u.com\">Lup Gabriel</a></div>
+			<div class=\"credits\">Designed by <a href=\"https://gwolf2u.com\">Lup Gabriel</a><br>Proudly hosted by <a href=\"https://scopehosts.com\">ScopeHosts</a></div>
 		</div>
 	</div>
 </footer>
