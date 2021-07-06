@@ -79,6 +79,10 @@ function moveChangelog($version){
 	}
 }
 
+function updateStats($version){
+	file_get_contents("https://[server:port]/updatestats?version=" . $version);
+}
+
 function CompileJSON($version) {
 	WriteTmpJSON($version, '{');
 	$files = glob('v' . $version . '.x/*.json', GLOB_BRACE);
@@ -149,6 +153,7 @@ nextDevice:
 	FinalizeJSON($version);
 	moveChangelog($version);
 	deleteDir('v' . $version . '.x');
+	updateStats($version);
 }
 
 if (!$ver == null){
