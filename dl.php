@@ -125,6 +125,7 @@
 					<div class="tab-pane fade" id="crDroid-v6">
 						<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
 						<div class="alert alert-primary" role="alert">This version of crDroid is supported officially on <b><?php echo GetSupportedDevices('6'); ?></b> devices coming from <b><?php echo GetSupportedOEMS('6'); ?></b> OEMs</div>
+						<div class="alert alert-warning" role="alert">Note that crDroid 6 is legacy updated, meaning it may drop support soon. Do update to newer crDroid revisions.</div>
 						<div class="device-holder-2020">
 							<?php ReadJSON(6); ?>
 						</div>
