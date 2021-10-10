@@ -96,6 +96,11 @@ if (!empty($device)) {
 					<div class="nav-tabs-wrapper">
 						<ul class="nav nav-tabs" data-tabs="tabs">
 							<li class="nav-item">
+								<a class="nav-link" href="#crDroid-v8" data-toggle="tab">
+									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 8 <span class="badge badge-warning">Soon</span>
+								</a>
+							</li>
+							<li class="nav-item">
 								<a class="nav-link" href="#crDroid-v7" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7
 								</a>
@@ -121,6 +126,12 @@ if (!empty($device)) {
 			</div>
 			<div class="card-body ">
 				<div class="tab-content text-center">
+					<div class="tab-pane fade" id="crDroid-v8">
+						<div class="device-holder">
+							<p>This crDroid version is based on Android 12 released by Google on October 4, 2021</p>
+							<div><span style="font-size: 200px; margin: 0 auto;"><i class="fas fa-laptop-code"></i></span><br> Well now... Hold your horses... This is under development!</div>
+						</div>
+					</div>
 					<div class="tab-pane fade" id="crDroid-v7">
 						<div class="devicespecific">
 							<p>This crDroid version is based on Android 11 released by Google on September 8, 2020</p>
