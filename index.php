@@ -59,7 +59,7 @@
           <li><a href="#faq">FAQ</a></li>
           <li><a href="translations.php">Translations</a></li>
           <li><a href="https://stats.crdroid.net">Device Stats</a></li>
-		  <li><a href="donate.php">Support us</a></li>
+		      <li><a href="donate.php">Support us</a></li>
           <li><a href="legal.php">Legal</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -76,6 +76,7 @@
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
       <!--<img src="img/hero-img.webp" alt="crdroid" height="500">-->
       <div class="ver-container">
+        <div class="ver"><a href="dl.php#crDroid-v8" class="btn-get-started crnew">crDroid <small>v</small><b>8</b> - Android 12</a><div class="new">Soon</div></div>
         <div class="ver"><a href="dl.php" class="btn-get-started">crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(7); ?></b> - Android 11</a></div>
         <div class="ver"><a href="dl.php#crDroid-v6" class="btn-get-started">crDroid <small>v</small><b><?php echo crDroid_Version(6); ?></b> - Android 10</a></div>
       </div>
@@ -157,11 +158,11 @@
               <li><i class="fa fa-angle-right"></i>Lock Screen</li>
               <li><i class="fa fa-angle-right"></i>Recents Screen</li>
               <li><i class="fa fa-angle-right"></i>Navigation</li>
-			  <li><i class="fa fa-angle-right"></i>Buttons</li>
-			  <li><i class="fa fa-angle-right"></i>User Interface</li>
-			  <li><i class="fa fa-angle-right"></i>Notifications</li>
-			  <li><i class="fa fa-angle-right"></i>Sound</li>
-			  <li><i class="fa fa-angle-right"></i>Misc</li>
+              <li><i class="fa fa-angle-right"></i>Buttons</li>
+              <li><i class="fa fa-angle-right"></i>User Interface</li>
+              <li><i class="fa fa-angle-right"></i>Notifications</li>
+              <li><i class="fa fa-angle-right"></i>Sound</li>
+              <li><i class="fa fa-angle-right"></i>Misc</li>
             </ul>
 
           </div>
@@ -185,7 +186,6 @@
 
     <div class="container">
       <div class="owl-carousel owl-theme">
-
         <div><img src="img/screen/1.webp" alt="img"></div>
         <div><img src="img/screen/2.webp" alt="img"></div>
         <div><img src="img/screen/3.webp" alt="img"></div>
@@ -195,10 +195,10 @@
         <div><img src="img/screen/7.webp" alt="img"></div>
         <div><img src="img/screen/8.webp" alt="img"></div>
         <div><img src="img/screen/9.webp" alt="img"></div>
-		<div><img src="img/screen/10.webp" alt="img"></div>
-		<div><img src="img/screen/11.webp" alt="img"></div>
-		<div><img src="img/screen/12.webp" alt="img"></div>
-		<div><img src="img/screen/13.webp" alt="img"></div>
+        <div><img src="img/screen/10.webp" alt="img"></div>
+        <div><img src="img/screen/11.webp" alt="img"></div>
+        <div><img src="img/screen/12.webp" alt="img"></div>
+        <div><img src="img/screen/13.webp" alt="img"></div>
       </div>
     </div>
 
@@ -434,6 +434,17 @@
   </section>
 
 <?php include 'footer.php';?>
+
+<script>
+	$('.crnew').mouseover(function(){
+    $('.new').css("background", "#fff");
+    $('.new').css("color", "#71c55d");
+  });
+  $('.crnew').mouseleave(function(){
+    $('.new').css("background", "#71c55d");
+    $('.new').css("color", "#fff");
+	});
+</script>
 
 </body>
 </html>
