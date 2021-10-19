@@ -186,7 +186,7 @@ $(document).ready(function(){
 	if (s[1]){
 		if (s[1].includes('changelog')){
 			var myv = tab.replace('crDroid-', '');
-			var file = 'changelog/' + myv + '.x/changelog_<?php echo $latest; ?>.txt';
+			var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
 			$(".changelogTXT").load(file);
 			$(".changelog").fadeIn(1000);
 			$(".changelogTXT").slideDown(1000);
