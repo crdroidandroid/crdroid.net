@@ -120,7 +120,7 @@
 				<div class="tab-content text-center">
 					<div class="tab-pane fade" id="crDroid-v8">
 						<div class="device-holder">
-							<p>This crDroid version is based on Android 11 released by Google on October 4, 2021</p>
+							<p>This crDroid version is based on Android 12 released by Google on October 4, 2021</p>
 							<div><span style="font-size: 200px; margin: 0 auto;"><i class="fas fa-laptop-code"></i></span><br> Well now... Hold your horses... This is under development!</div>
 						</div>
 					</div>

@@ -549,19 +549,23 @@ function ReadDeviceJSON($version, $id){
 endme:
 }
 
-function GetLatestcrDroid($device) {
-	// crDroid 4 if default
-	$version = 4;
-	
-	if (DeviceExistsInBranch('v9.0', $device) == true) {
-		$version = 5;
+function RemoveTabs($device) {
+	$all_versions = array();
+	if (DeviceExistsInBranch('v8.1', $device) == false) {
+		$all_versions[] = 4;
 	}
-	if (DeviceExistsInBranch('6', $device) == true) {
-		$version = 6;
+	if (DeviceExistsInBranch('v9.0', $device) == false) {
+		$all_versions[] = 5;
 	}
-	if (DeviceExistsInBranch('7', $device) == true) {
-		$version = 7;
+	if (DeviceExistsInBranch('6', $device) == false) {
+		$all_versions[] = 6;
 	}
-return $version;
+	if (DeviceExistsInBranch('7', $device) == false) {
+		$all_versions[] = 7;
+	}
+	if (DeviceExistsInBranch('8', $device) == false) {
+		$all_versions[] = 8;
+	}
+return $all_versions;
 }
 ?>

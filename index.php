@@ -76,7 +76,7 @@
       <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
       <!--<img src="img/hero-img.webp" alt="crdroid" height="500">-->
       <div class="ver-container">
-        <div class="ver"><a href="dl.php#crDroid-v8" class="btn-get-started crnew">crDroid <small>v</small><b>8</b> - Android 12</a><div class="new">Soon</div></div>
+        <div class="ver"><a href="dl.php#crDroid-v8" class="btn-get-started crnew">crDroid <small>v</small><b>8</b> - Android 12</a><div class="new">SOON</div></div>
         <div class="ver"><a href="dl.php" class="btn-get-started">crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(7); ?></b> - Android 11</a></div>
         <div class="ver"><a href="dl.php#crDroid-v6" class="btn-get-started">crDroid <small>v</small><b><?php echo crDroid_Version(6); ?></b> - Android 10</a></div>
       </div>

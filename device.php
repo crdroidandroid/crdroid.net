@@ -95,27 +95,27 @@ if (!empty($device)) {
 				<div class="nav-tabs-navigation">
 					<div class="nav-tabs-wrapper">
 						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item">
+							<li class="nav-item" id="8">
 								<a class="nav-link" href="#crDroid-v8" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 8 <span class="badge badge-warning">Soon</span>
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" id="7">
 								<a class="nav-link" href="#crDroid-v7" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" id="6">
 								<a class="nav-link" href="#crDroid-v6" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" id="5">
 								<a class="nav-link" href="#crDroid-v5" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5
 								</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item" id="4">
 								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
 									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4
 								</a>
@@ -168,6 +168,12 @@ if (!empty($device)) {
 
 <!-- Default tab -->
 <script type="text/javascript" async=true>
+<?php 
+	$php_array = RemoveTabs($_GET['name']);
+	$devicesId = array(4,5,6,7,8);
+	$diff = array_diff($devicesId, $php_array);
+	$latest = max($diff);
+?>
 $(document).ready(function(){
   var x = window.location.hash;
   var tab = null;
@@ -180,7 +186,7 @@ $(document).ready(function(){
 	if (s[1]){
 		if (s[1].includes('changelog')){
 			var myv = tab.replace('crDroid-', '');
-			var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
+			var file = 'changelog/' + myv + '.x/changelog_<?php echo $latest; ?>.txt';
 			$(".changelogTXT").load(file);
 			$(".changelog").fadeIn(1000);
 			$(".changelogTXT").slideDown(1000);
@@ -188,7 +194,7 @@ $(document).ready(function(){
 		}
 	}
   }else{
-	activateTab('crDroid-v<?php echo GetLatestcrDroid($_GET['name']); ?>');
+	activateTab('crDroid-v<?php echo $latest; ?>');
   };
 	$('[id="changelogBtn"]').click(function() {
 		$(".changelogTXT").load($(this).attr("data-textfile"));
@@ -200,6 +206,24 @@ $(document).ready(function(){
 		$(".changelog").fadeOut(0);
 		$(".changelogTXT").slideUp(0);
 	});
+});
+
+<?php 
+$js_array = json_encode($php_array);
+echo "const tabsToRemove = ". $js_array . ";\n";
+?>
+for (const tab of tabsToRemove) {
+	var tabid = document.getElementById(tab);
+	tabid.parentNode.removeChild(tabid);
+	var tabidContent = document.getElementById('crDroid-v' + tab);
+	tabidContent.parentNode.removeChild(tabidContent);
+};
+
+var noOfcrDroidVersions = 5;
+var supportedVersions = tabsToRemove.length;
+var tabWidthPercent = (100 / (noOfcrDroidVersions - supportedVersions)) + "%";
+$(".nav-item").css({
+	"min-width": tabWidthPercent
 });
 
 function activateTab(tab){
