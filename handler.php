@@ -499,7 +499,7 @@ function ReadDeviceJSON($version, $id){
 					  <div class=\"buttons\">
 					  	  <h5 class=\"text-left\">crDroid downloads:</h5>
 						  <button type=\"button\" class=\"btn btn-success btn-sm\" onclick=\"window.open('" . $devicename['download'] . "','_blank')\"><i class=\"fa fa-arrow-alt-circle-down\"></i> Download latest version</button>
-						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x','_blank')\"'\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
+						  <button type=\"button\" class=\"btn btn-dark btn-sm\" onclick=\"window.open('https://sourceforge.net/projects/crdroid/files/" . $devicecodename  . "/" . $version . ".x','_blank')\"><i class=\"fas fa-folder-open\"></i> Download older versions</button>
 						  <h5 class=\"text-left\">Useful links:</h5>
 						  <div class=\"btn-group\">
   							<button type=\"button\" class=\"btn btn-warning btn-sm dropdown-toggle\"><i class=\"fa fa-headset\"></i> Support</button>
