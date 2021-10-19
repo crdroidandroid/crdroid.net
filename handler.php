@@ -237,9 +237,6 @@ function ReturnDeviceInfo($version, $id) {
             }
         }
     }
-	if (DeviceExistsInBranch($version, $id) == false) {
-		echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
-	}
 }
 
 function crDroid_Version($version){
@@ -545,7 +542,6 @@ function ReadDeviceJSON($version, $id){
 			}
 		}
 	}
-	echo "There is no build information available for this version of crDroid <i class=\"far fa-sad-tear\"></i> <br>Check for other versions in the other tabs";
 endme:
 }
 

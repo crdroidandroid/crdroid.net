@@ -5,6 +5,11 @@
 include 'handler.php';
 $device = GetDeviceName($_GET['name']);
 
+$php_array = RemoveTabs($_GET['name']);
+$devicesId = array(4,5,6,7,8);
+$diff = array_diff($devicesId, $php_array);
+$latest = max($diff);
+
 if (!empty($device)) {
 	echo "	<meta charset=\"utf-8\">\n";
     echo "	<title>crDroid.net - Download crDroid for " . $device . " (" . $_GET['name'] . ")" . "</title>\n\n";
@@ -168,12 +173,6 @@ if (!empty($device)) {
 
 <!-- Default tab -->
 <script type="text/javascript" async=true>
-<?php 
-	$php_array = RemoveTabs($_GET['name']);
-	$devicesId = array(4,5,6,7,8);
-	$diff = array_diff($devicesId, $php_array);
-	$latest = max($diff);
-?>
 $(document).ready(function(){
   var x = window.location.hash;
   var tab = null;
@@ -219,7 +218,7 @@ for (const tab of tabsToRemove) {
 	tabidContent.parentNode.removeChild(tabidContent);
 };
 
-var noOfcrDroidVersions = 5;
+var noOfcrDroidVersions = <?php echo count($devicesId);?>;
 var supportedVersions = tabsToRemove.length;
 var tabWidthPercent = (100 / (noOfcrDroidVersions - supportedVersions)) + "%";
 $(".nav-item").css({
