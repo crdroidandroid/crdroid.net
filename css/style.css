@@ -632,7 +632,6 @@ section {
 
 .deviceimage img{
   max-height: 225px;
-  min-height: 225px;
   padding-top: 10px;
 }
 
@@ -643,7 +642,6 @@ section {
 
 .deviceimage-dl img {
   max-height: 450px;
-  min-height: 450px;
 }
 
 .center {
