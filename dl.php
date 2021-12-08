@@ -1,236 +1,203 @@
-<!doctype html>
+<?php include 'functions.php'; ?>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-    <title>crDroid.net - Download crDroid for supported devices</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="official crDroid ROM download page">
-	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<!-- Favicons -->
-	<link href="img/favicon.ico" rel="icon">
-	
-	<!-- Google Fonts -->
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <title>crDroid.net - Download crDroid for supported devices</title>
+  <meta name="description" content="official crDroid ROM website">
+  <meta name="keywords" content="crDroid, crDroid ROM, ROM">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
 
-	<!-- Libraries CSS Files -->
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-	<!-- Main Stylesheet File -->
-	<link href="css/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Google verification -->
-	<meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Bootstrap dark mode -->
+  <link id="dark-theme-style" rel="stylesheet" />
 
-		gtag('config', 'UA-6432969-5');
-	</script>
+  <!-- Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-6432969-5');
+  </script>
 </head>
 
 <body>
 
-  <header id="header" class="header header-hide">
-    <div class="container">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
 
-      <div id="logo" class="pull-left">
-        <h1><a href="https://crdroid.net" class="scrollto"><span>cr</span>Droid <span>A</span>ndroid</a></h1>
-        <!-- Uncomment below image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      <div class="logo">
+        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
+        <a href="<?php echo GetDomain(); ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="https://crdroid.net">Home</a></li>
-		  <li><a href="translations.php">Translations</a></li>
-		  <li><a href="https://stats.crdroid.net">Device Stats</a></li>
-		  <li><a href="donate.php">Support us</a></li>
-		  <li><a href="legal.php">Legal</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+          <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
-      </nav>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a class="switcher" role="button" id="theme-toggler" onclick="toggleTheme()"></a>
+
     </div>
-  </header>
-  
-<!--==========================
-	Get Started Section
-============================-->
-<section class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Ready to download?</h2>
-        <p class="separator">Below you can find a list with official supported devices.<br>Choose your device and get started using crDroid<br></p>
-		<div class="inputWithIcon"><input type="text" placeholder="Search for your device..." id="search"><i class="fas fa-search fa-lg fa-fw" aria-hidden="true"></i><small>*search can handle device name, codename, crDroid version or maintainer</small></div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section class="inner-page">
+      <div class="container">
+
+        <div class="section-title">
+          <p><br><br></p>
+          <h2>Ready to download?</h2>
+          <p>Below you can find a list with official supported devices.</p>
+          <p>Choose your device and get started using crDroid</p>
+        </div>
+
+        <!-- List devices -->
+        <div class="row">
+
+        <?php
+        $json_array = json_decode(file_get_contents('devices_handler/compiled.json'), true);
+
+        //fast go to OEM
+        echo "<div class='OEMS'>";
+        foreach($json_array as $key => $arrays){
+          echo "<a href='#" . $key . "' class='btn btn-secondary scrollto m-1'>" . $key . "</a>";
+        }
+        echo "</div>";
+
+        foreach($json_array as $key => $arrays){
+            echo "<div id='" . $key . "' class='oem'><h1><i class='bx bx-chevrons-left' ></i>" . $key . "<i class='bx bx-chevrons-right' ></i></h1></div>";
+            foreach($arrays as $devicecodename => $devicename){
+                echo "
+                <div class='col-lg-3 mb-4'>
+                <div class='card border-secondary shadow' id='" . $devicecodename . "'>
+                  <h5 class='card-header text-center'>" . $devicecodename . "</h5>
+                ";
+                //echo $devicecodename . "<br>";
+                $img = null;
+			          $imgpath = "img/devices/" . $devicecodename .".webp";
+                if (file_exists($imgpath)){
+                  $img = "<div class='deviceimage'><img src='" . $imgpath . "' /></div>";
+                } else {
+                  $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image' ></i></span>";
+                }
+                $onlyfirst = 0;
+                $lastupdate = 0;
+                foreach($devicename as $crVersion => $data){
+                    ++$onlyfirst;
+                    if($onlyfirst == 1){
+                      echo $img;
+                      echo "
+                      <div class='card-body'>
+                      <p class='card-text'><h4 class='devicename'>" . $data['device'] . "</h4></p>
+                        </div>
+                        <ul class='list-group list-group-flush'>
+                        <li class='list-group-item'><div class='center'>
+                    ";
+                    }
+                    //list all crDroid versions
+                    echo "<a href='". $devicecodename . "/" . $crVersion . "' class='m-1 btn btn-primary'>crDroid " . $crVersion . "</a>";
+                    if ($lastupdate < $data['builddate']){
+                      $lastupdate = $data['builddate'];
+                    }
+                }
+                echo "
+                          </div>
+                          </li>              
+                        </ul>
+                          <div class='card-footer text-muted'>Last build: " . beautifyDate($lastupdate) . "</div>
+                        </div>
+                    </div>
+                    ";
+            }
+        }
+    ?>
+          </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class='footerbg' id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>crDroid Android Project</h3>
+            <p>
+              <strong>Email:</strong> contact@crdroid.net<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
+              <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
+              <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
+              <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-</section>
 
-<?php include 'handler.php'; ?>
-<!--==========================
-	Download section
-============================-->
-<div class="container">
-	<div class="col-md-12">    
-		<div class="card card-nav-tabs">
-			<div class="card-header card-header-primary">
-				<div class="nav-tabs-navigation">
-					<div class="nav-tabs-wrapper">
-						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v8" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 8 <span class="badge badge-warning">Soon</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#crDroid-v7" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v6" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="card-body ">
-				<div class="tab-content text-center">
-					<div class="tab-pane fade" id="crDroid-v8">
-						<div class="device-holder">
-							<p>This crDroid version is based on Android 12 released by Google on October 4, 2021</p>
-							<div><span style="font-size: 200px; margin: 0 auto;"><i class="fas fa-laptop-code"></i></span><br> Well now... Hold your horses... This is under development!</div>
-						</div>
-					</div>
-					<div class="tab-pane fade show active" id="crDroid-v7">
-						<p>This crDroid version is based on Android 11 released by Google on September 8, 2020</p>
-						<div class="alert alert-primary" role="alert">This version of crDroid is supported officially on <b><?php echo GetSupportedDevices('7'); ?></b> devices coming from <b><?php echo GetSupportedOEMS('7'); ?></b> OEMs</div>
-						<div class="device-holder-2020">
-							<div class="device-holder-2020">
-								<?php ReadJSON(7); ?>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v6">
-						<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
-						<div class="alert alert-primary" role="alert">This version of crDroid is supported officially on <b><?php echo GetSupportedDevices('6'); ?></b> devices coming from <b><?php echo GetSupportedOEMS('6'); ?></b> OEMs</div>
-						<div class="alert alert-warning" role="alert">Note that crDroid 6 is legacy updated, meaning it may drop support soon. Do update to newer crDroid revisions.</div>
-						<div class="device-holder-2020">
-							<?php ReadJSON(6); ?>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v5">
-						<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
-						<div class="alert alert-dark" role="alert">This version of crDroid is no longer updated</div>
-						<div class="device-holder">
-							<?php ReturnDevices('v9.0') ?>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v4">
-						<p>This crDroid version is based on Android 8 (Oreo) released by Google on August 21, 2017</p>
-						<div class="alert alert-dark" role="alert">This version of crDroid is no longer updated</div>
-						<div class="device-holder">
-							<?php ReturnDevices('v8.1') ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright 2016-<?php echo date("Y");?> <strong><span>crDroid Android</span></strong>.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a> and hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-<!-- Modal -->
-<?php GenerateModal(6); ?>
-<?php GenerateModal(7); ?>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<?php include 'footer.php';?>
+  <!-- Vendor JS Files -->
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/bootstrap-dark/js/darkmode.js"></script>
 
-<!--==========================
-	Search script
-============================-->
-<script>
-	$("#search").on("keyup submit", function() {
-		var key = this.value.toLowerCase();
-		if (key == ''){
-			$(".manufacturer").css("display", "inherit");
-			$(".manufacturer-2020").css("display", "inherit");
-			$(".oemsplit").css("display", "inherit");
-		}else{
-			$(".manufacturer").css("display", "none");
-			$(".manufacturer-2020").css("display", "none");
-			$(".oemsplit").css("display", "none");
-		}
-		$(".device").each(function() {
-			var $this = $(this);
-			$this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
-		});
-		var instance = $('.lazy').Lazy({ chainable: false });
-		$('.lazy').Lazy();
-    	var instance = $('.lazy').data("plugin_lazy");
-	});
-	$('.dropdown-toggle').click(function(){
-		$('.dropdown-menu').toggleClass('show');
-	});
-	$(".dropdown-menu").mouseleave(function(){
-      $(".dropdown-menu").removeClass("show");
-    });
-	$('.close, .closebtn').click(function(){
-		$('.dropdown-menu').removeClass('show');
-		$(".changelog").fadeOut(0);
-		$(".changelogTXT").slideUp(0);
-	});
-
-    $(function() {
-        $('.lazy').lazy();
-    });
-</script>
-
-<!-- Default tab -->
-<script type="text/javascript" async=true>
-$(document).ready(function(){
-	var x = window.location.hash;
-	if (x.includes('#')){
-		var tab = x.replace('#', '');
-		activateTab(tab);
-	};
-	$('[id="changelogBtn"]').click(function() {
-		$(".changelogTXT").load($(this).attr("data-textfile"));
-		$(".changelog").fadeIn(1000);
-		$(".changelogTXT").slideDown(1000);
-	});
-});
-
-function activateTab(tab){
-  $('.nav-tabs a[href="#' + tab + '"]').tab('show');
-};
-</script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
 </body>
+
 </html>

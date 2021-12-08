@@ -46,6 +46,40 @@ function FinalizeJSON($version){
 	unlink($version.'convert.json');
 }
 
+function CompileFullJSON(){
+	// Put all required filenames into array
+	$fileNames = [
+		'6.json',
+		'7.json'
+	];
+
+	// Define an enmpty array for merging
+	$merged = [];
+
+	// Loop through each filename
+	foreach ($fileNames as $fileName) {
+		if(file_exists($fileName)){
+			$file = file_get_contents($fileName);
+			$jsonData = json_decode($file, true);
+			// Detach filename from extension to use as key later
+			$fileNameNoExt = basename($fileName, ".json");
+			
+			// Loop through every vendor key and it's value
+			foreach ($jsonData as $vendorKey => $vendorValues) {
+				// Loop through each name from vendor value
+				foreach ($vendorValues as $name => $device) {
+					// Compose new array structure and insert
+					// required filename as key between name and device values
+					$merged[$vendorKey][$name][$fileNameNoExt] = $device;
+				}
+			}
+		}
+	}
+	ksort($merged);
+	$compiled = json_encode($merged, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+	file_put_contents('compiled.json', $compiled);
+}
+
 function deleteDir($path) {
     if (empty($path)) { 
         return false;
@@ -158,6 +192,7 @@ nextDevice:
 
 if (!$ver == null){
 	CompileJSON($ver);
+	CompileFullJSON();
 	$request_method=$_SERVER["REQUEST_METHOD"];
 	switch($request_method){
 		case 'GET':

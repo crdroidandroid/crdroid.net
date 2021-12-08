@@ -1,247 +1,344 @@
-<!doctype html>
-<html lang="en">
-<head>
-<?php 
-include 'handler.php';
-$device = GetDeviceName($_GET['name']);
+<?php
+include 'functions.php';
 
-$php_array = RemoveTabs($_GET['name']);
-$devicesId = array(4,5,6,7,8);
-$diff = array_diff($devicesId, $php_array);
-$latest = max($diff);
+$domain = GetDomain();
+$device = $_GET['name'];
+$crversion = $_GET['crversion'];
 
-if (!empty($device)) {
-	echo "	<meta charset=\"utf-8\">\n";
-    echo "	<title>crDroid.net - Download crDroid for " . $device . " (" . $_GET['name'] . ")" . "</title>\n\n";
-    echo "	<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\n";
-    echo "	<meta name=\"description\" content=\"official crDroid ROM for " . $device . " (" . $_GET['name'] . ")" . "\">\n";
-    echo "	<meta name=\"keywords\" content=\"crDroid, crDroid ROM, ROM, " . $device . ", " . $_GET['name'] .  "\">\n";
-    $id = $_GET['name'];
-}else{
-    header("Location: https://crdroid.net/", true, 301);
+if (empty($crversion)) {
+    header("Location: " . $domain . "/downloads#" . $device . "", true, 301);
     exit;
 }
+
+//define vars
+$data = GetDeviceInfo($device, $crversion);
+$oem = $data[0];
+$devicename = $data[1]['device'];
+$maintainer = $data[1]['maintainer'];
+$nickname = $data[1]['nick'];
+$version = $data[1]['crversion'];
+$builddate = $data[1]['builddate'];
+$buildtype = $data[1]['buildtype'];
+$download = $data[1]['download'];
+$gapps = $data[1]['gapps'];
+$recovery = $data[1]['recovery'];
+$firmware = $data[1]['firmware'];
+$paypal = $data[1]['paypal'];
+$telegram = $data[1]['telegram'];
+$zipsize = $data[1]['size'];
+$forum = $data[1]['forum'];
+$md5 = $data[1]['md5'];
 ?>
 
-	<!-- Favicons -->
-	<link href="img/favicon.ico" rel="icon">
-	
-	<!-- Google Fonts -->
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<!-- Libraries CSS Files -->
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
+  <title>crDroid.net - Download crDroid for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
+  <meta name="description" content="official crDroid ROM for <?php echo $devicename; ?> (<?php echo $device; ?>)">
+  <meta name="keywords" content="crDroid, crDroid ROM, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
-	<!-- Main Stylesheet File -->
-	<link href="css/style.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="<?php echo GetDomain(); ?>/img/favicon.ico" rel="icon">
 
-	<!-- Google verification -->
-	<meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-		gtag('config', 'UA-6432969-5');
-	</script>
+  <!-- Vendor CSS Files -->
+  <link href="<?php echo GetDomain(); ?>/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?php echo GetDomain(); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo GetDomain(); ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php echo GetDomain(); ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php echo GetDomain(); ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?php echo GetDomain(); ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Bootstrap dark mode -->
+  <link id="dark-theme-style" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="<?php echo GetDomain(); ?>/css/style.css" rel="stylesheet">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-6432969-5');
+  </script>
 </head>
 
 <body>
 
-<header id="header" class="header header-hide">
-	<div class="container">
-		<div id="logo" class="pull-left">
-			<h1><a href="https://crdroid.net" class="scrollto"><span>cr</span>Droid <span>A</span>ndroid</a></h1>
-			<!-- Uncomment below image logo -->
-			<!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-		</div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
 
-		<nav id="nav-menu-container">
-			<ul class="nav-menu">
-			<li><a href="https://crdroid.net">Home</a></li>
-			<li><a href="translations.php">Translations</a></li>
-			<li><a href="dl.php">All devices</a></li>
-			<li><a href="https://stats.crdroid.net">Device Stats</a></li>
-			<li><a href="donate.php">Support us</a></li>
-			<li><a href="legal.php">Legal</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-		</nav>
-	</div>
-</header>
-  
-<!--==========================
-	Get Started Section
-============================-->
-<section class="devicespecific-padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="section-title text-center">
-        <p class="separator">Cool, seems you are ready to download<br>Check below info to get started<br></p>
-	  </div>
+      <div class="logo">
+        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
+        <a href="<?php echo GetDomain(); ?>"><img src="<?php echo GetDomain(); ?>/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+          <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a class="switcher" role="button" id="theme-toggler" onclick="toggleTheme()"></a>
+
     </div>
-</section>
+  </header><!-- End Header -->
 
-<!--==========================
-	Download section
-============================-->
-<div class="container">
-	<div class="col-md-12">    
-		<div class="card card-nav-tabs">
-			<div class="card-header card-header-primary">
-				<div class="nav-tabs-navigation">
-					<div class="nav-tabs-wrapper">
-						<ul class="nav nav-tabs" data-tabs="tabs">
-							<li class="nav-item" id="8">
-								<a class="nav-link" href="#crDroid-v8" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 8 <span class="badge badge-warning">Soon</span>
-								</a>
-							</li>
-							<li class="nav-item" id="7">
-								<a class="nav-link" href="#crDroid-v7" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 7
-								</a>
-							</li>
-							<li class="nav-item" id="6">
-								<a class="nav-link" href="#crDroid-v6" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 6
-								</a>
-							</li>
-							<li class="nav-item" id="5">
-								<a class="nav-link" href="#crDroid-v5" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 5
-								</a>
-							</li>
-							<li class="nav-item" id="4">
-								<a class="nav-link" href="#crDroid-v4" data-toggle="tab">
-									<span style="font-size: 18px;"><i class="fab fa-android"></i></span> crDroid 4
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="card-body ">
-				<div class="tab-content text-center">
-					<div class="tab-pane fade" id="crDroid-v8">
-						<div class="device-holder">
-							<p>This crDroid version is based on Android 12 released by Google on October 4, 2021</p>
-							<div><span style="font-size: 200px; margin: 0 auto;"><i class="fas fa-laptop-code"></i></span><br> Well now... Hold your horses... This is under development!</div>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v7">
-						<div class="devicespecific">
-							<p>This crDroid version is based on Android 11 released by Google on September 8, 2020</p>
-							<?php ReadDeviceJSON(7, $id); ?>							
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v6">
-						<div class="devicespecific">
-							<p>This crDroid version is based on Android 10 released by Google on September 3, 2019</p>
-							<?php ReadDeviceJSON(6, $id); ?>							
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v5">
-						<div class="device-holder">
-							<p>This crDroid version is based on Android 9 (Pie) released by Google on March 7, 2018</p>
-							<?php ReturnDeviceInfo('v9.0', $id);?>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="crDroid-v4">
-						<div class="device-holder">
-							<p>This crDroid version is based on Android 8 (Oreo) released by Google on August 21, 2017</p>
-							<?php ReturnDeviceInfo('v8.1', $id);?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="changelog" style="display: none; margin-left: 30px; padding-bottom: 5px;"><h5>Changelog:</h5></div>
-			<div style="text-align: center; padding-bottom: 20px;"><textarea readonly rows="12" class="changelogTXT" style="white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d; font-size: 0.8125rem;"></textarea></div>
-		</div>
-	</div>
-</div>
+  <main id="main">
 
-<?php include 'footer.php';?>
+    <section class="inner-page">
+      <div class="container">
 
-<!-- Default tab -->
-<script type="text/javascript" async=true>
-$(document).ready(function(){
-  var x = window.location.hash;
-  var tab = null;
-  if (x.includes('#')){
-	var s = x.split("/");
-	if (s[0]){
-		tab = s[0].replace('#','');
-		activateTab(tab);
-	}
-	if (s[1]){
-		if (s[1].includes('changelog')){
-			var myv = tab.replace('crDroid-', '');
-			var file = 'changelog/' + myv + '.x/changelog_<?php echo $_GET['name']; ?>.txt';
-			$(".changelogTXT").load(file);
-			$(".changelog").fadeIn(1000);
-			$(".changelogTXT").slideDown(1000);
-			$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
-		}
-	}
-  }else{
-	activateTab('crDroid-v<?php echo $latest; ?>');
-  };
-	$('[id="changelogBtn"]').click(function() {
-		$(".changelogTXT").load($(this).attr("data-textfile"));
-		$(".changelog").fadeIn(1000);
-		$(".changelogTXT").slideDown(1000);
-		$('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
-	});
-	$('.nav-link').click(function() {
-		$(".changelog").fadeOut(0);
-		$(".changelogTXT").slideUp(0);
-	});
-});
+        <div class="section-title">
+          <p><br><br></p>
+          <h2>Cool, seems you are ready to download</h2>
+          <p>Check below info to get started</p>
+        </div>
 
-<?php 
-$js_array = json_encode($php_array);
-echo "const tabsToRemove = ". $js_array . ";\n";
-?>
-for (const tab of tabsToRemove) {
-	var tabid = document.getElementById(tab);
-	tabid.parentNode.removeChild(tabid);
-	var tabidContent = document.getElementById('crDroid-v' + tab);
-	tabidContent.parentNode.removeChild(tabidContent);
-};
+        <!-- List device info -->
+        <div class="row">
+          <div class="col-md col-lg">
+			      <div class="col-md-12">
+          <?php
+            if (empty($maintainer)) {
+              echo "
+              <div class='alert alert-warning shadow' role='alert'>
+                <h4 class='alert-heading'>Aww snap!</h4>
+                <p>This version of crDroid is outdated or no longer supported, so try to check for other versions.</p>
+                <hr>
+                <p class='mb-0'>If this version source is still updated and if you are interested to maintain it, read our <a href='https://beta.crdroid.net/#faq' class='alert-link'>F.A.Q page</a> to get started</p>
+            </div>
+              ";
+            }
+          ?>
+              <div class="col-md-12">
+                <div class="card mb-3 shadow">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                    <?php
+                      $imgpath = "img/devices/" . $device .".webp";
+                      if (file_exists($imgpath)){
+                        $img = "<img src='" . GetDomain() . "/img/devices/" . $device .".webp' class='img-fluid rounded-start' alt='device image'>";
+                      } else {
+                        $img = "<span class='noimg'><i class='bx bxs-image' ></i></span>";
+                      }
+                    ?>
+                      <div class='deviceimage-dl'><?php echo $img; ?></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h3 class="card-title text-center">crDroid for <?php echo $devicename; ?></h3>
+                        <hr>
+                        <p class="card-text">&nbsp;</p>
+                        <table class="table table-sm table-borderless">
+                          <tbody>
+                            <tr>
+                              <th scope="row"><i class='bx bxs-copyright'></i> OEM</th>
+                              <td><?php echo $oem; ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><i class='bx bxs-terminal' ></i> Codename</th>
+                              <td><?php echo $device; ?></td>
+                            </tr>
+                            <?php 
+                              if (empty($maintainer) == false) {
+                                  echo "
+                                <tr>
+                                  <th scope='row'><i class='bx bxs-id-card' ></i> Maintainer</th>
+                                  <td>" . $maintainer . "</td>
+                                </tr>";
+                              }
+                              if (empty($nickname) == false) {
+                                  echo "
+                                <tr>
+                                  <th scope='row'><i class='bx bxs-credit-card-front' ></i> Nickname</th>
+                                  <td>" . $nickname . "</td>
+                                </tr>";
+                              }
+                            ?>
+                            <tr>
+                              <th scope="row"><i class='bx bxl-android' ></i> Version</th>
+                              <td><?php echo $version; ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><i class='bx bxs-calendar' ></i> Build date</th>
+                              <td><?php echo beautifyDate($builddate); ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><i class='bx bxs-file-archive' ></i> ZIP size</th>
+                              <td><?php echo convertToMB($zipsize); ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><i class='bx bx-git-branch' ></i> Build type</th>
+                              <td><?php echo $buildtype; ?></td>
+                            </tr>
+                          </tbody>
+                          </table>
+                          <h6 class="text-left">crDroid downloads:</h6>
+                          <div class="download-area">
+                            <a class="btn btn-success btn-sm m-1" href='<?php echo $download; ?>'><i class='bx bxs-download' ></i> Download latest version</a>
+						                <a class="btn btn-secondary btn-sm m-1" href='https://sourceforge.net/projects/crdroid/files/<?php echo $device; ?>/<?php echo $crversion;?>.x'><i class='bx bx-history' ></i>  Download older versions</a>
+                          </div>
+                          <h6 class="text-left">Useful links:</h6>
+                          <div class="download-area">
+                            <div class="btn-group" role="group" aria-label="support buttons">
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class='bx bx-support' ></i> Support
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                  <li><a class="dropdown-item" href="<?php echo $forum; ?>"><i class='bx bxs-conversation' ></i> Forum</a></li>
+                                  <?php
+                                    if (empty($telegram) == false){
+                                      echo "
+                                  <li><a class='dropdown-item' href='" . $telegram . "'><i class='bx bxl-telegram' ></i> Telegram</a></li>";
+                                    }
+                                  ?>
+                                </ul>
+                              </div>
+                            </div>
+                            <a class="btn btn-secondary btn-sm m-1" role='button' id="changelogBtn" data-textfile="../changelog/v<?php echo $crversion;?>.x/changelog_<?php echo $device; ?>.txt"><i class='bx bxs-spreadsheet' ></i> Changelog</a>
+                            <?php
+                                  if (empty($gapps) == false){
+                                      echo "
+                                        <a class='btn btn-info btn-sm m-1' href='" . $gapps . "'><i class='bx bxl-google' ></i> Gapps</a>";
+                                  }
+                            ?>
+                            <?php
+                                  if (empty($recovery) == false){
+                                      echo "
+						                            <a class='btn btn-danger btn-sm m-1' href='" . $recovery . "'><i class='bx bxs-terminal' ></i> Recovery</a>";
+                                  }
+                            ?>
+                            <?php
+                                  if (empty($firmware) == false){
+                                      echo "
+                                        <a class='btn btn-success btn-sm m-1' href='" . $firmware . "'><i class='bx bxs-terminal' ></i> Firmware</a>";
+                                  }
+                            ?>
+                            <?php
+                                  if (empty($paypal) == false){
+                                      echo "
+                                        <a class='btn btn-primary btn-sm m-1' href='" . $paypal . "'><i class='bx bxs-dollar-circle' ></i> Donate</a>";
+                                  }
+                            ?>
+						                <a class="btn btn-secondary btn-sm m-1" href='https://stats.crdroid.net/<?php echo $device; ?>'><i class='bx bx-stats' ></i> Stats</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="changelog" style="display: none; margin-left: 30px; padding-bottom: 5px;">
+                      <h6>Changelog:</h6>
+                    </div>
+			              <div style="text-align: center; padding-bottom: 10px;">
+                      <textarea readonly rows="12" class="changelogTXT" style="white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;">dasdsa</textarea>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+		    </div>
 
-var noOfcrDroidVersions = <?php echo count($devicesId);?>;
-var supportedVersions = tabsToRemove.length;
-var tabWidthPercent = (100 / (noOfcrDroidVersions - supportedVersions)) + "%";
-$(".nav-item").css({
-	"min-width": tabWidthPercent
-});
+      </div>
+    </section>
 
-function activateTab(tab){
-  $('.nav-tabs a[href="#' + tab + '"]').tab('show');
-};
+  </main><!-- End #main -->
 
-$('.dropdown-toggle').click(function(){
-	$('.dropdown-menu').toggleClass('show');
-});
-$(".dropdown-menu").mouseleave(function(){
-	$(".dropdown-menu").removeClass("show");
-});
-$('.close, .closebtn').click(function(){
-	$('.dropdown-menu').removeClass('show');
-});
-</script>
+  <!-- ======= Footer ======= -->
+  <footer class='footerbg' id="footer">
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>crDroid Android Project</h3>
+            <p>
+              <strong>Email:</strong> contact@crdroid.net<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
+              <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
+              <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
+              <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright 2016-<?php echo date("Y");?> <strong><span>crDroid Android</span></strong>.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a> and hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="<?php echo GetDomain(); ?>/vendor/aos/aos.js"></script>
+  <script src="<?php echo GetDomain(); ?>/vendor/jquery/jquery-3.6.0.js"></script>
+  <script src="<?php echo GetDomain(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo GetDomain(); ?>/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="<?php echo GetDomain(); ?>/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="<?php echo GetDomain(); ?>/vendor/bootstrap-dark/js/darkmode.js"></script>
+
+  <!-- Main JS File -->
+  <script src="<?php echo GetDomain(); ?>/js/main.js"></script>
+
+  <script type="text/javascript" async=true>
+    $(document).ready(function(){
+      var x = window.location.hash;
+      var tab = null;
+      if (x.includes('#')){
+        if (x.includes('changelog')){
+          var myv = <?php echo $crversion; ?>;
+          var file = '../changelog/v' + myv + '.x/changelog_<?php echo $device; ?>.txt';
+          $(".changelogTXT").load(file);
+          $(".changelog").fadeIn(1000);
+          $(".changelogTXT").slideDown(1000);
+          $('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+        }
+      };
+
+      $('[id="changelogBtn"]').click(function() {
+        $(".changelogTXT").load($(this).attr("data-textfile"));
+        $(".changelog").fadeIn(1000);
+        $(".changelogTXT").slideDown(1000);
+        $('html, body').animate({scrollTop: $(".changelog").offset().top}, 2000);
+      });
+      $('.nav-link').click(function() {
+        $(".changelog").fadeOut(0);
+        $(".changelogTXT").slideUp(0);
+      });
+    });
+  </script>
 </body>
+
 </html>

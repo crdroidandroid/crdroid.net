@@ -1,450 +1,337 @@
-<!doctype html>
+<?php include 'functions.php'; ?>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>crDroid.net - increase performance and reliability over stock Android for your device</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="official crDroid ROM website">
-	<meta name="keywords" content="crDroid, crDroid ROM, ROM">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<!-- Favicons -->
-	<link href="img/favicon.ico" rel="icon">
+  <title>crDroid.net - increase performance and reliability over stock Android for your device</title>
+  <meta name="description" content="official crDroid ROM website">
+  <meta name="keywords" content="crDroid, crDroid ROM, ROM">
 
-	<!-- Google Fonts -->
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-	<!-- Libraries CSS Files -->
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Main Stylesheet File -->
-	<link href="css/style.css" rel="stylesheet">
+  <!-- Bootstrap dark mode -->
+  <link id="dark-theme-style" rel="stylesheet" />
 
-	<!-- Google verification -->
-	<meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
 
-		gtag('config', 'UA-6432969-5');
-	</script>
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-6432969-5');
+  </script>
 </head>
 
 <body>
 
-  <header id="header" class="header header-hide">
-    <div class="container">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
 
-      <div id="logo" class="pull-left">
-        <h1><a href="https://crdroid.net" class="scrollto"><span>cr</span>Droid <span>A</span>ndroid</a></h1>
-        <!-- Uncomment below image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      <div class="logo">
+        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
+        <a href="<?php echo GetDomain(); ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#screenshots">Screenshots</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="translations.php">Translations</a></li>
-          <li><a href="https://stats.crdroid.net">Device Stats</a></li>
-		      <li><a href="donate.php">Support us</a></li>
-          <li><a href="legal.php">Legal</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">Features</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+          <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
-      </nav>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a class="switcher" role="button" id="theme-toggler" onclick="toggleTheme()"></a>
+
     </div>
-  </header>
+  </header><!-- End Header -->
 
-  <!--==========================
-    Hero Section
-  ============================-->
-  <section id="hero" class="wow fadeIn">
-    <div class="hero-container">
-      <h1>Welcome to crDroid ROM</h1>
-      <h2>crDroid is designed to improve the performance, reliability and customizability of stock Android</h2>
-      <!--<img src="img/hero-img.webp" alt="crdroid" height="500">-->
-      <div class="ver-container">
-        <div class="ver"><a href="dl.php#crDroid-v8" class="btn-get-started crnew">crDroid <small>v</small><b>8</b> - Android 12</a><div class="new">SOON</div></div>
-        <div class="ver"><a href="dl.php" class="btn-get-started">crDroid <small>v</small><b><?php include 'handler.php'; echo crDroid_Version(7); ?></b> - Android 11</a></div>
-        <div class="ver"><a href="dl.php#crDroid-v6" class="btn-get-started">crDroid <small>v</small><b><?php echo crDroid_Version(6); ?></b> - Android 10</a></div>
-      </div>
-    </div>
-  </section><!-- #hero -->
-
-  <!--==========================
-    Get Started Section
-  ============================-->
-  <section class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>What you get?</h2>
-        <p class="separator">Our focus</p>
-
-      </div>
-    </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
       <div class="row">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="img/svg/android.svg" alt="img" class="img-fluid">
-            <h4>Simple</h4>
-            <p>Designed from the ground up to be simple and lightweight for your device</p>
-
+        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+          <div>
+            <h1>Let's get started with crDroid</h1>
+            <h2>Improve the performance, reliability and customizability of your Android device</h2>
+            <a href="<?php echo GetDomain(); ?>/downloads" class="download-btn"><i class='bx bx-cloud-download'></i> Download for your device</a>
+            <a href="https://github.com/crdroidandroid/android" class="download-btn"><i class='bx bxl-github' ></i> Build from source</a>
           </div>
         </div>
+        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+          <img src="img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+    
+  </section><!-- End Hero -->
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
+  <main id="main">
 
-            <img src="img/svg/customize.svg" alt="img" class="img-fluid">
-            <h4>Customize</h4>
-            <p>Customize your installation with more then 40+ options found under crDroid Settings</p>
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
 
-          </div>
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>With crDroid you get lots of customization options not compromising on performance or security</p>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-
-            <img src="img/svg/secure.svg" alt="img" class="img-fluid">
-            <h4>Secure</h4>
-            <p>We cherish and treasure the privacy of our users with top-notch security options</p>
-
+        <div class="row no-gutters">
+          <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+            <div class="content d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up">
+                  <i class='bx bxs-mobile' ></i>
+                  <h4>Status Bar & Quick Settings</h4>
+                  <p>Customize what icons you see as well as effects and number of QS rows and columns</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class='bx bxs-lock-alt' ></i>
+                  <h4>Lock screen</h4>
+                  <p>Your lockscreen is what your friends will see first, so impress them from the beginning</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class='bx bxs-joystick-button' ></i>
+                  <h4>Navigation and buttons</h4>
+                  <p>Choose from gesture nav or old school nav buttons as well as customize what your hardware buttons do</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class='bx bxs-paint-roll' ></i>
+                  <h4>User interface</h4>
+                  <p>Your phone, your style... Set dark mode on or off and choose your colors</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class='bx bxs-volume-full' ></i>
+                  <h4>Notifications and sounds</h4>
+                  <p>Set how notifications behave and how differect parts of the UI react to your sounds</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                  <i class='bx bxs-dashboard' ></i>
+                  <h4>Miscellaneous</h4>
+                  <p>Game mode, smart charging, pocket detection, yes you can customize that also</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="img/features.png" class="img-fluid" alt="">
           </div>
         </div>
 
       </div>
-    </div>
+    </section><!-- End Features Section -->
 
-  </section>
+    <!-- ======= Details Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
 
-  <!--==========================
-    About Us Section
-  ============================-->
-  <section id="about-us" class="about-us padd-section wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-5 col-lg-3">
-          <img src="img/hero-img.webp" alt="About">
-        </div>
-
-        <div class="col-md-7 col-lg-5">
-          <div class="about-content">
-
-            <h2><span>crDroid</span>Main highlights</h2>
-            <p>Things you can customize</p>
-
-            <ul class="list-unstyled">
-              <li><i class="fa fa-angle-right"></i>Status Bar</li>
-              <li><i class="fa fa-angle-right"></i>Quick Settings</li>
-              <li><i class="fa fa-angle-right"></i>Lock Screen</li>
-              <li><i class="fa fa-angle-right"></i>Recents Screen</li>
-              <li><i class="fa fa-angle-right"></i>Navigation</li>
-              <li><i class="fa fa-angle-right"></i>Buttons</li>
-              <li><i class="fa fa-angle-right"></i>User Interface</li>
-              <li><i class="fa fa-angle-right"></i>Notifications</li>
-              <li><i class="fa fa-angle-right"></i>Sound</li>
-              <li><i class="fa fa-angle-right"></i>Misc</li>
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="img/details-1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h3>Always up-to-date</h3>
+            <p class="fst-italic">
+              Being up to date means a lot for us
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Security is always a priority</li>
+              <li><i class="bi bi-check"></i> At least once a month security updates pushed to source</li>
+              <li><i class="bi bi-check"></i> We cherish and treasure the privacy of our users</li>
             </ul>
+            <p>
+              As soon as we build and test every release, we will push updates
+            </p>
+          </div>
+        </div>
 
+        <div class="row content">
+          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+            <img src="img/details-2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>Source control</h3>
+            <p>
+              crDroid is maintained by a small group of developers.
+            </p>
+            <p>
+              Those developers donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases.
+            </p>
+            <p>
+              Our project will always be open source so that others can build and contribute also. We do encourage everyone to contribute on our GitHub. 
+            </p>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section><!-- End Details Section -->
 
-  <!--==========================
-    Screenshots Section
-  ============================-->
-  <section id="screenshots" class="padd-section text-center wow fadeInUp">
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container" data-aos="fade-up">
 
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>crDroid Settings Gallery</h2>
-        <p class="separator">On device screenshots</p>
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some crDroid settings screenshots so you know what you can customize on the go</p>
+        </div>
+
       </div>
-    </div>
 
-    <div class="container">
-      <div class="owl-carousel owl-theme">
-        <div><img src="img/screen/1.webp" alt="img"></div>
-        <div><img src="img/screen/2.webp" alt="img"></div>
-        <div><img src="img/screen/3.webp" alt="img"></div>
-        <div><img src="img/screen/4.webp" alt="img"></div>
-        <div><img src="img/screen/5.webp" alt="img"></div>
-        <div><img src="img/screen/6.webp" alt="img"></div>
-        <div><img src="img/screen/7.webp" alt="img"></div>
-        <div><img src="img/screen/8.webp" alt="img"></div>
-        <div><img src="img/screen/9.webp" alt="img"></div>
-        <div><img src="img/screen/10.webp" alt="img"></div>
-        <div><img src="img/screen/11.webp" alt="img"></div>
-        <div><img src="img/screen/12.webp" alt="img"></div>
-        <div><img src="img/screen/13.webp" alt="img"></div>
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="img/gallery/gallery-1.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-1.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-2.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-2.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-3.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-3.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-4.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-4.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-5.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-5.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-6.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-6.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-7.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-7.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-8.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-8.webp" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-9.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-9.webp" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
       </div>
-    </div>
+    </section><!-- End Gallery Section -->
 
-  </section>
-  
-  <!--==========================
-    Testimonials Section
-  ============================-->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
 
-  <section id="testimonials" class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
+        <div class="section-title">
 
-        <div class="col-md-8">
+          <h2>Frequently Asked Questions</h2>
 
-          <div class="testimonials-content">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        </div>
 
-              <div class="carousel-inner" role="listbox">
-
-                <div class="carousel-item  active">
-                  <div class="top-top">
-
-                    <h2>What our users say</h2>
-                    <p>Thanks for the great work, this ROM is really awesome.</p>
-                    <h4>nicko.martin<span>XDA Forum</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>What our users say</h2>
-                    <p>Best rom by far... Love this beast</p>
-                    <h4>grinch247<span>XDA Forum</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>What our users say</h2>
-                    <p>Decided to jump on the crDroid train. So far so good. Everything works perfectly.</p>
-                    <h4>apophis9283<span>XDA Forum</span></h4>
-
-                  </div>
-                </div>
-
+        <div class="accordion-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How do I become maintainer for crDroid? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p>
+                So you want to make your build official and become a crDroid maintainer?<br> Just head over to our GitHub in order to get more info. <br>Note that we only support Android 11 builds for new devices.<br>
+                </p>
+                <a href='https://github.com/crdroidandroid/android/blob/11.0/README.mkdn#3-how-to-become-an-official-maintainer' class="btn btn-info gothere">Go there now!</a>
               </div>
+            </li>
 
-              <div class="btm-btm">
-
-                <ul class="list-unstyled carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ul>
-
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Are you going to add more features? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  No way... Nah... just kidding... We always try to add more and more features with stability and security first in mind. 
+                </p>
               </div>
+            </li>
 
-            </div>
-          </div>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">What base is crDroid using? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  crDroid uses LineageOS as base. We try to keep in sync with LineageOS source while also adding lots of customizations for you to choose from.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">For how long do you plan to keep updates? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  As crDroid is based on LineageOS, which is also based on stock Android, we can say crDroid is going to keep updates flowing as long as LineageOS and Google do.
+                </p>
+              </div>
+            </li>
+
+          </ul>
         </div>
 
       </div>
-    </div>
-  </section>
-  
-  <!--==========================
-    FAQ Section
-  ============================-->
+    </section><!-- End Frequently Asked Questions Section -->
 
-  <section id="faq" class="padd-section text-center wow fadeInUp">
+  </main><!-- End #main -->
 
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Frequently Asked Questions</h2>
-        <p class="separator">FAQ</p>
+  <!-- ======= Footer ======= -->
+  <footer class='footerbg' id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>crDroid Android Project</h3>
+            <p>
+              <strong>Email:</strong> contact@crdroid.net<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
+              <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
+              <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
+              <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-6">
-          <div class="feature-block">
-            <img src="img/svg/base.svg" alt="img" class="img-fluid">
-            <h4>What base is crDroid using?</h4>
-            <p>crDroid uses LineageOS as base. We try to keep in sync with LineageOS source while also adding lots of customizations for you to choose from.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <div class="feature-block">
-            <img src="img/svg/features.svg" alt="img" class="img-fluid">
-            <h4>Are you going to add more features?</h4>
-            <p>No way... Nah... just kidding... We always try to add more and more features with stability and security first in mind. </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <div class="feature-block">
-            <img src="img/svg/update.svg" alt="img" class="img-fluid">
-            <h4>For how long do you plan to keep updates?</h4>
-            <p>As crDroid is based on LineageOS, which is also based on stock Android, we can say crDroid is going to keep updates flowing as long as LineageOS and Google do. </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <div class="feature-block">
-            <img src="img/svg/team.svg" alt="img" class="img-fluid">
-            <h4>How do I become maintainer for crDroid?</h4>
-            <p>So you want to make your build official and become a crDroid maintainer? Just head over to our GitHub for <a href="https://github.com/crdroidandroid/android/blob/11.0/README.mkdn#3-how-to-become-an-official-maintainer" target="_blank">more info</a>. Note that we only support Android 11 builds for new devices.</p>
-          </div>
-        </div>
-
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright 2016-<?php echo date("Y");?> <strong><span>crDroid Android</span></strong>.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a> and hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
       </div>
     </div>
-  </section>
+  </footer><!-- End Footer -->
 
-  <!--==========================
-    Team Section
-  ============================-->
-  <section id="team" class="padd-section text-center wow fadeInUp">
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <div class="container">
-      <div class="section-title text-center">
+  <!-- Vendor JS Files -->
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/bootstrap-dark/js/darkmode.js"></script>
 
-        <h2>Team Member</h2>
-        <p class="separator">Meet the core team</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/neobuddy89" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/neobuddy89"><i class="fab fa-github"></i> neobuddy89</a></li>
-              </ul>
-              <span>crDroid Lead Developer</span>
-              <h5>Pranav</h5>
-            </div>
-          </div>
-        </div>
-
-       <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/firebird11" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/firebird11"><i class="fab fa-github"></i> firebird11</a></li>
-              </ul>
-              <span>crDroid Core Team</span>
-              <h5>Hildo</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/gwolf2u" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/gwolf2u"><i class="fab fa-github"></i> gwolf2u</a></li>
-              </ul>
-              <span>crDroid Core Team</span>
-              <h5>Gabriel</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/Hikari-no-Tenshi" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/Hikari-no-Tenshi"><i class="fab fa-github"></i> Hikari-no-Tenshi</a></li>
-              </ul>
-              <span>crDroid Core Team</span>
-              <h5>Serhij</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/DarkJoker360" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/DarkJoker360"><i class="fab fa-github"></i> DarkJoker360</a></li>
-              </ul>
-              <span>crDroid Core Team</span>
-              <h5>Simone</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/xNombre" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/xNombre"><i class="fab fa-github"></i> xNombre</a></li>
-              </ul>
-              <span>crDroid Core Team</span>
-              <h5>Andrzej</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3 fitme">
-          <div class="team-block bottom">
-            <img src="https://avatars.githubusercontent.com/soubhik-khan" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/soubhik-khan"><i class="fab fa-github"></i> soubhik-khan</a></li>
-              </ul>
-              <span>crDroid Core Team (retired)</span>
-              <h5>Soubhik</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<?php include 'footer.php';?>
-
-<script>
-	$('.crnew').mouseover(function(){
-    $('.new').css("background", "#fff");
-    $('.new').css("color", "#71c55d");
-  });
-  $('.crnew').mouseleave(function(){
-    $('.new').css("background", "#71c55d");
-    $('.new').css("color", "#fff");
-	});
-</script>
-
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
 </body>
+
 </html>

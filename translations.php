@@ -1,92 +1,97 @@
-<!doctype html>
+<?php include 'functions.php'; ?>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-    <title>crDroid.net - help out with translations</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="translations for crDroid Android project">
-	<meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<!-- Favicons -->
-	<link href="img/favicon.ico" rel="icon">
-	
-	<!-- Google Fonts -->
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  <title>crDroid.net - help out with translations</title>
+  <meta name="description" content="translations for crDroid Android project">
+  <meta name="keywords" content="crDroid, crDroid ROM, ROM, crDroid download">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
 
-	<!-- Libraries CSS Files -->
-	<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-	<link href="lib/animate/animate.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-	<!-- Main Stylesheet File -->
-	<link href="css/style.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Google verification -->
-	<meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Bootstrap dark mode -->
+  <link id="dark-theme-style" rel="stylesheet" />
 
-		gtag('config', 'UA-6432969-5');
-	</script>
+  <!-- Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-6432969-5');
+  </script>
 </head>
 
 <body>
 
-  <header id="header" class="header header-hide">
-    <div class="container">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
 
-      <div id="logo" class="pull-left">
-        <h1><a href="https://crdroid.net" class="scrollto"><span>cr</span>Droid <span>A</span>ndroid</a></h1>
-        <!-- Uncomment below image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      <div class="logo">
+        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
+        <a href="<?php echo GetDomain(); ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="https://crdroid.net">Home</a></li>
-          <li><a href="dl.php">All devices</a></li>
-          <li><a href="https://stats.crdroid.net">Device Stats</a></li>
-		  <li><a href="donate.php">Support us</a></li>
-          <li><a href="legal.php">Legal</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+          <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
-      </nav>
-    </div>
-  </header>
-  
-<!--==========================
-	Get Started Section
-============================-->
-<section class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>We need your help</h2>
-        <p class="separator">crDroid needs your help translate all our project to be able to reach out to more and more of you.<br>Want to help, why not check out below for more info, is really easy.</p>
-		</div>
-    </div>
-</section>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
+      <a class="switcher" role="button" id="theme-toggler" onclick="toggleTheme()"></a>
 
-  <!--==========================
-    Get Started Section
-  ============================-->
-  <section class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="row">
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section class="inner-page">
+      <div class="container">
+
+	  <div class="section-title">
+          <p><br><br></p>
+          <h2>We need your help</h2>
+          <p>crDroid needs your help translate all our project to be able to reach out to more and more of you.</p>
+          <p>Want to help, why not check out below for more info, is really easy.</p>
+        </div>
+        
+		<div class="row">
 
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-translation">
-            <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid">
+            <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid translation">
             <h4>crDroid Settings</h4>
             <p>This is the place where mission control is running<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-translation/localized.svg"></p>
 			</a>
@@ -96,7 +101,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-frameworks-base">
-            <img src="img/svg/framework.svg" alt="img" class="img-fluid">
+            <img src="img/svg/framework.svg" alt="img" class="img-fluid translation">
             <h4>Frameworks Base</h4>
             <p>We need a way to link with Android API don't we<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-frameworks-base/localized.svg"></p>
 			</a>
@@ -106,7 +111,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-home">
-            <img src="img/svg/launcher.svg" alt="img" class="img-fluid">
+            <img src="img/svg/launcher.svg" alt="img" class="img-fluid translation">
             <h4>crDroid Home</h4>
             <p>Our Launcher from where you start favorite apps<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-home/localized.svg"></p>
 			</a>
@@ -114,11 +119,58 @@
         </div>
 
       </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class='footerbg' id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>crDroid Android Project</h3>
+            <p>
+              <strong>Email:</strong> contact@crdroid.net<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
+              <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
+              <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
+              <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
-  </section>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright 2016-<?php echo date("Y");?> <strong><span>crDroid Android</span></strong>.
+      </div>
+      <div class="credits">
+        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a> and hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-<?php include 'footer.php';?>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/bootstrap-dark/js/darkmode.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
 </body>
+
 </html>
