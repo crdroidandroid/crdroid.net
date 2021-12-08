@@ -111,7 +111,7 @@
                 $img = null;
 			          $imgpath = "img/devices/" . $devicecodename .".webp";
                 if (file_exists($imgpath)){
-                  $img = "<div class='deviceimage'><img src='" . $imgpath . "' /></div>";
+                  $img = "<div class='deviceimage'><img class='lazy' data-src='" . $imgpath . "' /></div>";
                 } else {
                   $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image' ></i></span>";
                 }
@@ -198,6 +198,15 @@
 
   <!-- Main JS File -->
   <script src="js/main.js"></script>
+
+  <!-- Lazy load images -->
+  <script>
+	$(function() {
+        $('.lazy').lazy();
+    });
+  </script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 </body>
 
 </html>
