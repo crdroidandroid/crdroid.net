@@ -49,6 +49,10 @@ function enableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#222";
 	}
+  elements = document.getElementsByClassName('form-control')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#181818";
+	}
 }
 
 function disableDarkTheme() {
@@ -70,5 +74,9 @@ function disableDarkTheme() {
   elements = document.getElementsByClassName('footerbg')
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#eff2f8";
+	}
+  elements = document.getElementsByClassName('form-control')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#fff";
 	}
 }

@@ -89,6 +89,14 @@
         <!-- List devices -->
         <div class="row">
 
+        <div class="input-group mb-3">
+        <div class="input-group-prepend shadow">
+          <span class="input-group-text" id="inputGroup-sizing-default">Search device</span>
+        </div>
+        <input type="text" class="form-control shadow" aria-label="Search device" id="search" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+
         <?php
         $json_array = json_decode(file_get_contents('devices_handler/compiled.json'), true);
 
@@ -103,7 +111,7 @@
             echo "<div id='" . $key . "' class='oem'><h1><i class='bx bx-chevrons-left' ></i>" . $key . "<i class='bx bx-chevrons-right' ></i></h1></div>";
             foreach($arrays as $devicecodename => $devicename){
                 echo "
-                <div class='col-lg-3 mb-4'>
+                <div class='col-lg-3 mb-4 device'>
                 <div class='card border-secondary shadow' id='" . $devicecodename . "'>
                   <h5 class='card-header text-center'>" . $devicecodename . "</h5>
                 ";
@@ -111,7 +119,7 @@
                 $img = null;
 			          $imgpath = "img/devices/" . $devicecodename .".webp";
                 if (file_exists($imgpath)){
-                  $img = "<div class='deviceimage'><img class='lazy' data-src='" . $imgpath . "' /></div>";
+                  $img = "<div class='deviceimage'><img src='" . $imgpath . "' /></div>";
                 } else {
                   $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image' ></i></span>";
                 }
@@ -199,14 +207,26 @@
   <!-- Main JS File -->
   <script src="js/main.js"></script>
 
-  <!-- Lazy load images -->
+  <!-- Search js -->
   <script>
 	$(function() {
-        $('.lazy').lazy();
-    });
+    //search js
+    $("#search").on("keyup submit", function() {
+		  var key = this.value.toLowerCase();
+		  if (key == ''){
+			  $(".oem").show();
+        $(".OEMS").show();
+		  }else{
+			  $(".oem").hide();
+        $(".OEMS").hide();
+		  }
+		  $(".device").each(function() {
+			  var $this = $(this);
+			  $this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
+		  });
+  	});
+  });
   </script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 </body>
 
 </html>
