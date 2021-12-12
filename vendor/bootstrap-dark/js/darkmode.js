@@ -12,6 +12,12 @@ const THEME_TOGGLER = document.getElementById("theme-toggler");
 
 let isDark = LOCAL_META_DATA && LOCAL_META_DATA.isDark;
 
+if (isDark) {
+	enableDarkTheme();
+} else {
+	disableDarkTheme();
+}
+
 function toggleTheme() {
   isDark = !isDark;
   if (isDark) {
@@ -65,43 +71,4 @@ function disableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#eff2f8";
 	}
-}
-
-// check browser level dark mode
-// Check to see if Media-Queries are supported
-if (window.matchMedia) {
-	// Check if the dark-mode Media-Query matches
-	if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-		//dark theme on
-		//check if user defined specific use of dark mode from previous visit
-		if (isDark == null) {
-			enableDarkTheme();
-		} else{
-			if (isDark) {
-				enableDarkTheme();
-			} else {
-				disableDarkTheme();
-			}
-		  }
-	} else {
-		//dark theme off
-		//check if user defined specific use of dark mode from previous visit
-		if (isDark == null) {
-			disableDarkTheme();
-		} else {
-			if (isDark) {
-				enableDarkTheme();
-			} else {
-				disableDarkTheme();
-			}
-		}
-	}
-  } else {
-	  //didn't detect mode
-	  //check if user defined specific use of dark mode from previous visit
-		if (isDark) {
-			enableDarkTheme();
-		} else {
-			disableDarkTheme();
-		}
 }
