@@ -127,7 +127,7 @@ $md5 = $data[1]['md5'];
                 <h4 class='alert-heading'>Aww snap!</h4>
                 <p>This version of crDroid is outdated or no longer supported, so try to check for other versions.</p>
                 <hr>
-                <p class='mb-0'>If this version source is still updated and if you are interested to maintain it, read our <a href='https://beta.crdroid.net/#faq' class='alert-link'>F.A.Q page</a> to get started</p>
+                <p class='mb-0'>If this version source is still updated and if you are interested to maintain it, read our <a href='" . GetDomain() . "/#faq' class='alert-link'>F.A.Q page</a> to get started</p>
             </div>
               ";
             }
