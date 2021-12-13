@@ -37,7 +37,7 @@ $md5 = $data[1]['md5'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>crDroid.net - Download crDroid for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
+  <title>crDroid.net - Download crDroid v<?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
   <meta name="description" content="official crDroid v<?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)">
   <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
