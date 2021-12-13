@@ -13,6 +13,10 @@ if (empty($crversion)) {
 //define vars
 $data = GetDeviceInfo($device, $crversion);
 $oem = $data[0];
+if (empty($oem)){
+  header("Location: " . $domain , true, 301);
+  exit;
+}
 $devicename = $data[1]['device'];
 $maintainer = $data[1]['maintainer'];
 $nickname = $data[1]['nick'];
@@ -42,24 +46,24 @@ $md5 = $data[1]['md5'];
   <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
   <!-- Favicons -->
-  <link href="<?php echo GetDomain(); ?>/img/favicon.ico" rel="icon">
+  <link href="<?php $domain ?>/img/favicon.ico" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?php echo GetDomain(); ?>/vendor/aos/aos.css" rel="stylesheet">
-  <link href="<?php echo GetDomain(); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo GetDomain(); ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<?php echo GetDomain(); ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?php echo GetDomain(); ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="<?php echo GetDomain(); ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?php $domain ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Bootstrap dark mode -->
   <link id="dark-theme-style" rel="stylesheet" />
 
   <!-- Main CSS File -->
-  <link href="<?php echo GetDomain(); ?>/css/style.css" rel="stylesheet">
+  <link href="<?php $domain ?>/css/style.css" rel="stylesheet">
 
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
@@ -82,18 +86,18 @@ $md5 = $data[1]['md5'];
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
-        <a href="<?php echo GetDomain(); ?>"><img src="<?php echo GetDomain(); ?>/img/logo.png" alt="" class="img-fluid"></a>
+        <!--<h1><a href="<?php $domain ?>">crDroid</a></h1>-->
+        <a href="<?php $domain ?>"><img src="<?php $domain ?>/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>">Home</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/downloads">Download</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="<?php $domain ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php $domain ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="<?php $domain ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link" href="<?php $domain ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php $domain ?>/legal">Legal</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
           <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
@@ -127,7 +131,7 @@ $md5 = $data[1]['md5'];
                 <h4 class='alert-heading'>Aww snap!</h4>
                 <p>This version of crDroid is outdated or no longer supported, so try to check for other versions.</p>
                 <hr>
-                <p class='mb-0'>If this version source is still updated and if you are interested to maintain it, read our <a href='" . GetDomain() . "/#faq' class='alert-link'>F.A.Q page</a> to get started</p>
+                <p class='mb-0'>If this version source is still updated and if you are interested to maintain it, read our <a href='" . $domain . "/#faq' class='alert-link'>F.A.Q page</a> to get started</p>
             </div>
               ";
             }
@@ -139,7 +143,7 @@ $md5 = $data[1]['md5'];
                     <?php
                       $imgpath = "img/devices/" . $device .".webp";
                       if (file_exists($imgpath)){
-                        $img = "<img src='" . GetDomain() . "/img/devices/" . $device .".webp' class='img-fluid rounded-start' alt='device image'>";
+                        $img = "<img src='" . $domain . "/img/devices/" . $device .".webp' class='img-fluid rounded-start' alt='device image'>";
                       } else {
                         $img = "<span class='noimg'><i class='bx bxs-image' ></i></span>";
                       }
@@ -302,15 +306,15 @@ $md5 = $data[1]['md5'];
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?php echo GetDomain(); ?>/vendor/aos/aos.js"></script>
-  <script src="<?php echo GetDomain(); ?>/vendor/jquery/jquery-3.6.0.js"></script>
-  <script src="<?php echo GetDomain(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?php echo GetDomain(); ?>/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="<?php echo GetDomain(); ?>/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="<?php echo GetDomain(); ?>/vendor/bootstrap-dark/js/darkmode.js"></script>
+  <script src="<?php $domain ?>/vendor/aos/aos.js"></script>
+  <script src="<?php $domain ?>/vendor/jquery/jquery-3.6.0.js"></script>
+  <script src="<?php $domain ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php $domain ?>/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="<?php $domain ?>/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="<?php $domain ?>/vendor/bootstrap-dark/js/darkmode.js"></script>
 
   <!-- Main JS File -->
-  <script src="<?php echo GetDomain(); ?>/js/main.js"></script>
+  <script src="<?php $domain ?>/js/main.js"></script>
 
   <script type="text/javascript" async=true>
     $(document).ready(function(){
