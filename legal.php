@@ -1,4 +1,7 @@
-<?php include 'functions.php'; ?>
+<?php
+  include 'functions.php';
+  $domain = GetDomain();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,17 +55,17 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
-        <a href="<?php echo GetDomain(); ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <!--<h1><a href="<?php echo $domain; ?>">crDroid</a></h1>-->
+        <a href="<?php echo $domain; ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>">Home</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/downloads">Download</a></li>
-		  <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
+		  <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
           <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>

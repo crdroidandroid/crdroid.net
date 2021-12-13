@@ -46,24 +46,24 @@ $md5 = $data[1]['md5'];
   <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
   <!-- Favicons -->
-  <link href="<?php $domain ?>/img/favicon.ico" rel="icon">
+  <link href="<?php echo $domain; ?>/img/favicon.ico" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?php $domain ?>/vendor/aos/aos.css" rel="stylesheet">
-  <link href="<?php $domain ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php $domain ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<?php $domain ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?php $domain ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="<?php $domain ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/aos/aos.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Bootstrap dark mode -->
   <link id="dark-theme-style" rel="stylesheet" />
 
   <!-- Main CSS File -->
-  <link href="<?php $domain ?>/css/style.css" rel="stylesheet">
+  <link href="<?php echo $domain; ?>/css/style.css" rel="stylesheet">
 
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
@@ -86,18 +86,18 @@ $md5 = $data[1]['md5'];
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <!--<h1><a href="<?php $domain ?>">crDroid</a></h1>-->
-        <a href="<?php $domain ?>"><img src="<?php $domain ?>/img/logo.png" alt="" class="img-fluid"></a>
+        <!--<h1><a href="<?php echo $domain; ?>">crDroid</a></h1>-->
+        <a href="<?php echo $domain; ?>"><img src="<?php echo $domain; ?>/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link" href="<?php $domain ?>">Home</a></li>
-          <li><a class="nav-link" href="<?php $domain ?>/downloads">Download</a></li>
-          <li><a class="nav-link" href="<?php $domain ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
-          <li><a class="nav-link" href="<?php $domain ?>/donate">Support us</a></li>
-          <li><a class="nav-link" href="<?php $domain ?>/legal">Legal</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/legal">Legal</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
           <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
@@ -306,15 +306,15 @@ $md5 = $data[1]['md5'];
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?php $domain ?>/vendor/aos/aos.js"></script>
-  <script src="<?php $domain ?>/vendor/jquery/jquery-3.6.0.js"></script>
-  <script src="<?php $domain ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?php $domain ?>/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="<?php $domain ?>/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="<?php $domain ?>/vendor/bootstrap-dark/js/darkmode.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/aos/aos.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/jquery/jquery-3.6.0.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/bootstrap-dark/js/darkmode.js"></script>
 
   <!-- Main JS File -->
-  <script src="<?php $domain ?>/js/main.js"></script>
+  <script src="<?php echo $domain; ?>/js/main.js"></script>
 
   <script type="text/javascript" async=true>
     $(document).ready(function(){

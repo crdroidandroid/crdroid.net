@@ -1,4 +1,7 @@
-<?php include 'functions.php'; ?>
+<?php
+  include 'functions.php';
+  $domain = GetDomain();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +55,8 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <!--<h1><a href="<?php echo GetDomain(); ?>">crDroid</a></h1>-->
-        <a href="<?php echo GetDomain(); ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <!--<h1><a href="<?php echo $domain; ?>">crDroid</a></h1>-->
+        <a href="<?php echo $domain; ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -62,10 +65,10 @@
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/donate">Support us</a></li>
-          <li><a class="nav-link" href="<?php echo GetDomain(); ?>/legal">Legal</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/legal">Legal</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
           <!--<li><a class="getstarted" href="dl.php">Download</a></li>-->
         </ul>
@@ -86,7 +89,7 @@
           <div>
             <h1>Let's get started with crDroid</h1>
             <h2>Improve the performance, reliability and customizability of your Android device</h2>
-            <a href="<?php echo GetDomain(); ?>/downloads" class="download-btn"><i class='bx bx-cloud-download'></i> Download for your device</a>
+            <a href="<?php echo $domain; ?>/downloads" class="download-btn"><i class='bx bx-cloud-download'></i> Download for your device</a>
             <a href="https://github.com/crdroidandroid/android" class="download-btn"><i class='bx bxl-github' ></i> Build from source</a>
           </div>
         </div>
