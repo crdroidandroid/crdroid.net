@@ -134,7 +134,7 @@
                       echo $img;
                       echo "
                       <div class='card-body'>
-                      <p class='card-text'><h4 class='devicename'>" . $data['device'] . "</h4></p>
+                      <p class='card-text'><h5 class='devicename'>" . $data['device'] . "</h5></p>
                         </div>
                         <ul class='list-group list-group-flush'>
                         <li class='list-group-item'><div class='center'>
