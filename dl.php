@@ -134,10 +134,11 @@
                       echo $img;
                       echo "
                       <div class='card-body'>
-                      <p class='card-text'><h5 class='devicename'>" . $data['device'] . "</h5>
+                      <h5 class='card-text devicename'>" . $data['device'] . "</h5>
                         </div>
                         <ul class='list-group list-group-flush'>
-                        <li class='list-group-item'><div class='center'>
+                        <li class='list-group-item'>
+                        <div class='center'>
                     ";
                     }
                     //list all crDroid versions
