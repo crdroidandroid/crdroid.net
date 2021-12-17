@@ -128,29 +128,35 @@
                 }
                 $onlyfirst = 0;
                 $lastupdate = 0;
+                $versions = array();
                 foreach($devicename as $crVersion => $data){
-                    ++$onlyfirst;
-                    if($onlyfirst == 1){
-                      echo $img;
-                      echo "
-                      <div class='card-body'>
-                      <h5 class='card-text devicename'>" . $data['device'] . "</h5>
-                        </div>
-                        <ul class='list-group list-group-flush'>
-                        <li class='list-group-item'>
-                        <div class='center'>
-                    ";
-                    }
-                    //list all crDroid versions
-                    echo "<a href='". $devicecodename . "/" . $crVersion . "' class='m-1 btn btn-primary'>crDroid " . $crVersion . "</a>";
-                    if ($lastupdate < $data['builddate']){
-                      $lastupdate = $data['builddate'];
-                    }
+                  ++$onlyfirst;
+                  if($onlyfirst == 1){
+                    echo $img;
+                    echo "
+                    <div class='card-body'>
+                    <h5 class='card-text devicename'>" . $data['device'] . "</h5>
+                      </div>
+                      <div class='center'>
+                      <div class='dropdown'>
+                        <a class='btn btn-danger dropdown-toggle m-2 shadow-sm' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' aria-expanded='false'>Download</a>
+                        <ul class='dropdown-menu shadow' aria-labelledby='dropdownMenuLink'>
+                  ";
+                  }
+                  if ($lastupdate < $data['builddate']){
+                    $lastupdate = $data['builddate'];
+                  }
+                  array_push($versions, $crVersion);
                 }
+                //list all crDroid versions
+                foreach ($versions as &$version) {
+                  echo "<li><a class='dropdown-item' href='" . $devicecodename . "/" . $version . "'>crDroid ". $version ." | Android " . crVersionToAndroid($version) . "</a></li>";
+                }
+                unset($version);
                 echo "
+                            </ul>
+                            </div>
                           </div>
-                          </li>              
-                        </ul>
                           <div class='card-footer text-muted'>Last build: " . beautifyDate($lastupdate) . "</div>
                         </div>
                     </div>

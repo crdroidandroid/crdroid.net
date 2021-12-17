@@ -44,4 +44,12 @@ outofhere:
 	return $details;
 }
 
+function crVersionToAndroid($checkVersion){
+	$versions = array(
+		6 => 10,
+		7 => 11
+	);
+
+	return $versions[$checkVersion];
+}
 ?>

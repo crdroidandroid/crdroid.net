@@ -21,6 +21,7 @@ $devicename = $data[1]['device'];
 $maintainer = $data[1]['maintainer'];
 $nickname = $data[1]['nick'];
 $version = $data[1]['crversion'];
+$android = crVersionToAndroid($crversion);
 $builddate = $data[1]['builddate'];
 $buildtype = $data[1]['buildtype'];
 $download = $data[1]['download'];
@@ -182,8 +183,12 @@ $md5 = $data[1]['md5'];
                               }
                             ?>
                             <tr>
-                              <th scope="row"><i class='bx bxl-android' ></i> Version</th>
+                              <th scope="row"><i class='bx bx-mobile' ></i> Version</th>
                               <td><?php echo $version; ?></td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><i class='bx bxl-android' ></i> Android</th>
+                              <td><?php echo $android; ?></td>
                             </tr>
                             <tr>
                               <th scope="row"><i class='bx bxs-calendar' ></i> Build date</th>
