@@ -50,7 +50,8 @@ function CompileFullJSON(){
 	// Put all required filenames into array
 	$fileNames = [
 		'6.json',
-		'7.json'
+		'7.json',
+		'8.json'
 	];
 
 	// Define an enmpty array for merging
