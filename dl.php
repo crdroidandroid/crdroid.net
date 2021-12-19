@@ -237,6 +237,21 @@
   	});
   });
   </script>
+  <script type="text/javascript" async=true>
+  $(document).ready(function(){
+    var x = window.location.hash;
+    if (x.includes('#')){
+      var codename = x.replace('#', '');
+      glowup(codename);
+    };
+  });
+
+  function glowup(device){
+    console.log(device);
+    var d = document.getElementById(device);
+    d.className += " mydevice";
+  };
+  </script>
 </body>
 
 </html>
