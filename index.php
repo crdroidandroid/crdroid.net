@@ -248,7 +248,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How do I become maintainer for crDroid? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                 <p>
-                So you want to make your build official and become a crDroid maintainer?<br> Just head over to our GitHub in order to get more info. <br>Note that we only support Android 11 builds for new devices.<br>
+                So you want to make your build official and become a crDroid maintainer?<br> Just head over to our GitHub in order to get more info. <br>Note that we only support Android 12 builds for new devices.<br>
                 </p>
                 <a href='https://github.com/crdroidandroid/android/blob/11.0/README.mkdn#3-how-to-become-an-official-maintainer' class="btn btn-info gothere">Go there now!</a>
               </div>
