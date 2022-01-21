@@ -91,7 +91,7 @@
         
 		<div class="row">
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-translation">
             <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid translation">
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-frameworks-base">
             <img src="img/svg/framework.svg" alt="img" class="img-fluid translation">
@@ -111,7 +111,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-home">
             <img src="img/svg/launcher.svg" alt="img" class="img-fluid translation">
@@ -121,12 +121,22 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-6">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-updater">
             <img src="img/svg/update.webp" alt="img" class="img-fluid translation">
             <h4>crDroid Updater</h4>
             <p>Things need to be updated and in your language, no?<br><img src="https://badges.crowdin.net/crdroid-updater/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-gaming-mode">
+            <img src="img/svg/game-mode.svg" alt="img" class="img-fluid translation">
+            <h4>crDroid Gaming Mode</h4>
+            <p>Get most out of your phone while gaming using out GameMode<br><img src="https://badges.crowdin.net/crdroid-gaming-mode/localized.svg"></p>
 			</a>
           </div>
         </div>
