@@ -33,6 +33,7 @@ $telegram = $data[1]['telegram'];
 $zipsize = $data[1]['size'];
 $forum = $data[1]['forum'];
 $md5 = $data[1]['md5'];
+$sha256 = $data[1]['sha256'];
 ?>
 
 <!DOCTYPE html>
@@ -202,8 +203,32 @@ $md5 = $data[1]['md5'];
                               <th scope="row"><i class='bx bx-git-branch' ></i> Build type</th>
                               <td><?php echo $buildtype; ?></td>
                             </tr>
-                          </tbody>
+                            </tbody>
                           </table>
+                          <div class="form-row align-items-center md5">
+                            <div class="col-auto">
+                              <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">MD5</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" value="<?php echo $md5; ?>" readonly>
+                              </div>
+                            </div>
+                            <?php
+                              if(empty($sha256) == false){
+                                echo "
+                                <div class='col-auto'>
+                                <div class='input-group mb-2'>
+                                  <div class='input-group-prepend'>
+                                    <div class='input-group-text'>SHA256</div>
+                                  </div>
+                                  <input type='text' class='form-control' id='inlineFormInputGroup' value='$sha256' readonly>
+                                </div>
+                              </div>
+                                ";
+                              }
+                            ?>
+                          </div>
                           <h6 class="text-left">crDroid downloads:</h6>
                           <div class="download-area">
                             <a class="btn btn-success btn-sm m-1" href='<?php echo $download; ?>'><i class='bx bxs-download' ></i> Download latest version</a>

@@ -683,6 +683,11 @@ section {
   max-width: 650px;
 }
 
+.md5 {
+  width: 65%;
+  margin: 0 auto;
+}
+
 .mydevice:before,
 .mydevice:after {
   content: "";
@@ -725,6 +730,9 @@ section {
     display: block;
     font-size: 100px;
     text-align: center;
+  }
+  .md5 {
+    width: 95%;
   }
 }
 
