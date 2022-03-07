@@ -277,7 +277,6 @@ $sha256 = $data[1]['sha256'];
                                         <a class='btn btn-primary btn-sm m-1' href='" . $paypal . "'><i class='bx bxs-dollar-circle' ></i> Donate</a>";
                                   }
                             ?>
-						                <a class="btn btn-secondary btn-sm m-1" href='https://stats.crdroid.net/<?php echo $device; ?>'><i class='bx bx-stats' ></i> Stats</a>
                           </div>
                       </div>
                     </div>
