@@ -236,7 +236,7 @@ $sha256 = $data[1]['sha256'];
                           </div>
                           <h6 class="text-left">Useful links:</h6>
                           <div class="download-area">
-                            <a class='btn btn-warning btn-sm m-1' href='" . $forum . "'><i class='bx bxs-conversation' ></i> Forum</a>
+                            <a class='btn btn-warning btn-sm m-1' href='<?php echo $forum; ?>'><i class='bx bxs-conversation' ></i> Forum</a>
                             <?php
                                   if (empty($telegram) == false){
                                       echo "
