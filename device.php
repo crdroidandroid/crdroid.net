@@ -236,22 +236,13 @@ $sha256 = $data[1]['sha256'];
                           </div>
                           <h6 class="text-left">Useful links:</h6>
                           <div class="download-area">
-                            <div class="btn-group" role="group" aria-label="support buttons">
-                              <div class="btn-group" role="group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <i class='bx bx-support' ></i> Support
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <li><a class="dropdown-item" href="<?php echo $forum; ?>"><i class='bx bxs-conversation' ></i> Forum</a></li>
-                                  <?php
-                                    if (empty($telegram) == false){
+                            <a class='btn btn-warning btn-sm m-1' href='" . $forum . "'><i class='bx bxs-conversation' ></i> Forum</a>
+                            <?php
+                                  if (empty($telegram) == false){
                                       echo "
-                                  <li><a class='dropdown-item' href='" . $telegram . "'><i class='bx bxl-telegram' ></i> Telegram</a></li>";
-                                    }
-                                  ?>
-                                </ul>
-                              </div>
-                            </div>
+                                        <a class='btn btn-primary btn-sm m-1' href='" . $telegram . "'><i class='bx bxl-telegram' ></i> Telegram</a>";
+                                  }
+                            ?>
                             <a class="btn btn-secondary btn-sm m-1" role='button' id="changelogBtn" data-textfile="../changelog/v<?php echo $crversion;?>.x/changelog_<?php echo $device; ?>.txt"><i class='bx bxs-spreadsheet' ></i> Changelog</a>
                             <?php
                                   if (empty($gapps) == false){
