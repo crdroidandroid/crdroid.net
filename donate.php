@@ -46,6 +46,9 @@
 
 	gtag('config', 'UA-6432969-5');
   </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
 </head>
 
 <body>

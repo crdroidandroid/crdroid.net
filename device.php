@@ -79,6 +79,9 @@ $sha256 = $data[1]['sha256'];
 
     gtag('config', 'UA-6432969-5');
   </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -228,6 +231,18 @@ $sha256 = $data[1]['sha256'];
                                 ";
                               }
                             ?>
+                          </div>
+                          <div class="download-area">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-gw-3+1f-3d+2z"
+                                data-ad-client="ca-pub-9442732345409545"
+                                data-ad-slot="3706777652"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                           </div>
                           <h6 class="text-left">crDroid downloads:</h6>
                           <div class="download-area">
