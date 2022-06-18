@@ -116,7 +116,7 @@
             <h3 class='card-title'>" . str_replace('title:', '', $file_data[0]) . "</h3>
             <p class='card-text'>" . str_replace('description:', '', $file_data[1]) . "</p>
             <h6 class='card-subtitle mb-2 text-muted'><i class='bx bxs-calendar' ></i>" . date_format($articledate, "M d, Y") . " <i class='bx bxs-contact' ></i> " . str_replace('author:', '', $file_data[2]) . "</h6>
-            <a href='" . $domain . "/blog/read.php?article=" . basename($file, ".md") . "' class='card-link'>Read more</a>
+            <a href='" . $domain . "/blog/" . basename($file, ".md") . "' class='card-link'>Read more</a>
           </div>
         </div>
         ";
