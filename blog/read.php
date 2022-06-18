@@ -1,7 +1,4 @@
 <?php
-  ini_set("display_errors", 1);
-  error_reporting(1);
-
   include '../functions.php';
   include 'Parsedown.php';
   $domain = GetDomain();

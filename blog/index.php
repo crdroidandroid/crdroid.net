@@ -1,6 +1,5 @@
 <?php
   include '../functions.php';
-  include 'Parsedown.php';
   $domain = GetDomain();
 ?>
 
