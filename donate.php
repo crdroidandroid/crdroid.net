@@ -66,7 +66,8 @@
         <ul>
           <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
-		      <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/legal">Legal</a></li>
           <li><a class="nav-link scrollto" href="#footer">Contact</a></li>

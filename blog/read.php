@@ -119,6 +119,20 @@
 
     <section class="inner-page">
       <div class="container">
+        <div class="center pb-3">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
+          <!-- Header -->
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-9442732345409545"
+              data-ad-slot="5655936532"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
         <div class="pb-2">
           <a href="<?php echo $domain; ?>/blog"><i class='bx bx-chevrons-left'></i> Back to blog</a>
         </div>

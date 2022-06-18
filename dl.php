@@ -65,6 +65,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
@@ -102,6 +103,19 @@
         <input type="text" class="form-control shadow" aria-label="Search device" id="search" aria-describedby="inputGroup-sizing-default">
       </div>
 
+        <div class="center pb-3">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
+          <!-- Header -->
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-9442732345409545"
+              data-ad-slot="5655936532"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
 
         <?php
         $json_array = json_decode(file_get_contents('devices_handler/compiled.json'), true);

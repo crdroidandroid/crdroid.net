@@ -11,7 +11,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>crDroid.net - increase performance and reliability over stock Android for your device</title>
-  <meta name="description" content="official crDroid ROM website">
+  <meta name="description" content="official crDroid ROM blog">
   <meta name="keywords" content="crDroid, crDroid ROM, ROM">
 
   <!-- Favicons -->
@@ -68,6 +68,7 @@
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
@@ -93,7 +94,7 @@
             <h1>Let's get started with crDroid</h1>
             <h2>Improve the performance, reliability and customizability of your Android device</h2>
             <a href="<?php echo $domain; ?>/downloads" class="download-btn"><i class='bx bx-cloud-download'></i> Download for your device</a>
-            <a href="https://github.com/crdroidandroid/android" class="download-btn"><i class='bx bxl-github' ></i> Build from source</a>
+            <a href="<?php echo $domain; ?>/blog" class="download-btn"><i class='bx bx-news'></i> What's new</a>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">

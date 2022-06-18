@@ -14,8 +14,8 @@ if (empty($crversion)) {
 $data = GetDeviceInfo($device, $crversion);
 $oem = $data[0];
 if (empty($oem)){
-  header("Location: " . $domain , true, 301);
-  exit;
+ header("Location: " . $domain , true, 301);
+ exit;
 }
 $devicename = $data[1]['device'];
 $maintainer = $data[1]['maintainer'];
@@ -99,6 +99,7 @@ $sha256 = $data[1]['sha256'];
         <ul>
           <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
