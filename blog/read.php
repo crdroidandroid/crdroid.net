@@ -11,7 +11,7 @@
     exit;
   }
   $file_data = array_slice(file($file), 1, 3);
-  $title = str_replace('title:', '', $file_data[0]);
+  $title = trim(str_replace('title:', '', $file_data[0]));
   $author = str_replace('author:', '', $file_data[2]);
   $articledate = date_create(substr(basename($file, ".md"),0,10));
   $content = file_get_contents($file);
