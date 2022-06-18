@@ -5,12 +5,12 @@ author: Lup Gabriel
 ---
 ### Well it sure has been a while
 The team here at crDroid sure isn't sleeping.  
-In the last few (lot of) days, we've worked a lot on optmizing our frontend, backend and of course our source.  
+In the last few (lot of) days, we've worked a lot on optimizing our frontend, backend and of course our source.  
 
 What does it mean you ask?  
 *Frontend*  
 Well first for public area, we've added a blog page on our website where you can check what the team is working on. 
-We hope this will be a good way for us to interact with the community more and get some on site feedback for our work.
+We hope this will be a good way for us to interact with the community more and get some on site feedback for our work.  
 *Backend*  
 Optimized some stuff for our API.  
 *Source*  

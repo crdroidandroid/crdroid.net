@@ -53,6 +53,10 @@ function enableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#181818";
 	}
+  elements = document.getElementsByClassName('blogbg')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#181818";
+	}
 }
 
 function disableDarkTheme() {
@@ -78,5 +82,9 @@ function disableDarkTheme() {
   elements = document.getElementsByClassName('form-control')
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#fff";
+	}
+  elements = document.getElementsByClassName('blogbg')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#e8ecf5";
 	}
 }
