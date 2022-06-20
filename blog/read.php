@@ -9,6 +9,7 @@
   }
   $file_data = array_slice(file($file), 1, 3);
   $title = trim(str_replace('title:', '', $file_data[0]));
+  $description = trim(str_replace('description:', '', $file_data[1]));
   $author = str_replace('author:', '', $file_data[2]);
   $articledate = date_create(substr(basename($file, ".md"),0,10));
   $content = file_get_contents($file);
@@ -25,7 +26,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>crDroid.net - <?php echo $title;?></title>
-  <meta name="description" content="<?php echo $title;?>">
+  <meta name="description" content="<?php echo $description;?>">
   <meta name="keywords" content="crDroid, crDroid ROM, ROM">
 
   <!-- Favicons -->
