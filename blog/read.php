@@ -132,7 +132,7 @@
         </div>
 
         <div class="pb-2">
-          <a href="<?php echo $domain; ?>/blog"><i class='bx bx-chevrons-left'></i> Back to blog</a>
+          <a href="javascript:history.go(-1)"><i class='bx bx-chevrons-left'></i> Back to blog</a>
         </div>
         <div>
           <?php

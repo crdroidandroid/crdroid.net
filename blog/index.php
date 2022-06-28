@@ -1,6 +1,13 @@
 <?php
   include '../functions.php';
   $domain = GetDomain();
+  $page = $_GET['page'];
+  if (empty($page)) {
+	$page = 1;
+	$title = "crDroid.net - Blog";
+  }else{
+	$title = "crDroid.net - Blog | Page " . $page;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +17,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>crDroid.net - Blog</title>
+  <title><?php echo $title; ?></title>
   <meta name="description" content="official crDroid ROM website">
   <meta name="keywords" content="crDroid, crDroid ROM, ROM">
 
@@ -118,23 +125,47 @@
       </div>
 
 		<?php
-      $path = __DIR__. '/articles';
-      $files = glob($path."/*.md");
-      foreach (array_reverse($files) as $file) {
-        $file_data = array_slice(file($file), 1, 3);
-        $articledate = date_create(substr(basename($file, ".md"),0,10));
-        echo "
-          <div class='card shadow-sm mb-4'>
-          <div class='card-body'>
-            <h3 class='card-title'>" . str_replace('title:', '', $file_data[0]) . "</h3>
-            <p class='card-text'>" . str_replace('description:', '', $file_data[1]) . "</p>
-            <h6 class='card-subtitle mb-2 text-muted'><i class='bx bxs-calendar' ></i>" . date_format($articledate, "M d, Y") . " <i class='bx bxs-contact' ></i> " . str_replace('author:', '', $file_data[2]) . "</h6>
-            <a href='" . $domain . "/blog/" . basename($file, ".md") . "' class='card-link'>Read more</a>
-          </div>
-        </div>
-        ";
-      }
-    ?>
+			$path = __DIR__. '/articles';
+			$files = array_reverse(glob($path."/*.md"));
+			$totalpages = ceil(count($files) / 5);
+			$files = array_slice($files, ($page * 5) - 5, $page * 5);
+
+			foreach ($files as $file) {
+				$file_data = array_slice(file($file), 1, 3);
+				$articledate = date_create(substr(basename($file, ".md"),0,10));
+				echo "
+				<div class='card shadow-sm mb-4'>
+				<div class='card-body'>
+					<h3 class='card-title'>" . str_replace('title:', '', $file_data[0]) . "</h3>
+					<p class='card-text'>" . str_replace('description:', '', $file_data[1]) . "</p>
+					<h6 class='card-subtitle mb-2 text-muted'><i class='bx bxs-calendar' ></i>" . date_format($articledate, "M d, Y") . " <i class='bx bxs-contact' ></i> " . str_replace('author:', '', $file_data[2]) . "</h6>
+					<a href='" . $domain . "/blog/" . basename($file, ".md") . "' class='card-link'>Read more</a>
+				</div>
+				</div>
+				";
+			}
+		?>
+		<div class="d-flex justify-content-center">
+			<nav aria-label="...">
+				<ul class="pagination">
+				<?php
+					for ($i=1; $i<=$totalpages; $i++) {
+						if ($i == $page){
+							echo "	<li class='page-item active' aria-current='page'>
+										<span class='page-link'>" . $i . "</span>
+									</li>";
+						}else{
+							if ($i == 1){
+								echo "	<li class='page-item'><a class='page-link' href='" . $domain . "/blog/'>" . $i . "</a></li>";
+							}else{
+								echo "	<li class='page-item'><a class='page-link' href='/blog/page/" . $i . "'>" . $i . "</a></li>";
+							}
+						}
+					}
+				?>
+				</ul>
+			</nav>
+		</div>
       </div>
     </section>
 
