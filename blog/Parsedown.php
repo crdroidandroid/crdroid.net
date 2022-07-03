@@ -1241,7 +1241,7 @@ class Parsedown
         $Inline = array(
             'extent' => $Link['extent'] + 1,
             'element' => array(
-                'name' => 'img',
+                'name' => 'img class="img-fluid img-thumbnail rounded mx-auto d-block"',
                 'attributes' => array(
                     'src' => $Link['element']['attributes']['href'],
                     'alt' => $Link['element']['text'],
