@@ -105,6 +105,7 @@
         <div class="d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
             <h1><?php echo $title;?></h1>
+            <h3><?php echo $description;?></h3>
             <h2>Written on <?php echo date_format($articledate, "M d, Y");?> by <?php echo $author;?></h2>
           </div>
         </div>
