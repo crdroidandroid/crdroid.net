@@ -1,6 +1,6 @@
 ---
 title: Changelog 24 July
-description: focusing on Launcher and GameSpace
+description: Focusing on Launcher and GameSpace
 author: Lup Gabriel
 ---
 ### Since we all *game* from the *Launcher*
@@ -18,7 +18,7 @@ Below you can see the official changelog.
 | GameSpace: Expose icon in launcher | |
 | GameSpace: added reTicker option | |
 | GameSpace: Added in-game danmaku feature | |
-vFix NPE when led pulse not supported for crDroid Settings | |
+| Fix NPE when led pulse not supported for crDroid Settings | |
 | Small reTicker changes | |
 | Small changes made to DozeSensors proximity sensor support | |
 | Added config for double tap sensors that need a proximity check | [link1](https://github.com/crdroidandroid/android_frameworks_base/commit/5e2eecc1280a395c2fea60dffc16d3bca459f3d3), [link2](https://github.com/crdroidandroid/android_frameworks_base/commit/15076f91e5643ba652512de0e021669d1e3dbc12) | |
@@ -48,4 +48,4 @@ Since the official crDroid 8.7, most devices got updates, while we've added supp
 | tissot | https://crdroid.net/tissot/8 | dropped support |
 | walleye | https://crdroid.net/walleye/8 | dropped support |
 
-We welcome new maintainers for dropped devices or even new device, to apply for maintainer status by [checking our our doc](https://github.com/crdroidandroid/android#3-how-to-become-an-official-maintainer).
+We welcome new maintainers for dropped devices or even new device, to apply for maintainer status by [checking our doc](https://github.com/crdroidandroid/android#3-how-to-become-an-official-maintainer).
