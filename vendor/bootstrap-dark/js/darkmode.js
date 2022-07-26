@@ -57,6 +57,25 @@ function enableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#181818";
 	}
+  var j = 0;
+  elements = document.getElementsByClassName('gallery-lightbox')
+  for(var i = 0, j = 0; i < elements.length; i++){
+    if(i < 9)
+      elements[i].href="img/gallery/gallery_dark-"+(i+1)+".webp";
+    else {
+      elements[i].href="img/gallery/gallery_dark-"+(j+1)+".webp";
+      j++;
+    }
+	}
+  elements = document.getElementsByClassName('screenshots-gallery')
+  for(var i = 0, j = 0; i < elements.length; i++){
+    if(i < 9)
+      elements[i].src="img/gallery/gallery_dark-"+(i+1)+".webp";
+    else {
+      elements[i].src="img/gallery/gallery_dark-"+(j+1)+".webp";
+      j++;
+    }
+  }
 }
 
 function disableDarkTheme() {
@@ -87,4 +106,23 @@ function disableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#e8ecf5";
 	}
+  var j;
+  elements = document.getElementsByClassName('gallery-lightbox')
+  for(var i = 0, j = 0; i < elements.length; i++){
+    if(i < 9)
+       elements[i].href="img/gallery/gallery-"+(i+1)+".webp";
+    else {
+      elements[i].href="img/gallery/gallery-"+(j+1)+".webp";
+      j++;
+    }
+  }
+  elements = document.getElementsByClassName('screenshots-gallery')
+  for(var i = 0, j = 0; i < elements.length; i++){
+    if(i < 9)
+      elements[i].src="img/gallery/gallery-"+(i+1)+".webp";
+    else {
+      elements[i].src="img/gallery/gallery-"+(j+1)+".webp";
+      j++;
+    }
+  }
 }
