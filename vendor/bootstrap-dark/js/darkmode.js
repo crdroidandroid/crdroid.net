@@ -57,6 +57,10 @@ function enableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#181818";
 	}
+  elements = document.getElementsByClassName('FAQ-element')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#191919";
+	}
   var j = 0;
   elements = document.getElementsByClassName('gallery-lightbox')
   for(var i = 0, j = 0; i < elements.length; i++){
@@ -105,6 +109,10 @@ function disableDarkTheme() {
   elements = document.getElementsByClassName('blogbg')
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#e8ecf5";
+	}
+  elements = document.getElementsByClassName('FAQ-element')
+  for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundColor = "#f5f5f5";
 	}
   var j;
   elements = document.getElementsByClassName('gallery-lightbox')

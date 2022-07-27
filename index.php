@@ -238,7 +238,7 @@
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
 
@@ -248,7 +248,7 @@
 
         <div class="accordion-list">
           <ul>
-            <li data-aos="fade-up">
+            <li class="FAQ-element">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How do I become maintainer for crDroid? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                 <p>
@@ -258,7 +258,7 @@
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="100">
+            <li class="FAQ-element">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Are you going to add more features? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                 <p>
@@ -267,7 +267,7 @@
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="200">
+            <li class="FAQ-element">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">What base is crDroid using? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                 <p>
@@ -276,7 +276,7 @@
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="300">
+            <li class="FAQ-element">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">Why the "eye" and not something else? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                 <p>
