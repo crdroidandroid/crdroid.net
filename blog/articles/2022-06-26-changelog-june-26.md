@@ -1,5 +1,5 @@
 ---
-title: Chagelog June 26th
+title: Changelog June 26th
 description: We will try to post source changelogs
 author: Lup Gabriel
 ---

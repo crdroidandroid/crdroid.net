@@ -21,7 +21,7 @@ Below you can see the official changelog.
 | Fix NPE when led pulse not supported for crDroid Settings | |
 | Small reTicker changes | |
 | Small changes made to DozeSensors proximity sensor support | |
-| Added config for double tap sensors that need a proximity check | [link1](https://github.com/crdroidandroid/android_frameworks_base/commit/5e2eecc1280a395c2fea60dffc16d3bca459f3d3), [link2](https://github.com/crdroidandroid/android_frameworks_base/commit/15076f91e5643ba652512de0e021669d1e3dbc12) | |
+| Added config for double tap sensors that need a proximity check | [link1](https://github.com/crdroidandroid/android_frameworks_base/commit/5e2eecc1280a395c2fea60dffc16d3bca459f3d3), [link2](https://github.com/crdroidandroid/android_frameworks_base/commit/15076f91e5643ba652512de0e021669d1e3dbc12) |
 | Prevent NPE for Demo mode | |
 | Update notification count overlay style | |
 | Fix issue with text select and copy | |

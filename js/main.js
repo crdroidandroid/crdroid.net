@@ -243,3 +243,57 @@
   });
 
 })()
+
+const wrapper = document.querySelector(".blocker-wrapper");
+const button = wrapper.querySelector("button");
+
+button.addEventListener("click", ()=>{
+  wrapper.classList.remove("show");
+  setCookie();
+});
+
+async function detectAdBlock() {
+  let adBlockEnabled = false
+  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  try {
+    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+  } catch (e) {
+    adBlockEnabled = true
+  } finally {
+    console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+  }
+  let ads = getCookie();
+  if (ads == "yes"){
+    wrapper.classList.remove("show");
+    return;
+  }
+  if (adBlockEnabled == true) {
+    wrapper.classList.add("show");
+  }else{
+    wrapper.classList.remove("show");
+  }
+}
+
+function setCookie(){
+  var now = new Date();
+  now.setTime(now.getTime() + 1 * 300 * 1000);
+  document.cookie = "adsaway=yes; expires=" + now.toUTCString() + "; path=/";
+}
+
+function getCookie(){
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  let ads = "adsaway=";
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(ads) == 0) {
+      return c.substring(ads.length, c.length);
+    }
+  }
+  return "";
+}
+
+detectAdBlock()
