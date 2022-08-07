@@ -248,9 +248,14 @@ const wrapper = document.querySelector(".blocker-wrapper");
 const button = wrapper.querySelector("button");
 const btnlayer = wrapper.querySelector(".bg-layer");
 
+if (document.getElementById("dl-ads") !== null){
+  document.getElementById("dl-ads").style.display = "none";
+}
+if (document.getElementById("dl-links") !== null){
+  document.getElementById("dl-links").style.display = 'none';
+}
+
 button.disabled = true;
-document.getElementById("dl-ads").style.display = "none";
-document.getElementById("dl-links").style.display = 'none';
 button.addEventListener("click", ()=>{
   wrapper.classList.remove("show");
   setCookie();
@@ -273,12 +278,16 @@ async function detectAdBlock() {
     }else{
       wrapper.classList.add("show");
     }
-    document.getElementById("dl-ads").style.display = "inherit";
+    if (document.getElementById("dl-ads") != null){
+      document.getElementById("dl-ads").style.display = "inherit";
+    }
     runCounter();
     runDLCounter();
   }else{
     wrapper.classList.remove("show");
-    document.getElementById("dl-links").style.display = 'inherit';
+    if (document.getElementById("dl-links") != null){
+      document.getElementById("dl-links").style.display = 'inherit';
+    }
   }
 }
 
@@ -331,12 +340,20 @@ function runDLCounter() {
     if (count <= 0)
     {
       clearInterval(counter);
-      document.getElementById("dl-ads").remove();
-      document.getElementById("dl-links").style.display = 'inherit';
+      if (document.getElementById("dl-ads") != null){
+        document.getElementById("dl-ads").remove();
+      }
+      if (document.getElementById("dl-links") != null){
+        document.getElementById("dl-links").style.display = 'inherit';
+      }
       return;
     }
-    document.getElementById("dl-ads").innerHTML="Please disable adblock to download faster (" + count + ")";
-    document.getElementById("dl-links").style.display = 'none';
+    if (document.getElementById("dl-ads") != null){
+      document.getElementById("dl-ads").innerHTML="Please disable adblock to download faster (" + count + ")";
+    }
+    if (document.getElementById("dl-links") != null){
+      document.getElementById("dl-links").style.display = 'none';
+    }
   }
 }
 
