@@ -246,7 +246,9 @@
 
 const wrapper = document.querySelector(".blocker-wrapper");
 const button = wrapper.querySelector("button");
+const btnlayer = wrapper.querySelector(".bg-layer");
 
+button.disabled = true;
 button.addEventListener("click", ()=>{
   wrapper.classList.remove("show");
   setCookie();
@@ -297,3 +299,19 @@ function getCookie(){
 }
 
 detectAdBlock()
+
+var count=5;
+var counter=setInterval(timer, 1000);
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+    clearInterval(counter);
+    document.getElementById("timed").innerHTML="Okay, I'll Whitelist";
+    button.disabled = false;
+    btnlayer.classList.remove("disable");
+    return;
+  }
+  document.getElementById("timed").innerHTML="Please wait " + count + " seconds...";
+}

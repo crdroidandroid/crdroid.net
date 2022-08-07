@@ -154,8 +154,8 @@
       <h2>AdBlock Detected!</h2>
       <p>crDroid server is made possible by displaying ads on our website. Please support us by whitelisting our url.</p>
       <div class="blocker-btn">
-        <div class="bg-layer"></div>
-        <button>Okay, I'll Whitelist</button>
+        <div class="bg-layer disable"></div>
+        <button id="timed">Please wait 5 seconds...</button>
       </div>
     </div>
   </div>

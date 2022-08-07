@@ -973,6 +973,9 @@ section {
   background: -webkit-linear-gradient(135deg, #6b8bd1, #384c75);
   transition: all 0.4s ease;
 }
+.blocker-wrapper .blocker-btn .bg-layer.disable{
+  background: -webkit-linear-gradient(135deg, #858585, #e2e2e2);
+}
 .blocker-wrapper .blocker-btn:hover .bg-layer{
   left: 0;
 }
