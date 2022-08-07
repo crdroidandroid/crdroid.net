@@ -82,6 +82,8 @@ $sha256 = $data[1]['sha256'];
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
+
+  <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
 </head>
 
 <body>

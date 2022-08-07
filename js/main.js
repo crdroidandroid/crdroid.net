@@ -263,14 +263,25 @@ button.addEventListener("click", ()=>{
 
 async function detectAdBlock() {
   let adBlockEnabled = false
+
   const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
   try {
     await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
   } catch (e) {
     adBlockEnabled = true
   } finally {
-    console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+    console.log(`Check1 -> AdBlock Enabled: ${adBlockEnabled}`)
   }
+
+  if (adBlockEnabled == false){
+    if(document.getElementById('GzripwVoRsYx')){
+      console.log(`Check2 -> AdBlock Enabled: ${adBlockEnabled}`)
+    } else {
+      adBlockEnabled = true
+      console.log(`Check2 -> AdBlock Enabled: ${adBlockEnabled}`)
+    }
+  }
+
   if (adBlockEnabled == true) {
     let ads = getCookie();
     if (ads == "yes"){
