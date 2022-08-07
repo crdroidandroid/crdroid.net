@@ -249,6 +249,8 @@ const button = wrapper.querySelector("button");
 const btnlayer = wrapper.querySelector(".bg-layer");
 
 button.disabled = true;
+document.getElementById("dl-ads").style.display = "none";
+document.getElementById("dl-links").style.display = 'none';
 button.addEventListener("click", ()=>{
   wrapper.classList.remove("show");
   setCookie();
@@ -264,15 +266,19 @@ async function detectAdBlock() {
   } finally {
     console.log(`AdBlock Enabled: ${adBlockEnabled}`)
   }
-  let ads = getCookie();
-  if (ads == "yes"){
-    wrapper.classList.remove("show");
-    return;
-  }
   if (adBlockEnabled == true) {
-    wrapper.classList.add("show");
+    let ads = getCookie();
+    if (ads == "yes"){
+      wrapper.classList.remove("show");
+    }else{
+      wrapper.classList.add("show");
+    }
+    document.getElementById("dl-ads").style.display = "inherit";
+    runCounter();
+    runDLCounter();
   }else{
     wrapper.classList.remove("show");
+    document.getElementById("dl-links").style.display = 'inherit';
   }
 }
 
@@ -298,20 +304,40 @@ function getCookie(){
   return "";
 }
 
-detectAdBlock()
-
-var count=5;
-var counter=setInterval(timer, 1000);
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
+function runCounter() {
+  var count=5;
+  var counter=setInterval(timer, 1000);
+  function timer()
   {
-    clearInterval(counter);
-    document.getElementById("timed").innerHTML="Okay, I'll Whitelist";
-    button.disabled = false;
-    btnlayer.classList.remove("disable");
-    return;
+    count=count-1;
+    if (count <= 0)
+    {
+      clearInterval(counter);
+      document.getElementById("timed").innerHTML="Okay, I'll Whitelist";
+      button.disabled = false;
+      btnlayer.classList.remove("disable");
+      return;
+    }
+    document.getElementById("timed").innerHTML="Please wait " + count + " seconds...";
   }
-  document.getElementById("timed").innerHTML="Please wait " + count + " seconds...";
 }
+
+function runDLCounter() {
+  var count=7;
+  var counter=setInterval(timer, 1000);
+  function timer()
+  {
+    count=count-1;
+    if (count <= 0)
+    {
+      clearInterval(counter);
+      document.getElementById("dl-ads").remove();
+      document.getElementById("dl-links").style.display = 'inherit';
+      return;
+    }
+    document.getElementById("dl-ads").innerHTML="Please disable adblock to download faster (" + count + ")";
+    document.getElementById("dl-links").style.display = 'none';
+  }
+}
+
+detectAdBlock()

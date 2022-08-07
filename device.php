@@ -246,7 +246,8 @@ $sha256 = $data[1]['sha256'];
                             </script>
                           </div>
                           <h6 class="text-left">crDroid downloads:</h6>
-                          <div class="download-area">
+                          <div id="dl-ads" class="center pb-2">Please disable adblock to download faster (7)</div>
+                          <div class="download-area" id="dl-links">
                             <a class="btn btn-success btn-sm m-1" href='<?php echo $download; ?>'><i class='bx bxs-download' ></i> Download latest version</a>
 						                <a class="btn btn-secondary btn-sm m-1" href='https://sourceforge.net/projects/crdroid/files/<?php echo $device; ?>/<?php echo $crversion;?>.x'><i class='bx bx-history' ></i>  Download older versions</a>
                           </div>
