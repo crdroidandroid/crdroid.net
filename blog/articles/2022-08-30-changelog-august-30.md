@@ -1,6 +1,6 @@
 ---
 title: Changelog August 30
-description: Fixing SafetyNet and others
+description: More QS customizations alongside fixes
 author: Lup Gabriel
 ---
 Since our last update, we've focused on some good and nice to have changes.
