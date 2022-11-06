@@ -53,4 +53,4 @@ Since our original announcement, we've added support for following devices.
 | Redmi Note 9S Series | <https://crdroid.net/miatoll/9> |
 | Redmi Note 11 | <https://crdroid.net/spes/9> |
 
-Well that's all fow this week.
+Well that's all for this week.
