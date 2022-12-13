@@ -127,7 +127,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-updater">
             <img src="img/svg/update.webp" alt="img" class="img-fluid translation">
@@ -137,12 +137,32 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-4">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-gaming-mode">
             <img src="img/svg/game-mode.svg" alt="img" class="img-fluid translation">
             <h4>crDroid Gaming Mode</h4>
             <p>Get most out of your phone while gaming using out GameMode<br><img src="https://badges.crowdin.net/crdroid-gaming-mode/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-dialer">
+            <img src="img/svg/dialer.webp" alt="img" class="img-fluid translation">
+            <h4>crDroid Dialer (phone app)</h4>
+            <p>The phone Dialer app with a touch of crDroid and Material You<br><img src="https://badges.crowdin.net/crdroid-dialer/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-parallelspace">
+            <img src="img/svg/parallelspace.webp" alt="img" class="img-fluid translation">
+            <h4>crDroid ParallelSpace</h4>
+            <p>Since you may or may not need two Whatsapp apps heh?<br><img src="https://badges.crowdin.net/crdroid-parallelspace/localized.svg"></p>
 			</a>
           </div>
         </div>
