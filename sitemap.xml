@@ -38,32 +38,47 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-07-14-crDroid-8.7</loc>
+  <loc>https://crdroid.net/blog/2023-01-15-crdroid-9.1-released</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-07-03-how-to-use-SourceForge-mirror</loc>
+  <loc>https://crdroid.net/blog/2022-12-31-happy-new-year-2023</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-07-03-changelog-july-03</loc>
+  <loc>https://crdroid.net/blog/2022-12-18-december-security-patches-madness</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-06-26-changelog-june-26</loc>
+  <loc>https://crdroid.net/blog/2022-11-26-changelog-nov-09-Changelog-26-nov</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-06-18-Blog-and-updates</loc>
+  <loc>https://crdroid.net/blog/2022-11-06-changelog-nov-09-crDroid-9-improving-the-beta</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/page/2</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/page/3</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/page/4</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/page/5</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -74,6 +89,16 @@
 </url>
 <url>
   <loc>https://crdroid.net/X00QD/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/X00QD/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/X00QD/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -123,6 +148,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/Z01R/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/angler/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -159,6 +189,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/walleye/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/redfin/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -258,6 +293,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/zippo/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/m1852/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -343,7 +383,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/ahannah/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/chef/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/chef/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/deen/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -353,7 +408,12 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/Phoenix/7</loc>
+  <loc>https://crdroid.net/rhannah/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/PNX_sprout/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -383,12 +443,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/cheeseburger/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/dumpling/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/dumpling/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/dumpling/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -408,6 +478,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/enchilada/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/fajita/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -423,6 +498,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/fajita/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/guacamole/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -434,6 +514,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/guacamole/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/guacamole/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -468,12 +553,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/hotdog/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/hotdogb/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/hotdogb/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/hotdogb/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -488,12 +583,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/hotdogg/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/instantnoodle/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/instantnoodle/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/instantnoodle/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -508,6 +613,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/instantnoodlep/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/kebab/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -518,7 +628,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/kebab/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/lemonade/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/lemonade/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/lemonade/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -529,6 +654,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/lemonadep/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/lemonadep/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -548,6 +678,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/beryllium/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/lmi/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -559,6 +694,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/lmi/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/lmi/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -588,6 +728,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/alioth/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/surya/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -598,12 +743,27 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/surya/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/vayu/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/vayu/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/vayu/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/munch/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -619,6 +779,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/RMX1921/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/RMX1921/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -673,6 +838,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/RM6785/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/begonia/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -684,6 +854,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/begonia/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/begonia/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -703,6 +878,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/ginkgo/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/lavender/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -718,6 +898,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/lavender/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/miatoll/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -729,6 +914,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/miatoll/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/miatoll/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -753,12 +943,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/raphael/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/rosy/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/rosy/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/rosy/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -774,6 +974,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/rova/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/rova/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -808,6 +1013,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/vince/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/violet/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -819,6 +1029,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/violet/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/violet/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -868,6 +1083,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/mojito/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/olive/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -879,6 +1099,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/picasso/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/picasso/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -903,6 +1128,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/sweet/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/twolip/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -919,6 +1149,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/spes/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/spes/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -958,6 +1193,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/beyond0lte/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/beyond1lte/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -973,6 +1213,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/beyond1lte/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/beyond2lte/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -984,6 +1229,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/beyond2lte/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/beyond2lte/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1118,12 +1368,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/d1/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/d2s/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/d2s/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/d2s/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1138,12 +1398,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/d2x/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/gta4xl/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/gta4xl/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/gta4xl/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1158,6 +1428,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/gta4xlwifi/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/gts4lv/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -1168,12 +1443,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/gts4lv/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/gts4lvwifi/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/gts4lvwifi/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/gts4lvwifi/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1204,6 +1489,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/beyondx/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/beyondx/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1253,6 +1543,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/chiron/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/clover/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -1293,12 +1588,22 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/dipper/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/gemini/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://crdroid.net/gemini/7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/gemini/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1448,6 +1753,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/courbet/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/davinci/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -1459,11 +1769,6 @@
 </url>
 <url>
   <loc>https://crdroid.net/juice/7</loc>
-  <changefreq>hourly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://crdroid.net/juice/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1488,14 +1793,109 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/chime/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/chime/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/mars/8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/mars/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/platina/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/vince/8</loc>
+  <loc>https://crdroid.net/venus/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/venus/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-10-28-crDroid-9-released</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-10-13-crDroid-8.10-and-crDroid-9-updates</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-09-15-how-to-report-bugs</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-09-11-crDroid-8.9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-08-30-changelog-august-30</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-08-19-changelog-august-19</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-08-11-crDroid-8.8</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-08-05-changelog-august-5</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-07-24-changelog-july-24</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-07-14-crDroid-8.7</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-07-03-how-to-use-SourceForge-mirror</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-07-03-changelog-july-03</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-06-26-changelog-june-26</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2022-06-18-Blog-and-updates</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/2022-04-08-crDroid-8-March-2022-summary</loc>
