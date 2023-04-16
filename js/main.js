@@ -264,13 +264,20 @@ button.addEventListener("click", ()=>{
 async function detectAdBlock() {
   let adBlockEnabled = false
 
-  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
   try {
-    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+    await Promise.race([
+      fetch(new Request(googleAdUrl)),
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject(new Error('Timeout'));
+        }, 5000);
+      })
+    ]);
   } catch (e) {
-    adBlockEnabled = true
+    adBlockEnabled = true;
   } finally {
-    console.log(`Check1 -> AdBlock Enabled: ${adBlockEnabled}`)
+    console.log(`Check1 -> AdBlock Enabled: ${adBlockEnabled}`);
   }
 
   if (adBlockEnabled == false){

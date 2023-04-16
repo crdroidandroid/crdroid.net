@@ -71,19 +71,17 @@ $sha256 = $data[1]['sha256'];
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6432969-5"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-6432969-5');
+    gtag('config', 'G-NR3C0WDB8Q');
   </script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
-
-  <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -370,6 +368,7 @@ $sha256 = $data[1]['sha256'];
 
   <!-- Main JS File -->
   <script src="<?php echo $domain; ?>/js/main.js"></script>
+  <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
 
   <script type="text/javascript" async=true>
     $(document).ready(function(){
