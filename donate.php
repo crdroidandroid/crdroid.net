@@ -140,7 +140,7 @@
         &copy; Copyright 2016-<?php echo date("Y");?> <strong><span>crDroid Android</span></strong>.
       </div>
       <div class="credits">
-        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a> and hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
+        Designed by <a href="https://gwolf2u.com">Lup Gabriel</a>, buildservers powered by <a href="https://www.interserver.net/r/836686">InterServer</a> and website hosted @ <a href="https://scopehosts.com">ScopeHosts</a>
       </div>
     </div>
   </footer><!-- End Footer -->
