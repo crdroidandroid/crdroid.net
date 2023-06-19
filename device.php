@@ -292,7 +292,7 @@ $sha256 = $data[1]['sha256'];
                       <h6>Changelog:</h6>
                     </div>
 			              <div style="text-align: center; padding-bottom: 10px;">
-                      <textarea readonly rows="12" class="changelogTXT" style="white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;">dasdsa</textarea>
+                      <textarea readonly rows="12" class="changelogTXT" style="white-space: pre-wrap; width: 95%; max-width: 95%; display: none; border-radius: 10px; border: 2px dashed #71c55d;">Loading...</textarea>
                     </div>
                     </div>
                   </div>
