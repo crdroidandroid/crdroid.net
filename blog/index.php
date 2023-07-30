@@ -128,7 +128,7 @@
 			$path = __DIR__. '/articles';
 			$files = array_reverse(glob($path."/*.md"));
 			$totalpages = ceil(count($files) / 5);
-			$files = array_slice($files, ($page * 5) - 5, $page * 5);
+			$files = array_slice($files, ($page - 1) * 5, 5);
 
 			foreach ($files as $file) {
 				$file_data = array_slice(file($file), 1, 3);
@@ -145,27 +145,63 @@
 				";
 			}
 		?>
-		<div class="d-flex justify-content-center">
-			<nav aria-label="...">
-				<ul class="pagination">
-				<?php
-					for ($i=1; $i<=$totalpages; $i++) {
-						if ($i == $page){
-							echo "	<li class='page-item active' aria-current='page'>
-										<span class='page-link'>" . $i . "</span>
-									</li>";
-						}else{
-							if ($i == 1){
-								echo "	<li class='page-item'><a class='page-link' href='" . $domain . "/blog/'>" . $i . "</a></li>";
-							}else{
-								echo "	<li class='page-item'><a class='page-link' href='/blog/page/" . $i . "'>" . $i . "</a></li>";
-							}
-						}
-					}
-				?>
-				</ul>
-			</nav>
-		</div>
+    <div class="d-flex justify-content-center">
+      <nav aria-label="...">
+        <ul class="pagination">
+            <?php
+            $totalPagesToShow = 2; // Number of pages to show on each side of the current page
+            $startPage = max(1, $page - $totalPagesToShow); // Calculate the start page
+            $endPage = min($totalpages, $page + $totalPagesToShow); // Calculate the end page
+
+            // Display previous arrow if needed
+            if ($page > 1) {
+                echo "<li class='page-item'>
+                        <a class='page-link' href='/blog/page/" . ($page - 1) . "' aria-label='Previous'>
+                            <span aria-hidden='true'>&laquo;</span>
+                        </a>
+                    </li>";
+            }
+
+            // Display ellipsis if there are pages before the start page
+            if ($startPage > 1) {
+                echo "<li class='page-item disabled'>
+                        <span class='page-link'>&hellip;</span>
+                    </li>";
+            }
+
+            for ($i = $startPage; $i <= $endPage; $i++) {
+                if ($i == $page) {
+                    echo "<li class='page-item active' aria-current='page'>
+                            <span class='page-link'>" . $i . "</span>
+                        </li>";
+                } else {
+                    if ($i == 1) {
+                        echo "<li class='page-item'><a class='page-link' href='" . $domain . "/blog/'>" . $i . "</a></li>";
+                    } else {
+                        echo "<li class='page-item'><a class='page-link' href='/blog/page/" . $i . "'>" . $i . "</a></li>";
+                    }
+                }
+            }
+
+            // Display ellipsis if there are pages after the end page
+            if ($endPage < $totalpages) {
+                echo "<li class='page-item disabled'>
+                        <span class='page-link'>&hellip;</span>
+                    </li>";
+            }
+
+            // Display next arrow if needed
+            if ($page < $totalpages) {
+                echo "<li class='page-item'>
+                        <a class='page-link' href='/blog/page/" . ($page + 1) . "' aria-label='Next'>
+                            <span aria-hidden='true'>&raquo;</span>
+                        </a>
+                    </li>";
+            }
+            ?>
+        </ul>
+      </nav>
+    </div>
       </div>
     </section>
 
