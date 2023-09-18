@@ -37,6 +37,9 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Clickio -->
+  <script async type="text/javascript" src="//clickiocmp.com/t/consent_232010.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
   <script>
@@ -46,9 +49,6 @@
 
     gtag('config', 'G-NR3C0WDB8Q');
   </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -175,9 +175,9 @@
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
               <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
               <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+              <a href="#" title="Change privacy policy" onclick="if(window.__lxG__consent__!==undefined&&window.__lxG__consent__.getState()!==null){window.__lxG__consent__.showConsent()} else {alert('This function only for users from European Economic Area (EEA)')}; return false"><i class='bx bx-check-shield' ></i></a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -191,22 +191,6 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
-  <!-- ======= Ads blocker ======= -->
-  <div class="blocker-wrapper">
-    <div class="content">
-      <div class="warn-icon">
-        <span class="icon"><i class='bx bx-shield-x' ></i></span>
-      </div>
-      <h2>AdBlock Detected!</h2>
-      <p>crDroid server is made possible by displaying ads on our website. Please support us by whitelisting our url.</p>
-      <div class="blocker-btn">
-        <div class="bg-layer disable"></div>
-        <button id="timed">Please wait 5 seconds...</button>
-      </div>
-    </div>
-  </div>
-  <!-- End Ads blocker -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

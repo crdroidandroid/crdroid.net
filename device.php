@@ -70,6 +70,9 @@ $sha256 = $data[1]['sha256'];
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Clickio -->
+  <script async type="text/javascript" src="//clickiocmp.com/t/consent_232010.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
   <script>
@@ -323,9 +326,9 @@ $sha256 = $data[1]['sha256'];
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
               <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
               <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+              <a href="#" title="Change privacy policy" onclick="if(window.__lxG__consent__!==undefined&&window.__lxG__consent__.getState()!==null){window.__lxG__consent__.showConsent()} else {alert('This function only for users from European Economic Area (EEA)')}; return false"><i class='bx bx-check-shield' ></i></a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
