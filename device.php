@@ -380,7 +380,11 @@ $sha256 = $data[1]['sha256'];
       if (x.includes('#')){
         if (x.includes('changelog')){
           var myv = <?php echo $crversion; ?>;
-          var file = '../changelog/v' + myv + '.x/changelog_<?php echo $device; ?>.txt';
+          if (strlen(myv) > 1){
+            var file = '../changelog/v' + myv + '.x/<?php echo $device; ?>_changelog.txt';
+          }else{
+            var file = '../changelog/v' + myv + '.x/changelog_<?php echo $device; ?>.txt';
+          }
           $(".changelogTXT").load(file);
           $(".changelog").fadeIn(1000);
           $(".changelogTXT").slideDown(1000);
