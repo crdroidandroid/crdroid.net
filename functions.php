@@ -55,4 +55,14 @@ function crVersionToAndroid($checkVersion){
 
 	return $versions[$checkVersion];
 }
+
+function changelogFile($checkVersion, $device){
+    $changelog = '';
+    if (strlen($checkVersion) > 1) {
+        $changelog = "../changelog/v" . $checkVersion . ".x/" . $device . "_changelog.txt";
+    } else {
+        $changelog = "../changelog/v" . $checkVersion . ".x/changelog_" . $device . ".txt";
+    }
+    return $changelog;
+}
 ?>

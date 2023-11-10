@@ -263,7 +263,7 @@ $sha256 = $data[1]['sha256'];
                                         <a class='btn btn-primary btn-sm m-1' href='" . $telegram . "'><i class='bx bxl-telegram' ></i> Telegram</a>";
                                   }
                             ?>
-                            <a class="btn btn-secondary btn-sm m-1" role='button' id="changelogBtn" data-textfile="../changelog/v<?php echo $crversion;?>.x/changelog_<?php echo $device; ?>.txt"><i class='bx bxs-spreadsheet' ></i> Changelog</a>
+                            <a class="btn btn-secondary btn-sm m-1" role='button' id="changelogBtn" data-textfile="<?php echo changelogFile($crversion, $device); ?>"><i class='bx bxs-spreadsheet' ></i> Changelog</a>
                             <?php
                                   if (empty($gapps) == false){
                                       echo "
@@ -379,12 +379,7 @@ $sha256 = $data[1]['sha256'];
       var tab = null;
       if (x.includes('#')){
         if (x.includes('changelog')){
-          var myv = <?php echo $crversion; ?>;
-          if (myv.length > 1){
-            var file = '../changelog/v' + myv + '.x/<?php echo $device; ?>_changelog.txt';
-          }else{
-            var file = '../changelog/v' + myv + '.x/changelog_<?php echo $device; ?>.txt';
-          }
+          var file = '<?php echo changelogFile($crversion, $device); ?>';
           $(".changelogTXT").load(file);
           $(".changelog").fadeIn(1000);
           $(".changelogTXT").slideDown(1000);
