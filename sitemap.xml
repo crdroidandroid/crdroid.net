@@ -38,6 +38,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/blog/2023-12-12-crDroid-9.12-released</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/blog/2023-11-16-crDroid-10-beta-and-crDroid-9.11</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -54,11 +59,6 @@
 </url>
 <url>
   <loc>https://crdroid.net/blog/2023-10-12-crDroid-9.10-released</loc>
-  <changefreq>hourly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://crdroid.net/blog/2023-09-18-crDroid-9.9-released</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -493,6 +493,16 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/Spacewar/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/Spacewar/10</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://crdroid.net/avicii/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
@@ -779,6 +789,11 @@
 </url>
 <url>
   <loc>https://crdroid.net/salami/9</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/salami/10</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -1399,16 +1414,6 @@
 </url>
 <url>
   <loc>https://crdroid.net/lancelot/9</loc>
-  <changefreq>hourly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://crdroid.net/stone/9</loc>
-  <changefreq>hourly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://crdroid.net/stone/10</loc>
   <changefreq>hourly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -2223,6 +2228,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://crdroid.net/blog/2023-09-18-crDroid-9.9-released</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
   <loc>https://crdroid.net/blog/2023-08-13-crDroid-9.8-released</loc>
   <changefreq>hourly</changefreq>
   <priority>0.51</priority>
@@ -2243,17 +2253,17 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2023-05-30-scheduled-downtime</loc>
-  <changefreq>hourly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
   <loc>https://crdroid.net/blog/page/1</loc>
   <changefreq>hourly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/page/4</loc>
+  <changefreq>hourly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://crdroid.net/blog/2023-05-30-scheduled-downtime</loc>
   <changefreq>hourly</changefreq>
   <priority>0.51</priority>
 </url>
@@ -2278,14 +2288,14 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2023-03-02-changelog-week-9-2023</loc>
+  <loc>https://crdroid.net/blog/page/5</loc>
   <changefreq>hourly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/page/5</loc>
+  <loc>https://crdroid.net/blog/2023-03-02-changelog-week-9-2023</loc>
   <changefreq>hourly</changefreq>
-  <priority>0.51</priority>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/2023-02-14-crDroid-9-released</loc>
@@ -2308,12 +2318,12 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-12-18-december-security-patches-madness</loc>
+  <loc>https://crdroid.net/blog/page/6</loc>
   <changefreq>hourly</changefreq>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/page/6</loc>
+  <loc>https://crdroid.net/blog/2022-12-18-december-security-patches-madness</loc>
   <changefreq>hourly</changefreq>
   <priority>0.41</priority>
 </url>
@@ -2338,14 +2348,14 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-09-15-how-to-report-bugs</loc>
+  <loc>https://crdroid.net/blog/page/7</loc>
   <changefreq>hourly</changefreq>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/page/7</loc>
+  <loc>https://crdroid.net/blog/2022-09-15-how-to-report-bugs</loc>
   <changefreq>hourly</changefreq>
-  <priority>0.41</priority>
+  <priority>0.33</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/2022-09-11-crDroid-8.9</loc>
@@ -2368,12 +2378,12 @@
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-08-05-changelog-august-5</loc>
+  <loc>https://crdroid.net/blog/page/8</loc>
   <changefreq>hourly</changefreq>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/page/8</loc>
+  <loc>https://crdroid.net/blog/2022-08-05-changelog-august-5</loc>
   <changefreq>hourly</changefreq>
   <priority>0.33</priority>
 </url>
@@ -2398,14 +2408,14 @@
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/2022-06-26-changelog-june-26</loc>
+  <loc>https://crdroid.net/blog/page/9</loc>
   <changefreq>hourly</changefreq>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://crdroid.net/blog/page/9</loc>
+  <loc>https://crdroid.net/blog/2022-06-26-changelog-june-26</loc>
   <changefreq>hourly</changefreq>
-  <priority>0.33</priority>
+  <priority>0.26</priority>
 </url>
 <url>
   <loc>https://crdroid.net/blog/2022-06-18-Blog-and-updates</loc>
