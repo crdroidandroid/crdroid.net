@@ -646,9 +646,33 @@ section {
   margin: 0 auto;
 }
 
-.deviceimage img{
-  max-height: 225px;
+.deviceimage img {
+  height: 225px;
+  width: auto;
   padding-top: 10px;
+  opacity: 0;
+  animation: pulse 2s infinite;
+}
+
+.deviceimage img.loading {
+  opacity: 1;
+}
+
+.deviceimage img.loaded {
+  opacity: 1;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 
 .deviceimage-dl {

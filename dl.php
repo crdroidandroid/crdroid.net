@@ -140,11 +140,13 @@
                 ";
                 //echo $devicecodename . "<br>";
                 $img = null;
-			          $imgpath = "img/devices/" . $devicecodename .".webp";
-                if (file_exists($imgpath)){
-                  $img = "<div class='deviceimage'><img src='" . $imgpath . "' /></div>";
+                $smallImgPath = "img/devices/" . $devicecodename . "-small.webp";
+                $largeImgPath = "img/devices/" . $devicecodename . ".webp";
+
+                if (file_exists($smallImgPath)) {
+                    $img = "<div class='deviceimage'><img src='" . $smallImgPath . "' data-src='" . $largeImgPath . "' class='lazy-image' /></div>";
                 } else {
-                  $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image' ></i></span>";
+                    $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image'></i></span>";
                 }
                 $onlyfirst = 0;
                 $lastupdate = 0;
@@ -274,21 +276,70 @@
   	});
   });
   </script>
-  <script type="text/javascript" async=true>
-  $(document).ready(function(){
-    var x = window.location.hash;
-    if (x.includes('#')){
-      var codename = x.replace('#', '');
-      glowup(codename);
-    };
-  });
 
-  function glowup(device){
-    console.log(device);
-    var d = document.getElementById(device);
-    d.className += " mydevice";
-  };
+  <!-- to device -->
+  <script>
+    $(document).ready(function() {
+      var x = window.location.hash;
+      if (x.includes('#')) {
+        var codename = x.replace('#', '');
+        glowup(codename);
+      };
+
+      // Check if there's a hash in the URL when the page loads
+      var hash = window.location.hash;
+      if (hash) {
+        var dynamicId = hash.substring(1);
+        var element = document.getElementById(dynamicId);
+
+        if (element) {
+          $('html, body').animate({
+            scrollTop: $(element).offset().top - ($(window).height() - $(element).outerHeight(true)) / 2
+          }, 1000);
+        }
+      }
+    });
+
+    function glowup(device) {
+      var d = document.getElementById(device);
+      if (d) {
+        d.className += " mydevice";
+      }
+    };
   </script>
+
+  <!-- lazy load images -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lazyImages = document.querySelectorAll('.lazy-image');
+
+      const lazyLoad = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const src = img.getAttribute('data-src');
+
+              img.setAttribute('src', src);
+              img.classList.add('loading');
+
+              img.onload = function() {
+                img.classList.remove('loading');
+                img.classList.add('loaded');
+              };
+
+              observer.disconnect();
+            }
+          });
+        });
+
+        io.observe(target);
+      };
+
+      lazyImages.forEach(lazyLoad);
+    });
+  </script>
+
 </body>
 
 </html>
