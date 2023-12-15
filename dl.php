@@ -129,6 +129,17 @@
           echo "<a href='#" . $key . "' class='btn btn-secondary scrollto m-1'>" . $key . "</a>";
         }
         echo "</div>";
+        
+        echo '<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="listOutdated" onchange="filterVersions()">
+                    <label class="form-check-label" for="listOutdated">List outdated crDroid revisions</label>
+                </div>
+            </div>
+        </div>
+      </div>';
 
         foreach($json_array as $key => $arrays){
             echo "<div id='" . $key . "' class='oem'><h1><i class='bx bx-chevrons-left' ></i>" . $key . "<i class='bx bx-chevrons-right' ></i></h1></div>";
@@ -339,6 +350,48 @@
       lazyImages.forEach(lazyLoad);
     });
   </script>
+
+  <!-- filter outdated -->
+  <script>
+    function filterVersions() {
+      var listOutdated = document.getElementById("listOutdated");
+      var devices = document.querySelectorAll(".device");
+
+      devices.forEach(function(device) {
+        var versions = device.querySelectorAll(".dropdown-item");
+        var isVisible = false;
+
+        versions.forEach(function(version) {
+          var versionText = version.textContent || version.innerText;
+          var includeVersions = ["crDroid 7", "crDroid 8", "crDroid 9", "crDroid 10"];
+          
+          // If the checkbox is unchecked, hide versions that don't match the filter
+          if (!listOutdated.checked && !includeVersions.some(v => versionText.includes(v))) {
+            version.parentNode.style.display = "none";
+          } else {
+            version.parentNode.style.display = "block";
+            isVisible = true;
+          }
+        });
+
+        device.style.display = isVisible ? "block" : "none";
+      });
+    }
+
+    window.onload = function() {
+      var listOutdated = document.getElementById("listOutdated");
+
+      if (window.location.href.match(/#(.+)/)) {
+        listOutdated.checked = true;
+      } else {
+        listOutdated.checked = false;
+      }
+
+      filterVersions();
+
+      listOutdated.addEventListener("change", filterVersions);
+    };
+</script>
 
 </body>
 
