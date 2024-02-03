@@ -1,21 +1,31 @@
 <?php
-  include '../functions.php';
-  include '../vendor/Parsedown.php';
-  $domain = GetDomain();
-  $article = $_GET['article'];
-  $file = 'articles/' . $article . '.md';
-  if (!file_exists($file)){
+include 'functions.php';
+include 'vendor/Parsedown.php';
+
+$domain = GetDomain();
+$device = $_GET['name'];
+$crversion = $_GET['crversion'];
+
+if (empty($crversion)) {
+    header("Location: " . $domain . "/downloads#" . $device . "", true, 301);
     exit;
-  }
-  $file_data = array_slice(file($file), 1, 3);
-  $title = trim(str_replace('title:', '', $file_data[0]));
-  $description = trim(str_replace('description:', '', $file_data[1]));
-  $author = str_replace('author:', '', $file_data[2]);
-  $articledate = date_create(substr(basename($file, ".md"),0,10));
-  $content = file_get_contents($file);
-  $content = explode("\n", $content);
-  array_splice($content, 0, 5);
-  $newcontent = implode("\n", $content);
+}
+
+//define vars
+$data = GetDeviceInfo($device, $crversion);
+$oem = $data[0];
+if (empty($oem)){
+ header("Location: " . $domain , true, 301);
+ exit;
+}
+
+$file = 'install_docs/' . $crversion . '/' . $device . '.md';
+if (!file_exists($file)){
+  header("Location: " . $domain , true, 301);
+  exit;
+}
+$content = file_get_contents($file);
+$devicename = $data[1]['device'];
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +35,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>crDroid.net - <?php echo $title;?></title>
-  <meta name="description" content="<?php echo $description;?>">
-  <meta name="keywords" content="crDroid, crDroid ROM, ROM">
+  <title>crDroid.net - How to install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
+  <meta name="description" content="install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)">
+  <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
   <!-- Favicons -->
   <link href="<?php echo $domain; ?>/img/favicon.ico" rel="icon">
@@ -84,6 +94,7 @@
         <ul>
           <li><a class="nav-link" href="<?php echo $domain; ?>">Home</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/donate">Support us</a></li>
@@ -99,71 +110,64 @@
     </div>
   </header><!-- End Header -->
 
+  <!-- ======= Intro Section ======= -->
+  <section id="blog" class="d-flex align-items-center blogbg">
 
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="d-flex align-items-center blogbg">
-
-    <div class="container">
-      <div class="row">
-        <div class="d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
-          <div>
-            <h1><?php echo $title;?></h1>
-            <h3><?php echo $description;?></h3>
-            <h2>Written on <?php echo date_format($articledate, "M d, Y");?> by <?php echo $author;?></h2>
-          </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+      <div>
+        <h1>Install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?></h1>
+        <h3><?php echo $device; ?></h3>
       </div>
     </div>
+  </div>
+</div>
 
-    </section><!-- End Blog -->
+</section><!-- End intro -->
 
   <main id="main">
 
     <section class="inner-page">
       <div class="container">
-        <div class="center pb-3">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
-          <!-- Header -->
-          <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-9442732345409545"
-              data-ad-slot="5655936532"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
 
         <div class="pb-2">
-          <a href="<?php echo $domain; ?>/blog"><i class='bx bx-chevrons-left'></i> Back to blog</a>
+            <a href="<?php echo $domain; ?>/<?php echo $device; ?>/<?php echo $crversion; ?>"><i class='bx bx-chevrons-left'></i> Back to download page</a>
         </div>
-        <div>
-          <?php
-            echo $filedata;
-            $Parsedown = new Parsedown();
-            echo $Parsedown->text($newcontent);
-          ?>
-        </div>
-        <div>
-          <div id="disqus_thread"></div>
-          <script>
-              /**
-              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-              var disqus_config = function () {
-              this.page.url = '<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>';  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = '<?php echo $title;?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-              };
-              (function() { // DON'T EDIT BELOW THIS LINE
-              var d = document, s = d.createElement('script');
-              s.src = 'https://crdroid-android.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-              })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </div>
+
+        <!-- List device info -->
+        <div class="row">
+          <div class="col-md col-lg">
+			      <div class="col-md-12">
+              <div class="alert alert-danger" role="alert">
+                <div>
+                  <b>Warning:</b> The provided instructions are for crDroid <?php echo $crversion; ?>. These will only work if you follow every section and step precisely.<br>
+                  Do <b>not</b> continue after something fails!
+                </div>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <b>crDroid</b> is not responsible for any damage you made to your device. You have been warned!
+              </div>
+
+              <div>
+                <h2>Flashing instructions</h2>
+                <br>
+                <!-- Markdown parsing -->
+                <?php
+                  $Parsedown = new Parsedown();
+                  echo $Parsedown->text($content);
+                ?>
+              </div>
+
+              <div>
+                <h2>Require support?</h2>
+                For support questions, check out forum or telegram links found on our <a href="<?php echo $domain; ?>/<?php echo $device; ?>/<?php echo $crversion; ?>">download page</a>, useful links area.<br>
+              </div>
+
+            </div>
+          </div>
+		    </div>
+
       </div>
     </section>
 
@@ -232,9 +236,6 @@
   <!-- Main JS File -->
   <script src="<?php echo $domain; ?>/js/main.js"></script>
   <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
-
-  <!-- Disquss -->
-  <script id="dsq-count-scr" src="//crdroid-android.disqus.com/count.js" async></script>
 </body>
 
 </html>

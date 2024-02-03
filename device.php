@@ -34,6 +34,7 @@ $zipsize = $data[1]['size'];
 $forum = $data[1]['forum'];
 $md5 = $data[1]['md5'];
 $sha256 = $data[1]['sha256'];
+$installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
 ?>
 
 <!DOCTYPE html>
@@ -256,6 +257,11 @@ $sha256 = $data[1]['sha256'];
                           </div>
                           <h6 class="text-left">Useful links:</h6>
                           <div class="download-area">
+                            <?php 
+                              if (file_exists($installfile)){
+                                echo "<a class='btn btn-danger btn-sm m-1' href='" . $crversion . "/install'><i class='bx bxs-book-alt'></i> How to install</a>";
+                              }
+                            ?>
                             <a class='btn btn-warning btn-sm m-1' href='<?php echo $forum; ?>'><i class='bx bxs-conversation' ></i> Forum</a>
                             <?php
                                   if (empty($telegram) == false){

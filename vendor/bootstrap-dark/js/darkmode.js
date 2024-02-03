@@ -80,6 +80,12 @@ function enableDarkTheme() {
       j++;
     }
   }
+  elements = document.querySelectorAll('code');
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.backgroundColor = "#1a1a1a";
+    elements[i].style.borderColor = "#353535";
+    elements[i].style.borderLeftColor = "#f36d33";
+	}
 }
 
 function disableDarkTheme() {
@@ -133,4 +139,10 @@ function disableDarkTheme() {
       j++;
     }
   }
+  elements = document.querySelectorAll('code');
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.backgroundColor = "#f4f4f4";
+    elements[i].style.borderColor = "#ddd";
+    elements[i].style.borderLeftColor = "#f36d33";
+	}
 }
