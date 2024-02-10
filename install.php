@@ -77,6 +77,24 @@ $devicename = $data[1]['device'];
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
+
+  <!-- Copy button css -->
+  <style>
+    .code-container {
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: -4px;
+      right: 0;
+      opacity: 0.5;
+    }
+
+    .copy-btn:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -236,6 +254,40 @@ $devicename = $data[1]['device'];
   <!-- Main JS File -->
   <script src="<?php echo $domain; ?>/js/main.js"></script>
   <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
+
+  <!-- Copy button js -->
+  <script>
+    $(document).ready(function() {
+        $('pre code').each(function() {
+          var codeText = $(this).text().trim();
+          var copyButton = $('<button class="btn btn-secondary btn-sm copy-btn"><i class="bx bx-copy"></i></button>');
+
+          // Wrap the code content and the copy button in a container
+          var codeContainer = $('<div class="code-container"></div>');
+          codeContainer.append($(this).contents());
+          codeContainer.append(copyButton);
+
+          // Replace the code content with the code container
+          $(this).html(codeContainer);
+
+          copyButton.click(function() {
+            copyToClipboard(codeText);
+            $(this).html('<i class="bx bx-check"></i> Copied');
+            setTimeout(function() {
+              copyButton.html('<i class="bx bx-copy"></i>');
+            }, 2000);
+          });
+        });
+
+        function copyToClipboard(text) {
+          var $temp = $('<input>');
+          $('body').append($temp);
+          $temp.val(text).select();
+          document.execCommand('copy');
+          $temp.remove();
+        }
+      });
+  </script>
 </body>
 
 </html>
