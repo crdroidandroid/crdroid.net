@@ -363,7 +363,7 @@
 
         versions.forEach(function(version) {
           var versionText = version.textContent || version.innerText;
-          var includeVersions = ["crDroid 7", "crDroid 8", "crDroid 9", "crDroid 10"];
+          var includeVersions = ["crDroid 8", "crDroid 9", "crDroid 10"];
           
           // If the checkbox is unchecked, hide versions that don't match the filter
           if (!listOutdated.checked && !includeVersions.some(v => versionText.includes(v))) {
