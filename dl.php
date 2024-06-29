@@ -132,10 +132,10 @@
         
         echo '<div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="listOutdated" onchange="filterVersions()">
-                    <label class="form-check-label" for="listOutdated">List outdated crDroid revisions</label>
+                    <label class="form-check-label" for="listOutdated">Show all devices and OEMs (even outdated)</label>
                 </div>
             </div>
         </div>
