@@ -267,25 +267,93 @@
   <script src="js/main.js"></script>
   <script src="js/peel1.js" type="text/javascript"></script>
 
-  <!-- Search js -->
+  <!-- Search and filter js -->
   <script>
-	$(function() {
-    //search js
-    $("#search").on("keyup submit", function() {
-		  var key = this.value.toLowerCase();
-		  if (key == ''){
-			  $(".oem").show();
-        $(".OEMS").show();
-		  }else{
-			  $(".oem").hide();
-        $(".OEMS").hide();
-		  }
-		  $(".device").each(function() {
-			  var $this = $(this);
-			  $this.toggle($(this).text().toLowerCase().indexOf(key) >= 0);
-		  });
-  	});
-  });
+    $(function() {
+      function filterVersions() {
+        const listOutdated = document.getElementById("listOutdated");
+        const devices = document.querySelectorAll(".device");
+        const oems = document.querySelectorAll(".oem");
+        const includeVersions = ["crDroid 8", "crDroid 9", "crDroid 10"];
+
+        devices.forEach(device => {
+          const versions = device.querySelectorAll(".dropdown-item");
+          let isVisible = false;
+
+          versions.forEach(version => {
+            const versionText = version.textContent || version.innerText;
+            const shouldShow = listOutdated.checked || includeVersions.some(v => versionText.includes(v));
+
+            version.parentNode.style.display = shouldShow ? "block" : "none";
+            if (shouldShow) isVisible = true;
+          });
+
+          device.style.display = isVisible ? "block" : "none";
+        });
+
+        oems.forEach(oem => {
+          let nextElement = oem.nextElementSibling;
+          let hasVisibleDevice = false;
+
+          while (nextElement && !nextElement.classList.contains("oem")) {
+            if (nextElement.classList.contains("device") && nextElement.style.display !== "none") {
+              hasVisibleDevice = true;
+              break;
+            }
+            nextElement = nextElement.nextElementSibling;
+          }
+
+          oem.style.display = hasVisibleDevice ? "block" : "none";
+        });
+
+        updateOEMLinks();
+      }
+
+      function updateOEMLinks() {
+        $(".OEMS a").each(function() {
+          const targetID = $(this).attr("href").substring(1);
+          const targetOEM = $("#" + targetID);
+          const isVisible = targetOEM.length > 0 && targetOEM.is(":visible");
+
+          $(this).toggle(isVisible);
+        });
+      }
+
+      $("#search").on("keyup submit", function() {
+        var key = this.value.toLowerCase();
+
+        if (key === '') {
+          filterVersions();
+        } else {
+          $(".oem").show();
+          $(".device").show();
+
+          $(".dropdown-item").closest('li').show();
+          $(".device").each(function() {
+            var $this = $(this);
+            var matches = $this.text().toLowerCase().indexOf(key) >= 0;
+            $this.toggle(matches);
+          });
+
+          $(".oem").each(function() {
+            var $this = $(this);
+            var hasVisibleDevice = $this.nextUntil(".oem").filter(".device:visible").length > 0;
+            $this.toggle(hasVisibleDevice);
+          });
+
+          updateOEMLinks();
+        }
+      });
+
+      window.onload = function() {
+        const listOutdated = document.getElementById("listOutdated");
+        listOutdated.checked = !!window.location.href.match(/#(.+)/);
+        filterVersions();
+        listOutdated.addEventListener("change", filterVersions);
+      };
+
+      window.filterVersions = filterVersions;
+    });
   </script>
 
   <!-- to device -->
@@ -350,49 +418,6 @@
       lazyImages.forEach(lazyLoad);
     });
   </script>
-
-  <!-- filter outdated -->
-  <script>
-    function filterVersions() {
-      var listOutdated = document.getElementById("listOutdated");
-      var devices = document.querySelectorAll(".device");
-
-      devices.forEach(function(device) {
-        var versions = device.querySelectorAll(".dropdown-item");
-        var isVisible = false;
-
-        versions.forEach(function(version) {
-          var versionText = version.textContent || version.innerText;
-          var includeVersions = ["crDroid 8", "crDroid 9", "crDroid 10"];
-          
-          // If the checkbox is unchecked, hide versions that don't match the filter
-          if (!listOutdated.checked && !includeVersions.some(v => versionText.includes(v))) {
-            version.parentNode.style.display = "none";
-          } else {
-            version.parentNode.style.display = "block";
-            isVisible = true;
-          }
-        });
-
-        device.style.display = isVisible ? "block" : "none";
-      });
-    }
-
-    window.onload = function() {
-      var listOutdated = document.getElementById("listOutdated");
-
-      if (window.location.href.match(/#(.+)/)) {
-        listOutdated.checked = true;
-      } else {
-        listOutdated.checked = false;
-      }
-
-      filterVersions();
-
-      listOutdated.addEventListener("change", filterVersions);
-    };
-</script>
-
 </body>
 
 </html>
