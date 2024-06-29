@@ -274,7 +274,7 @@
         const listOutdated = document.getElementById("listOutdated");
         const devices = document.querySelectorAll(".device");
         const oems = document.querySelectorAll(".oem");
-        const includeVersions = ["crDroid 8", "crDroid 9", "crDroid 10"];
+        const includeVersions = ["crDroid 9", "crDroid 10"];
 
         devices.forEach(device => {
           const versions = device.querySelectorAll(".dropdown-item");
