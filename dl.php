@@ -142,10 +142,10 @@
       </div>';
 
         foreach($json_array as $key => $arrays){
-            echo "<div id='" . $key . "' class='oem'><h1><i class='bx bx-chevrons-left' ></i>" . $key . "<i class='bx bx-chevrons-right' ></i></h1></div>";
+            echo "<div id='" . $key . "' class='oem google-anno-skip'><h1><i class='bx bx-chevrons-left' ></i>" . $key . "<i class='bx bx-chevrons-right' ></i></h1></div>";
             foreach($arrays as $devicecodename => $devicename){
                 echo "
-                <div class='col-lg-3 mb-4 device'>
+                <div class='col-lg-3 mb-4 device google-anno-skip'>
                 <div class='card border-secondary shadow' id='" . $devicecodename . "'>
                   <h5 class='card-header text-center'>" . $devicecodename . "</h5>
                 ";
