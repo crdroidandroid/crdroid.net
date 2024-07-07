@@ -228,15 +228,15 @@
       <div class="container-fluid" data-aos="fade-up">
         <div class="gallery-slider swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="img/gallery/gallery-1.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-1.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-2.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-2.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-3.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-3.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-4.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-4.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-5.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-5.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-6.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-6.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-7.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-7.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-8.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-8.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-9.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-9.webp" class="img-fluid screenshots-gallery" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-1.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-1.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-2.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-2.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-3.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-3.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-4.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-4.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-5.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-5.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-6.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-6.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-7.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-7.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-8.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-8.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-9.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-9.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>

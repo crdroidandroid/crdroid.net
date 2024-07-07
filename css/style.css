@@ -545,6 +545,9 @@ section {
 .gallery .swiper-slide-active {
   text-align: center;
 }
+.img-radius {
+  border-radius: 15px;
+}
 @media (min-width: 992px) {
   .gallery .swiper-wrapper {
     padding: 40px 0;
