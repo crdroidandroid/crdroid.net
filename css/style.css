@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #585a61;
 }
 
@@ -33,7 +33,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: bolder;
   color: #47536e;
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
 }
 #hero .download-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;
   display: inline-block;
@@ -796,7 +796,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #8a8c95;
 }
 #footer .footer-top h4 {
