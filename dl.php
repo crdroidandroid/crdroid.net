@@ -263,13 +263,9 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
   <script src="vendor/bootstrap-dark/js/darkmode.js"></script>
 
-  <!-- Main JS File -->
-  <script src="js/main.js"></script>
-  <script src="js/peel1.js" type="text/javascript"></script>
-
   <!-- Search and filter js -->
   <script>
-    $(function() {
+    document.addEventListener("DOMContentLoaded", function() {
       function filterVersions() {
         const listOutdated = document.getElementById("listOutdated");
         const devices = document.querySelectorAll(".device");
@@ -345,13 +341,11 @@
         }
       });
 
-      window.onload = function() {
-        const listOutdated = document.getElementById("listOutdated");
-        listOutdated.checked = !!window.location.href.match(/#(.+)/);
-        filterVersions();
-        listOutdated.addEventListener("change", filterVersions);
-      };
-
+      const listOutdated = document.getElementById("listOutdated");
+      listOutdated.checked = !!window.location.href.match(/#(.+)/);
+      filterVersions();
+      listOutdated.addEventListener("change", filterVersions);
+      
       window.filterVersions = filterVersions;
     });
   </script>
@@ -418,6 +412,10 @@
       lazyImages.forEach(lazyLoad);
     });
   </script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js" async></script>
+  <script src="js/peel1.js" type="text/javascript"></script>
 </body>
 
 </html>
