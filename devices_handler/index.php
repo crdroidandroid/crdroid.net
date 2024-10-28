@@ -53,7 +53,8 @@ function CompileFullJSON(){
 		'7.json',
 		'8.json',
 		'9.json',
-		'10.json'
+		'10.json',
+		'11.json'
 	];
 
 	// Define an enmpty array for merging
