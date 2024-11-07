@@ -1,6 +1,5 @@
 <?php
 include 'functions.php';
-include 'vendor/Parsedown.php';
 
 $domain = GetDomain();
 $device = $_GET['name'];
@@ -18,14 +17,9 @@ if (empty($oem)){
  header("Location: " . $domain , true, 301);
  exit;
 }
-
-$file = 'install_docs/' . $crversion . '/' . $device . '.md';
-if (!file_exists($file)){
-  header("Location: " . $domain , true, 301);
-  exit;
-}
-$content = file_get_contents($file);
 $devicename = $data[1]['device'];
+$telegram = $data[1]['telegram'];
+$forum = $data[1]['forum'];
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +29,8 @@ $devicename = $data[1]['device'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>crDroid.net - How to install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
-  <meta name="description" content="install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)">
+  <title>crDroid.net - Dedicated support for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
+  <meta name="description" content="support for <?php echo $devicename; ?> (<?php echo $device; ?>)">
   <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
 
   <!-- Favicons -->
@@ -78,21 +72,46 @@ $devicename = $data[1]['device'];
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
 
-  <!-- Copy button css -->
+  <!-- Custom CSS for styling links -->
   <style>
-    .code-container {
-      position: relative;
+    .support-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .copy-btn {
-      position: absolute;
-      top: -4px;
-      right: 0;
-      opacity: 0.5;
+    .support-link i {
+      font-size: 5rem; /* Large icon */
+      margin-bottom: 10px;
     }
 
-    .copy-btn:hover {
-      opacity: 1;
+    .support-link h2 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .support-link:hover {
+      background-color: transparent;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .support-link {
+        padding: 15px;
+      }
+      .support-link h2 {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -135,8 +154,7 @@ $devicename = $data[1]['device'];
   <div class="row">
     <div class="d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
       <div>
-        <h1>Install crDroid <?php echo $crversion; ?> for <?php echo $devicename; ?></h1>
-        <h3><?php echo $device; ?></h3>
+        <h1>Reach us</h1>
       </div>
     </div>
   </div>
@@ -145,50 +163,66 @@ $devicename = $data[1]['device'];
 </section><!-- End intro -->
 
   <main id="main">
-
     <section class="inner-page">
       <div class="container">
-
         <div class="pb-2">
-            <a href="<?php echo $domain; ?>/<?php echo $device; ?>/<?php echo $crversion; ?>"><i class='bx bx-chevrons-left'></i> Back to download page</a>
+          <a href="<?php echo $domain; ?>/<?php echo $device; ?>/<?php echo $crversion; ?>">
+            <i class='bx bx-chevrons-left'></i> Back to download page
+          </a>
         </div>
 
         <!-- List device info -->
         <div class="row">
-          <div class="col-md col-lg">
-			      <div class="col-md-12">
-              <div class="alert alert-danger" role="alert">
-                <div>
-                  <b>Warning:</b> The provided instructions are for crDroid <?php echo $crversion; ?>. These will only work if you follow every section and step precisely.<br>
-                  Do <b>not</b> continue after something fails!
-                </div>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <b>crDroid</b> is not responsible for any damage you made to your device. You have been warned!
-              </div>
-
-              <div>
-                <h2>Flashing instructions</h2>
-                <br>
-                <!-- Markdown parsing -->
-                <?php
-                  $Parsedown = new Parsedown();
-                  echo $Parsedown->text($content);
-                ?>
-              </div>
-
-              <div>
-                <h2>Require support?</h2>
-                For support questions, check out forum or telegram links found on our <a href="<?php echo $domain; ?>/<?php echo $device; ?>/<?php echo $crversion; ?>/support">support page</a><br>
-              </div>
-
-            </div>
+          <div class="col-12">
+            <h3>Whether you’re new to crDroid or a long-time user, you can reach us as follows</h3>
           </div>
-		    </div>
+          
+          <?php if (!empty($telegram)): ?>
+            <div class="col-md-6 col-sm-12 mt-4">
+              <a href="<?php echo $telegram; ?>" class="support-link" target="_blank">
+                <i class='bx bxl-telegram'></i>
+                <h4>Group for <?php echo $devicename; ?></h4>
+                <p>Get dedicated support for your device on Telegram. This group connects you with experienced users and developers for device-specific discussions</p>
+              </a>
+            </div>
 
+            <div class="col-md-6 col-sm-12 mt-4">
+              <a href="<?php echo $forum; ?>" class="support-link" target="_blank">
+                <i class='bx bx-comment-dots'></i>
+                <h4>Dedicated Forum</h4>
+                <p>Find device-specific threads and discussions on the XDA forum. Perfect for in-depth troubleshooting and guidance tailored to your device.</p>
+              </a>
+            </div>
+
+          <?php else: ?>
+            <div class="col-md-12 col-sm-12 mt-4 text-center">
+              <a href="<?php echo $forum; ?>" class="support-link" target="_blank">
+                <i class='bx bx-comment-dots'></i>
+                <h4>Dedicated Forum</h4>
+                <p>Find device-specific threads and discussions on the XDA forum. Perfect for in-depth troubleshooting and guidance tailored to your device.</p>
+              </a>
+            </div>
+          <?php endif; ?>
+
+          <div class="col-md-6 col-sm-12 mt-4">
+            <a href="https://t.me/crDroidAndroid" class="support-link" target="_blank">
+              <i class='bx bxl-telegram'></i>
+              <h4>crDroid Community</h4>
+              <p>A general space to connect, discuss, and share experiences with other crDroid users. Ideal for non-device-specific topics and overall community support.</p>
+            </a>
+          </div>
+          
+          <div class="col-md-6 col-sm-12 mt-4">
+            <a href="https://t.me/crDroidUpdates" class="support-link" target="_blank">
+              <i class='bx bxl-telegram'></i>
+              <h4>crDroid ROM Updates</h4>
+              <p>Stay up-to-date with everything crDroid. This channel provides notification-only updates, keeping you informed of new builds and latest updates.</p>
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

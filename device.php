@@ -130,6 +130,12 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
           <p>Check below info to get started</p>
         </div>
 
+        <div class="pb-2">
+          <a href="<?php echo $domain; ?>/downloads">
+            <i class='bx bx-chevrons-left'></i> Back to all devices download page
+          </a>
+        </div>
+
         <!-- List device info -->
         <div class="row">
           <div class="col-md col-lg">
@@ -262,13 +268,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
                                 echo "<a class='btn btn-danger btn-sm m-1' href='" . $crversion . "/install'><i class='bx bxs-book-alt'></i> How to install</a>";
                               }
                             ?>
-                            <a class='btn btn-warning btn-sm m-1' href='<?php echo $forum; ?>'><i class='bx bxs-conversation' ></i> Forum</a>
-                            <?php
-                                  if (empty($telegram) == false){
-                                      echo "
-                                        <a class='btn btn-primary btn-sm m-1' href='" . $telegram . "'><i class='bx bxl-telegram' ></i> Telegram</a>";
-                                  }
-                            ?>
+                            <a class='btn btn-warning btn-sm m-1' href='<?php echo $crversion;?>/support'><i class='bx bx-support'></i> Ask for support</a>
                             <a class="btn btn-secondary btn-sm m-1" role='button' id="changelogBtn" data-textfile="<?php echo changelogFile($crversion, $device); ?>"><i class='bx bxs-spreadsheet' ></i> Changelog</a>
                             <?php
                                   if (empty($gapps) == false){
