@@ -159,8 +159,10 @@ $devicename = $data[1]['device'];
 			      <div class="col-md-12">
               <div class="alert alert-danger" role="alert">
                 <div>
-                  <b>Warning:</b> The provided instructions are for crDroid <?php echo $crversion; ?>. These will only work if you follow every section and step precisely.<br>
+                  <b>Warning:</b> The provided instructions are for <b>crDroid <?php echo $crversion; ?> running on <?php echo $devicename . " (" . $device . ")</b>"; ?>. These will only work if you follow every section and step precisely.<br>
                   Do <b>not</b> continue after something fails!
+                  <hr>
+                  <p class='mb-0'>Installation is only possible on a device with unlocked bootloader!</p>
                 </div>
               </div>
               <div class="alert alert-warning" role="alert">
