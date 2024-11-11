@@ -270,7 +270,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Are you going to add more features? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  No way... Nah... just kidding... We always try to add more and more features with stability and security first in mind. 
+                  Absolutely! We're always working to add exciting new features while prioritizing stability and security.
                 </p>
               </div>
             </li>
@@ -279,7 +279,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Will you add support for 'XYZ' device? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Unfortunately, we cannot add support for every device since we do not need specific conditions.<br> At least someone from the team needs to own the device and have the possibility of creating device-side sources. 
+                  We're actively expanding our device compatibility. To ensure smooth integration and optimal performance, we prioritize devices readily available to our development team for testing and development, but there's no guarantee a device will be supported at any time.
                 </p>
               </div>
             </li>
@@ -288,7 +288,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">What base is crDroid using? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  crDroid uses LineageOS as base. We try to keep in sync with LineageOS source while also adding lots of customizations for you to choose from.
+                  crDroid is built upon LineageOS. We strive to stay in sync with their source while adding our own customizations.
                 </p>
               </div>
             </li>
@@ -297,7 +297,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">Why the "eye" and not something else? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  The crDroid logo is being used since the first maintainer "Cristiano Matos" added it at the beginning of the project and represents a drawing his kid did at school one day.
+                  Our "eye" logo has been with us since the beginning! It's based on a drawing by the founder's child. 
                 </p>
               </div>
             </li>
