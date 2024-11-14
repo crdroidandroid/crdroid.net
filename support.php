@@ -190,7 +190,7 @@ $forum = $data[1]['forum'];
               <a href="<?php echo $forum; ?>" class="support-link" target="_blank">
                 <i class='bx bx-comment-dots'></i>
                 <h4>Dedicated Forum</h4>
-                <p>Find device-specific threads and discussions on the XDA forum. Perfect for in-depth troubleshooting and guidance tailored to your device.</p>
+                <p>Find device-specific threads and discussions on the forum. Perfect for in-depth troubleshooting and guidance tailored to your device.</p>
               </a>
             </div>
 
