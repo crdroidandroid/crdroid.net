@@ -46,7 +46,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
 
   <title>crDroid.net - Download crDroid v<?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)</title>
   <meta name="description" content="official crDroid v<?php echo $crversion; ?> for <?php echo $devicename; ?> (<?php echo $device; ?>)">
-  <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>">
+  <meta name="keywords" content="crDroid, crDroid ROM, crDroid <?php echo $crversion; ?>, ROM, <?php echo $devicename; ?>, <?php echo $device; ?>, Android <?php echo $android; ?> for <?php echo $devicename; ?>">
 
   <!-- Favicons -->
   <link href="<?php echo $domain; ?>/img/favicon.ico" rel="icon">
@@ -126,7 +126,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
 
         <div class="section-title">
           <p><br><br></p>
-          <h2>Cool, seems you are ready to download</h2>
+          <h2>You are now ready to download and install <br>crDroid <?php echo $crversion; ?> based on Android <?php echo $android; ?> for <?php echo $devicename; ?></h2>
           <p>Check below info to get started</p>
         </div>
 
