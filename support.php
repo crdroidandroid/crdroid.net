@@ -154,7 +154,7 @@ $forum = $data[1]['forum'];
   <div class="row">
     <div class="d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
       <div>
-        <h1>Reach us</h1>
+        <h1>Need support for <?php echo $devicename; ?> (<?php echo $device; ?>) ?</h1>
       </div>
     </div>
   </div>
