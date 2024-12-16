@@ -20,6 +20,7 @@ This update builds on our commitment to delivering a stable, customizable, and f
 -   **Sidebar**: Quickly access your favorite apps with a customizable sidebar.
 -   **Improved Smartspace Controls**: Better integration and customization for your home screen widgets.
 -   **Weather Widget Updates**: A revamped design with accurate and detailed weather data.
+-   **All our crDroid 10 features**: Normally we would not leave our crDroid 10 features behind.
 -   **Many more**
 
 ---
