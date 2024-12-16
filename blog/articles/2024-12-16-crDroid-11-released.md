@@ -15,6 +15,11 @@ This update builds on our commitment to delivering a stable, customizable, and f
 -   **Updated Settings Visuals**: Navigate a cleaner and more intuitive settings menu, with a fresh look and better organization.
 -   **New Freeform Mode**: Multitasking just got better! Easily resize and manage app windows for improved productivity.
 -   **Online PixelPropUtils Fingerprint Updates**: A new online mechanism ensures quick Pixel Integrity validation for seamless Google Play compatibility.
+-   **New Music Player**: Enhanced with a sleek design and more playback features.
+-   **GameSpace Updates**: Take your gaming experience to the next level.
+-   **Sidebar**: Quickly access your favorite apps with a customizable sidebar.
+-   **Improved Smartspace Controls**: Better integration and customization for your home screen widgets.
+-   **Weather Widget Updates**: A revamped design with accurate and detailed weather data.
 -   **Many more**
 
 ---
@@ -25,13 +30,17 @@ To ensure a smooth transition to crDroid 11, we highly recommend performing a cl
 For the best experience, use the new crDroid-official NikGapps package available at [NikGapps](https://nikgapps.com/crdroid-official).
 
 ---
+
 ### crDroid 10.11 Update
 
-Alongside this release, we’re also rolling out crDroid 10.11, which includes the December 2024 security patches. Stay secure and up to date on Android 14 while preparing for the future.
+Alongside this release, we’re also rolling out crDroid 10.11, which includes the December 2024 security patches.  
+Stay secure and up to date on Android 14 while enjoying the features you love.
+
+---
 
 ### Stay Connected
 For updates, discussions, and feedback, join us on:
 -   [Telegram channel](https://t.me/crDroidUpdates)
 -   [Telegram community](https://t.me/crDroidAndroid)  
 
-We’re excited for you to explore crDroid 11 and look forward to your feedback as we continue refining the experience.
+We thank testers and our developers for support through BETA releases and we are excited for you to explore crDroid 11 and look forward to your feedback as we continue refining the experience.
