@@ -304,18 +304,23 @@
         const devices = document.querySelectorAll(".device");
         const oems = document.querySelectorAll(".oem");
         const includeVersions = ["crDroid 9", "crDroid 10", "crDroid 11"];
-
+        const hash = window.location.hash;
+        
         devices.forEach(device => {
           const versions = device.querySelectorAll(".dropdown-item");
           let isVisible = false;
 
-          versions.forEach(version => {
-            const versionText = version.textContent || version.innerText;
-            const shouldShow = listOutdated.checked || includeVersions.some(v => versionText.includes(v));
+          if (hash) {
+            isVisible = true;
+          } else {
+            versions.forEach(version => {
+              const versionText = version.textContent || version.innerText;
+              const shouldShow = listOutdated.checked || includeVersions.some(v => versionText.includes(v));
 
-            version.parentNode.style.display = shouldShow ? "block" : "none";
-            if (shouldShow) isVisible = true;
-          });
+              version.parentNode.style.display = shouldShow ? "block" : "none";
+              if (shouldShow) isVisible = true;
+            });
+          }
 
           device.style.display = isVisible ? "block" : "none";
         });
