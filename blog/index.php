@@ -202,7 +202,6 @@
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
               <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
               <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
-              <a href="#" title="Change privacy policy" onclick="if(window.__lxG__consent__!==undefined&&window.__lxG__consent__.getState()!==null){window.__lxG__consent__.showConsent()} else {alert('This function only for users from European Economic Area (EEA)')}; return false"><i class='bx bx-check-shield' ></i></a>
             </div>
           </div>
         </div>
