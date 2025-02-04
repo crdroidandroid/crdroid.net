@@ -52,6 +52,10 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Ads -->
+  <meta name="monetag" content="8cacee2e5aae15724ef27453b36dc9a4">
+  <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="129481" async data-cfasync="false"></script>
+
 </head>
 
 <body>
@@ -106,19 +110,6 @@
 
     <section class="inner-page">
       <div class="container">
-        <div class="center pb-3">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9442732345409545" crossorigin="anonymous"></script>
-          <!-- Header -->
-          <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-9442732345409545"
-              data-ad-slot="5655936532"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-          <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
 
         <div class="pb-2">
           <a href="<?php echo $domain; ?>/blog"><i class='bx bx-chevrons-left'></i> Back to blog</a>
@@ -188,22 +179,6 @@
     </div>
   </footer><!-- End Footer -->
 
-  <!-- ======= Ads blocker ======= -->
-  <div class="blocker-wrapper">
-    <div class="content">
-      <div class="warn-icon">
-        <span class="icon"><i class='bx bx-shield-x' ></i></span>
-      </div>
-      <h2>AdBlock Detected!</h2>
-      <p>crDroid server is made possible by displaying ads on our website. Please support us by whitelisting our url.</p>
-      <div class="blocker-btn">
-        <div class="bg-layer disable"></div>
-        <button id="timed">Please wait 5 seconds...</button>
-      </div>
-    </div>
-  </div>
-  <!-- End Ads blocker -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -216,7 +191,6 @@
 
   <!-- Main JS File -->
   <script src="<?php echo $domain; ?>/js/main.js"></script>
-  <script src="<?php echo $domain; ?>/js/peel1.js" type="text/javascript"></script>
 
   <!-- Disquss -->
   <script id="dsq-count-scr" src="//crdroid-android.disqus.com/count.js" async></script>

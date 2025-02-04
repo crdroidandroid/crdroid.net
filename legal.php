@@ -37,6 +37,10 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Ads -->
+  <meta name="monetag" content="8cacee2e5aae15724ef27453b36dc9a4">
+  <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="129481" async data-cfasync="false"></script>
+
 </head>
 
 <body>
@@ -192,7 +196,6 @@
 
   <!-- Main JS File -->
   <script src="js/main.js"></script>
-  <script src="js/peel1.js" type="text/javascript"></script>
 </body>
 
 </html>

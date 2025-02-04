@@ -42,6 +42,10 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Ads -->
+  <meta name="monetag" content="8cacee2e5aae15724ef27453b36dc9a4">
+  <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="129481" async data-cfasync="false"></script>
+
 </head>
 
 <body>
@@ -329,22 +333,6 @@
     </div>
   </footer><!-- End Footer -->
 
-  <!-- ======= Ads blocker ======= -->
-  <div class="blocker-wrapper">
-    <div class="content">
-      <div class="warn-icon">
-        <span class="icon"><i class='bx bx-shield-x' ></i></span>
-      </div>
-      <h2>AdBlock Detected!</h2>
-      <p>crDroid server is made possible by displaying ads on our website. Please support us by whitelisting our url.</p>
-      <div class="blocker-btn">
-        <div class="bg-layer disable"></div>
-        <button id="timed">Please wait 5 seconds...</button>
-      </div>
-    </div>
-  </div>
-  <!-- End Ads blocker -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -357,7 +345,6 @@
 
   <!-- Main JS File -->
   <script src="js/main.js"></script>
-  <script src="js/peel1.js" type="text/javascript"></script>
 </body>
 
 </html>
