@@ -86,8 +86,8 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
   <script src="https://staupsoaksy.net/act/files/tag.min.js?z=8906252" data-cfasync="false" async></script>
   <!-- Ads In-Page Push -->
   <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8906259,document.createElement('script'))</script>
-  <!-- Vignette Banner -->
-  <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',8906266,document.createElement('script'))</script>
+  <!-- Native Banner (Interstitial) -->
+  <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',8906340,document.createElement('script'))</script>
 
 </head>
 
