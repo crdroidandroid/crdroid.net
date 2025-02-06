@@ -1,4 +1,4 @@
-<?php
+  <?php
   include 'functions.php';
   $domain = GetDomain();
 ?>
@@ -36,6 +36,15 @@
 
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NR3C0WDB8Q');
+  </script>
 
   <!-- Ads -->
   <meta name="monetag" content="8cacee2e5aae15724ef27453b36dc9a4">

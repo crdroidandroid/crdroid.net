@@ -52,6 +52,15 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NR3C0WDB8Q');
+  </script>
+
   <!-- Ads -->
   <meta name="monetag" content="8cacee2e5aae15724ef27453b36dc9a4">
   <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="129481" async data-cfasync="false"></script>
