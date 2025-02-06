@@ -46,8 +46,6 @@
     gtag('config', 'G-NR3C0WDB8Q');
   </script>
 
-  <!-- Ads Onclick (popunder) -->
-  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://shebudriftaiter.net/tag.min.js',8906164,document.body||document.documentElement)</script>
   <!-- Ads Push -->
   <script src="https://staupsoaksy.net/act/files/tag.min.js?z=8906252" data-cfasync="false" async></script>
   <!-- Ads In-Page Push -->
@@ -97,20 +95,56 @@
           <h2>Support us</h2>
 		      <h2><i class='bx bxs-heart' ></i></h2>
           <p>crDroid is a project that we are doing with passion and in our free time. </p>
-          <p>If you would like to support us, cosider a donation on PayPal or our Patreon page.</p>
-		      <p>Every <i class='bx bx-dollar'></i> will get reinvested in the further development of the project!</p>
+		      <p>crDroid has always been about freedom, performance, and customization—and we want to keep it that way!</p>
+          <p>Our build servers work hard to bring you fast, stable, and up-to-date ROMs, but maintaining and upgrading them requires ongoing resources.<p>
+          <p>To continue growing and improving crDroid, we need your support! A small monthly donation helps us cover server costs, enhance build capacity, and keep crDroid free for everyone.</p>
+          <p>Every contribution, no matter the size, makes a huge difference! 🙌</p>
         </div>
         
 		<div class="row">
 
         <div class="col-md col-lg">
           <div class="feature-block">
-		  	<button type="button" class="btn btn-primary btn-lg m-3" onclick="window.open('https://paypal.me/crdroidandroid')"><i class='bx bxl-paypal' ></i> Donate on Paypal</button></span>
+		  	<button type="button" class="btn btn-primary btn-lg m-3" onclick="window.open('https://paypal.me/gwolf2u')"><i class='bx bxl-paypal' ></i> Donate on Paypal</button>
 			<button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('http://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button>
           </div>
         </div>
 
       </div>
+
+      <div class="row">
+        <div class="col-md-6">
+            <div class="feature-block">
+                <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+                <iframe src="https://donorbox.org/embed/crdroid-build-servers?default_interval=o" 
+                        name="donorbox" 
+                        allowpaymentrequest="allowpaymentrequest" 
+                        seamless="seamless" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        height="900px" 
+                        width="100%" 
+                        style="max-width: 500px; min-width: 310px; max-height:none!important" 
+                        allow="payment">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="feature-block">
+                <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+                <iframe height="93px" 
+                        width="100%" 
+                        src="https://donorbox.org/embed/crdroid-build-servers?donor_wall_color=%23128aed&only_donor_wall=true&preview=true" 
+                        style="width: 100%; max-width:500px; min-width:310px; min-height: 345px;" 
+                        seamless="seamless" 
+                        name="donorbox" 
+                        frameborder="0" 
+                        scrolling="no"> 
+                </iframe>
+            </div>
+        </div>
+    </div>
 
       </div>
     </section>
