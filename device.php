@@ -82,8 +82,6 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
 
   <!-- Ads Onclick (popunder) -->
   <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://shebudriftaiter.net/tag.min.js',8906164,document.body||document.documentElement)</script>
-  <!-- Ads Push -->
-  <script src="https://staupsoaksy.net/act/files/tag.min.js?z=8906252" data-cfasync="false" async></script>
   <!-- Ads In-Page Push -->
   <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8906259,document.createElement('script'))</script>
   <!-- Native Banner (Interstitial) -->

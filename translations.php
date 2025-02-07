@@ -46,8 +46,6 @@
     gtag('config', 'G-NR3C0WDB8Q');
   </script>
 
-  <!-- Ads Push -->
-  <script src="https://staupsoaksy.net/act/files/tag.min.js?z=8906252" data-cfasync="false" async></script>
   <!-- Ads In-Page Push -->
   <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8906259,document.createElement('script'))</script>
   <!-- Native Banner (Interstitial) -->
