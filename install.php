@@ -62,11 +62,65 @@ $devicename = $data[1]['device'];
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'functionality_storage': 'granted',
+          'personalization_storage': 'granted',
+          'security_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'wait_for_update': 1500
+      });
+      gtag('consent', 'default', {
+          'region': ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IS', 'IE', 'IT', 'LV', 'LI', 'LT', 'LU', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'CH'],
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'functionality_storage': 'denied',
+          'personalization_storage': 'denied',
+          'security_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'wait_for_update': 1500
+      });
+      gtag('set', 'ads_data_redaction', false);
+      gtag('set', 'url_passthrough', false);
+    </script>
+
   <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
   <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
   <script type="text/javascript" charset="UTF-8">
     document.addEventListener('DOMContentLoaded', function () {
-      cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"crDroid Android","website_privacy_policy_url":"https://crdroid.net/legal"});
+      cookieconsent.run({
+        "notice_banner_type":"simple",
+        "consent_type":"express",
+        "palette":"light",
+        "language":"en",
+        "page_load_consent_levels":["strictly-necessary"],
+        "notice_banner_reject_button_hide":false,
+        "preferences_center_close_button_hide":false,
+        "page_refresh_confirmation_buttons":false,
+        "website_name":"crDroid Android",
+        "website_privacy_policy_url":"https://crdroid.net/legal",
+        "callbacks": {
+          "scripts_specific_loaded": (level) => {
+            switch(level) {
+              case 'targeting':
+                gtag('consent', 'update', {
+                  'ad_storage': 'granted',
+                  'ad_user_data': 'granted',
+                  'ad_personalization': 'granted',
+                  'analytics_storage': 'granted'
+                });
+                break;
+            }
+          }
+        },
+        "callbacks_force": true
+      });
     });
   </script>
 
