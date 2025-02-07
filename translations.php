@@ -37,9 +37,17 @@
   <!-- Google verification -->
   <meta name="google-site-verification" content="v_DBWc21zWokjHdPNpABWYSkB3lSz6u7mPGXsmOPGt8" />
 
+  <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+  <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+      cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"crDroid Android","website_privacy_policy_url":"https://crdroid.net/legal"});
+    });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
-  <script>
+  <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-NR3C0WDB8Q"></script>
+  <script type="text/plain" data-cookie-consent="tracking">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -191,6 +199,7 @@
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
               <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
               <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
+              <a href="#" id="open_preferences_center" title="Update cookies preferences"><i class='bx bx-check-shield' ></i></a>
             </div>
           </div>
         </div>
