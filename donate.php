@@ -160,8 +160,8 @@
 
         <div class="col-md col-lg">
           <div class="feature-block">
-		  	<button type="button" class="btn btn-primary btn-lg m-3" onclick="window.open('https://paypal.me/gwolf2u')"><i class='bx bxl-paypal' ></i> Donate on Paypal</button>
-			<button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('http://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button>
+          <button type="button" class="btn btn-primary btn-lg m-3" onclick="window.open('https://paypal.me/crdroidandroid')"><i class='bx bxl-paypal' ></i> Donate on Paypal</button>
+			    <button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('https://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button>
           </div>
         </div>
 
