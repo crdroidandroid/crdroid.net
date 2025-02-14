@@ -127,12 +127,8 @@ $forum = $data[1]['forum'];
     gtag('config', 'G-NR3C0WDB8Q');
   </script>
 
-  <!-- Ads Onclick (popunder) -->
-  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://shebudriftaiter.net/tag.min.js',8906164,document.body||document.documentElement)</script>
-  <!-- Ads In-Page Push -->
-  <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8906259,document.createElement('script'))</script>
-  <!-- Native Banner (Interstitial) -->
-  <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',8906340,document.createElement('script'))</script>
+  <!-- Ads System -->
+  <?php outputAds(); ?>
 
   <!-- Custom CSS for styling links -->
   <style>

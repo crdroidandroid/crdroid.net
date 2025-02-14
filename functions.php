@@ -66,4 +66,66 @@ function changelogFile($checkVersion, $device){
     }
     return $changelog;
 }
+
+function outputAds($checkHash = false) {
+    $url = GetDomain() . "/ads.json";
+    $jsonData = file_get_contents($url);
+    
+    if ($jsonData === false) {
+        echo "<!-- Failed to fetch ads.json -->";
+        return;
+    }
+    
+    $adsData = json_decode($jsonData, true);
+    
+    if (!is_array($adsData) || !isset($adsData['ads'])) {
+        echo "<!-- Invalid ads.json format -->";
+        return;
+    }
+    
+    $adsConfig = $adsData['ads'];
+    echo '<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var disableOnclick = false;
+    ';
+
+    if ($checkHash) {
+        echo '
+            if (window.location.hash) {
+                disableOnclick = true;
+            }
+        ';
+    }
+
+    if (isset($adsConfig['onclick']) && $adsConfig['onclick'] === true) {
+        echo '
+            if (!disableOnclick) {
+                var script = document.createElement("script");
+                script.src = "https://shebudriftaiter.net/tag.min.js";
+                script.setAttribute("data-zone", "8906164");
+                (document.body || document.documentElement).appendChild(script);
+            }
+        ';
+    }
+
+    if (isset($adsConfig['inpage']) && $adsConfig['inpage'] === true) {
+        echo '
+            var script = document.createElement("script");
+            script.src = "https://vemtoutcheeg.com/400/8906259";
+            (document.body || document.documentElement).appendChild(script);
+        ';
+    }
+
+    if (isset($adsConfig['native']) && $adsConfig['native'] === true) {
+        echo '
+            var script = document.createElement("script");
+            script.src = "https://groleegni.net/401/8906340";
+            (document.body || document.documentElement).appendChild(script);
+        ';
+    }
+
+    echo '
+        });
+    </script>';
+}
 ?>
