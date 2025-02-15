@@ -924,7 +924,7 @@ section {
 /*--------------------------------------------------------------
 # Ads blocker
 --------------------------------------------------------------*/
-.blocker-wrapper{
+.crblocker-wrapper{
   z-index: 999;
   position: fixed;
   width: 100%;
@@ -939,11 +939,11 @@ section {
   transition: opacity 0.2s 0s ease-in-out,
               transform 0.4s 0s ease-in-out;
 }
-.blocker-wrapper.show{
+.crblocker-wrapper.show{
   opacity: 1;
   pointer-events: auto;
 }
-.blocker-wrapper .content{
+.crblocker-wrapper .content{
   top: 50px;
   position: relative;
   display: flex;
@@ -952,7 +952,7 @@ section {
   padding: 30px;
   flex-direction: column
 }
-.blocker-wrapper .content .warn-icon{
+.crblocker-wrapper .content .warn-icon{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -961,7 +961,7 @@ section {
   border-radius: 50%;
   background: linear-gradient(#5777ba 0%, #445c91 100%);
 }
-.blocker-wrapper .warn-icon .icon{
+.crblocker-wrapper .warn-icon .icon{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -970,23 +970,23 @@ section {
   background: #fff;
   border-radius: inherit;
 }
-.blocker-wrapper .warn-icon .icon i{
+.crblocker-wrapper .warn-icon .icon i{
   background: linear-gradient(#5777ba 0%, #445c91 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 50px;
 }
-.blocker-wrapper .content h2{
+.crblocker-wrapper .content h2{
   margin-top: 35px;
   font-size: 32px;
 }
-.blocker-wrapper .content p{
+.crblocker-wrapper .content p{
   font-size: 19px;
   text-align: center;
   margin-top: 20px;
 }
-.blocker-wrapper .blocker-btn{
+.crblocker-wrapper .blocker-btn{
   height: 57px;
   width: 223px;
   margin-top: 30px;
@@ -994,7 +994,7 @@ section {
   position: relative;
   overflow: hidden;
 }
-.blocker-wrapper .blocker-btn .bg-layer{
+.crblocker-wrapper .blocker-btn .bg-layer{
   height: 100%;
   width: 300%;
   position: absolute;
@@ -1002,13 +1002,13 @@ section {
   background: -webkit-linear-gradient(135deg, #6b8bd1, #384c75);
   transition: all 0.4s ease;
 }
-.blocker-wrapper .blocker-btn .bg-layer.disable{
+.crblocker-wrapper .blocker-btn .bg-layer.disable{
   background: -webkit-linear-gradient(135deg, #858585, #e2e2e2);
 }
-.blocker-wrapper .blocker-btn:hover .bg-layer{
+.crblocker-wrapper .blocker-btn:hover .bg-layer{
   left: 0;
 }
-.blocker-wrapper .content button{
+.crblocker-wrapper .content button{
   position: relative;
   z-index: 1;
   height: 100%;
