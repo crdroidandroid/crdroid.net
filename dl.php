@@ -315,7 +315,7 @@
         const listOutdated = document.getElementById("listOutdated");
         const devices = document.querySelectorAll(".device");
         const oems = document.querySelectorAll(".oem");
-        const includeVersions = ["crDroid 9", "crDroid 10", "crDroid 11"];
+        const includeVersions = ["crDroid 10", "crDroid 11"];
         const hash = window.location.hash;
         
         devices.forEach(device => {
