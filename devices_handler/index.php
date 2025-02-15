@@ -46,42 +46,29 @@ function FinalizeJSON($version){
 	unlink($version.'convert.json');
 }
 
-function CompileFullJSON(){
-	// Put all required filenames into array
-	$fileNames = [
-		'6.json',
-		'7.json',
-		'8.json',
-		'9.json',
-		'10.json',
-		'11.json'
-	];
+function CompileFullJSON() {
+    $fileNames = ['6.json', '7.json', '8.json', '9.json', '10.json', '11.json'];
+    $merged = [];
 
-	// Define an enmpty array for merging
-	$merged = [];
+    foreach ($fileNames as $fileName) {
+        if (file_exists($fileName)) {
+            $jsonData = json_decode(file_get_contents($fileName), true);
+            $fileNameNoExt = basename($fileName, ".json");
 
-	// Loop through each filename
-	foreach ($fileNames as $fileName) {
-		if(file_exists($fileName)){
-			$file = file_get_contents($fileName);
-			$jsonData = json_decode($file, true);
-			// Detach filename from extension to use as key later
-			$fileNameNoExt = basename($fileName, ".json");
-			
-			// Loop through every vendor key and it's value
-			foreach ($jsonData as $vendorKey => $vendorValues) {
-				// Loop through each name from vendor value
-				foreach ($vendorValues as $name => $device) {
-					// Compose new array structure and insert
-					// required filename as key between name and device values
-					$merged[$vendorKey][$name][$fileNameNoExt] = $device;
-				}
-			}
-		}
-	}
-	ksort($merged);
-	$compiled = json_encode($merged, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-	file_put_contents('compiled.json', $compiled);
+            foreach ($jsonData as $vendorKey => $vendorValues) {
+                foreach ($vendorValues as $name => $device) {
+                    $merged[$vendorKey][$name][$fileNameNoExt] = $device;
+                }
+            }
+        }
+    }
+
+    ksort($merged);
+    foreach ($merged as $vendorKey => $vendorValues) {
+        ksort($merged[$vendorKey]);
+    }
+
+    file_put_contents('compiled.json', json_encode($merged, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
 }
 
 function deleteDir($path) {
