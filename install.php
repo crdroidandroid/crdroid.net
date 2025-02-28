@@ -220,11 +220,15 @@ $devicename = $data[1]['device'];
                   <b>Warning:</b> The provided instructions are for <b>crDroid <?php echo $crversion; ?> running on <?php echo $devicename . " (" . $device . ")</b>"; ?>. These will only work if you follow every section and step precisely.<br>
                   Do <b>not</b> continue after something fails!
                   <hr>
-                  <p class='mb-0'>Installation is only possible on a device with unlocked bootloader!</p>
+                  <p class='mb-0'>Before you proceed, <b>remove all Google accounts</b> from your device to avoid "Factory reset protection" (FRP)!</p>
+                  <p class='mb-0'>Installation is only possible on a device with <b>unlocked bootloader!</b></p>
                 </div>
               </div>
               <div class="alert alert-warning" role="alert">
-                <b>crDroid</b> is not responsible for any damage you made to your device. You have been warned!
+                  crDroid is provided as-is without warranty, and while we strive to ensure functionality, you install it at your own risk.
+              </div>
+              <div class="alert alert-info" role="alert">
+                  We are not responsible for any damage you made to your device. You have been warned!
               </div>
 
               <div>
