@@ -226,8 +226,7 @@ $devicename = $data[1]['device'];
               </div>
               <div class="alert alert-warning" role="alert">
                   crDroid is provided as-is without warranty, and while we strive to ensure functionality, you install it at your own risk.
-              </div>
-              <div class="alert alert-info" role="alert">
+                  <br>
                   We are not responsible for any damage you made to your device. You have been warned!
               </div>
 
