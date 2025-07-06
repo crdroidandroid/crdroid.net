@@ -210,7 +210,7 @@
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                   <i class='bx bxs-volume-full' ></i>
                   <h4>Notifications and sounds</h4>
-                  <p>Set how notifications behave and how differect parts of the UI react to your sounds</p>
+                  <p>Set how notifications behave and how different parts of the UI react to your sounds</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                   <i class='bx bxs-dashboard' ></i>
