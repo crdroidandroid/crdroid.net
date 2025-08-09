@@ -177,7 +177,7 @@
             <div class="col-md-4">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="listOutdated" onchange="filterVersions()">
-                    <label class="form-check-label" for="listOutdated">Show all devices and OEMs (even outdated)</label>
+                    <label class="form-check-label" for="listOutdated">Show all versions not just latest supported</label>
                 </div>
             </div>
         </div>
@@ -296,7 +296,7 @@
         const listOutdated = document.getElementById("listOutdated");
         const devices = document.querySelectorAll(".device");
         const oems = document.querySelectorAll(".oem");
-        const includeVersions = ["crDroid 10", "crDroid 11"];
+        const includeVersions = ["crDroid 11"];
         const hash = window.location.hash;
         
         devices.forEach(device => {
