@@ -108,9 +108,6 @@
     gtag('config', 'G-NR3C0WDB8Q');
   </script>
 
-  <!-- Ads System -->
-  <?php outputAds(); ?>
-
 </head>
 
 <body>
@@ -254,22 +251,6 @@
     </div>
   </footer><!-- End Footer -->
 
-  <!-- ======= Ads blocker ======= -->
-  <div class="crblocker-wrapper">
-    <div class="content">
-      <div class="warn-icon">
-        <span class="icon"><i class='bx bx-shield-x' ></i></span>
-      </div>
-      <h2>AdBlock Detected!</h2>
-      <p>crDroid server is made possible by displaying ads on our website. Please support us by whitelisting our url.</p>
-      <div class="blocker-btn">
-        <div class="bg-layer disable"></div>
-        <button id="timed"></button>
-      </div>
-    </div>
-  </div>
-  <!-- End Ads blocker -->
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -282,8 +263,6 @@
 
   <!-- Main JS File -->
   <script src="js/main.js"></script>
-  <script src="js/adblock-checker.min.js"></script>
-  <script src="js/checker.js"></script>
 </body>
 
 </html>
