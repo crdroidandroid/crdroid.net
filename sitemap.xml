@@ -916,11 +916,6 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://crdroid.net/10/support</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://crdroid.net/nx_tab/11</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
@@ -2136,11 +2131,6 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://crdroid.net/11/install</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://crdroid.net/veux/10</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
@@ -2716,11 +2706,6 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://crdroid.net/11/support</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://crdroid.net/cheeseburger/10</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
@@ -3061,11 +3046,6 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://crdroid.net/patreon.com/emincangencer</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://crdroid.net/walleye/10</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
@@ -3261,11 +3241,6 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://crdroid.net/paypal.me/debdeep199x</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://crdroid.net/blog/2025-04-12-crDroid-11.4-is-now-available</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
@@ -3307,11 +3282,6 @@
   </url>
   <url>
     <loc>https://crdroid.net/blog/2025-02-09-crDroid-11.2-is-now-released</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://crdroid.net/paypal.me/gottebrian</loc>
     <changefreq>hourly</changefreq>
     <priority>0.64</priority>
   </url>
