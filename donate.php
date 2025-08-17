@@ -95,21 +95,12 @@
           <p>To continue growing and improving crDroid, we need your support! A small monthly donation helps us cover server costs, enhance build capacity, and keep crDroid free for everyone.</p>
           <p>Every contribution, no matter the size, makes a huge difference! 🙌</p>
         </div>
-        
-		<div class="row">
-
-        <div class="col-md col-lg">
-          <div class="feature-block">
-          <button type="button" class="btn btn-primary btn-lg m-3" onclick="window.open('https://paypal.me/crdroidandroid')"><i class='bx bxl-paypal' ></i> Donate on Paypal</button>
-			    <button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('https://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button>
-          </div>
-        </div>
-
-      </div>
 
       <div class="row">
         <div class="col-md-6">
             <div class="feature-block">
+                <div class="align-items-center justify-content-center"><button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('https://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button></div>
+                <div class="align-items-center justify-content-center"><h4>or choose PayPal / credit card</h4></div>
                 <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
                 <iframe src="https://donorbox.org/embed/crdroid-build-servers?default_interval=o" 
                         name="donorbox" 
@@ -119,7 +110,7 @@
                         scrolling="no" 
                         height="900px" 
                         width="100%" 
-                        style="max-width: 500px; min-width: 310px; max-height:none!important" 
+                        style="max-width: 400px; min-width: 310px; max-height:none!important" 
                         allow="payment">
                 </iframe>
             </div>
@@ -128,10 +119,10 @@
         <div class="col-md-6">
             <div class="feature-block">
                 <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
-                <iframe height="93px" 
+                <iframe height="975px" 
                         width="100%" 
                         src="https://donorbox.org/embed/crdroid-build-servers?donor_wall_color=%23128aed&only_donor_wall=true&preview=true" 
-                        style="width: 100%; max-width:500px; min-width:310px; min-height: 345px;" 
+                        style="width: 100%; max-width:500px; min-width:310px; max-height: 975px; min-height: 975px;" 
                         seamless="seamless" 
                         name="donorbox" 
                         frameborder="0" 
