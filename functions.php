@@ -51,7 +51,8 @@ function crVersionToAndroid($checkVersion){
 		8 => 12,
 		9 => 13,
 		10 => 14,
-		11 => 15
+		11 => 15,
+		12 => 16
 	);
 
 	return $versions[$checkVersion];

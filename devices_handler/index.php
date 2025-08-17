@@ -47,7 +47,7 @@ function FinalizeJSON($version){
 }
 
 function CompileFullJSON() {
-    $fileNames = ['6.json', '7.json', '8.json', '9.json', '10.json', '11.json'];
+    $fileNames = ['6.json', '7.json', '8.json', '9.json', '10.json', '11.json', '12.json'];
     $merged = [];
 
     foreach ($fileNames as $fileName) {
