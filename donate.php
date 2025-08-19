@@ -99,7 +99,7 @@
       <div class="row">
         <div class="col-md-6">
             <div class="feature-block">
-                <div class="align-items-center justify-content-center"><button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('https://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a Patreon</button></div>
+                <div class="align-items-center justify-content-center"><button type="button" class="btn btn-warning btn-lg m-3" onclick="window.open('https://patreon.com/join/crdroidandroid')"><i class='bx bxl-patreon' ></i> Become a patron</button></div>
                 <div class="align-items-center justify-content-center"><h4>or choose PayPal / credit card</h4></div>
                 <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
                 <iframe src="https://donorbox.org/embed/crdroid-build-servers?default_interval=o" 
@@ -186,3 +186,4 @@
 </body>
 
 </html>
+
