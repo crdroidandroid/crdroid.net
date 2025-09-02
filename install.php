@@ -157,7 +157,7 @@ $devicename = $data[1]['device'];
                   <b>Warning:</b> The provided instructions are for <b>crDroid <?php echo $crversion; ?> running on <?php echo $devicename . " (" . $device . ")</b>"; ?>. These will only work if you follow every section and step precisely.<br>
                   Do <b>not</b> continue after something fails!
                   <hr>
-                  <p class='mb-0'>Before you proceed, <b>remove all Google accounts</b> from your device to avoid "Factory reset protection" (FRP)!</p>
+                  <p class='mb-0'>Before you start, make sure you’ve <b>deleted every Google account</b> from the device on a fresh install. This will prevent “Factory Reset Protection” (FRP) from kicking in during the setup steps.</p>
                   <p class='mb-0'>Installation is only possible on a device with <b>unlocked bootloader!</b></p>
                 </div>
               </div>
@@ -274,3 +274,4 @@ $devicename = $data[1]['device'];
 </body>
 
 </html>
+
