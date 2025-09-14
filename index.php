@@ -323,7 +323,6 @@
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
               <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
               <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
-              <a href="#" id="open_preferences_center" title="Update cookies preferences"><i class='bx bx-check-shield' ></i></a>
             </div>
           </div>
         </div>
