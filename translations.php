@@ -154,12 +154,22 @@
           </div>
         </div>
 
-        <div class="col-md-12 col-lg-12">
+        <div class="col-md-6 col-lg-6">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-parallelspace">
             <img src="img/svg/parallelspace.webp" alt="img" class="img-fluid translation">
             <h4>crDroid ParallelSpace</h4>
             <p>Since you may or may not need two Whatsapp apps heh?<br><img src="https://badges.crowdin.net/crdroid-parallelspace/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-lmofreeform">
+            <img src="img/svg/lmofreeform.webp" alt="img" class="img-fluid translation">
+            <h4>crDroid LMOFreeform</h4>
+            <p>Sidebar helper app to show up the way you configure it<br><img src="https://badges.crowdin.net/crdroid-lmofreeform/localized.svg"></p>
 			</a>
           </div>
         </div>
