@@ -258,7 +258,7 @@
                 <p>
                 So you want to make your build official and become a crDroid maintainer?<br> Just head over to our GitHub in order to get more info.<br>
                 </p>
-                <a href='https://github.com/crdroidandroid/android/blob/13.0/README.mkdn#3-how-to-become-an-official-maintainer' class="btn btn-info gothere">Go there now!</a>
+                <a href='https://github.com/crdroidandroid/android/blob/16.0/README.mkdn#3-how-to-become-an-official-maintainer' class="btn btn-info gothere">Go there now!</a>
               </div>
             </li>
 
@@ -354,3 +354,4 @@
 </body>
 
 </html>
+
