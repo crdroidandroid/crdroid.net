@@ -90,8 +90,8 @@ function moveChangelog($version){
 		if ($dh = opendir($dir)) {
 			while (($file = readdir($dh)) !== false) {
 			//exclude unwanted 
-				if (strpos($file, '.md')) continue;
-				if (strpos($file, '.json')) continue;
+				if ($file !== false && strpos($file, '.md') !== false) continue;
+				if ($file !== false && strpos($file, '.json') !== false) continue;
 
 				if (rename($dir.'/'.$file, $dirNew.'/'.$file)){
 					//move done
@@ -127,7 +127,7 @@ function CompileJSON($version) {
 		$device=$json_data['response'][0]['device'] ?? null;
 		$maintainer_arr=explode("(", $json_data['response'][0]['maintainer']);
 		$maintainer=$maintainer_arr[0] ?? null;
-		$nick=str_replace(")","",$json_data['response'][0]['maintainer']) ?? null;
+		$nick=str_replace(")","",$json_data['response'][0]['maintainer'] ?? "") ?? null;
 		$nick_arr=explode("(", $nick);
 		$nick=$nick_arr[1] ?? null;
 		$crversion=$json_data['response'][0]['version'] ?? null;
@@ -183,7 +183,7 @@ nextDevice:
 	updateStats($version);
 }
 
-if (!$ver == null){
+if ($ver !== null){
 	CompileJSON($ver);
 	CompileFullJSON();
 	$request_method=$_SERVER["REQUEST_METHOD"];

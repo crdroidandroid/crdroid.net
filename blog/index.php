@@ -1,7 +1,7 @@
 <?php
   include '../functions.php';
   $domain = GetDomain();
-  $page = $_GET['page'];
+  $page = $_GET['page'] ?? null;
   if (empty($page)) {
 	$page = 1;
 	$title = "crDroid.net - Blog";

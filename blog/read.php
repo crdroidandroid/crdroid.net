@@ -2,7 +2,7 @@
   include '../functions.php';
   include '../vendor/Parsedown.php';
   $domain = GetDomain();
-  $article = $_GET['article'];
+  $article = $_GET['article'] ?? null;
   $file = 'articles/' . $article . '.md';
   if (!file_exists($file)){
     exit;

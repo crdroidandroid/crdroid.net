@@ -2,8 +2,8 @@
 include 'functions.php';
 
 $domain = GetDomain();
-$device = $_GET['name'];
-$crversion = $_GET['crversion'];
+$device = $_GET['name'] ?? null;
+$crversion = $_GET['crversion'] ?? null;
 
 if (empty($crversion)) {
     header("Location: " . $domain . "/downloads#" . $device . "", true, 301);
