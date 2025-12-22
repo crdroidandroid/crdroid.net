@@ -128,7 +128,7 @@
     },
     "oriole": {
       "device": "Pixel 6",
-      "maintainer": "Ivy",
+      "maintainer": "",
       "nick": "Lost-Entrepreneur439",
       "crversion": "10.14",
       "builddate": "20250504",
@@ -312,7 +312,7 @@
     },
     "channel": {
       "device": "Moto G7 Play",
-      "maintainer": "Lightzin021",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250228",
@@ -548,7 +548,7 @@
   "Nintendo": {
     "nx_tab": {
       "device": "Switch",
-      "maintainer": "Ivy",
+      "maintainer": "",
       "nick": "Lost-Entrepreneur439",
       "crversion": "10.14",
       "builddate": "20250504",
@@ -662,7 +662,7 @@
     },
     "cheeseburger": {
       "device": "OnePlus 5",
-      "maintainer": "Zed",
+      "maintainer": "",
       "nick": "Zed9K",
       "crversion": "10.11",
       "builddate": "20241218",
@@ -680,7 +680,7 @@
     },
     "dumpling": {
       "device": "OnePlus 5T",
-      "maintainer": "Zed",
+      "maintainer": "",
       "nick": "Zed9K",
       "crversion": "10.11",
       "builddate": "20241218",
@@ -698,7 +698,7 @@
     },
     "enchilada": {
       "device": "OnePlus 6",
-      "maintainer": "Jordan Whiteley",
+      "maintainer": "",
       "nick": "Terminator_J",
       "crversion": "10.13",
       "builddate": "20250414",
@@ -716,7 +716,7 @@
     },
     "fajita": {
       "device": "OnePlus 6T",
-      "maintainer": "Jordan Whiteley",
+      "maintainer": "",
       "nick": "Terminator_J",
       "crversion": "10.13",
       "builddate": "20250414",
@@ -734,7 +734,7 @@
     },
     "guacamole": {
       "device": "OnePlus 7 Pro",
-      "maintainer": "Lup Gabriel",
+      "maintainer": "",
       "nick": "gwolfu",
       "crversion": "10.11",
       "builddate": "20241215",
@@ -770,7 +770,7 @@
     },
     "hotdog": {
       "device": "OnePlus 7T Pro",
-      "maintainer": "ShEV",
+      "maintainer": "",
       "nick": "ShevT",
       "crversion": "10.11",
       "builddate": "20241218",
@@ -878,7 +878,7 @@
     },
     "lemonade": {
       "device": "OnePlus 9",
-      "maintainer": "Lup Gabriel",
+      "maintainer": "",
       "nick": "gwolfu",
       "crversion": "10.11",
       "builddate": "20241215",
@@ -896,7 +896,7 @@
     },
     "lemonadep": {
       "device": "OnePlus 9 Pro",
-      "maintainer": "Lup Gabriel",
+      "maintainer": "",
       "nick": "gwolfu",
       "crversion": "10.11",
       "builddate": "20241215",
@@ -932,7 +932,7 @@
     },
     "salami": {
       "device": "OnePlus 11 5G",
-      "maintainer": "Pranav Vashi",
+      "maintainer": "",
       "nick": "neobuddy89",
       "crversion": "10.11",
       "builddate": "20241214",
@@ -952,7 +952,7 @@
   "Poco": {
     "alioth": {
       "device": "Xiaomi POCO F3",
-      "maintainer": "raystef66",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.14",
       "builddate": "20250523",
@@ -970,7 +970,7 @@
     },
     "beryllium": {
       "device": "Pocophone F1",
-      "maintainer": "Lup Gabriel",
+      "maintainer": "",
       "nick": "gwolfu",
       "crversion": "10.11",
       "builddate": "20241215",
@@ -988,7 +988,7 @@
     },
     "lmi": {
       "device": "Xiaomi POCO F2 Pro",
-      "maintainer": "raystef66",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.14",
       "builddate": "20250523",
@@ -1096,7 +1096,7 @@
     },
     "vayu": {
       "device": "Poco X3 Pro",
-      "maintainer": "Pranav Vashi",
+      "maintainer": "",
       "nick": "neobuddy89",
       "crversion": "10.11",
       "builddate": "20241214",
@@ -1298,7 +1298,7 @@
     },
     "lavender": {
       "device": "Redmi Note 7",
-      "maintainer": "tilt-rgb",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.11",
       "builddate": "20241213",
@@ -1370,7 +1370,7 @@
     },
     "raphael": {
       "device": "Mi 9T Pro",
-      "maintainer": "Hildo Boerboom",
+      "maintainer": "",
       "nick": "firebird11",
       "crversion": "10.11",
       "builddate": "20241215",
@@ -1406,7 +1406,7 @@
     },
     "rova": {
       "device": "Redmi 4A/5A",
-      "maintainer": "Max",
+      "maintainer": "",
       "nick": "iusmac",
       "crversion": "10.12",
       "builddate": "20250123",
@@ -1460,7 +1460,7 @@
     },
     "sky": {
       "device": "Redmi 12 5G",
-      "maintainer": "Mourya Baruah",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.11",
       "builddate": "20241217",
@@ -1514,7 +1514,7 @@
     },
     "sweet": {
       "device": "Redmi Note 10 Pro/Max",
-      "maintainer": "Pranav Vashi",
+      "maintainer": "",
       "nick": "neobuddy89",
       "crversion": "10.11",
       "builddate": "20241214",
@@ -1624,7 +1624,7 @@
     },
     "a20": {
       "device": "Galaxy A20",
-      "maintainer": "Ivy",
+      "maintainer": "",
       "nick": "Lost-Entrepreneur439",
       "crversion": "10.14",
       "builddate": "20250504",
@@ -1642,7 +1642,7 @@
     },
     "a70q": {
       "device": "Galaxy A70",
-      "maintainer": "Santiago García Mantiñán",
+      "maintainer": "",
       "nick": "manty",
       "crversion": "10.14",
       "builddate": "20250505",
@@ -1696,7 +1696,7 @@
     },
     "beyond0lte": {
       "device": "Galaxy S10e",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1714,7 +1714,7 @@
     },
     "beyond1lte": {
       "device": "Galaxy S10",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1732,7 +1732,7 @@
     },
     "beyond2lte": {
       "device": "Galaxy S10+",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1750,7 +1750,7 @@
     },
     "beyondx": {
       "device": "Galaxy S10 5G",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1768,7 +1768,7 @@
     },
     "d1": {
       "device": "Galaxy Note10",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1786,7 +1786,7 @@
     },
     "d1x": {
       "device": "Galaxy Note10 5G",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1804,7 +1804,7 @@
     },
     "d2s": {
       "device": "Galaxy Note10+",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1822,7 +1822,7 @@
     },
     "d2x": {
       "device": "Galaxy Note10+ 5G",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1840,7 +1840,7 @@
     },
     "f62": {
       "device": "Galaxy F62/M62",
-      "maintainer": "Pedro Araujo",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.13",
       "builddate": "20250301",
@@ -1970,7 +1970,7 @@
     },
     "cepheus": {
       "device": "Xiaomi MI9",
-      "maintainer": "raystef66",
+      "maintainer": "",
       "nick": "",
       "crversion": "10.14",
       "builddate": "20250523",
@@ -1988,7 +1988,7 @@
     },
     "chiron": {
       "device": "Mi Mix 2",
-      "maintainer": "Santiago García Mantiñán",
+      "maintainer": "",
       "nick": "manty",
       "crversion": "10.14",
       "builddate": "20250504",
@@ -2006,7 +2006,7 @@
     },
     "clover": {
       "device": "Mi Pad 4",
-      "maintainer": "Peter Meiser",
+      "maintainer": "",
       "nick": "meiser79",
       "crversion": "10.12",
       "builddate": "20250122",
