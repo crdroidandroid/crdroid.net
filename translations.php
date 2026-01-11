@@ -124,17 +124,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-updater">
-            <img src="img/svg/update.webp" alt="img" class="img-fluid translation">
-            <h4>crDroid Updater</h4>
-            <p>Things need to be updated and in your language, no?<br><img src="https://badges.crowdin.net/crdroid-updater/localized.svg"></p>
-			</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-gaming-mode">
             <img src="img/svg/game-mode.svg" alt="img" class="img-fluid translation">
@@ -144,7 +134,17 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-3 col-lg-3">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-updater">
+            <img src="img/svg/update.webp" alt="img" class="img-fluid translation">
+            <h4>crDroid Updater</h4>
+            <p>Things need to be updated and in your language, no?<br><img src="https://badges.crowdin.net/crdroid-updater/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-dialer">
             <img src="img/svg/dialer.webp" alt="img" class="img-fluid translation">
@@ -154,17 +154,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-parallelspace">
-            <img src="img/svg/parallelspace.webp" alt="img" class="img-fluid translation">
-            <h4>crDroid ParallelSpace</h4>
-            <p>Since you may or may not need two Whatsapp apps heh?<br><img src="https://badges.crowdin.net/crdroid-parallelspace/localized.svg"></p>
-			</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-lmofreeform">
             <img src="img/svg/lmofreeform.webp" alt="img" class="img-fluid translation">
@@ -191,7 +181,8 @@
           <div class="col-lg col-md-6 footer-contact">
             <h3>crDroid Android Project</h3>
             <p>
-              <strong>Email:</strong> contact@crdroid.net<br>
+              <span class="text-muted"><small><i class="bi bi-info-circle"></i> For device-specific support, please use the forum or Telegram links on the device download page.</small></span><br>
+              <strong>Email:</strong> contact@crdroid.net
             </p>
             <div class="social-links mt-3">
               <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
