@@ -8,12 +8,8 @@ Hey crDroid enthusiasts!
 
 Google's been cracking down on unsigned custom ROMs passing Play Integrity checks. To stay on the safe side, you'll now need to sign your ROM packages with release keys instead of test keys.
 
-Since crDroid is open-source, we want to empower you to create your own signing keys. Our awesome team member *@the306bobby* built a script specifically for this purpose. Head over to [his GitHub page](https://github.com/306bobby-android/crDroid-build-signed-script) to grab it and get started.
+Since crDroid is open-source, we want to empower you to create your own signing keys. So we've made a script to create such keys. Head over to [this GitHub page](https://github.com/crdroidandroid/crDroid-build-signed-script) to grab it and get started.
 
 **Bonus!** This script isn't just for crDroid. You can adapt it for other ROMs as well.
-
-**crDroid Builders:**  
-
-No need to add *-include vendor/lineage-priv/keys/keys.mk*  in your device tree sources anymore.
 
 Happy building!
