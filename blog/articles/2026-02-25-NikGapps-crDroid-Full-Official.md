@@ -30,7 +30,8 @@ This is the **base official package** recommended for most crDroid users.
 - Pixel Device Personalization Services  
 - Settings Services  
 - Private Compute Services  
-- Google Search / Assistant (Gemini on newer Android versions)  
+- Google Gemini  
+- Google Search  
 - Google Text-to-Speech  
 - WebView (replaces AOSP webview) + Trichrome library  
 - Digital Wellbeing  
