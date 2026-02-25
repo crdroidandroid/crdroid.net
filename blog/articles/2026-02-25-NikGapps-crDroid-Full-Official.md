@@ -103,6 +103,7 @@ It includes everything from the Official package — plus a large collection of 
 | Google Maps | ❌ | ✅ |
 | Google Messages | ❌ | ✅ |
 | Google Photos | ❌ | ✅ |
+| Google Wallpaper | ❌ | ❌ |
 | Gboard | ❌ | ✅ |
 | Gmail | ❌ | ✅ |
 | Pixel Launcher | ❌ | ❌ |
