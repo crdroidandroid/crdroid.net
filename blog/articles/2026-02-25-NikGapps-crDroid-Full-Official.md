@@ -32,13 +32,12 @@ This is the **base official package** recommended for most crDroid users.
 - Private Compute Services  
 - Google Search / Assistant (Gemini on newer Android versions)  
 - Google Text-to-Speech  
-- Google Chrome  
 - WebView (Trichrome library)  
 - Digital Wellbeing  
 - Device Health Services  
 - Android Auto  
 
-### Who is tt for?
+### Who is it for?
 
 - Users who want **essential Google services only**
 - Devices with **limited system partition space**
@@ -89,7 +88,7 @@ It includes everything from the Official package — plus a large collection of 
 |----------|----------|---------------|
 | Play Store & Core Services | ✅ | ✅ |
 | Pixel Personalization Services | ✅ | ✅ (expanded) |
-| Chrome & WebView | ✅ | ✅ |
+| WebView | ✅ | ✅ |
 | Google Messages | ❌ | ✅ |
 | Google Dialer | ❌ | ✅ |
 | Maps & Photos | ❌ | ✅ |
