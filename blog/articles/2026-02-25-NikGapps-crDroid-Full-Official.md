@@ -32,6 +32,7 @@ This is the **base official package** recommended for most crDroid users.
 - Private Compute Services  
 - Gemini  
 - Google Search  
+- Google Sounds  
 - Google Text-to-Speech  
 - WebViewGoogle (replaces AOSP webview) + Trichrome library  
 - Digital Wellbeing  
@@ -96,6 +97,7 @@ It includes everything from the Official package — plus a large collection of 
 | Android Auto (stub) | ✅ | ✅ |
 | Gemini | ✅ | ✅ |
 | Google Search | ✅ | ✅ |
+| Google Sounds | ✅ | ✅ |
 | Google Chrome | ❌ | ✅ |
 | Google Contacts | ❌ | ✅ |
 | Google Dialer | ❌ | ✅ |
