@@ -57,13 +57,13 @@ It includes everything from the Official package — plus a large collection of 
 
 ### Additional apps included
 
-- Google Messages  
-- Google Dialer  
-- Google Contacts (full app)  
-- Google Clock  
-- Google Calculator 
+- Google Messages (replaces AOSP Messaging)   
+- Google Dialer (replaces AOSP Dialer)   
+- Google Contacts (replaces AOSP Contacts)  
+- Google Clock (replaces AOSP DeskClock)   
+- Google Calculator  
 - Google Maps  
-- Google Photos  
+- Google Photos (replaces AOSP Gallery)  
 - Gmail  
 - Google Keep  
 - Google Files  
@@ -71,7 +71,7 @@ It includes everything from the Official package — plus a large collection of 
 - Carrier Services  
 - Android Device Policy (Work profile support)  
 - Google Feedback  
-- Partner Setup  
+- Pixel Setup Wizard  
 - Expanded Pixel personalization components  
 
 ### Who is it for?
@@ -89,13 +89,18 @@ It includes everything from the Official package — plus a large collection of 
 | Play Store & Core Services | ✅ | ✅ |
 | Pixel Personalization Services | ✅ | ✅ (expanded) |
 | WebView | ✅ | ✅ |
+| Digital Wellbeing | ✅ | ✅ |
+| Android Auto (stub) | ✅ | ✅ |
 | Google Messages | ❌ | ✅ |
 | Google Dialer | ❌ | ✅ |
-| Maps & Photos | ❌ | ✅ |
+| Google Drive | ❌ | ✅ |
+| Google Photos | ❌ | ✅ |
+| Google Maps | ❌ | ✅ |
 | Gmail | ❌ | ✅ |
+| Pixel Setup Wizard | ❌ | ✅ |
 | Recorder & Files | ❌ | ✅ |
 | Work Profile Support | Limited | ✅ |
-| Package Size | Smaller (~450MB) | Larger (~900MB+) |
+| Package Size | Smaller (~450MB) | Larger (~800MB+) |
 
 ---
 
@@ -122,6 +127,6 @@ NikGapps now offers two clearly defined paths for crDroid users:
 
 The Full package does require significantly more system space, so it won’t fit on every device. But on supported devices, it delivers one of the most complete Google experiences available for crDroid.
 
-Choose based on your storage capacity and how “Pixel-like” you want your ROM to feel.
+Choose based on your storage capacity and how **“Pixel-like”** you want your ROM to feel.
 
 Happy flashing!
