@@ -30,10 +30,10 @@ This is the **base official package** recommended for most crDroid users.
 - Pixel Device Personalization Services  
 - Settings Services  
 - Private Compute Services  
-- Google Gemini  
+- Gemini  
 - Google Search  
 - Google Text-to-Speech  
-- WebView (replaces AOSP webview) + Trichrome library  
+- WebViewGoogle (replaces AOSP webview) + Trichrome library  
 - Digital Wellbeing  
 - Device Health Services  
 - Android Auto  
@@ -91,9 +91,11 @@ It includes everything from the Official package — plus a large collection of 
 |----------|----------|---------------|
 | Play Store & Core Services | ✅ | ✅ |
 | Pixel Personalization Services | ✅ | ✅ (expanded) |
-| WebView | ✅ | ✅ |
+| WebViewGoogle | ✅ | ✅ |
 | Digital Wellbeing | ✅ | ✅ |
 | Android Auto (stub) | ✅ | ✅ |
+| Gemini | ✅ | ✅ |
+| Google Search | ✅ | ✅ |
 | Google Chrome | ❌ | ✅ |
 | Google Contacts | ❌ | ✅ |
 | Google Dialer | ❌ | ✅ |
