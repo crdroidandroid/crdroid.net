@@ -105,6 +105,7 @@ It includes everything from the Official package — plus a large collection of 
 | Google Photos | ❌ | ✅ |
 | Gboard | ❌ | ✅ |
 | Gmail | ❌ | ✅ |
+| Pixel Launcher | ❌ | ❌ |
 | Pixel Setup Wizard | ❌ | ✅ |
 | Recorder & Files | ❌ | ✅ |
 | Work Profile Support | Limited | ✅ |
