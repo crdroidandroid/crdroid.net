@@ -32,7 +32,7 @@ This is the **base official package** recommended for most crDroid users.
 - Private Compute Services  
 - Google Search / Assistant (Gemini on newer Android versions)  
 - Google Text-to-Speech  
-- WebView (Trichrome library)  
+- WebView (replaces AOSP webview) + Trichrome library  
 - Digital Wellbeing  
 - Device Health Services  
 - Android Auto  
@@ -65,7 +65,7 @@ It includes everything from the Official package — plus a large collection of 
 - Google Dialer (replaces AOSP Dialer)  
 - Google Maps  
 - Google Photos (replaces AOSP Gallery)  
-- Gboard (replace AOSP Keyboard)  
+- Gboard (replaces AOSP Keyboard)  
 - Gmail  
 - Google Keep  
 - Google Files  
