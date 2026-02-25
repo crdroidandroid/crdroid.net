@@ -58,12 +58,14 @@ It includes everything from the Official package — plus a large collection of 
 ### Additional apps included
 
 - Google Messages (replaces AOSP Messaging)   
-- Google Dialer (replaces AOSP Dialer)   
+- Google Chrome (replaces AOSP Browser)  
 - Google Contacts (replaces AOSP Contacts)  
 - Google Clock (replaces AOSP DeskClock)   
-- Google Calculator  
+- Google Calculator (replaces AOSP Calculator)  
+- Google Dialer (replaces AOSP Dialer)  
 - Google Maps  
 - Google Photos (replaces AOSP Gallery)  
+- Gboard (replace AOSP Keyboard)  
 - Gmail  
 - Google Keep  
 - Google Files  
@@ -91,11 +93,14 @@ It includes everything from the Official package — plus a large collection of 
 | WebView | ✅ | ✅ |
 | Digital Wellbeing | ✅ | ✅ |
 | Android Auto (stub) | ✅ | ✅ |
-| Google Messages | ❌ | ✅ |
+| Google Chrome | ❌ | ✅ |
+| Google Contacts | ❌ | ✅ |
 | Google Dialer | ❌ | ✅ |
 | Google Drive | ❌ | ✅ |
-| Google Photos | ❌ | ✅ |
 | Google Maps | ❌ | ✅ |
+| Google Messages | ❌ | ✅ |
+| Google Photos | ❌ | ✅ |
+| Gboard | ❌ | ✅ |
 | Gmail | ❌ | ✅ |
 | Pixel Setup Wizard | ❌ | ✅ |
 | Recorder & Files | ❌ | ✅ |
