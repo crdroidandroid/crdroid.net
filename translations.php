@@ -94,7 +94,7 @@
         
 		<div class="row">
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-translation">
             <img src="img/svg/crdroid-settings.svg" alt="img" class="img-fluid translation">
@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-frameworks-base">
             <img src="img/svg/framework.svg" alt="img" class="img-fluid translation">
@@ -114,12 +114,32 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-3 col-lg-3">
           <div class="feature-block">
 			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-home">
             <img src="img/svg/launcher.svg" alt="img" class="img-fluid translation">
             <h4>crDroid Home</h4>
             <p>Our Launcher from where you start favorite apps<br><img src="https://d322cqt584bo4o.cloudfront.net/crdroid-home/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-resources">
+            <img src="img/svg/resources.png" alt="img" class="img-fluid translation">
+            <h4>crDroid Resources</h4>
+            <p>Help translate crDroid resources to make the project more accessible<br><img src="https://badges.crowdin.net/crdroid-resources/localized.svg"></p>
+			</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <div class="feature-block">
+			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-lmofreeform">
+            <img src="img/svg/lmofreeform.webp" alt="img" class="img-fluid translation">
+            <h4>crDroid LMOFreeform</h4>
+            <p>Sidebar helper app to show up the way you configure it<br><img src="https://badges.crowdin.net/crdroid-lmofreeform/localized.svg"></p>
 			</a>
           </div>
         </div>
@@ -150,16 +170,6 @@
             <img src="img/svg/dialer.webp" alt="img" class="img-fluid translation">
             <h4>crDroid Dialer (phone app)</h4>
             <p>The phone Dialer app with a touch of crDroid and Material You<br><img src="https://badges.crowdin.net/crdroid-dialer/localized.svg"></p>
-			</a>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-lg-3">
-          <div class="feature-block">
-			<a target="_blank" style="text-decoration: none;" href="https://crowdin.com/project/crdroid-lmofreeform">
-            <img src="img/svg/lmofreeform.webp" alt="img" class="img-fluid translation">
-            <h4>crDroid LMOFreeform</h4>
-            <p>Sidebar helper app to show up the way you configure it<br><img src="https://badges.crowdin.net/crdroid-lmofreeform/localized.svg"></p>
 			</a>
           </div>
         </div>
