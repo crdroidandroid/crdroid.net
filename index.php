@@ -321,8 +321,6 @@
             <div class="social-links mt-3">
               <a href="https://t.me/crDroidAndroid"><i class='bx bxl-telegram'></i></a>
               <a href="https://github.com/crdroidandroid"><i class='bx bxl-github' ></i></a>
-              <a href="https://patreon.com/crdroidandroid"><i class='bx bxl-patreon'></i></a>
-              <a href="https://paypal.me/crdroidandroid"><i class='bx bxl-paypal' ></i></a>
             </div>
           </div>
         </div>
