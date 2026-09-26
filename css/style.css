@@ -552,7 +552,7 @@ section {
 }
 @media (min-width: 992px) {
   .gallery .swiper-wrapper {
-    padding: 40px 0;
+    padding: 80px 0 40px 0;
   }
   .gallery .swiper-slide-active {
     border: 6px solid #5777ba;
