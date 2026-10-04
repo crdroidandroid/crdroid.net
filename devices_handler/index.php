@@ -3,6 +3,14 @@ $ver = null;
 if (isset($_GET['regenerate'])){
 	$ver = $_GET['regenerate'];
 }
+$debug = isset($_GET['debug']) && $_GET['debug'] === 'true';
+
+function debug_log($message) {
+	global $debug;
+	if ($debug) {
+		echo "<!-- DEBUG: " . htmlspecialchars($message) . " -->\n";
+	}
+}
 
 function CountJSON($version){
 	$folderPath = 'v' . $version . '.x/';
@@ -31,8 +39,21 @@ function WriteJSON($version){
 }
 
 function FinalizeJSON($version){
+	debug_log("FinalizeJSON: Writing JSON for version " . $version);
 	WriteJSON($version);
-	$input = json_decode(file_get_contents($version.'convert.json'), true);
+	$convertFile = $version . 'convert.json';
+	if (!file_exists($convertFile)) {
+		debug_log("FinalizeJSON: ERROR - convert file does not exist: " . $convertFile);
+		return;
+	}
+	$raw = file_get_contents($convertFile);
+	debug_log("FinalizeJSON: convert file size: " . strlen($raw) . " bytes");
+	$input = json_decode($raw, true);
+	if ($input === null) {
+		debug_log("FinalizeJSON: ERROR - JSON decode failed: " . json_last_error_msg());
+		return;
+	}
+	debug_log("FinalizeJSON: Decoded " . count($input) . " entries");
 	$output = $version . '.json';
 	$records = [];
 	foreach($input as $key => $value){
@@ -42,8 +63,10 @@ function FinalizeJSON($version){
 	}
 	ksort($records);
 	$data = json_encode($records, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+	debug_log("FinalizeJSON: Writing output file: " . $output . " (" . strlen($data) . " bytes)");
 	file_put_contents($output, $data);
-	unlink($version.'convert.json');
+	unlink($convertFile);
+	debug_log("FinalizeJSON: Completed");
 }
 
 function CompileFullJSON() {
@@ -109,16 +132,21 @@ function updateStats($version){
 }
 
 function CompileJSON($version) {
+	debug_log("Starting CompileJSON for version: " . $version);
 	WriteTmpJSON($version, '{');
 	$files = glob('v' . $version . '.x/*.json', GLOB_BRACE);
+	debug_log("Found " . count($files) . " JSON files in v" . $version . ".x/");
 	$tab = "\t";
 	$countto = CountJSON($version);
+	debug_log("CountJSON returned: " . $countto);
 	$countup = 0;
 	foreach($files as $file) {
 		++$countup;
+		debug_log("Processing file: " . $file);
 		$json = file_get_contents($file);
 		$json_data = json_decode($json,true);
 		if($json_data === null) {
+			debug_log("  JSON decode failed for: " . $file);
 			continue;
 		}
 		
@@ -146,7 +174,8 @@ function CompileJSON($version) {
 		$sha256=$json_data['response'][0]['sha256'] ?? null;
 
 		if (is_null($oem) || is_null($codename) || is_null($device) || is_null($maintainer) || is_null($crversion) || is_null($builddate) || is_null($buildtype) || is_null($download) || is_null($forum)) {
-			goto nextDevice;
+			debug_log("  Skipping device due to missing fields: oem=" . var_export($oem, true) . ", codename=" . var_export($codename, true) . ", device=" . var_export($device, true) . ", maintainer=" . var_export($maintainer, true) . ", crversion=" . var_export($crversion, true) . ", builddate=" . var_export($builddate, true) . ", buildtype=" . var_export($buildtype, true) . ", download=" . var_export($download, true) . ", forum=" . var_export($forum, true));
+			continue;
 		}
 
 		WriteTmpJSON($version, $tab . '"' . $codename . '": [');
@@ -175,12 +204,17 @@ function CompileJSON($version) {
 			WriteTmpJSON($version, $tab . '],');
 		}
 	}
-nextDevice:
+	debug_log("Finished processing all files. countup=" . $countup . ", countto=" . $countto);
 	WriteTmpJSON($version, '}');
+	debug_log("Calling FinalizeJSON for version: " . $version);
 	FinalizeJSON($version);
+	debug_log("FinalizeJSON completed");
 	moveChangelog($version);
+	debug_log("moveChangelog completed");
 	deleteDir('v' . $version . '.x');
+	debug_log("deleteDir completed");
 	updateStats($version);
+	debug_log("updateStats completed");
 }
 
 if (!$ver == null){
