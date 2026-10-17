@@ -38,8 +38,8 @@
         },
         "blueline": {
             "device": "Pixel 3",
-            "maintainer": "Evelyn",
-            "nick": "Lost-Entrepreneur439",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.16",
             "builddate": "20260525",
             "buildtype": "Final",
@@ -56,8 +56,8 @@
         },
         "bonito": {
             "device": "Pixel 3a XL",
-            "maintainer": "Evelyn",
-            "nick": "Lost-Entrepreneur439",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.16",
             "builddate": "20260525",
             "buildtype": "Final",
@@ -146,8 +146,8 @@
         },
         "crosshatch": {
             "device": "Pixel 3 XL",
-            "maintainer": "Evelyn",
-            "nick": "Lost-Entrepreneur439",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.16",
             "builddate": "20260525",
             "buildtype": "Final",
@@ -254,8 +254,8 @@
         },
         "sargo": {
             "device": "Pixel 3a",
-            "maintainer": "Evelyn",
-            "nick": "Lost-Entrepreneur439",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.16",
             "builddate": "20260526",
             "buildtype": "Final",
@@ -548,8 +548,8 @@
     "Nintendo": {
         "nx_tab": {
             "device": "Switch",
-            "maintainer": "Evelyn",
-            "nick": "Lost-Entrepreneur439",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.16",
             "builddate": "20260526",
             "buildtype": "Final",
@@ -916,7 +916,7 @@
     "Poco": {
         "alioth": {
             "device": "Xiaomi POCO F3",
-            "maintainer": "raystef66",
+            "maintainer": "",
             "nick": "",
             "crversion": "11.17",
             "builddate": "20260808",
@@ -934,8 +934,8 @@
         },
         "beryllium": {
             "device": "Pocophone F1",
-            "maintainer": "Lup Gabriel",
-            "nick": "gwolfu",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.17",
             "builddate": "20260804",
             "buildtype": "Final",
@@ -1298,7 +1298,7 @@
         },
         "miatoll": {
             "device": "Redmi Note 9S Series",
-            "maintainer": "swiitchOFF",
+            "maintainer": "",
             "nick": "",
             "crversion": "11.17",
             "builddate": "20260807",
@@ -1352,8 +1352,8 @@
         },
         "rova": {
             "device": "Redmi 4A/5A",
-            "maintainer": "Max",
-            "nick": "iusmac",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.17",
             "builddate": "20260805",
             "buildtype": "Final",
@@ -1570,8 +1570,8 @@
         },
         "a70q": {
             "device": "Galaxy A70",
-            "maintainer": "Santiago Garc\u00eda Manti\u00f1\u00e1n",
-            "nick": "manty",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.17",
             "builddate": "20260804",
             "buildtype": "Final",
@@ -1878,8 +1878,8 @@
         },
         "chiron": {
             "device": "Mi Mix 2",
-            "maintainer": "Santiago Garc\u00eda Manti\u00f1\u00e1n",
-            "nick": "manty",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.17",
             "builddate": "20260805",
             "buildtype": "Final",
@@ -1950,8 +1950,8 @@
         },
         "dipper": {
             "device": "Xiaomi MI 8",
-            "maintainer": "Lup Gabriel",
-            "nick": "gwolfu",
+            "maintainer": "",
+            "nick": "",
             "crversion": "11.17",
             "builddate": "20260805",
             "buildtype": "Final",
@@ -2148,7 +2148,7 @@
         },
         "vili": {
             "device": "Xiaomi 11T Pro",
-            "maintainer": "swiitchOFF",
+            "maintainer": "",
             "nick": "",
             "crversion": "11.17",
             "builddate": "20260820",
