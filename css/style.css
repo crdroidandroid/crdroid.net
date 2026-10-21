@@ -111,6 +111,9 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   margin: 0;
   max-height: 40px;
+  filter:
+  drop-shadow(0 0 1px rgba(0, 0, 0, .95))
+  drop-shadow(0 1px 3px rgba(0, 0, 0, .22));
 }
 
 /*--------------------------------------------------------------
