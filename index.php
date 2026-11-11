@@ -293,7 +293,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">Why the "eye" and not something else? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Our "eye" logo has been with us since the beginning! It's based on a drawing by the founder's child. 
+                  Our "eye" logo has been with us since the beginning! It's based on a drawing by the founder's child. crDroid is not affiliated with any religion, and our logo has no such intent behind it!
                 </p>
               </div>
             </li>
