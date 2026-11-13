@@ -478,6 +478,12 @@ section {
 	margin-bottom: 35px;
 }
 
+/* .image is a stretching flex row: without align-self the img is stretched to the text column's height and distorted */
+.features .image img {
+  align-self: center;
+  height: auto;
+  max-width: 520px;
+}
 @media (max-width: 991px) {
   .features .image {
     text-align: center;
