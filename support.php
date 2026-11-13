@@ -1,9 +1,9 @@
-  <?php
+<?php
 include 'functions.php';
 
 $domain = GetDomain();
-$device = $_GET['name'];
-$crversion = $_GET['crversion'];
+$device = $_GET['name'] ?? '';
+$crversion = $_GET['crversion'] ?? '';
 
 if (empty($crversion)) {
     header("Location: " . $domain . "/downloads#" . $device . "", true, 301);
@@ -12,7 +12,7 @@ if (empty($crversion)) {
 
 //define vars
 $data = GetDeviceInfo($device, $crversion);
-$oem = $data[0];
+$oem = $data[0] ?? '';
 if (empty($oem)){
  header("Location: " . $domain , true, 301);
  exit;
@@ -255,7 +255,7 @@ $forum = $data[1]['forum'];
 
   <!-- Vendor JS Files -->
   <script src="<?php echo $domain; ?>/vendor/aos/aos.js"></script>
-  <script src="<?php echo $domain; ?>/vendor/jquery/jquery-3.6.0.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/jquery/jquery-3.6.0.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/swiper/swiper-bundle.min.js"></script>

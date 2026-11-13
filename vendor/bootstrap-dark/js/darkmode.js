@@ -1,12 +1,20 @@
-// get base domain to fix nginx/apache rewrite rules
-var url = window.location.protocol + "//" + location.host.split(":")[0];
+// swiper (loop mode) clones slides, so the gallery can hold more than 9 <a>/<img>;
+// every one carries data-shot (1-9) naming the screenshot it shows
+function setGalleryTheme(prefix) {
+  document.querySelectorAll('[data-shot]').forEach(function (el) {
+    var file = "img/gallery/" + prefix + el.dataset.shot + ".webp";
+    if (el.tagName === 'A') el.href = file; else el.src = file;
+  });
+  // glightbox caches hrefs at init; absent on the first call (darkmode.js loads before main.js)
+  if (window.galleryLightbox) window.galleryLightbox.reload();
+}
 
 // unique identifier
 const LOCAL_STORAGE_KEY = "toggle-bootstrap-theme";
 const LOCAL_META_DATA = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 
 // path to dark theme bootstrap css used
-const DARK_THEME_PATH = url + "/vendor/bootstrap-dark/css/bootstrap.min.css";
+const DARK_THEME_PATH = location.origin + "/vendor/bootstrap-dark/css/bootstrap.min.css";
 const DARK_STYLE_LINK = document.getElementById("dark-theme-style");
 const THEME_TOGGLER = document.getElementById("theme-toggler");
 
@@ -61,25 +69,7 @@ function enableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#191919";
 	}
-  var j = 0;
-  elements = document.getElementsByClassName('gallery-lightbox')
-  for(var i = 0, j = 0; i < elements.length; i++){
-    if(i < 9)
-      elements[i].href="img/gallery/gallery_dark-"+(i+1)+".webp";
-    else {
-      elements[i].href="img/gallery/gallery_dark-"+(j+1)+".webp";
-      j++;
-    }
-	}
-  elements = document.getElementsByClassName('screenshots-gallery')
-  for(var i = 0, j = 0; i < elements.length; i++){
-    if(i < 9)
-      elements[i].src="img/gallery/gallery_dark-"+(i+1)+".webp";
-    else {
-      elements[i].src="img/gallery/gallery_dark-"+(j+1)+".webp";
-      j++;
-    }
-  }
+  setGalleryTheme("gallery_dark-");
   elements = document.querySelectorAll('code');
   for(var i = 0; i < elements.length; i++){
     elements[i].style.backgroundColor = "#1a1a1a";
@@ -120,25 +110,7 @@ function disableDarkTheme() {
   for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "#f5f5f5";
 	}
-  var j;
-  elements = document.getElementsByClassName('gallery-lightbox')
-  for(var i = 0, j = 0; i < elements.length; i++){
-    if(i < 9)
-       elements[i].href="img/gallery/gallery-"+(i+1)+".webp";
-    else {
-      elements[i].href="img/gallery/gallery-"+(j+1)+".webp";
-      j++;
-    }
-  }
-  elements = document.getElementsByClassName('screenshots-gallery')
-  for(var i = 0, j = 0; i < elements.length; i++){
-    if(i < 9)
-      elements[i].src="img/gallery/gallery-"+(i+1)+".webp";
-    else {
-      elements[i].src="img/gallery/gallery-"+(j+1)+".webp";
-      j++;
-    }
-  }
+  setGalleryTheme("gallery-");
   elements = document.querySelectorAll('code');
   for(var i = 0; i < elements.length; i++){
     elements[i].style.backgroundColor = "#f4f4f4";

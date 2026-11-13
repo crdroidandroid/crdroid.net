@@ -150,10 +150,11 @@
    * Scroll with ofset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
+    // getElementById, not select(): a hash such as #2a is not a valid CSS selector and would throw
+    let id = ''
+    try { id = decodeURIComponent(window.location.hash.slice(1)) } catch (e) { /* malformed escape: ignore the hash */ }
+    if (id && document.getElementById(id)) {
+      scrollto('#' + CSS.escape(id))
     }
   });
 
@@ -176,8 +177,8 @@
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
-        spaceBetween: 30
+        slidesPerView: 1.6,
+        spaceBetween: 16
       },
       640: {
         slidesPerView: 3,
@@ -197,37 +198,9 @@
   /**
    * Initiate gallery lightbox 
    */
-  const galleryLightbox = GLightbox({
+  // exposed so darkmode.js can reload() it after swapping the gallery hrefs
+  window.galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
-
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      }
-    }
   });
 
   /**
