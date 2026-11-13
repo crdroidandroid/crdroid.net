@@ -151,7 +151,8 @@
    */
   window.addEventListener('load', () => {
     // getElementById, not select(): a hash such as #2a is not a valid CSS selector and would throw
-    const id = decodeURIComponent(window.location.hash.slice(1))
+    let id = ''
+    try { id = decodeURIComponent(window.location.hash.slice(1)) } catch (e) { /* malformed escape: ignore the hash */ }
     if (id && document.getElementById(id)) {
       scrollto('#' + CSS.escape(id))
     }
@@ -197,7 +198,8 @@
   /**
    * Initiate gallery lightbox 
    */
-  const galleryLightbox = GLightbox({
+  // exposed so darkmode.js can reload() it after swapping the gallery hrefs
+  window.galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
   });
 

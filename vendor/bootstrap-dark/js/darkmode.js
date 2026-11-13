@@ -5,6 +5,8 @@ function setGalleryTheme(prefix) {
     var file = "img/gallery/" + prefix + el.dataset.shot + ".webp";
     if (el.tagName === 'A') el.href = file; else el.src = file;
   });
+  // glightbox caches hrefs at init; absent on the first call (darkmode.js loads before main.js)
+  if (window.galleryLightbox) window.galleryLightbox.reload();
 }
 
 // unique identifier
