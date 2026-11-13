@@ -6,13 +6,11 @@ function GetDomain() {
 function convertToMB($val) {
 	$units = "MB";
 	$val = $val / 1024 / 1024;
-	$val = round($val, 1);
-	if (strlen($val) > 5) {
+	if ($val >= 1024) {
 		$val = $val / 1024;
-		$val = round($val,1);
 		$units = "GB";
 	}
-	return $val . " " . $units;
+	return round($val, 1) . " " . $units;
 }
 
 function beautifyDate($val) {
@@ -56,7 +54,7 @@ function crVersionToAndroid($checkVersion){
 		13 => 17
 	);
 
-	return $versions[$checkVersion];
+	return $versions[$checkVersion] ?? '?';
 }
 
 function changelogFile($checkVersion, $device){
@@ -68,5 +66,3 @@ function changelogFile($checkVersion, $device){
     }
     return $changelog;
 }
-?>
-

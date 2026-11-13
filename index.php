@@ -63,7 +63,7 @@
 
       <div class="logo">
         <!--<h1><a href="<?php echo $domain; ?>">crDroid</a></h1>-->
-        <a href="<?php echo $domain; ?>"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <a href="<?php echo $domain; ?>"><img src="img/logo.png" alt="crDroid" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -72,6 +72,7 @@
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+          <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
@@ -102,7 +103,7 @@
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
-          <img src="img/hero-img.png" class="img-fluid" alt="">
+          <img src="img/hero-img.webp" class="img-fluid" width="1360" height="1120" alt="crDroid settings shown on three phones in light and dark themes" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -158,7 +159,7 @@
             </div>
           </div>
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="img/features.png" class="img-fluid" alt="">
+            <img src="img/features.webp" class="img-fluid" width="1000" height="1040" alt="crDroid Buttons settings screen over the dark theme" loading="lazy">
           </div>
         </div>
 
@@ -171,7 +172,7 @@
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="img/details-1.png" class="img-fluid" alt="">
+            <img src="img/details-1.webp" class="img-fluid" width="700" height="1100" alt="crDroid Miscellaneous settings screen" loading="lazy">
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>Always up-to-date</h3>
@@ -191,7 +192,7 @@
 
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="img/details-2.png" class="img-fluid" alt="">
+            <img src="img/details-2.webp" class="img-fluid" width="700" height="1100" alt="crDroid Notifications settings screen in dark theme" loading="lazy">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Source control</h3>
@@ -224,15 +225,15 @@
       <div class="container-fluid" data-aos="fade-up">
         <div class="gallery-slider swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="img/gallery/gallery-1.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-1.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-2.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-2.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-3.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-3.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-4.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-4.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-5.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-5.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-6.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-6.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-7.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-7.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-8.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-8.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/gallery/gallery-9.webp" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/gallery/gallery-9.webp" class="img-fluid screenshots-gallery img-radius" alt=""></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-1.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="1"><img src="img/gallery/gallery-1.webp" class="img-fluid screenshots-gallery" data-shot="1" loading="lazy" alt="crDroid settings screenshot 1 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-2.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="2"><img src="img/gallery/gallery-2.webp" class="img-fluid screenshots-gallery" data-shot="2" loading="lazy" alt="crDroid settings screenshot 2 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-3.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="3"><img src="img/gallery/gallery-3.webp" class="img-fluid screenshots-gallery" data-shot="3" loading="lazy" alt="crDroid settings screenshot 3 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-4.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="4"><img src="img/gallery/gallery-4.webp" class="img-fluid screenshots-gallery" data-shot="4" loading="lazy" alt="crDroid settings screenshot 4 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-5.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="5"><img src="img/gallery/gallery-5.webp" class="img-fluid screenshots-gallery" data-shot="5" loading="lazy" alt="crDroid settings screenshot 5 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-6.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="6"><img src="img/gallery/gallery-6.webp" class="img-fluid screenshots-gallery" data-shot="6" loading="lazy" alt="crDroid settings screenshot 6 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-7.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="7"><img src="img/gallery/gallery-7.webp" class="img-fluid screenshots-gallery" data-shot="7" loading="lazy" alt="crDroid settings screenshot 7 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-8.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="8"><img src="img/gallery/gallery-8.webp" class="img-fluid screenshots-gallery" data-shot="8" loading="lazy" alt="crDroid settings screenshot 8 of 9"></a></div>
+            <div class="swiper-slide"><a href="img/gallery/gallery-9.webp" class="gallery-lightbox" data-gall="gallery-carousel" data-shot="9"><img src="img/gallery/gallery-9.webp" class="img-fluid screenshots-gallery" data-shot="9" loading="lazy" alt="crDroid settings screenshot 9 of 9"></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -253,7 +254,7 @@
         <div class="accordion-list">
           <ul>
             <li class="FAQ-element">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How do I become maintainer for crDroid? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1">How do I become maintainer for crDroid? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                 <p>
                 So you want to make your build official and become a crDroid maintainer?<br> Just head over to our GitHub in order to get more info.<br>

@@ -1,13 +1,8 @@
 <?php
   include '../functions.php';
   $domain = GetDomain();
-  $page = $_GET['page'];
-  if (empty($page)) {
-	$page = 1;
-	$title = "crDroid.net - Blog";
-  }else{
-	$title = "crDroid.net - Blog | Page " . $page;
-  }
+  $page = max(1, (int) ($_GET['page'] ?? 1));
+  $title = $page === 1 ? "crDroid.net - Blog" : "crDroid.net - Blog | Page " . $page;
 ?>
 
 <!DOCTYPE html>
