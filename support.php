@@ -181,7 +181,6 @@ $forum = $data[1]['forum'];
               </a>
             </div>
 
-          <?php if (!empty($forum)): ?>
             <div class="col-md-6 col-sm-12 mt-4">
               <a href="<?php echo $forum; ?>" class="support-link" target="_blank">
                 <i class='bx bx-comment-dots'></i>
@@ -189,9 +188,8 @@ $forum = $data[1]['forum'];
                 <p>Find device-specific threads and discussions on the forum. Perfect for in-depth troubleshooting and guidance tailored to your device.</p>
               </a>
             </div>
-          <?php endif; ?>
 
-          <?php elseif (!empty($forum)): ?>
+          <?php else: ?>
             <div class="col-md-12 col-sm-12 mt-4 text-center">
               <a href="<?php echo $forum; ?>" class="support-link" target="_blank">
                 <i class='bx bx-comment-dots'></i>

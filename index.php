@@ -72,7 +72,6 @@
           <li><a class="nav-link scrollto" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
-          <li><a class="nav-link" href="<?php echo $domain; ?>/downloads">Download</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/blog">Blog</a></li>
           <li><a class="nav-link" href="<?php echo $domain; ?>/translations">Translations</a></li>
           <li><a class="nav-link" href="https://stats.crdroid.net">Stats</a></li>
