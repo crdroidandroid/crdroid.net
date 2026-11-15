@@ -2,9 +2,11 @@
   include '../functions.php';
   include '../vendor/Parsedown.php';
   $domain = GetDomain();
-  $article = $_GET['article'];
+  $article = $_GET['article'] ?? '';
   $file = 'articles/' . $article . '.md';
-  if (!file_exists($file)){
+  // article is a bare file name: no directory separators, no leading dot
+  if (!preg_match('/^[A-Za-z0-9][A-Za-z0-9._-]*$/', $article) || !is_file($file)){
+    http_response_code(404);
     exit;
   }
   $file_data = array_slice(file($file), 1, 3);
@@ -123,7 +125,7 @@
         </div>
         <div>
           <?php
-            echo $filedata;
+            // article body
             $Parsedown = new Parsedown();
             echo $Parsedown->text($newcontent);
           ?>
@@ -135,8 +137,8 @@
               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
               var disqus_config = function () {
-              this.page.url = '<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>';  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = '<?php echo $title;?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              this.page.url = <?php echo json_encode($domain . strtok($_SERVER['REQUEST_URI'], '?'), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+              this.page.identifier = <?php echo json_encode($title, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
               };
               (function() { // DON'T EDIT BELOW THIS LINE
               var d = document, s = d.createElement('script');

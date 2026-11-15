@@ -2,8 +2,8 @@
 include 'functions.php';
 
 $domain = GetDomain();
-$device = $_GET['name'];
-$crversion = $_GET['crversion'];
+$device = $_GET['name'] ?? '';
+$crversion = $_GET['crversion'] ?? '';
 
 if (empty($crversion)) {
     header("Location: " . $domain . "/downloads#" . $device . "", true, 301);
@@ -12,7 +12,7 @@ if (empty($crversion)) {
 
 //define vars
 $data = GetDeviceInfo($device, $crversion);
-$oem = $data[0];
+$oem = $data[0] ?? '';
 if (empty($oem)){
  header("Location: " . $domain , true, 301);
  exit;
@@ -221,7 +221,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
                                 <div class="input-group-prepend">
                                   <div class="input-group-text">MD5</div>
                                 </div>
-                                <input type="text" class="form-control" id="inlineFormInputGroup" value="<?php echo $md5; ?>" readonly>
+                                <input type="text" class="form-control" id="md5Value" value="<?php echo $md5; ?>" readonly>
                               </div>
                             </div>
                             <?php
@@ -232,7 +232,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
                                   <div class='input-group-prepend'>
                                     <div class='input-group-text'>SHA256</div>
                                   </div>
-                                  <input type='text' class='form-control' id='inlineFormInputGroup' value='$sha256' readonly>
+                                  <input type='text' class='form-control' id='sha256Value' value='$sha256' readonly>
                                 </div>
                               </div>
                                 ";
@@ -335,7 +335,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
 
   <!-- Vendor JS Files -->
   <script src="<?php echo $domain; ?>/vendor/aos/aos.js"></script>
-  <script src="<?php echo $domain; ?>/vendor/jquery/jquery-3.6.0.js"></script>
+  <script src="<?php echo $domain; ?>/vendor/jquery/jquery-3.6.0.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="<?php echo $domain; ?>/vendor/swiper/swiper-bundle.min.js"></script>
@@ -344,7 +344,7 @@ $installfile = 'install_docs/' . $crversion . '/' . $device . '.md';
   <!-- Main JS File -->
   <script src="<?php echo $domain; ?>/js/main.js"></script>
 
-  <script type="text/javascript" async=true>
+  <script>
     $(document).ready(function(){
       var x = window.location.hash;
       var tab = null;

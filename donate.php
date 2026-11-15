@@ -1,4 +1,4 @@
-  <?php
+<?php
   include 'functions.php';
   $domain = GetDomain();
 ?>
@@ -91,7 +91,7 @@
 		      <h2><i class='bx bxs-heart' ></i></h2>
           <p>crDroid is a project that we are doing with passion and in our free time. </p>
 		      <p>crDroid has always been about freedom, performance, and customization—and we want to keep it that way!</p>
-          <p>Our build servers work hard to bring you fast, stable, and up-to-date ROMs, but maintaining and upgrading them requires ongoing resources.<p>
+          <p>Our build servers work hard to bring you fast, stable, and up-to-date ROMs, but maintaining and upgrading them requires ongoing resources.</p>
           <p>To continue growing and improving crDroid, we need your support! A small monthly donation helps us cover server costs, enhance build capacity, and keep crDroid free for everyone.</p>
           <p>Every contribution, no matter the size, makes a huge difference! 🙌</p>
         </div>
@@ -118,7 +118,6 @@
 
         <div class="col-md-6">
             <div class="feature-block">
-                <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
                 <iframe height="975px" 
                         width="100%" 
                         src="https://donorbox.org/embed/crdroid-build-servers?donor_wall_color=%23128aed&only_donor_wall=true&preview=true" 

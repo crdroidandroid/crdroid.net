@@ -116,7 +116,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="listOutdated" onchange="filterVersions()">
+                    <input class="form-check-input" type="checkbox" id="listOutdated">
                     <label class="form-check-label" for="listOutdated">Show all versions not just latest supported</label>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                 $largeImgPath = "img/devices/" . $devicecodename . ".webp";
 
                 if (file_exists($smallImgPath)) {
-                    $img = "<div class='deviceimage'><img src='" . $smallImgPath . "' data-src='" . $largeImgPath . "' class='lazy-image' /></div>";
+                    $img = "<div class='deviceimage'><img src='" . $smallImgPath . "' data-src='" . $largeImgPath . "' class='lazy-image' alt='' /></div>";
                 } else {
                     $img = "<span style='display:block; font-size: 150px; text-align: center;'><i class='bx bxs-image'></i></span>";
                 }
@@ -154,8 +154,8 @@
                       </div>
                       <div class='center'>
                       <div class='dropdown'>
-                        <a class='btn btn-danger dropdown-toggle m-2 shadow-sm' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' aria-expanded='false'>Download</a>
-                        <ul class='dropdown-menu shadow' aria-labelledby='dropdownMenuLink'>
+                        <a class='btn btn-danger dropdown-toggle m-2 shadow-sm' role='button' id='dropdown-" . $devicecodename . "' data-bs-toggle='dropdown' aria-expanded='false'>Download</a>
+                        <ul class='dropdown-menu shadow' aria-labelledby='dropdown-" . $devicecodename . "'>
                   ";
                   }
                   if ($lastupdate < $data['builddate']){
@@ -163,7 +163,8 @@
                   }
                   array_push($versions, $crVersion);
                 }
-                //list all crDroid versions
+                //list all crDroid versions, newest first
+                rsort($versions, SORT_NUMERIC);
                 foreach ($versions as &$version) {
                   echo "<li><a class='dropdown-item' href='" . $devicecodename . "/" . $version . "'>crDroid ". $version ." | Android " . crVersionToAndroid($version) . "</a></li>";
                 }
@@ -283,7 +284,7 @@
         });
       }
 
-      $("#search").on("keyup submit", function() {
+      $("#search").on("input", function() {
         var key = this.value.toLowerCase();
 
         if (key === '') {
@@ -313,8 +314,6 @@
       listOutdated.checked = !!window.location.href.match(/#(.+)/);
       filterVersions();
       listOutdated.addEventListener("change", filterVersions);
-      
-      window.filterVersions = filterVersions;
     });
   </script>
 
